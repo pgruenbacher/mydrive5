@@ -1,0 +1,35 @@
+.modal-header
+  h3.modal-title Donate
+.modal-body
+  form(stripe-form="handleStripe" name="myForm")
+    .alert.alert-danger This is a mockup. We will not actually process your donation.
+    .form-group
+      label(for="card") Card number
+      input(
+        id="card" 
+        name="number" 
+        ng-model="number"
+        payments-validate="card" 
+        payments-format="card" 
+        payments-type-model="type" 
+        ng-class="myForm.number.$card.type" 
+        type="text").form-control.credit-card
+    .form-group
+      label(for="expiry") Expiry
+      input(
+        id="expiry"
+        type="text"
+        ng-model="expiry"
+        payments-validate="expiry"
+        payments-format="expiry").form-control
+    .form-group
+      label(for="CVC") CVC
+      input(
+        id="CVC"
+        type="text"
+        ng-model="cvc"
+        payments-validate="cvc"
+        payments-format="cvc"
+        payments-type-model="type").form-control
+    
+    button(type="submit").btn.btn-primary.btn-block Submit

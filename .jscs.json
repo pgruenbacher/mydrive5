@@ -1,0 +1,12 @@
+{
+  "preset": "google",
+  "maximumLineLength": {
+    "value": 100,
+    "allowComments": true,
+    "allowRegex": true
+  },
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+  "requireSpacesInsideObjectBrackets": "all",
+  "disallowSpacesInsideObjectBrackets": "nested",
+  "requireSpacesInConditionalExpression": true
+}

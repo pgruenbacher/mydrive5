@@ -1,0 +1,12 @@
+.container
+  a.button.button-primary.button-lg(ng-click="openUploadModal()") Upload
+
+  div.form-group
+    label(for="photos") Input Picture
+    input(id="photos" type="file" class="btn" ng-file-select="onFileSelect($files)" multiple)
+    p.help-block Select pictures
+    div(ng-repeat="file in files").container
+      div.progress
+          div.progress-bar(role="progressbar" style="width:{{file.progress}}%;")
+            {{file.name}} : {{file.progress}}
+      button.btn.btn-ttc(type="button",ng-click="abort($index)",ng-show="file.progress != 100") Abort

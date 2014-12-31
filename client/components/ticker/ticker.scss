@@ -1,0 +1,25 @@
+.tick.dollar-container{
+  padding-left:45px;
+}
+.dollar-append{
+  content:'$';
+  display:block;
+  font-size:4em;
+  color:white;
+  position:absolute;
+  text-shadow: 0 -1px 0 black;
+  left:22px;
+  top:8px;
+  z-index:1000;
+}
+// .dollar-container-parent:before{
+//   content:'$';
+//   display:block;
+//   font-size:4em;
+//   color:white;
+//   position:absolute;
+//   text-shadow: 0 -1px 0 black;
+//   left:24px;
+//   bottom:10px;
+//   z-index:1000;
+// }

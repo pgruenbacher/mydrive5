@@ -1,0 +1,77 @@
+
+
+$background: rgb(255,255,255);
+$foreground: rgb(30,30,30);
+
+$border_color: rgb(30,30,30);
+$box_shadow_color: rgb(150,150,150);
+
+$move_background: rgb(255,255,255);
+$separator_color: rgb(180,180,180);
+$bar_color: rgb(50,50,50);
+$bar_height: 1px;
+
+$move_shadow_color: rgb(0,0,0);
+.clear-both{
+  clear:both;
+}
+.statistic-box{
+  color: white;
+  border: 1px solid $border_color;
+  border-radius: 5px;
+  margin-bottom: 0.125em;
+  /* background: $gradient; */
+  background-color: rgb(45,45,45);background-color: #2d2d2d;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF2D2D2D', endColorstr='#FF464646');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2d2d2d), color-stop(30%, #464646));
+  background-image: -webkit-linear-gradient(top, #2d2d2d 0%, #464646 30%);
+  background-image: -moz-linear-gradient(top, #2d2d2d 0%, #464646 30%);
+  background-image: -o-linear-gradient(top, #2d2d2d 0%, #464646 30%);
+  background-image: -ms-linear-gradient(top, #2d2d2d 0%, #464646 30%);
+  background-image: linear-gradient(top, #2d2d2d 0%, #464646 30%);
+}
+
+/* Dark Button CSS */
+.payment-button {
+    outline: 0;
+    padding: 5px 12px;
+    display: block;
+    color: #9fa8b0;
+    font-weight: bold;
+    font-size:2.5em;
+    margin:4px auto;
+    text-shadow: 1px 1px #1f272b;
+    border: 1px solid #1c252b;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #232B30; /* old browsers */
+    background: -moz-linear-gradient(top, #3D4850 3%, #313d45 4%, #232B30 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#3D4850), color-stop(4%,#313d45), color-stop(100%,#232B30)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D4850', endColorstr='#232B30',GradientType=0 ); /* ie */
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* CSS3 */
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Firefox */
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); /* Safari, Chrome */
+}
+.payment-button:hover {
+    color: #fff;
+    background: #4C5A64; /* old browsers */
+    background: -moz-linear-gradient(top, #4C5A64 3%, #404F5A 4%, #2E3940 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#4C5A64), color-stop(4%,#404F5A), color-stop(100%,#2E3940)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4C5A64', endColorstr='#2E3940',GradientType=0 ); /* ie */
+}
+.payment-button:active {
+    background-position: 0 top;
+    position: relative;
+    top: 1px;
+    color: #fff;
+    padding: 6px 12px 4px;
+    background: #20282D; /* old browsers */
+    background: -moz-linear-gradient(top, #20282D 3%, #252E34 51%, #222A30 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#20282D), color-stop(51%,#252E34), color-stop(100%,#222A30)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20282D', endColorstr='#222A30',GradientType=0 ); /* ie */
+    -moz-box-shadow: 1px 1px 1px rgba(255,255,255,0.1); /* Firefox */
+    -webkit-box-shadow: 1px 1px 1px rgba(255,255,255,0.1); /* Safari, Chrome */
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.1); /* CSS3 */
+}

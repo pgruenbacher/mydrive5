@@ -1,0 +1,10 @@
+.statistic-box
+  div
+    ticker(value='{{totalDonated}}')
+  div.clear-both
+    .progress-container
+      b{{percentGoal}} % of our goal of {{goal | number:0}} dollars
+      progressbar(animate="true", value="percentGoal", type="success")
+  div.clear-both
+    payment-processor
+      button(ng-click="openPaymentModal()").btn.payment-button Donate Now

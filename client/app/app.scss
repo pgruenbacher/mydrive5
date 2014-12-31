@@ -1,0 +1,42 @@
+
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+
+/**
+ * App-wide Styles
+ */
+html,body{
+    height:100%;
+}
+#wrap{
+    min-height:100%;
+}
+#main{
+    overflow:auto;
+    padding-bottom:150px;
+}
+
+.footer {
+    text-align: center;
+    position:relative;
+    margin-top:-150px;
+    margin-bottom:0px;
+    height:150px;
+    padding-top: 70px;
+    padding-bottom:30px;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.scss';
+@import 'account/signup/signup.scss';
+@import 'admin/admin.scss';
+@import 'main/main.scss';
+@import 'modal/modal.scss';
+@import 'payments/paymentsProcessor/payment.scss';
+@import 'statistic-box/statistic-box.scss';
+@import 'ticker/ticker.scss';
+// endinjector
