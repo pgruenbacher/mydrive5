@@ -59,7 +59,9 @@ function Strategy(options, verify) {
 /**
  * Inherit from `OAuth2Strategy`.
  */
+console.log('custom');
 util.inherits(Strategy, OAuth2Strategy);
+console.log(util);
 /**
  * Authenticate request by delegating to a service provider using OAuth 2.0.
  *
@@ -67,6 +69,7 @@ util.inherits(Strategy, OAuth2Strategy);
  * @api protected
  */
 OAuth2Strategy.prototype.authenticate = function(req, options) {
+  console.log('authenticate');
   options = options || {};
   var self = this;
 
@@ -83,6 +86,7 @@ OAuth2Strategy.prototype.authenticate = function(req, options) {
     if (!parsed.protocol) {
       // The callback URL is relative, resolve a fully qualified URL from the
       // URL of the originating request.
+      console.log(util);
       callbackURL = url.resolve(util.originalURL(req), callbackURL);
     }
   }
