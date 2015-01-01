@@ -13,7 +13,7 @@ angular.module 'mydrive5App'
         $modal.open 
           size:'sm'
           controller:'paymentModalController'
-          templateUrl:'app/payment/paymentProcessor/paymentModal.html'
+          templateUrl:'components/payments/payments-processor/paymentModal.html'
 
 .controller 'paymentModalController', ($scope,$modalInstance)->
 

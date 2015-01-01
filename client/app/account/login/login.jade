@@ -37,7 +37,9 @@
             | Register
 
         hr
-
+        div
+          button.stripe-connect.dark(ng-click='loginOauth("stripe")')
+            span Connect with Stripe
         div
           a.btn.btn-facebook(href='', ng-click='loginOauth("facebook")')
             i.fa.fa-facebook

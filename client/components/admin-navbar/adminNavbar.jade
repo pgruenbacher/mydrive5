@@ -1,0 +1,25 @@
+div.navbar.navbar-default.navbar-static-top()
+  div.container
+    div.navbar-header
+      button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(ui-sref='app.admin') Control Panel
+
+    div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
+      ul.nav.navbar-nav
+        li(ui-sre-active='active')
+          a(ui-sref='app.admin.sites') My Sites
+
+        li(ui-sref-active='active')
+          a(ui-sref='app.admin.media') Media
+
+
+      ul.nav.navbar-nav.navbar-right
+
+        li(ui-sref-active='active')
+          a(ui-sref='app.admin.settings')
+            span Account 
+            span.glyphicon.glyphicon-cog

@@ -1,0 +1,6 @@
+div.palette-picker-container
+div.palette-picker-initial(ng-click="togglePicker()") Choose color palette
+  span.down-arrow &#x25BE;
+ul.palette-choice-list(ng-show="pickerVisible")
+  li(ng-repeat="choice in choices" class="palette-choice" ng-click="choosePalette(choice)")
+    span.color-preview(style="background-color:{{color.string}}",ng-repeat="color in choice")

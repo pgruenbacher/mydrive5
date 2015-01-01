@@ -8,7 +8,8 @@ angular.module 'mydrive5App', [
   'ui.router',
   'ui.bootstrap',
   'angularFileUpload',
-  'ngCkeditor'
+  'ngCkeditor',
+  'angularPayments'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider

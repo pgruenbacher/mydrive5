@@ -1,5 +1,5 @@
 var passport = require('passport');
-var StripeStrategy = require('../../components/stripe-passport').Strategy;
+var StripeStrategy = require('passport-stripe').Strategy;
 var Thing=require('../../sqldb').Thing
 
 exports.setup = function (User, config) {

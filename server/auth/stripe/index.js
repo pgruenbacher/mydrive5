@@ -54,6 +54,9 @@ router
         }
       });
     }else{
+      params={
+        'stripe_landing':'login'
+      }
       initiatePassportStrategy(req,res,next,params);
     }
     
