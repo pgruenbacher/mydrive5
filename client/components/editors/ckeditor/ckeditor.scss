@@ -1,0 +1,24 @@
+.editor-container{
+  position:relative;
+}
+
+.editor-vline,
+.editor-hline {
+  background: #ffffff url("/assets/images/Jcrop.gif");
+  font-size: 0;
+  position: absolute;
+}
+.editor-vline {
+  height: 100%;
+  width: 1px !important;
+}
+.editor-vline.right {
+  right: 0;
+}
+.editor-hline {
+  height: 1px !important;
+  width: 100%;
+}
+.editor-hline.bottom {
+  bottom: 0;
+}

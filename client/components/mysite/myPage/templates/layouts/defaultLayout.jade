@@ -1,0 +1,22 @@
+.masthead
+  .container
+    editor-container
+      div(ckeditor="editorOptions",ng-model="page.template.default.header1")
+
+.container
+  .row
+    .col-md-4
+      editor-container
+        div(ckeditor="editorOptions",ng-model="page.template.default.block1")
+      p
+        a.btn.btn-default(href='#', role='button') View details &raquo;
+    .col-md-4
+      editor-container
+        div(ckeditor="editorOptions",ng-model="page.template.default.block2")
+      p
+        a.btn.btn-default(href='#', role='button') View details &raquo;
+    .col-md-4
+      editor-container
+        div(ckeditor="editorOptions",ng-model="page.template.default.block3")
+      p
+        a.btn.btn-default(href='#', role='button') View details &raquo;

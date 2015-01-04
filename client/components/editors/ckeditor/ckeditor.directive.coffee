@@ -1,5 +1,7 @@
 'use strict'
 
+# USING THE BOWER COMPONENT FOR HTE MOMENT!!!!!
+
 angular.module 'mydrive5App'
 # directive for compiling html
 .directive "compileHtml", ($parse, $sce, $compile)->
@@ -10,6 +12,23 @@ angular.module 'mydrive5App'
     expression = $sce.trustAsHtml(scope.message).toString()
     element.append expression
 
+
+
+.directive 'editorContainer', ->
+  template:"<div class='editor-container'>"+
+    "<div class='editor-vline right'></div>"+
+    "<div class='editor-vline'></div>"+
+    "<div class='editor-hline bottom'></div>"+
+    "<div class='editor-hline'></div>"+
+    "<div ng-transclude='true'></div>"+
+    "</div>"
+  transclude:true
+  restrict:'EA'
+  scope:true
+  link: (scope,element,attrs)->
+
+
+
 # directive for the CKE editor
 .directive 'ckedit', ($parse)->
   
@@ -18,10 +37,9 @@ angular.module 'mydrive5App'
   prefix = '__ckd_'
   
 
-  emplate: '<div></div>'
+  template: '<div></div>'
   restrict: 'EA'
   link: (scope, element, attrs) ->
-
     getter = $parse(attrs.ckedit)
     setter = getter.assign;
 

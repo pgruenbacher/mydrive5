@@ -18,10 +18,8 @@ angular.module 'mydrive5App'
           return true
       return false
 
-    $document.bind 'click', ->
-      console.log 'click'
+    $document.bind 'click', (event)->
       if !elementMatchesAnyInArray(event.target, element.find(event.target.tagName))
-        console.log event.target
         scope.pickerVisible=false
         scope.$apply()
 
@@ -44,6 +42,6 @@ angular.module 'mydrive5App'
       for color in choice
         color.string='rgb('+color[0]+','+color[1]+','+color[2]+')'
 
-
+    scope.choice=scope.choices[0]
 
 

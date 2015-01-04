@@ -1,0 +1,10 @@
+div
+  label.control-label(for="template") Select Layout {{page.template.label}}
+    select.form-control(
+      id="template"
+      ng-model="page.template"
+      name="template"
+      ng-options="template.label for template in templates"
+      )
+    
+my-page(template="{{page.template.src}}",page="page")

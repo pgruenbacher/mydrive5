@@ -1,3 +1,17 @@
-// .preview{
-//   outline:2px solid #000;
-// }
+.preview{
+  outline:2px solid #000;
+}
+
+.dynamic{
+  a.navbar-brand{
+    color:inherit;
+    background-color:inherit;
+  }
+  >li{
+    background-color:inherit;
+    >a{
+      color:inherit;
+      background-color:inherit;
+    }
+  }
+}

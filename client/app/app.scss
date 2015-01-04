@@ -37,7 +37,11 @@ html,body{
 @import 'admin/sites/sites.scss';
 @import 'main/main.scss';
 @import 'admin-navbar/adminNavbar.scss';
+@import 'editors/ckeditor/ckeditor.scss';
+@import 'fullBlog/fullBlog.scss';
 @import 'modal/modal.scss';
+@import 'mysite/myNavbar/myNavbar.scss';
+@import 'mysite/myPage/page.scss';
 @import 'palette-picker/palettePicker.scss';
 @import 'payments/payments-processor/payment.scss';
 @import 'statistic-box/statistic-box.scss';

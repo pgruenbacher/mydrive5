@@ -10,5 +10,3 @@ angular.module 'mydrive5App'
   $scope.isLoggedIn = Auth.isLoggedIn
   $scope.isAdmin = Auth.isAdmin
   $scope.getCurrentUser = Auth.getCurrentUser
-
-  console.log Auth.getCurrentUser

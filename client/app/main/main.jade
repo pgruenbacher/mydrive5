@@ -7,7 +7,7 @@ header#banner.hero-unit
 .container
   .row
     .col-md-7
-      div(ckeditor="editorOptions" contenteditable="{{editMode}}" ng-model="exampleBody")
+      div(ckeditor="editorOptions" contenteditable="false" ng-model="exampleBody")
     .col-md-5
       statistic-box(total-donated="{{statistics.totalDonated}}",goal="{{statistics.goal}}")
   .row
