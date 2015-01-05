@@ -6,5 +6,7 @@ div
       name="template"
       ng-options="template.label for template in templates"
       )
-    
-my-page(template="{{page.template.src}}",page="page")
+  button.btn.btn-success(ng-click="save()") Save
+
+
+my-page(template="{{page.template.src}}",page="page",navigation-items="navigationItems")

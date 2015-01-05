@@ -1,17 +1,23 @@
 .container
   .row
     .col-lg-4.col-lg-offset-2.col-md-10.col-md-offset-1.blog-main
-      .post-preview
-        a
-          h2.post-title Sample blog post
-          h3.post-subtitle Sample blog post subtitle
-        p.post-meta Posted on Month 32, 2014
-        
+      div(ng-if="index")
+        .post-preview(ng-repeat="post in filteredPosts")
+          a(ng-click="openPost(post)")
+            h2.post-title {{post.title}}
+            h3.post-subtitle {{post.subTitle}}
+          p.post-meta Posted on {{post.createdAt|moment:'MMM Do, YYYY'}}
+      div(ng-if="!index")
+        a(ng-click="openIndex()") Back to index
+        h1.post-title {{post.title}}
+        h2.post-subtitle {{post.subTitle}}
+        article
+          div(data-ng-bind-html="post.html")
       ul.pager
+        li.previous
+          a(ng-click="previous()") Previous
         li.next
-          a(href='') Previous
-        li
-          a(href='') Next
+          a(ng-click="next()") Next
     .col-sm-3.col-sm-offset-1.blog-sidebar
       .sidebar-module.sidebar-module-inset
         h4 About
@@ -22,28 +28,6 @@
         ol.list-unstyled
           li
             a(href='') March 2014
-          li
-            a(href='') February 2014
-          li
-            a(href='') January 2014
-          li
-            a(href='') December 2013
-          li
-            a(href='') November 2013
-          li
-            a(href='') October 2013
-          li
-            a(href='') September 2013
-          li
-            a(href='') August 2013
-          li
-            a(href='') July 2013
-          li
-            a(href='') June 2013
-          li
-            a(href='') May 2013
-          li
-            a(href='') April 2013
       .sidebar-module
         h4 Elsewhere
         ol.list-unstyled

@@ -7,16 +7,29 @@
   .row
     .col-md-4
       editor-container
-        div(ckeditor="editorOptions",ng-model="page.template.default.block1")
+        div(editable="editorOptions",ng-model="page.template.default.block1")
       p
-        a.btn.btn-default(href='#', role='button') View details &raquo;
+        my-button(
+          available="navigationItems",
+          button="page.template.default.button1",
+          current-page="{{page.slug}}"
+          )
     .col-md-4
       editor-container
         div(ckeditor="editorOptions",ng-model="page.template.default.block2")
       p
-        a.btn.btn-default(href='#', role='button') View details &raquo;
+        my-button(
+          available="navigationItems",
+          button="page.template.default.button2",
+          current-page="{{page.slug}}"
+          )
     .col-md-4
       editor-container
-        div(ckeditor="editorOptions",ng-model="page.template.default.block3")
+        div(ckeditor="",ng-model="page.template.default.block3")
       p
-        a.btn.btn-default(href='#', role='button') View details &raquo;
+        my-button(
+          available="navigationItems",
+          button="page.template.default.button3",
+          current-page="{{page.slug}}"
+          )
+

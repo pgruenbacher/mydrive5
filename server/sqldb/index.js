@@ -31,6 +31,13 @@ db.User = db.sequelize.import(path.join(
 ));
 
 // Insert models below
+db.Post = db.sequelize.import(path.join(
+  config.root,
+  'server',
+  'api',
+  'post',
+  'post.model'
+));
 db.Image = db.sequelize.import(path.join(
   config.root,
   'server',
@@ -38,5 +45,8 @@ db.Image = db.sequelize.import(path.join(
   'image',
   'image.model'
 ));
+
+db.Post.belongsTo(db.User);
+db.User.hasMany(db.Post);
 
 module.exports = db;

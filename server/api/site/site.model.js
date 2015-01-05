@@ -16,7 +16,10 @@ var SubSchema = new Schema({
 SubSchema.virtual('slug').get(function(){
   return slug(this.title);  
 });
-
+SubSchema.virtual('parentId').get(function(){
+  // console.log(this.parent());
+  return this.parent().id
+});
 var MenuSchema = new Schema({
   title:String,
   sub:[SubSchema]

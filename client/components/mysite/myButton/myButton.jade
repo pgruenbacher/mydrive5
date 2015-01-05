@@ -1,0 +1,23 @@
+.btn-group(dropdown)
+  button(
+    type="button",
+    ng-click="navigate()",
+    ng-disabled="button.disabled"
+    ).btn
+    span(ng-show="!editMode") {{button.title}}
+    input(type="text",ng-blur="edit(false)",ng-model="button.title",ng-show="editMode")
+  button(type="button",dropdown-toggle).btn 
+    span.caret
+  ul.dropdown-menu(role="menu")
+    li
+      a(ng-click="disable(true)",ng-show="!button.disabled") Disable (won't appear on website)
+        a(ng-click="disable(false)",ng-show="button.disabled") Enable (will appear on website)
+    li.divider
+    li
+      a(ng-click="edit(true)",ng-show="!editMode") Edit Name
+      a(ng-click="edit(false)",ng-show="editMode") Exit Edit Mode
+    li.divider
+    li
+      h4 Choose button navigation destination
+    li(ng-repeat="item in available",ng-class="{highlight:button.destination===item}")
+      a(ng-click="setDestination(item)") {{item}}

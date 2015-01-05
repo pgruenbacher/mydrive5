@@ -3,7 +3,7 @@
     ticker(value='{{totalDonated}}')
   div.clear-both
     .progress-container
-      b{{percentGoal}} % of our goal of {{goal | number:0}} dollars
+      b {{percentGoal}} % of our goal of {{goal | number:0}} dollars
       progressbar(animate="true", value="percentGoal", type="success")
   div.clear-both
     payment-processor

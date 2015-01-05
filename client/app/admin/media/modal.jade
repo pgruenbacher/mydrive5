@@ -29,9 +29,9 @@
             tr(ng-repeat="file in uploader.queue")
               td
                 strong
-                  {{file.file.name}}
+                  | {{file.file.name}}
               td(nowrap)
-                {{file.file.size/1024/1024|number:2}} MB
+                | {{file.file.size/1024/1024|number:2}} MB
               td
                 .progress-bar(role="progress-bar" ng-style="{ 'width': file.progress + '%' }")
 

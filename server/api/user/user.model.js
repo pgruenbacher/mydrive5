@@ -3,6 +3,7 @@
 var crypto = require('crypto');
 var authTypes = ['github', 'twitter', 'facebook', 'google','stripe'];
 
+
 var validatePresenceOf = function(value) {
   console.log('validate',value);
   return value && value.length;
@@ -257,5 +258,6 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  
   return User;
 };

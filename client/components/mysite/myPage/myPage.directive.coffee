@@ -6,6 +6,7 @@ angular.module 'mydrive5App'
   scope:
     template:'@'
     page:'='
+    navigationItems:'='
   link: (scope, element, attrs) ->
     getTemplate=(templateName)->
       $http.get 'components/mysite/myPage/templates/layouts/'+scope.template+'.html'
@@ -24,11 +25,19 @@ angular.module 'mydrive5App'
         getTemplate scope.template
       oldScope=newValue
 
+  controller:($scope)->
+    $scope.newFaq=->
+      $scope.page.template.faq.faqs.push
+        title:'New Faq'
+        content:'<p>New content</p>'
 
-    scope.editorOptions =
+    $scope.deleteFaq=(index)->
+      $scope.page.template.faq.faqs.splice(index,1);
+
+    $scope.editorOptions =
       language: 'en'
       'skin': 'moono'
-      'extraPlugins': 'imagebrowser,mediaembed'
+      extraPlugins: 'imagebrowser,mediaembed,sourcedialog'
       imageBrowser_listUrl: '/api/images?type=editorBrowser'
       filebrowserBrowseUrl: '/api/files?type=editorBrowser'
       filebrowserImageUploadUrl: '/api/images/upload'
@@ -45,8 +54,13 @@ angular.module 'mydrive5App'
         name: 'editing' 
         items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ]
       ,
+        name:'document'
+        items: ['Sourcedialog']
+      ,
         name: 'links'
         items: [ 'Link', 'Unlink' ]
+      ,
+      '/'
       ,
         name: 'tools'
         items: [ 'SpellChecker', 'Maximize' ]
@@ -59,6 +73,4 @@ angular.module 'mydrive5App'
       ,
         name: 'insert'
         items: [ 'Image', 'Table', 'SpecialChar', 'MediaEmbed' ]
-      ,
-        '/'
       ]
