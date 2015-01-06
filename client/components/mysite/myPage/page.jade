@@ -6,7 +6,8 @@ div
       name="template"
       ng-options="template.label for template in templates"
       )
-  button.btn.btn-success(ng-click="save()") Save
+  button.btn.btn-success(ng-click="save()") Save page
+    i.fa.fa-spin.fa-spinner(ng-show="pageSaving")
 
 
 my-page(template="{{page.template.src}}",page="page",navigation-items="navigationItems")

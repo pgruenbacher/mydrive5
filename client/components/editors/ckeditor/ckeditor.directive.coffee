@@ -16,18 +16,18 @@ angular.module 'mydrive5App'
 
 
 
-# .directive 'editorContainer', ->
-#   template:"<div class='editor-container'>"+
-#     "<div class='editor-vline right'></div>"+
-#     "<div class='editor-vline'></div>"+
-#     "<div class='editor-hline bottom'></div>"+
-#     "<div class='editor-hline'></div>"+
-#     "<div ng-transclude='true'></div>"+
-#     "</div>"
-#   transclude:true
-#   restrict:'EA'
-#   scope:true
-#   link: (scope,element,attrs)->
+.directive 'editorContainer', ->
+  template:"<div class='editor-container'>"+
+    "<div class='editor-vline right'></div>"+
+    "<div class='editor-vline'></div>"+
+    "<div class='editor-hline bottom'></div>"+
+    "<div class='editor-hline'></div>"+
+    "<div ng-transclude='true'></div>"+
+    "</div>"
+  transclude:true
+  restrict:'EA'
+  scope:true
+  link: (scope,element,attrs)->
 
 
 

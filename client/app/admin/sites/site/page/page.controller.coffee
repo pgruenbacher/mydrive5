@@ -2,27 +2,24 @@
 
 angular.module 'mydrive5App'
 .controller 'PageCtrl', ($scope,$stateParams,Sites) ->
-  
+  console.log 'page ctrl'  
+  $scope.pageSaving=false
 
-  findPage=(site,domainName)->
-    for key,menuItem of site.menuItems
-      if menuItem.slug == domainName
-        return menuItem
-      if menuItem.sub.length > 0
-        for skey,subItem of menuItem.sub
-          if subItem.slug == domainName
-            return subItem
-
-  $scope.page=findPage($scope.site,$stateParams.page)
-  
   init=->
+    $scope.page=Sites.findPage($scope.site,$stateParams.page)
     if typeof $scope.page.template == 'undefined'
       $scope.page.template=$scope.templates[0]
 
   $scope.save=->
-    Sites.update($scope.site._id,$scope.site)
+    $scope.pageSaving=true
+    data=$scope.page
+    Sites.savePage($scope.site,$scope.page)
     .then (response)->
       console.log response
+      $scope.site=response.data[0]
+      init()
+      $scope.pageSaving=false
+
 
 
 

@@ -43,7 +43,8 @@ angular.module 'mydrive5App', [
 
 .run ($rootScope, $state, Auth) ->
   # Redirect to login if route requires auth and you're not logged in
-  $rootScope.$on '$stateChangeStart', (event, next) ->
+  $rootScope.$on '$stateChangeStart', (event, next,nextParams,fromState,fromParams) ->
+
     Auth.isLoggedIn (loggedIn) ->
       $state.go 'login' if next.authenticate and not loggedIn
 

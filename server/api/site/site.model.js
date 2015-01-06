@@ -10,7 +10,8 @@ function isSlug(value){
 
 
 var SubSchema = new Schema({
-  title:String
+  title:String,
+  template: Schema.Types.Mixed
 });
 
 SubSchema.virtual('slug').get(function(){
@@ -22,7 +23,8 @@ SubSchema.virtual('parentId').get(function(){
 });
 var MenuSchema = new Schema({
   title:String,
-  sub:[SubSchema]
+  sub:[SubSchema],
+  template: Schema.Types.Mixed
 });
 
 MenuSchema.virtual('slug').get(function(){

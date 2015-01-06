@@ -19,6 +19,8 @@ angular.module 'mydrive5App'
     url: '/:page'
     templateUrl:'components/mysite/myPage/page.html'
     controller:'PageCtrl'
-    
+    onExit: ($stateParams,site,Sites)->
+      page=Sites.findPage(site,$stateParams.page)
+      Sites.savePage(site,page)
 
 

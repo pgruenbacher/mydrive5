@@ -32,11 +32,12 @@ function handleEntityNotFound(res) {
 
 function saveUpdates(updates) {
   return function(entity) {
-    var updated = _.merge(entity, updates);
-    console.log
-    return updated.saveAsync()
-      .spread(function(updated) {
-        return updated;
+    console.log(updates.menuItems[0].sub[0]);
+    _.extend(entity, updates);
+    console.log(entity.menuItems[0].sub[0]);
+    return entity.saveAsync()
+      .spread(function(entity) {
+        return entity;
       });
   };
 }
@@ -53,7 +54,6 @@ function removeEntity(res) {
 }
 
 function findMenuItem(site,id,object){
-  console.log('id',typeof id);
   for(var i=0;i<site.menuItems.length; i++){
     console.log(site.menuItems[i]._id,typeof site.menuItems[i]._id);
     if(site.menuItems[i]._id.equals(id)){
@@ -89,7 +89,6 @@ exports.show = function(req, res) {
 
 // Creates a new site in the DB.
 exports.create = function(req, res) {
-  console.log(req);
   Site.createAsync(req.body)
     .then(responseWithResult(res, 201))
     .catch(handleError(res));
@@ -111,27 +110,53 @@ exports.update = function(req, res) {
   if (req.body._id) {
     delete req.body._id;
   }
-  console.log(req.body);
-  Site.findByIdAsync(req.params.id)
-    .then(handleEntityNotFound(res))
-    .then(saveUpdates(req.body))
-    .then(responseWithResult(res))
-    .catch(handleError(res));
-};
+  // So hacky update
+  // Site.findOneAndUpdate({
+  //   _id:req.params._id
+  // },req.body,function(site){
+  //   return res.json(site);
+  // });
 
-exports.set = function(req,res){
+  Site.updateAsync({
+    _id:req.params.id,
+    'menuItems._id':req.body.id
+  },req.body)
+  .spread(function(a,b){
+    console.log(a,b);
+    res.json(a);
+  })
+  .catch(handleError(res));
+
   // Site.findByIdAsync(req.params.id)
-  // .then(function(site){
-  //   if(req.body.parentId){
-  //     // findMenuItem(site,req.body.id,req.body);
-  //   }else{
-  //     console.log('noooo');
-  //     // findMenuItem(site,req.body.id,req.body);
-  //   }
-  //   saveUpdates()(site)
+  //   .then(handleEntityNotFound(res))
+  //   .then(saveUpdates(req.body))
   //   .then(responseWithResult(res))
   //   .catch(handleError(res));
-  // });
+};
+
+exports.setSub = function(req,res){
+  var data=req.body;
+  Site.findOneAsync({_id:req.params.id})
+  .then(handleEntityNotFound(res))
+  .then(function(site){
+    site.menuItems[data.grandParentIndex].sub[data.parentIndex].template=req.body.template;
+    site.saveAsync()
+    .then(responseWithResult(res, 201))
+    .catch(handleError(res));
+  })
+  .catch(handleError(res));
+};
+exports.setMenu = function(req,res){
+  var data=req.body;
+  Site.findOneAsync({_id:req.params.id})
+  .then(handleEntityNotFound(res))
+  .then(function(site){
+    site.menuItems[data.parentIndex].template=req.body.template;
+    site.saveAsync()
+    .then(responseWithResult(res, 201))
+    .catch(handleError(res));
+  })
+  .catch(handleError(res));
 };
 
 // Deletes a site from the DB.

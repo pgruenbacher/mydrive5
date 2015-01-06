@@ -124,7 +124,10 @@
       i.fa.fa-arrow-circle-down
 
 div.preview(ng-show="createVisible")
-  my-navbar(nav-items="newSite.menuItems",nav-brand="newSite.siteName",custom-color="custom(0)")
+  my-navbar(
+    nav-items="newSite.menuItems",
+    nav-brand="{{newSite.siteName}}",
+    custom-color="custom(0)")
 
 
   .container
