@@ -7,26 +7,13 @@ var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
 
-var validationError = function(res, statusCode) {
-  statusCode = statusCode || 422;
-  return function(err) {
-    res.status(statusCode).json(err);
-  };
-};
-
-function handleError(res, statusCode) {
-  statusCode = statusCode || 500;
-  return function(err) {
-    res.status(statusCode).send(err);
-  };
-}
-
-function respondWith(res, statusCode) {
-  statusCode = statusCode || 200;
-  return function() {
-    res.send(statusCode);
-  };
-}
+var Common = require('../api.service');
+var handleError=Common.handleError;
+var responseWithResult=Common.responseWithResult;
+var handleEntityNotFound=Common.handleEntityNotFound;
+var saveUpdates=Common.saveUpdates;
+var removeEntity=Common.removeEntity;
+var validationError=Common.validationError;
 
 /**
  * Get list of users
@@ -93,7 +80,7 @@ exports.show = function(req, res, next) {
  */
 exports.destroy = function(req, res) {
   User.destroy({ _id: req.params.id })
-    .then(respondWith(res, 204))
+    .then(responseWithResult(res, 204))
     .catch(handleError(res));
 };
 
@@ -114,7 +101,7 @@ exports.changePassword = function(req, res, next) {
       if (user.authenticate(oldPass)) {
         user.password = newPass;
         return user.save()
-          .then(respondWith(res, 200))
+          .then(responseWithResult(res, 200))
           .catch(validationError(res));
       } else {
         return res.send(403);

@@ -12,7 +12,6 @@ angular.module 'mydrive5App'
 
   $scope.save=->
     $scope.pageSaving=true
-    data=$scope.page
     Sites.savePage($scope.site,$scope.page)
     .then (response)->
       console.log response

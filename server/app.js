@@ -13,6 +13,9 @@ var sqldb = require('./sqldb');
 var config = require('./config/environment');
 var multer = require('multer');
 
+// var subdomain = require('subdomain');
+var vhost=require('vhost');
+
 // Connect to MongoDB
 mongoose.connect(config.mongo.uri, config.mongo.options);
 
@@ -26,6 +29,10 @@ var socketio = require('socket.io')(server, {
   serveClient: (config.env === 'production') ? false : true,
   path: '/socket.io-client'
 });
+
+// app.use(subdomain({ base : 'mydrive5', removeWWW : true }));
+
+
 
 app.use(require('prerender-node').set('prerenderToken', config.prerender.token));
 //Muler Upload Settings
@@ -56,9 +63,24 @@ app.use(multer({
   }
 }));
 
+
+
+
+var redirect = express();
+var main=express();
+
 require('./config/socketio')(socketio);
-require('./config/express')(app);
-require('./routes')(app);
+
+require('./config/express')(main);
+require('./config/express')(redirect);
+
+require('./routes')(main,'index.html');
+require('./routes')(redirect,'public.index.html');
+
+
+app.use(vhost('*.mydrive5.com', redirect));
+app.use(vhost('localhost',main));
+
 
 // Start server
 function startServer() {
@@ -72,6 +94,7 @@ sqldb.sequelize.sync()
   .catch(function(err) {
     console.log('Server failed to start due to error: %s', err);
   });
+
 
 // Expose app
 exports = module.exports = app;

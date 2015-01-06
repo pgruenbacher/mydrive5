@@ -3,74 +3,12 @@
 var _ = require('lodash');
 var Site = require('./site.model');
 
-function handleError(res, statusCode) {
-  statusCode = statusCode || 500;
-  return function(err) {
-    console.log(err);
-    res.send(statusCode, err);
-  };
-}
-
-function responseWithResult(res, statusCode) {
-  statusCode = statusCode || 200;
-  return function(entity) {
-    if (entity) {
-      return res.json(statusCode, entity);
-    }
-  };
-}
-
-function handleEntityNotFound(res) {
-  return function(entity) {
-    if (!entity) {
-      res.send(404);
-      return null;
-    }
-    return entity;
-  };
-}
-
-function saveUpdates(updates) {
-  return function(entity) {
-    console.log(updates.menuItems[0].sub[0]);
-    _.extend(entity, updates);
-    console.log(entity.menuItems[0].sub[0]);
-    return entity.saveAsync()
-      .spread(function(entity) {
-        return entity;
-      });
-  };
-}
-
-function removeEntity(res) {
-  return function(entity) {
-    if (entity) {
-      return entity.removeAsync()
-        .then(function() {
-          return res.send(204);
-        });
-    }
-  };
-}
-
-function findMenuItem(site,id,object){
-  for(var i=0;i<site.menuItems.length; i++){
-    console.log(site.menuItems[i]._id,typeof site.menuItems[i]._id);
-    if(site.menuItems[i]._id.equals(id)){
-      console.log('return');
-      site.menuItems[i]=object;
-      return site;
-    }
-    for(var j=0; j<site.menuItems[i].sub.length; j++){
-      console.log(site.menuItems[i].sub[j]._id,site.menuItems[i].sub[j]._id===id);
-      if(site.menuItems[i].sub[j]._id.equals(id)){
-        console.log('return sub',site.menuItems[i].sub[j]._id);
-        site.menuItems[i].sub[j]=object;
-        return site;
-      }
-    }
-  }
-}
+var Common = require('../api.service');
+var handleError=Common.handleError;
+var responseWithResult=Common.responseWithResult;
+var handleEntityNotFound=Common.handleEntityNotFound;
+var saveUpdates=Common.saveUpdates;
+var removeEntity=Common.removeEntity;
 
 // Gets list of sites from the DB.
 exports.index = function(req, res) {

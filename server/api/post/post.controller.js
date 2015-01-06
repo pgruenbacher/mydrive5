@@ -5,53 +5,13 @@ var sqldb = require('../../sqldb')
 var Post = sqldb.Post;
 var User = sqldb.User;
 
-function handleError(res, statusCode) {
-  statusCode = statusCode || 500;
-  return function(err) {
-    console.log(err);
-    res.status(statusCode).send(err);
-  };
-}
+var Common = require('../api.service');
+var handleError=Common.handleError;
+var responseWithResult=Common.responseWithResult;
+var handleEntityNotFound=Common.handleEntityNotFound;
+var saveUpdates=Common.saveUpdates;
+var removeEntity=Common.removeEntity;
 
-function responseWithResult(res, statusCode) {
-  statusCode = statusCode || 200;
-  return function(entity) {
-    if (entity) {
-      console.log('work');
-      return res.status(statusCode).json(entity);
-    }
-  };
-}
-
-function handleEntityNotFound(res) {
-  return function(entity) {
-    if (!entity) {
-      res.send(404);
-      return null;
-    }
-    return entity;
-  };
-}
-
-function saveUpdates(updates) {
-  return function(entity) {
-    return entity.updateAttributes(updates)
-      .then(function(updated) {
-        return updated;
-      });
-  };
-}
-
-function removeEntity(res) {
-  return function(entity) {
-    if (entity) {
-      return entity.destroy()
-        .then(function() {
-          return res.send(204);
-        });
-    }
-  };
-}
 
 // Get list of Posts
 exports.index = function(req, res) {

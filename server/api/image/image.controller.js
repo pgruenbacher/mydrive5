@@ -12,6 +12,14 @@ var _ = require('lodash');
 var sqldb = require('../../sqldb')
 var Image = sqldb.Image;
 
+
+var Common = require('../api.service');
+var handleError=Common.handleError;
+var responseWithResult=Common.responseWithResult;
+var handleEntityNotFound=Common.handleEntityNotFound;
+var saveUpdates=Common.saveUpdates;
+var removeEntity=Common.removeEntity;
+
 // Gets list of images from the DB.
 function createThumbnail(location,callback){
   blitline.addJob({
@@ -57,52 +65,6 @@ function formatMediaEmbed(images){
   return array;
 }
 
-function handleError(res, statusCode) {
-  statusCode = statusCode || 500;
-  return function(err) {
-    console.log('error',err);
-    res.status(statusCode).send(err);
-  };
-}
-
-function responseWithResult(res, statusCode) {
-  statusCode = statusCode || 200;
-  return function(entity) {
-    if (entity) {
-      return res.status(statusCode).json(entity);
-    }
-  };
-}
-
-function handleEntityNotFound(res) {
-  return function(entity) {
-    if (!entity) {
-      res.send(404);
-      return null;
-    }
-    return entity;
-  };
-}
-
-function saveUpdates(updates) {
-  return function(entity) {
-    return entity.updateAttributes(updates)
-      .then(function(updated) {
-        return updated;
-      });
-  };
-}
-
-function removeEntity(res) {
-  return function(entity) {
-    if (entity) {
-      return entity.destroy()
-        .then(function() {
-          return res.send(204);
-        });
-    }
-  };
-}
 
 exports.index = function(req, res) {
   Image.findAll({

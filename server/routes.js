@@ -7,7 +7,9 @@
 var errors = require('./components/errors');
 var path = require('path');
 
-module.exports = function(app) {
+
+
+module.exports = function(app,index) {
 
   // Insert routes below
   app.use('/api/posts', require('./api/post'));
@@ -18,13 +20,29 @@ module.exports = function(app) {
 
   app.use('/auth', require('./auth'));
 
+  // app.get('/subdomain/:domain/', function(request, response) {
+  //   return response.json(request.params);
+  // });
+  
+  // app.use('/subdomain/:subdomain/',require('./public/routing'));
+  // app.get('/subdomain/:subDomain/', function(request, response) {
+  //   response.end('BLOG.LOCALHOST: "/"');
+  // });
+  // app.route('/subdomain/:subdomain')
+  // .get(function(req, res) {
+  //   res.sendFile(path.resolve(app.get('appPath') + '/public.index.html'));
+  // });
+
+
+  
+
   // All undefined asset or api routes should return a 404
-  app.route('/:url(api|auth|components|app|bower_components|assets)/*')
+  app.route('/:url(api|auth|subdomain|components|app|bower_components|assets)/*')
    .get(errors[404]);
 
   // All other routes should redirect to the index.html
   app.route('/*')
-    .get(function(req, res) {
-      res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-    });
+  .get(function(req, res) {
+    res.sendFile(path.resolve(app.get('appPath') + '/'+index));
+  });
 };
