@@ -12,34 +12,18 @@
 	"buffers":
 	[
 		{
-			"file": "client/app/admin/sites/site/page/page.controller.coffee",
+			"file": "server/app.js",
 			"settings":
 			{
-				"buffer_size": 4398,
+				"buffer_size": 2377,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/components/mysite/myPage/myPage.directive.coffee",
+			"file": "client/public.index.html",
 			"settings":
 			{
-				"buffer_size": 2164,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/views/404.jade",
-			"settings":
-			{
-				"buffer_size": 3223,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 20727,
+				"buffer_size": 7172,
 				"line_ending": "Unix"
 			}
 		}
@@ -94,23 +78,23 @@
 	"expanded_folders":
 	[
 		"/home/paul/Code/fundraiser/mydrive5",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp",
-		"/home/paul/Code/fundraiser/mydrive5/client/assets/images",
-		"/home/paul/Code/fundraiser/mydrive5/dist",
+		"/home/paul/Code/fundraiser/mydrive5/client",
+		"/home/paul/Code/fundraiser/mydrive5/dist/client",
 		"/home/paul/Code/fundraiser/mydrive5/server",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/environment",
 		"/home/paul/Code/fundraiser/mydrive5/server/public",
 		"/home/paul/Code/fundraiser/mydrive5/server/views"
 	],
 	"file_history":
 	[
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/server/views/404.jade",
+		"/home/paul/Code/fundraiser/mydrive5/Gruntfile.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/public/routing.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/package.json",
-		"/home/paul/Code/fundraiser/mydrive5/Gruntfile.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/config/seed.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/service.js",
@@ -161,7 +145,6 @@
 		"/home/paul/Code/fundraiser/mydrive5/server/api/post/post.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/services/sites/sites.service.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
@@ -230,8 +213,7 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/class_webdriver_FirefoxDomExecutor.html",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/statistic-box/statistic-box.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/media/modal.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/media/modal.html",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/media/media.js.map"
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/media/modal.html"
 	],
 	"find":
 	{
@@ -394,16 +376,16 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/app/admin/sites/site/page/page.controller.coffee",
+					"file": "server/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4398,
+						"buffer_size": 2377,
 						"regions":
 						{
 						},
@@ -412,96 +394,6 @@
 							[
 								0,
 								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/components/mysite/myPage/myPage.directive.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 216.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "server/views/404.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3223,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 6,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1998.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Gruntfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9481,
-								9481
 							]
 						],
 						"settings":
@@ -511,10 +403,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6277.0,
+						"translation.y": 1080.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/public.index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								754,
+								754
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -574,6 +496,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"app.js",
+				"server/app.js"
+			],
 			[
 				"gruntfile",
 				"Gruntfile.js"
@@ -673,10 +599,6 @@
 			[
 				"mynavbar.dire",
 				"client/components/mysite/myNavbar/myNavbar.directive.coffee"
-			],
-			[
-				"app.js",
-				"server/app.js"
 			],
 			[
 				"page.jade",

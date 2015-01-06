@@ -75,7 +75,7 @@ require('./config/express')(main);
 require('./config/express')(redirect);
 
 require('./routes')(main,'index.html');
-require('./routes')(redirect,'public.index.html');
+require('./public')(redirect,'public.index.html');
 
 
 app.use(vhost('*.mydrive5.com', redirect));

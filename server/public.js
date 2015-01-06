@@ -15,7 +15,6 @@ module.exports = function(app,index) {
   app.use('/api/posts', require('./api/post'));
   app.use('/api/sites', require('./api/site'));
   app.use('/api/images', require('./api/image'));
-  app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 
   app.use('/auth', require('./auth'));
@@ -27,7 +26,6 @@ module.exports = function(app,index) {
   // All other routes should redirect to the index.html
   app.route('/*')
   .get(function(req, res) {
-    console.log('get inde');
     res.sendFile(path.resolve(app.get('appPath') + '/'+index));
   });
 };
