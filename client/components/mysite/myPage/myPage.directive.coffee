@@ -60,6 +60,9 @@ angular.module 'mydrive5App'
         name: 'links'
         items: [ 'Link', 'Unlink' ]
       ,
+        name:'colors'
+        items:['TextColor','BGColor']
+      ,
       '/'
       ,
         name: 'tools'

@@ -68,7 +68,7 @@ function formatMediaEmbed(images){
 
 exports.index = function(req, res) {
   Image.findAll({
-    where:{OriginalId:{gt:0}},
+    where:{OriginalId:{not:0}},
     include:[{model:Image,as:'Thumbnail'}]
   })
     .then(function(images){

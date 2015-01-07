@@ -1,0 +1,49 @@
+.container
+  .row
+    .col-md-6
+      editor-container
+        div(ckeditor="editorOptions",ng-model="page.template.contact.info")
+    .col-md-6
+      .well.well-sm
+        form.form-horizontal
+          fieldset
+            legend.text-center.header Contact Us
+            .form-group
+              span.col-md-1.col-md-offset-2.text-center
+                i.fa.fa-user.fa-2x
+              .col-md-8
+                input.form-control(
+                  name="name"
+                  type="text"
+                  placeholder="your name"
+                  )
+            .form-group
+              span.col-md-1.col-md-offset-2.text-center
+                i.fa.fa-envelope.fa-2x
+              .col-md-8
+                input.form-control(
+                  name="name"
+                  type="text"
+                  placeholder="your email"
+                  )
+            .form-group
+              span.col-md-1.col-md-offset-2.text-center
+                i.fa.fa-phone-square.fa-2x
+              .col-md-8
+                input.form-control(
+                  name="name"
+                  type="text"
+                  placeholder="your phone"
+                  )
+            .form-group
+              span.col-md-1.col-md-offset-2.text-center
+                i.fa.fa-pencil-square.fa-2x
+              .col-md-8
+                textarea.form-control(
+                  name="name"
+                  type="text"
+                  placeholder="your message"
+                  )
+            .row
+              .col-md-offset-4.col-md-4
+                button.btn.btn-lg.btn-success Submit

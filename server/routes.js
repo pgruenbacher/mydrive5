@@ -9,7 +9,7 @@ var path = require('path');
 
 
 
-module.exports = function(app,index) {
+module.exports = function(app) {
 
   // Insert routes below
   app.use('/api/posts', require('./api/post'));
@@ -28,6 +28,6 @@ module.exports = function(app,index) {
   app.route('/*')
   .get(function(req, res) {
     console.log('get inde');
-    res.sendFile(path.resolve(app.get('appPath') + '/'+index));
+    res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
   });
 };

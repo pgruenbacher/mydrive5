@@ -1,9 +1,8 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'mediaCtrl', ($scope,$modal,$upload,$http,$filter) ->
+.controller 'mediaCtrl', ($scope,Images,$modal,socket,$upload,$http,$filter) ->
   $scope.message = 'Hello'
-  $scope.imageUploads = []
 
   $scope.openUploadModal=->
     console.log 'open'
@@ -11,14 +10,28 @@ angular.module 'mydrive5App'
       templateUrl:'app/admin/media/modal.html'
       size:'lg'
     } 
+  $scope.images=[]
+  Images.all()
+  .then (response)->
+    $scope.images = response.data
+    console.log $scope.images, response
+    socket.syncUpdates 'image', $scope.images
+  
+  $scope.$on '$destroy', ->
+    socket.unsyncUpdates 'image'
+  
+
+            
+
+
+.controller 'UploadCtrl', ($scope, Images, $http, $rootScope, $upload, $filter)->
+
+  $scope.imageUploads = []
 
   performSave=(parsedData)->
-    $http.post('/api/images',parsedData).success (response)->
-      console.log response
-
+    Images.create(parsedData).success (response)->
 
   performUpload=(file, i)->
-    console.log 'perform',file,i
     $http.get('/api/images/s3-sign?mimeType='+ file.type).success (response)->
       s3Params = response
       $scope.upload[i] = $upload.upload {
@@ -70,20 +83,19 @@ angular.module 'mydrive5App'
     $scope.upload[index].abort()
     $scope.upload[index] = null
 
+  $scope.abortAll=()->
+    for upload in $scope.upload
+      upload.abort();
+      upload=null
+
   $scope.onFileSelect = ($files)->
     $scope.files = $files
     $scope.upload = []
     i=0
     for file in $files
-      console.log file
       file.progress = parseInt(0)
       performUpload(file,i)
       i++
-      
-            
-
-
-.controller 'uploadCtrl', ($scope, $http, $rootScope, $upload)->
   
 
 

@@ -6,6 +6,8 @@
 .container
   .row
     .col-md-4
+      div.my-image(my-image="page.template.default.image1").img-circle
+        img(ng-src="{{page.template.default.image1.urlPath}}").img-circle.img-responsive
       editor-container
         div(editable="editorOptions",ng-model="page.template.default.block1")
       p
@@ -15,6 +17,8 @@
           current-page="{{page.slug}}"
           )
     .col-md-4
+      div.my-image(my-image="page.template.default.image2").img-circle
+        img(ng-src="{{page.template.default.image2.urlPath}}").img-circle.img-responsive
       editor-container
         div(ckeditor="editorOptions",ng-model="page.template.default.block2")
       p
@@ -24,6 +28,8 @@
           current-page="{{page.slug}}"
           )
     .col-md-4
+      div.my-image(my-image="page.template.default.image3").img-circle
+        img(ng-src="{{page.template.default.image3.urlPath}}").img-circle.img-responsive
       editor-container
         div(ckeditor="",ng-model="page.template.default.block3")
       p

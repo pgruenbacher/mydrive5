@@ -19,7 +19,7 @@ var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose-bird')();
 
-module.exports = function(app) {
+module.exports = function(app,appFolder) {
   var env = app.get('env');
 
   app.set('views', config.root + '/server/views');
@@ -40,10 +40,10 @@ module.exports = function(app) {
     store: new mongoStore({ mongoose_connection: mongoose.connection })
   }));
 
-  app.set('appPath', path.join(config.root, 'client'));
+  app.set('appPath', path.join(config.root, appFolder));
 
   if ('production' === env) {
-    app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
+    app.use(favicon(path.join(config.root, appFolder, 'favicon.ico')));
     app.use(express.static(app.get('appPath')));
     app.use(morgan('dev'));
   }

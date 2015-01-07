@@ -37,11 +37,18 @@ angular.module 'mydrive5App'
       default:
         block3:default1
         button3:{}
+        image3:{}
         block2:default1
         button2:{}
+        image2:{}
         block1:default1
         button1:{}
         header1:default1
+        image1:{}
+    }
+    {
+      src:'contactLayout'
+      label:'contact'
     }
     {
       src:'blogLayout'

@@ -71,11 +71,11 @@ var main=express();
 
 require('./config/socketio')(socketio);
 
-require('./config/express')(main);
-require('./config/express')(redirect);
+require('./config/express')(main,'client');
+require('./config/express')(redirect,'public');
 
-require('./routes')(main,'index.html');
-require('./public')(redirect,'public.index.html');
+require('./routes')(main);
+require('./public')(redirect);
 
 
 app.use(vhost('*.mydrive5.com', redirect));
