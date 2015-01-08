@@ -36,7 +36,6 @@ angular.module 'mydrive5App'
       label:'welcome'
       default:
         block3:default1
-        button3:{}
         image3:{}
         block2:default1
         button2:{}
@@ -49,6 +48,8 @@ angular.module 'mydrive5App'
     {
       src:'contactLayout'
       label:'contact'
+      contact:
+        content1:'<h1><u>Example Contact Info</u></h1> <p>&nbsp;</p> <h4><span style="color:rgb(0, 0, 0)">George Blanchette</span><br /> <span style="color:rgb(0, 0, 0)">15 Cliff Street</span><br /> <span style="color:rgb(0, 0, 0)">Griswold CT 06351</span></h4> <p><strong>Click for:&nbsp;</strong><strong><a href="https://www.google.com/maps/dir/Current+Location/15+Cliff+Street+Griswold+CT+06351">Directions</a>&nbsp;</strong></p> <p><strong>Tel:</strong><a href="tel://1-510-434-1344"><strong>&nbsp;</strong>(510)-434-1344</a><br /> <strong>Email:&nbsp;</strong><a href="mailto:example@example.com">example@example.com</a></p> <p>&nbsp;</p> <h2><span style="color:rgb(0, 0, 0)">Ken Burns</span></h2> <h4><span style="color:rgb(0, 0, 0)">233 River Road&nbsp;&diams;&nbsp;New London CT 06320 &diams;&nbsp;</span><a href="tel://1-510-434-1344" style="line-height: 19.999979019165px; background-color: rgb(255, 255, 255);">(510)-434-1344</a>&nbsp;&diams;&nbsp;<a href="mailto:example@example.com" style="line-height: 19.999979019165px; background-color: rgb(255, 255, 255);">example@example.com</a></h4>'
     }
     {
       src:'blogLayout'

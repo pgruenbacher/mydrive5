@@ -37,7 +37,7 @@ angular.module 'mydrive5App'
     $scope.editorOptions =
       language: 'en'
       'skin': 'moono'
-      extraPlugins: 'imagebrowser,mediaembed,sourcedialog'
+      extraPlugins: 'imagebrowser,mediaembed,sourcedialog,colorbutton,SimpleLink,colordialog,youtube'
       imageBrowser_listUrl: '/api/images?type=editorBrowser'
       filebrowserBrowseUrl: '/api/files?type=editorBrowser'
       filebrowserImageUploadUrl: '/api/images/upload'
@@ -46,7 +46,7 @@ angular.module 'mydrive5App'
       toolbar: 'full'
       toolbar_full: [
         name: 'basicstyles'
-        items: [ 'Bold', 'Italic' ]
+        items: [ 'Bold', 'Italic', 'Underline' ]
       ,   
         name: 'paragraph'
         items: [ 'BulletedList', 'NumberedList', 'Blockquote' ]
@@ -58,7 +58,7 @@ angular.module 'mydrive5App'
         items: ['Sourcedialog']
       ,
         name: 'links'
-        items: [ 'Link', 'Unlink' ]
+        items: [ 'Link' , 'Unlink',]
       ,
         name:'colors'
         items:['TextColor','BGColor']
@@ -72,8 +72,8 @@ angular.module 'mydrive5App'
         items: [ 'Undo', 'Redo' ]
       ,
         name: 'styles'
-        items: [ 'Format', 'FontSize', 'TextColor', 'PasteText', 'PasteFromWord', 'RemoveFormat' ]
+        items: [ 'Format', 'PasteText', 'PasteFromWord', 'RemoveFormat' ]
       ,
         name: 'insert'
-        items: [ 'Image', 'Table', 'SpecialChar', 'MediaEmbed' ]
+        items: [ 'Image', 'Table', 'SpecialChar', 'MediaEmbed','Youtube' ]
       ]
