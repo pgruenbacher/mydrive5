@@ -9,21 +9,23 @@ angular.module 'mydrive5App'
     button:'='
     currentPage:'@'
   link: (scope, element, attrs) ->
+    if angular.isDefined(scope.button)
+      if typeof scope.button.title =='undefined'
+        scope.button.title='nav button'
 
-    if !scope.button.title?
-      scope.button.title='nav button'
-
-    scope.edit=(bool)->
-      scope.editMode=bool
-    scope.disable=(bool)->
-      scope.button.disabled=bool
-    scope.setDestination=(dest)->
-      scope.button.destination=dest
-    scope.navigate=()->
-      if scope.button.destination? && !scope.editMode
-        path=$location.path()
-        pos=path.search(scope.currentPage)
-        path=path.slice(0,pos)+scope.button.destination
-        $location.path(path)
+      scope.edit=(bool)->
+        scope.editMode=bool
+      scope.disable=(bool)->
+        scope.button.disabled=bool
+      scope.setDestination=(dest)->
+        scope.button.destination=dest
+      scope.navigate=()->
+        if scope.button.destination? && !scope.editMode
+          path=$location.path()
+          pos=path.search(scope.currentPage)
+          path=path.slice(0,pos)+scope.button.destination
+          $location.path(path)
+    else
+      element.addClass 'ng-hide'
 
 

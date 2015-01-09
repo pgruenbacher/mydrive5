@@ -1,0 +1,31 @@
+.masthead
+  .container
+    .col-md-6.col-md-offset-1
+      editor-container
+        div(ckeditor="editorOptions",ng-model="page.template.eventInfo.header1")
+
+.container
+  .row
+    .col-md-6.col-md-offset-1
+      tabset(vertical="false",type="tabs")
+        tab(
+          ng-repeat="schedule in page.template.eventInfo.schedules",
+          heading="{{schedule.title}}"
+          )
+          editor-container
+            div(editable="editorOptions",content-editable="true",ng-model="schedule.content")
+          
+    .col-md-4
+      form.form-horizontal
+        .form-group(ng-repeat="schedule in page.template.eventInfo.schedules")
+          label.control-lavel.col-sm-3
+            | Tab title:
+          .col-sm-7
+            input.form-control(
+              ng-model="schedule.title"
+              )
+          .col-sm-1
+            button.btn.btn-danger(ng-click="deleteTab($index)")
+              i.fa.fa-trash
+      button.btn.btn(ng-click="newTab()")
+        | New Group

@@ -1,4 +1,7 @@
-.masthead
+.jumbotron.masthead.my-mage(
+  my-image="page.template.default.jumboImage"
+  ng-style="{'background-image':'url('+page.template.default.jumboImage.urlPath+')'}"
+  )
   .container
     editor-container
       div(ckeditor="editorOptions",ng-model="page.template.default.header1")

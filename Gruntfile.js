@@ -262,7 +262,8 @@ module.exports = function (grunt) {
           /bootstrap.js/, 
           '/json3/', 
           '/es5-shim/', 
-          /bootstrap.css/, 
+          /bootstrap.css/,
+          '/bower_components/ckeditor/ckeditor.js',
           /font-awesome.css/
         ]
       }

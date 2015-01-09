@@ -6,7 +6,7 @@ angular.module 'mydrive5App'
   transclude:true
   scope:
     myImage:'='
-  template:'<div ng-show="placehold" class="holder-text">Click to edit (this placeholder won\'t appear on the website otherwise)</div><div ng-transclude></div>'
+  template:'<div ng-show="placehold" class="holder-text">Click to edit image (this placeholder won\'t appear on the website otherwise)</div><div ng-transclude></div>'
   link: (scope, element, attrs) ->
     placehold=()->
       scope.placehold=true
@@ -26,7 +26,9 @@ angular.module 'mydrive5App'
       scope.placehold=false
 
 
-    element.on 'click', (a,b)->
+    element.on 'click', (e)->
+      if e.target.getAttribute('my-image') == null & e.target.tagName != 'IMG'
+        return null
       modalInstance=$modal.open
         size:'lg'
         templateUrl:'components/mysite/myImage/myImageModal.html'

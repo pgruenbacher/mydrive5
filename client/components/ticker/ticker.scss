@@ -8,18 +8,18 @@
   color:white;
   position:absolute;
   text-shadow: 0 -1px 0 black;
-  left:22px;
+  left:10px;
   top:8px;
   z-index:1000;
 }
-// .dollar-container-parent:before{
-//   content:'$';
-//   display:block;
-//   font-size:4em;
-//   color:white;
-//   position:absolute;
-//   text-shadow: 0 -1px 0 black;
-//   left:24px;
-//   bottom:10px;
-//   z-index:1000;
-// }
+.ticker-container{
+  display:block;
+  position:relative;
+  height:100px;
+}
+.day-label{
+  font-size:3.5em;
+  color:white;
+  text-shadow: 0 -1px 0 black;
+  padding-left:10px;
+}

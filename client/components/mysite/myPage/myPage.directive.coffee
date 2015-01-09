@@ -32,7 +32,15 @@ angular.module 'mydrive5App'
         content:'<p>New content</p>'
 
     $scope.deleteFaq=(index)->
-      $scope.page.template.faq.faqs.splice(index,1);
+      $scope.page.template.faq.faqs.splice(index,1)
+
+    $scope.newTab=->
+      $scope.page.template.eventInfo.schedules.push
+        title:'New Tab'
+        content:'<p>New content</p>'
+
+    $scope.deleteTab=(index)->
+      $scope.page.template.eventInfo.schedules.splice(index,1)
 
     $scope.editorOptions =
       language: 'en'

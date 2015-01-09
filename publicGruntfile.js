@@ -30,7 +30,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     yeoman: {
       // configurable paths
-      client: require('./bower.json').appPath || 'public',
+      client: 'public',
       dist: 'dist'
     },
     express: {
@@ -256,14 +256,18 @@ module.exports = function (grunt) {
     wiredep: {
       target: {
         src: '<%= yeoman.client %>/index.html',
-        ignorePath: '<%= yeoman.client %>/',
+        ignorePath: '../client/',
         exclude: [
           /bootstrap-sass-official/, 
           /bootstrap.js/, 
           '/json3/', 
           '/es5-shim/', 
           /bootstrap.css/, 
-          /font-awesome.css/
+          /font-awesome.css/,
+          /ckeditor/,
+          /ng-ckeditor/,
+          /ng-file-upload/,
+          /ng-file-upload-shim/
         ]
       }
     },
@@ -381,9 +385,30 @@ module.exports = function (grunt) {
         html: ['<%= yeoman.dist %>/public/*.html']
       }
     },
-
     // Copies remaining files to places other tasks can use
     copy: {
+      client:{
+        files:[{
+          expand:true,
+          cwd:'client',
+          dest:'public',
+          src:[
+            'assets/**/*',
+            'bower_components/**/*',
+            'components/statistic-box/*',
+            'components/payments/**/*',
+            'components/ui-router/**/*',
+            'components/mysite/**/*',
+            'components/fullBlog/**/*',
+            'components/auth/**/*',
+            'components/filter/**/*',
+            'components/socket/**/*',
+            'components/ticker/**/*',
+            'components/mongoose-error/**/*',
+            'components/maskover/**/*',
+          ]
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -626,6 +651,7 @@ module.exports = function (grunt) {
       scripts: {
         options: {
           transform: function(filePath) {
+            if(filePath === null){console.log('null');return '';}
             filePath = filePath.replace('/public/', '');
             filePath = filePath.replace('/.tmp/', '');
             return '<script src="' + filePath + '"></script>';
@@ -705,24 +731,25 @@ module.exports = function (grunt) {
 
     if (target === 'debug') {
       return grunt.task.run([
-        // 'clean:server',
+        'clean:server',
         'env:all',
         'injector:sass', 
         'concurrent:server',
         'injector',
-        // 'wiredep',
+        'wiredep',
         'autoprefixer',
         'concurrent:debug'
       ]);
     }
 
     grunt.task.run([
-      // 'clean:server',
+      'clean:server',
+      'copy:client',
       'env:all',
       'injector:sass', 
       'concurrent:server',
       'injector',
-      // 'wiredep',
+      'wiredep',
       'autoprefixer',
       'express:dev',
       'wait',
@@ -748,7 +775,7 @@ module.exports = function (grunt) {
 
     else if (target === 'public') {
       return grunt.task.run([
-        // 'clean:server',
+        'clean:server',
         'env:all',
         'injector:sass', 
         'concurrent:test',
@@ -772,7 +799,7 @@ module.exports = function (grunt) {
 
       else {
         return grunt.task.run([
-          // 'clean:server',
+          'clean:server',
           'env:all',
           'env:test',
           'injector:sass', 
@@ -832,7 +859,7 @@ module.exports = function (grunt) {
     'injector:sass', 
     'concurrent:dist',
     'injector',
-    // 'wiredep',
+    'wiredep',
     'useminPrepare',
     'autoprefixer',
     'ngtemplates',
