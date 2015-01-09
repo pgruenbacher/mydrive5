@@ -11,7 +11,7 @@
 
   div.row
     form.form-horizontal(name="newSiteForm",ng-show="createVisible",on-valid-submit="saveSite()")
-      div.col-lg-6
+      div.col-lg-6.well
         div.form-group
           label(for="siteName").control-label.col-sm-4 My Website Name
           div.col-sm-8
@@ -98,7 +98,7 @@
                   span delete&nbsp
                   i.fa.fa-trash
 
-      div.col-lg-6           
+      div.col-lg-6.well           
         
         palette-picker(choice="choice")
 

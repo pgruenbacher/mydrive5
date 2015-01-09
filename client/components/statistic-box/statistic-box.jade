@@ -1,11 +1,15 @@
 .statistic-box
   div.ticker-container
-    ticker(id="test",value="1392120000",method="days")
+    div(ticker id="test",value="1392120000",method="days")
+    .day-label
+      p days Left 
+    p till my event
   div.ticker-container
-    ticker(value='{{totalDonated}}',method="dollars")
+    div(ticker value='{{totalDonated}}',method="dollars")
   div.clear-both
     .progress-container
-      b {{percentGoal}} % of our goal of {{goal | number:0}} dollars
+      div.clear-both
+        b {{percentGoal}} % of goal of {{goal | number:0}} dollars
       progressbar(animate="true", value="percentGoal", type="success")
   div.clear-both
     payment-processor

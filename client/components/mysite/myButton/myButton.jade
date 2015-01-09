@@ -6,9 +6,9 @@
     ).btn
     span(ng-show="!editMode") {{button.title}}
     input(type="text",ng-blur="edit(false)",ng-model="button.title",ng-show="editMode")
-  button(type="button",dropdown-toggle).btn 
+  button(type="button",dropdown-toggle, ng-if="editing").btn 
     span.caret
-  ul.dropdown-menu(role="menu")
+  ul.dropdown-menu(role="menu" ng-if="editing")
     li
       a(ng-click="disable(true)",ng-show="!button.disabled") Disable (won't appear on website)
         a(ng-click="disable(false)",ng-show="button.disabled") Enable (will appear on website)

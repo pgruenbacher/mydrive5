@@ -15,11 +15,15 @@
 .ticker-container{
   display:block;
   position:relative;
-  height:100px;
+  min-height:100px;
+  .tick-flip{
+    margin-right:5px;
+    border: none;
+    box-shadow: none;
+    background:none;
+
+  }
 }
-.day-label{
-  font-size:3.5em;
-  color:white;
-  text-shadow: 0 -1px 0 black;
-  padding-left:10px;
+.tick-flip{
+  margin-right:5px;
 }

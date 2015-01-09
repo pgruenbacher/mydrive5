@@ -10,4 +10,5 @@ angular.module 'mydrive5App'
   link: (scope, element, attrs) ->
     scope.$watch 'totalDonated', ->
       scope.percentGoal=$filter('number')(scope.totalDonated/scope.goal*100,0)
-      false
+
+    

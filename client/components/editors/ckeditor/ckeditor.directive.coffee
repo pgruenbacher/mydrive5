@@ -6,102 +6,34 @@ angular.module 'mydrive5App'
 # directive for compiling html
 
 
-# .directive "compileHtml", ($parse, $sce, $compile)->
-#   restrict: "A"
-#   scope:
-#     'message':'=compileHtml'
-#   link: (scope, element, attributes)->
-#     expression = $sce.trustAsHtml(scope.message).toString()
-#     element.append expression
+.directive "compileHtml", ($parse, $sce, $compile)->
+  restrict: "A"
+  scope:
+    'message':'=compileHtml'
+  link: (scope, element, attributes)->
+    expression = $sce.trustAsHtml(scope.message).toString()
+    element.append expression
 
 
 
-.directive 'editorContainer', ->
+.directive 'editorContainer', (config)->
   template:"<div class='editor-container'>"+
-    "<div class='editor-vline right'></div>"+
-    "<div class='editor-vline'></div>"+
-    "<div class='editor-hline bottom'></div>"+
-    "<div class='editor-hline'></div>"+
+    "<div class='editor-vline right' ng-if='editing'></div>"+
+    "<div class='editor-vline' ng-if='editing'></div>"+
+    "<div class='editor-hline bottom' ng-if='editing'></div>"+
+    "<div class='editor-hline' ng-if='editing'></div>"+
     "<div ng-transclude='true'></div>"+
     "</div>"
   transclude:true
   restrict:'EA'
   scope:true
   link: (scope,element,attrs)->
+    scope.editing = !config.public
 
 
 
-# # directive for the CKE editor
-# .directive 'ckedit', ($parse)->
-  
-#   CKEDITOR.disableAutoInline = true
-#   counter = 0
-#   prefix = '__ckd_'
-  
 
-#   template: '<div></div>'
-#   restrict: 'EA'
-#   link: (scope, element, attrs) ->
-#     getter = $parse(attrs.ckedit)
-#     setter = getter.assign;
-
-#     attrs.$set 'contenteditable', true
-#     if !attrs.id
-#       attrs.$set 'id', prefix + (++counter)
-
-
-#     CKEDITOR.plugins.registered['save'] =
-#       init:(editor)->
-#         editor.addCommand 'save',
-#           modes: { wysiwyg: 1, source: 1 },
-#           exec: (editor)->
-#             if (editor.checkDirty())
-#               ckValue = editor.getData()
-#               scope.$apply ->
-#                 setter(scope, ckValue)
-#               ckValue = null
-#               editor.resetDirty()
-#         editor.ui.addButton 'Save',
-#           label: 'Save'
-#           command: 'save'
-#           toolbar: 'document'
-    
-#     options = {}
-#     options.on =
-#       blur: (e) ->
-#         if (e.editor.checkDirty())
-#           ckValue = e.editor.getData()
-#           scope.$apply ->
-#             setter(scope, ckValue)
-#           ckValue = null
-#           e.editor.resetDirty()
-
-#     options.extraPlugins = 'sourcedialog'
-#     options.removePlugins = 'sourcearea'
-#     editorangular = CKEDITOR.inline element[0], options
-
-#     scope.$watch attrs.ckedit, (value)->
-#       editorangular.setData(value)
-
-
-# .run ($q, $timeout)->
-#   $defer = $q.defer()
-
-#   if (angular.isUndefined(CKEDITOR))
-#     throw new Error('CKEDITOR not found')
-
-#   CKEDITOR.disableAutoInline = true;
-#   checkLoaded=()->
-#     if (CKEDITOR.status == 'loaded')
-#       loaded = true;
-#       $defer.resolve();
-#     else
-#       checkLoaded()
-#   CKEDITOR.on('loaded', checkLoaded)
-#   $timeout(checkLoaded, 100)
-
-
-.directive 'editable',($timeout, $q)->
+.directive 'editable',($timeout, $q, $sce, config)->
   restrict: 'A'
   require: ['ngModel', '^?form']
   scope:
@@ -109,6 +41,14 @@ angular.module 'mydrive5App'
   link: (scope, element, attrs, ctrls)->
     ngModel = ctrls[0]
     form    = ctrls[1] || null
+    if config.public
+      console.log 'public'
+      ngModel.$render = ()->
+        if typeof ngModel.$viewValue != 'undefined' && typeof ngModel.$viewValue != 'number'
+          if ngModel.$viewValue != null
+            element.append $sce.trustAsHtml(ngModel.$viewValue).toString()
+      return false
+
     EMPTY_HTML = '<p></p>'
     isTextarea = element[0].tagName.toLowerCase() == 'textarea'
     data = []
@@ -186,3 +126,74 @@ angular.module 'mydrive5App'
       onLoad()
     else
       $defer.promise.then(onLoad)
+
+
+
+# # directive for the CKE editor
+# .directive 'ckedit', ($parse)->
+  
+#   CKEDITOR.disableAutoInline = true
+#   counter = 0
+#   prefix = '__ckd_'
+  
+
+#   template: '<div></div>'
+#   restrict: 'EA'
+#   link: (scope, element, attrs) ->
+#     getter = $parse(attrs.ckedit)
+#     setter = getter.assign;
+
+#     attrs.$set 'contenteditable', true
+#     if !attrs.id
+#       attrs.$set 'id', prefix + (++counter)
+
+
+#     CKEDITOR.plugins.registered['save'] =
+#       init:(editor)->
+#         editor.addCommand 'save',
+#           modes: { wysiwyg: 1, source: 1 },
+#           exec: (editor)->
+#             if (editor.checkDirty())
+#               ckValue = editor.getData()
+#               scope.$apply ->
+#                 setter(scope, ckValue)
+#               ckValue = null
+#               editor.resetDirty()
+#         editor.ui.addButton 'Save',
+#           label: 'Save'
+#           command: 'save'
+#           toolbar: 'document'
+    
+#     options = {}
+#     options.on =
+#       blur: (e) ->
+#         if (e.editor.checkDirty())
+#           ckValue = e.editor.getData()
+#           scope.$apply ->
+#             setter(scope, ckValue)
+#           ckValue = null
+#           e.editor.resetDirty()
+
+#     options.extraPlugins = 'sourcedialog'
+#     options.removePlugins = 'sourcearea'
+#     editorangular = CKEDITOR.inline element[0], options
+
+#     scope.$watch attrs.ckedit, (value)->
+#       editorangular.setData(value)
+
+
+# .run ($q, $timeout)->
+#   $defer = $q.defer()
+
+#   if (angular.isUndefined(CKEDITOR))
+#     throw new Error('CKEDITOR not found')
+
+#   CKEDITOR.disableAutoInline = true;
+#   checkLoaded=()->
+#     if (CKEDITOR.status == 'loaded')
+#       loaded = true;
+#       $defer.resolve();
+#     else
+#       checkLoaded()
+#   CKEDITOR.on('loaded', checkLoaded)
+#   $timeout(checkLoaded, 100)

@@ -65,6 +65,7 @@ angular.module 'mydrive5App'
       src:'blogLayout'
       label:'blog'
       blog:
+        headerImage:{}
         header:'<h1>My blog header</h1>'
         subHeader:'<h2>This is my blog subheader</h2>'
         about:'<p><em>This is my about section.</em>This is my about section, I can edit it any way that I may want. I may edit it any way that I want</p>'
@@ -80,8 +81,11 @@ angular.module 'mydrive5App'
           {title:'Event Questions',content:faq}
         ]
     }
-    {src:'participantLayout'
-    label:'participant profile'}
+    {
+      src:'participantLayout'
+      label:'participant profile'
+      participant:{}
+    }
     {
       src:'eventInfoLayout'
       label:'event info'

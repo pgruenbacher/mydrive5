@@ -16,7 +16,8 @@ angular.module 'mydrive5App'
           $compile(element.contents())(scope)
 
     element.text 'Loading...'
-
+    console.log 'mypage'
+    console.log scope.template
     getTemplate(scope.template)
 
     oldScope=scope.template
@@ -45,7 +46,7 @@ angular.module 'mydrive5App'
     $scope.editorOptions =
       language: 'en'
       'skin': 'moono'
-      extraPlugins: 'imagebrowser,mediaembed,sourcedialog,colorbutton,SimpleLink,colordialog,youtube'
+      extraPlugins: 'imagebrowser,mediaembed,sourcedialog,colorbutton,SimpleLink,iframe,colordialog,youtube'
       imageBrowser_listUrl: '/api/images?type=editorBrowser'
       filebrowserBrowseUrl: '/api/files?type=editorBrowser'
       filebrowserImageUploadUrl: '/api/images/upload'
@@ -66,7 +67,7 @@ angular.module 'mydrive5App'
         items: ['Sourcedialog']
       ,
         name: 'links'
-        items: [ 'Link' , 'Unlink',]
+        items: [ 'Link' , 'Unlink', 'Iframe']
       ,
         name:'colors'
         items:['TextColor','BGColor']

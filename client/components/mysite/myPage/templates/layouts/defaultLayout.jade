@@ -4,7 +4,7 @@
   )
   .container
     editor-container
-      div(ckeditor="editorOptions",ng-model="page.template.default.header1")
+      div(editable="editorOptions",ng-model="page.template.default.header1")
 
 .container
   .row
@@ -23,7 +23,7 @@
       div.my-image(my-image="page.template.default.image2").img-circle
         img(ng-src="{{page.template.default.image2.urlPath}}").img-circle.img-responsive
       editor-container
-        div(ckeditor="editorOptions",ng-model="page.template.default.block2")
+        div(editable="editorOptions",ng-model="page.template.default.block2")
       p
         my-button(
           available="navigationItems",
@@ -34,11 +34,13 @@
       div.my-image(my-image="page.template.default.image3").img-circle
         img(ng-src="{{page.template.default.image3.urlPath}}").img-circle.img-responsive
       editor-container
-        div(ckeditor="",ng-model="page.template.default.block3")
+        div(editable="",ng-model="page.template.default.block3")
       p
         my-button(
           available="navigationItems",
           button="page.template.default.button3",
           current-page="{{page.slug}}"
           )
+  .row
+    subscription-form
 

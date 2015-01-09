@@ -68,13 +68,13 @@ angular.module 'mydrive5App'
     if scope.method == 'days'
 
       iteration=0
-      stopAt=10
+      stopAt=4
       startNumber=0
       
-      element.addClass('tick tick-scroll')
-      contentTr = angular.element('<div class="day-label">Days Left</div>')
-      contentTr.insertAfter(element)
-      $compile(contentTr)(scope)
+      element.addClass('tick tick-flip')
+      # contentTr = angular.element('<div class="day-label">Days Left</div>')
+      # contentTr.insertAfter(element)
+      # $compile(contentTr)(scope)
 
       now = scope.value - 10 * 60 * 60
       console.log scope.value, now
