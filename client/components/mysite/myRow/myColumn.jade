@@ -1,4 +1,11 @@
-|column
-my-section(ng-repeat="section in sections", section="section")
+div(ng-repeat="section in sections", section="section")
+  select(
+  placeholder="select type"
+  ng-if="editable"
+  ng-model="section.template"
+  ng-options="template.label for template in sectionTemplates track by template.label"
+  )
+    option(value='',disabled) -Choose type-
+  my-section(section="section")
 
-a(ng-click="addSection()") Add Section    
+a(ng-click="addSection()",ng-if="editable") Add Section    

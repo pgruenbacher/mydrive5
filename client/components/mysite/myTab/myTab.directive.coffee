@@ -7,7 +7,7 @@ angular.module 'mydrive5App'
   scope:
     tabs:'=tabs'
   link: (scope, element, attrs) ->
-    scope.editable=!config.public
+    scope.editable=!config.public()
     scope.$on('$desroy', ->
       console.log 'destroyed'
       )

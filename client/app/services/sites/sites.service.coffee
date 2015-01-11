@@ -2,6 +2,7 @@
 
 angular.module 'mydrive5App'
 .factory 'Sites', ($http)->
+  navigationItems=[]
   # AngularJS will instantiate a singleton by calling 'new' on this function
   query:(obj)-> 
     $http.get '/api/sites/find', {params:obj}
@@ -9,6 +10,18 @@ angular.module 'mydrive5App'
   update:(id,data)->
     console.log data
     $http.put '/api/sites/'+id, data
+
+  setNavigationItems:(site)->
+    navigationItems=[]
+    for menuItem in site.menuItems
+      if menuItem.sub.length
+        for subItem in menuItem.sub
+          navigationItems.push subItem.slug
+      else
+        navigationItems.push menuItem.slug
+    return navigationItems
+  getNavigationItems:->
+    navigationItems
 
   setPage:(id,pageId,data)->
     $http.put '/api/sites/'+id+'/menu/'+pageId, data

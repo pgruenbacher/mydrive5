@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.directive 'fullBlog', ->
+.directive 'fullBlog', ($anchorScroll,$location) ->
 
   ab2str=(buf)->
     return String.fromCharCode.apply(null, new Uint16Array(buf))
@@ -16,6 +16,7 @@ angular.module 'mydrive5App'
   controller:($scope,Posts)->
     $scope.index=true;
     $scope.posts=[];
+    $scope.filteredPosts=[]
 
     Posts.all()
     .then (response)->
@@ -37,14 +38,20 @@ angular.module 'mydrive5App'
     # pagination
     numPerPage=3
     $scope.currentPage=1
+    
+    # For pagination of index
     $scope.numPages = ()->
       return Math.ceil($scope.posts.length / numPerPage)
-    
     $scope.previous=()->
       if $scope.currentPage>1 then $scope.currentPage--
+      $location.hash('blog')
+      $anchorScroll()
     $scope.next=()->
-      console.log $scope.numPages()
       if $scope.currentPage<$scope.numPages() then $scope.currentPage++
+      $location.hash('blog')
+      $anchorScroll()
+
+    
 
     $scope.$watch 'posts+currentPage', ()->
 

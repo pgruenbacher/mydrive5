@@ -8,7 +8,7 @@ angular.module 'mydrive5App'
     faqs:'='
     editorOptions:'@'
   link: (scope, element, attrs) ->
-    scope.editable = !config.public
+    scope.editable = !config.public()
     scope.newFaq=->
       scope.faqs.push
         title:'New Faq'

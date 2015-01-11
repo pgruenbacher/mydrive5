@@ -11,70 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "client/components/mysite/myRow/myRow.directive.coffee",
-			"settings":
-			{
-				"buffer_size": 1157,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myRow/myRow.jade",
-			"settings":
-			{
-				"buffer_size": 240,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myRow/myGrid.jade",
-			"settings":
-			{
-				"buffer_size": 85,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myRow/myColumn.jade",
-			"settings":
-			{
-				"buffer_size": 115,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myRow/mySection.jade",
-			"settings":
-			{
-				"buffer_size": 12,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myPage/templates/layouts/defaultLayout.jade",
-			"settings":
-			{
-				"buffer_size": 1662,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/admin/sites/site/page/page.controller.coffee",
-			"settings":
-			{
-				"buffer_size": 6300,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myRow/myRow.directive.spec.coffee",
-			"settings":
-			{
-				"buffer_size": 436,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -127,145 +63,146 @@
 	[
 		"/home/paul/Code/fundraiser/mydrive5",
 		"/home/paul/Code/fundraiser/mydrive5/client",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor/assets/fonts",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap",
 		"/home/paul/Code/fundraiser/mydrive5/client/components",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myDate",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow"
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts",
+		"/home/paul/Code/fundraiser/mydrive5/public",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/services",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/services/posts",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/services/sites",
+		"/home/paul/Code/fundraiser/mydrive5/public/components",
+		"/home/paul/Code/fundraiser/mydrive5/public/components/mysite/myButton"
 	],
 	"file_history":
 	[
+		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/editors/ckeditor/ckeditor.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/index.html",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/publicGruntfile.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/ckeditor.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/lib/clientsidescripts.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/static/client.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/istanbul/lib/cli.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/ChangeLog",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/CHANGELOG",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/eventInfoLayout.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.jade",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/550fcd5633e5b11f923606bb97e0f2cf1de03329/statistic-box.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/prerender-node/node_modules/request/node_modules/tough-cookie/public-suffix.txt",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/admin.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/source-map/build/prefix-utils.jsm",
+		"/home/paul/Code/fundraiser/mydrive5/package.json",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/font-awesome/less/bordered-pulled.less",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/stoppable_test.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/statistic-box/statistic-box.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose/lib/statemachine.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/node_modules/chalk/node_modules/.bin/strip-ansi",
+		"/home/paul/Code/fundraiser/mydrive5/mydrive5.sublime-project",
+		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/filters/filters.filter.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/components/filters/filters.filter.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/components/mysite/myButton/myButton.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myTab/myTab.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myTab/myTab.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myDate/myDate.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/blogLayout.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/fullBlog/fullBlog.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/fullBlog/fullBlog.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/fullBlog/fullBlog.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-angular-templates/test/expected/full_url.js",
+		"/home/paul/Code/fundraiser/mydrive5/bower.json",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/templates/layouts/blogLayout.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/supertest/example.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/ElementsPanelDescriptor.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/skins/kama/editor_ie.css",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/skins/kama/editor.css",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/compression/node_modules/accepts/node_modules/negotiator/lib/mediaType.js",
 		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-api.js",
-		"/home/paul/Code/fundraiser/mydrive5/publicGruntfile.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myGrid.html",
-		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myGrid.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/page.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myButton/myButton.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/myFaq.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myImage/myImage.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myImage/myImage.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myRow.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myRow.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myRow.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myRow.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/myFaq.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/myFaq.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myButton/myButton.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/5cf4d7353b55f29e1b4dc40cb0e7cbbf9245c901/myButton.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/editors/ckeditor/ckeditor.scss",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/jade/lib/filters-client.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/filters/filters.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/jade/lib/nodes/filter.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/lib/file_list.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/object/forIn.js",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/app.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/services/sites/sites.service.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/customLayout.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/templates/layouts/customLayout.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-angular-templates/test/expected/custom_url.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myButton/myButton.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myGrid.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myRow.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/subscriptionForm/subscriptionForm.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/CompletionDictionary.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/FilteredItemSelectionDialog.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/mySection.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/mySection.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/Section.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/dist-tools/service-collector.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/defaultLayout.jade",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/lib/defaults.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-jscs/node_modules/jscs/lib/rules/disallow-empty-blocks.js",
 		"/home/paul/Code/fundraiser/mydrive5/dev.sqlite",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myButton/myButton.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myRow.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-dom-munger/test/expected/read_order.txt",
-		"/home/paul/Code/fundraiser/mydrive5/readme.md",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/admin-navbar/adminNavbar.scss",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/f6e196094a01d41572576d820bbd6a698a51f9d6/adminNavbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/b08e8a31f6d48eccfd7a90259e5b26517b6e8457/adminNavbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/admin.jade",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/app.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/socketio.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/eventInfoLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/test/expected/custom_options",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/CONTRIBUTING.md",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ng-ckeditor/test/directiveOnFormSpec.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/config.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/service.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myColumn.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myColumn.html",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myNavbar/myNavbar.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/8f2dc666f40fe64abe3e1d5a5c5b0e7042e2bc1a/myNavbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/app.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myDate/myDate.scss",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/admin.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/acfc4ec3f93bc5639fd72d9429b5efd1e2c16c20/admin.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-jshint/node_modules/jshint/data/ascii-identifier-data.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/fullBlog/fullBlog.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/fullBlog/fullBlog.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/blogLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/bower.json",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myButton/myButton.html",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/templates/layouts/blogLayout.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/participantLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-argumentvalidation.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/statistic-box/statistic-box.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/e2e2e8eb8b75785df28950235dc9fee5ead80d94/myDate.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/e1762cb01c88df84ad0fa277366a312bf683ec16/myDate.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/statistic-box/statistic-box.scss",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/stoppable_test.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/express.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myImage/myImage.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myImage/myImage.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myTab/myTab.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myTab/myTab.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myTab/myTab.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myTab/myTab.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/node_modules/js-beautify/js/test/amd-beautify-tests.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/971fbe46f8df50e1bfc52bad0378c79490ec10cc/myTab.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/ticker/ticker.scss",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/scripts/translate-api",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/defaultLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/editors/ckeditor/ckeditor.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/app.scss",
-		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.scss",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/cc0c2dc0f66084026de1fd5de246e4b8468ea31a/page.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myTab/myTab.html",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/http-proxy/examples/middleware/gzip-middleware-proxytable.js",
-		"/home/paul/Code/fundraiser/mydrive5/public/components/mysite/myPage/templates/layouts/cleanBlogLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap/js/tab.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/editors/ckeditor/ckeditor.scss",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/CHANGELOG",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/wscript",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/WatchExpressionsSidebarPane.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap/less/wells.less",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-injector/node_modules/wiredep/node_modules/bower-config/node_modules/optimist/example/line_count.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-injector/node_modules/wiredep/node_modules/bower-config/node_modules/optimist/example/line_count_options.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/command.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_jumbotron.scss",
-		"/home/paul/Code/fundraiser/mydrive5/package.json",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/f90d5779a126074193747d01e14571a4c4334e5d/myImage.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt/node_modules/nopt/examples/my-program.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize/lib/query-interface.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/node_modules/cli-color/node_modules/es5-ext/date/#/days-in-month.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize/lib/dialects/mysql/connection-manager.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/templates/layouts/eventInfoLayout.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/myFaq.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myFaq/myFaq.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/5b630c08fcbb10b57dfab77f95173dbd9e58a21d/myFaq.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/myFaq.scss",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/lib/PageAgent.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/media/modal.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-newer/test/integration/newer-modify-none.spec.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/node_modules/cli-color/node_modules/es5-ext/object/get-property-names.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/lib/action/version.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/NOTICE.txt",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/.bin/ng-annotate",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/navbar/navbar.html",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/navbar/navbar.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/65c4ad01974f6862fdb5af84a73c17c04a379f0e/fullBlog.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/1782bdfb64591ed5e125153eb6e88aadba641aa6/sites.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/sites/site/site.src.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-jshint/node_modules/jshint/src/reporters/non_error.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/NEWS.md",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/socket.io/node_modules/redis/examples/web_server.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/faqLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/modal.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/composable-middleware/lib/middleware-common-object.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/node_modules/autoprefixer/node_modules/caniuse-db/features-json/css-boxdecorationbreak.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/math/NullReduction.as",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/node_modules/autoprefixer/node_modules/caniuse-db/features-json/css-repeating-gradients.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-angular-templates/node_modules/html-minifier/node_modules/clean-css/lib/properties/override-compactor.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/class_goog_math_Coordinate.html",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/credentials/cognito_identity_credentials.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/ng-annotate/node_modules/convert-source-map/test/comment-regex.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/account.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular-csp.css",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/payments/payments-processor/paymentProcessor.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/353f4a42db62c317f5b641029fbd7e10fd7c37c7/payment.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/ChangeLog",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-nodemon/node_modules/nodemon/faq.md",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/RequestHeadersView.js",
 		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/27ebda57bebdfd288003d5d460918a3e4d1e8e09/font-awesome.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/filters/filters.filter.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myButton/myButton.js"
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myRow.js.map",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-injector/test/expected/custom.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-angular-templates/test/expected/custom_source.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myRow/myRow.directive.spec.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize/lib/query-interface.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/statistic-box/statistic-box.scss",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/cb5725b11c9734f4986bc257f5d60af29a0c52df/statistic-box.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/MemoryStatistics.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/statistic-box/statistic-box.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/statistic-box/statistic-box.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/server/config/socketio.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myGrid.html",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myRow/myRow.js"
 	],
 	"find":
 	{
@@ -283,6 +220,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"copy",
+			"ckeditor",
+			"wiredep",
+			"tick",
+			"service",
+			"editorOptions",
+			"config.public",
+			"navigationItems",
 			"goTo",
 			"post.html",
 			"a",
@@ -402,15 +347,7 @@
 			"Pelotonia",
 			"Thing",
 			"User",
-			"#",
-			"pager",
-			"hr",
-			"sans-serif",
-			"}\n",
-			".background-co",
-			".serif",
-			".",
-			";\n"
+			"#"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -428,239 +365,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "client/components/mysite/myRow/myRow.directive.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1157,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1062,
-								1062
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
-						},
-						"translation.x": -0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/components/mysite/myRow/myRow.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 240,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								240,
-								240
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/components/mysite/myRow/myGrid.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 85,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								71,
-								71
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 36.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/components/mysite/myRow/myColumn.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8,
-								8
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/components/mysite/myRow/mySection.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12,
-								12
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/components/mysite/myPage/templates/layouts/defaultLayout.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1662,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								223,
-								223
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/app/admin/sites/site/page/page.controller.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3939,
-								3939
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 702.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "client/components/mysite/myRow/myRow.directive.spec.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 436,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -719,32 +425,292 @@
 		"selected_items":
 		[
 			[
-				"page.control",
-				"client/app/admin/sites/site/page/page.controller.coffee"
+				"clientckeditordire",
+				"client/components/editors/ckeditor/ckeditor.directive.coffee"
 			],
 			[
-				"mygrid.jade",
-				"client/components/mysite/myRow/myGrid.jade"
+				"clientindex",
+				"client/index.html"
+			],
+			[
+				"publicindex",
+				"public/index.html"
+			],
+			[
+				"publicgrunt",
+				"publicGruntfile.js"
+			],
+			[
+				"site.jade",
+				"client/app/admin/sites/site/site.jade"
+			],
+			[
+				"publicsite.co",
+				"public/app/site/site.coffee"
+			],
+			[
+				"publicgu",
+				"publicGruntfile.js"
+			],
+			[
+				"index.html",
+				"client/index.html"
+			],
+			[
+				"mypage",
+				"client/components/mysite/myPage/myPage.directive.coffee"
+			],
+			[
+				"mytab.scss",
+				"client/components/mysite/myTab/myTab.scss"
 			],
 			[
 				"mypage.dir",
 				"client/components/mysite/myPage/myPage.directive.coffee"
 			],
 			[
-				"myrow.",
-				"client/components/mysite/myRow/myRow.jade"
+				"fullblogjade",
+				"client/components/fullBlog/fullBlog.jade"
 			],
 			[
-				"myrow.jade",
-				"client/components/mysite/myRow/myRow.jade"
+				"bloglayou",
+				"client/components/mysite/myPage/templates/layouts/blogLayout.jade"
+			],
+			[
+				"bloglayout",
+				".tmp/components/mysite/myPage/templates/layouts/blogLayout.html"
+			],
+			[
+				"ckeditor.dire",
+				"client/components/editors/ckeditor/ckeditor.directive.coffee"
+			],
+			[
+				"page.control",
+				"client/app/admin/sites/site/page/page.controller.coffee"
+			],
+			[
+				"mypage.jade",
+				"client/components/mysite/myPage/page.jade"
+			],
+			[
+				"myimage.dire",
+				"client/components/mysite/myImage/myImage.directive.coffee"
+			],
+			[
+				"myrow.dir",
+				"client/components/mysite/myRow/myRow.directive.coffee"
+			],
+			[
+				"mytab.dir",
+				"client/components/mysite/myTab/myTab.directive.coffee"
+			],
+			[
+				"myfaq.dire",
+				"client/components/mysite/myFaq/myFaq.directive.coffee"
+			],
+			[
+				"mybutton.direc",
+				"client/components/mysite/myButton/myButton.directive.coffee"
+			],
+			[
+				"ckeditor.dir",
+				"client/components/editors/ckeditor/ckeditor.directive.coffee"
+			],
+			[
+				"filtercoff",
+				"client/components/filters/filters.filter.coffee"
+			],
+			[
+				"page.controler",
+				"client/app/admin/sites/site/page/page.controller.coffee"
 			],
 			[
 				"page.jade",
 				"client/components/mysite/myPage/page.jade"
 			],
 			[
+				"app.cof",
+				"client/app/app.coffee"
+			],
+			[
+				"sites.ser",
+				"client/app/services/sites/sites.service.coffee"
+			],
+			[
+				"app.coffe",
+				"public/app/app.coffee"
+			],
+			[
+				"app.coff",
+				"client/app/app.coffee"
+			],
+			[
+				"customlayout.jade",
+				"client/components/mysite/myPage/templates/layouts/customLayout.jade"
+			],
+			[
+				"myfaq.",
+				"client/components/mysite/myFaq/myFaq.jade"
+			],
+			[
+				"mysection.dir",
+				"client/components/mysite/subscriptionForm/subscriptionForm.directive.coffee"
+			],
+			[
+				"section.directive",
+				"client/components/mysite/subscriptionForm/subscriptionForm.directive.coffee"
+			],
+			[
+				"section.jade",
+				"client/components/mysite/myRow/mySection.jade"
+			],
+			[
+				"mygrid.jade",
+				"client/components/mysite/myRow/myGrid.jade"
+			],
+			[
+				"mycolumn.jade",
+				"client/components/mysite/myRow/myColumn.jade"
+			],
+			[
+				"myrow.jade",
+				"client/components/mysite/myRow/myRow.jade"
+			],
+			[
+				"myrow.direc",
+				"client/components/mysite/myRow/myRow.directive.coffee"
+			],
+			[
+				"fullblog.dire",
+				"client/components/fullBlog/fullBlog.directive.coffee"
+			],
+			[
+				"fullblog.jade",
+				"client/components/fullBlog/fullBlog.jade"
+			],
+			[
+				"site.control",
+				"client/app/admin/sites/site/site.controller.coffee"
+			],
+			[
+				"mynavbar.jade",
+				"client/components/mysite/myNavbar/myNavbar.jade"
+			],
+			[
+				"site.con",
+				"public/app/site/site.controller.coffee"
+			],
+			[
+				"fullblog.directive",
+				"client/components/fullBlog/fullBlog.directive.coffee"
+			],
+			[
 				"defaultlayout",
 				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
+			],
+			[
+				"site.service",
+				"client/app/services/sites/sites.service.coffee"
+			],
+			[
+				"mybutton.direct",
+				"client/components/mysite/myButton/myButton.directive.coffee"
+			],
+			[
+				"mybutton.jade",
+				"client/components/mysite/myButton/myButton.jade"
+			],
+			[
+				"myfaq",
+				"client/components/mysite/myFaq/myFaq.jade"
+			],
+			[
+				"customlayou",
+				"client/components/mysite/myPage/templates/layouts/customLayout.jade"
+			],
+			[
+				"customlayout",
+				".tmp/components/mysite/myPage/templates/layouts/customLayout.html"
+			],
+			[
+				"mycolum",
+				"client/components/mysite/myRow/myColumn.jade"
+			],
+			[
+				"defaultla",
+				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
+			],
+			[
+				"eventinfo",
+				"client/components/mysite/myPage/templates/layouts/eventInfoLayout.jade"
+			],
+			[
+				"myfaq.jade",
+				"client/components/mysite/myFaq/myFaq.jade"
+			],
+			[
+				"page.con",
+				"public/app/site/page/page.controller.coffee"
+			],
+			[
+				"faqlayout",
+				"client/components/mysite/myPage/templates/layouts/faqLayout.jade"
+			],
+			[
+				"myrow",
+				"client/components/mysite/myRow/myRow.jade"
+			],
+			[
+				"myrow.driective",
+				"client/components/mysite/myRow/myRow.directive.coffee"
+			],
+			[
+				"mygr",
+				"client/components/mysite/myRow/myGrid.jade"
+			],
+			[
+				"myr",
+				"client/components/mysite/myRow/myRow.directive.coffee"
+			],
+			[
+				"customjade",
+				"client/components/mysite/myPage/templates/layouts/customLayout.jade"
+			],
+			[
+				"myrow.dri",
+				"client/components/mysite/myRow/myRow.directive.coffee"
+			],
+			[
+				"mygrid",
+				"client/components/mysite/myRow/myGrid.jade"
+			],
+			[
+				"sites.service",
+				"client/app/services/sites/sites.service.coffee"
+			],
+			[
+				"site.contorl",
+				"client/app/admin/sites/site/site.controller.coffee"
+			],
+			[
+				"mypage.di",
+				"client/components/mysite/myPage/myPage.directive.coffee"
+			],
+			[
+				"defaultlayou",
+				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
+			],
+			[
+				"myimage.scss",
+				"client/components/mysite/myImage/myImage.scss"
+			],
+			[
+				"statistic-boxscss",
+				"client/components/statistic-box/statistic-box.scss"
+			],
+			[
+				"myrow.",
+				"client/components/mysite/myRow/myRow.jade"
 			],
 			[
 				"mypage.dire",
@@ -759,14 +725,6 @@
 				"client/components/admin-navbar/adminNavbar.scss"
 			],
 			[
-				"app.cof",
-				"client/app/app.coffee"
-			],
-			[
-				"site.control",
-				"client/app/admin/sites/site/site.controller.coffee"
-			],
-			[
 				"page.contorl",
 				"public/app/site/page/page.controller.coffee"
 			],
@@ -777,10 +735,6 @@
 			[
 				"mynavbar.dire",
 				"client/components/mysite/myNavbar/myNavbar.directive.coffee"
-			],
-			[
-				"mynavbar.jade",
-				"client/components/mysite/myNavbar/myNavbar.jade"
 			],
 			[
 				"main.jade",
@@ -799,14 +753,6 @@
 				"client/app/admin/admin.jade"
 			],
 			[
-				"site.jade",
-				"client/app/admin/sites/site/site.jade"
-			],
-			[
-				"page.con",
-				"public/app/site/page/page.controller.coffee"
-			],
-			[
 				"blogjad",
 				"client/components/fullBlog/fullBlog.jade"
 			],
@@ -823,10 +769,6 @@
 				"client/components/statistic-box/statistic-box.jade"
 			],
 			[
-				"eventinfo",
-				"client/components/mysite/myPage/templates/layouts/eventInfoLayout.jade"
-			],
-			[
 				"myimage.dir",
 				"client/components/mysite/myImage/myImage.directive.coffee"
 			],
@@ -835,24 +777,12 @@
 				"client/components/mysite/myImage/myImage.directive.coffee"
 			],
 			[
-				"app.coff",
-				"client/app/app.coffee"
-			],
-			[
-				"myfaq",
-				"client/components/mysite/myFaq/myFaq.jade"
-			],
-			[
 				"mytabjade",
 				"client/components/mysite/myTab/myTab.jade"
 			],
 			[
 				"mytab.dire",
 				"client/components/mysite/myTab/myTab.directive.coffee"
-			],
-			[
-				"mytab.scss",
-				"client/components/mysite/myTab/myTab.scss"
 			],
 			[
 				"app.scss",
@@ -865,10 +795,6 @@
 			[
 				"mypage.dri",
 				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"mytab.dir",
-				"client/components/mysite/myTab/myTab.directive.coffee"
 			],
 			[
 				"mytab.jade",
@@ -891,20 +817,8 @@
 				"client/components/mysite/myTab/myTab.jade"
 			],
 			[
-				"ckeditor.dire",
-				"client/components/editors/ckeditor/ckeditor.directive.coffee"
-			],
-			[
-				"myimage.scss",
-				"client/components/mysite/myImage/myImage.scss"
-			],
-			[
 				"defau",
 				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
-			],
-			[
-				"myimage.dire",
-				"client/components/mysite/myImage/myImage.directive.coffee"
 			],
 			[
 				"default",
@@ -925,14 +839,6 @@
 			[
 				"myimage.scs",
 				"client/components/mysite/myImage/myImage.scss"
-			],
-			[
-				"myfaq.jade",
-				"client/components/mysite/myFaq/myFaq.jade"
-			],
-			[
-				"app.coffe",
-				"client/app/app.coffee"
 			],
 			[
 				"modal.jade",
@@ -963,24 +869,8 @@
 				"client/bower_components/angular/angular.js"
 			],
 			[
-				"mybutton.jade",
-				"client/components/mysite/myButton/myButton.jade"
-			],
-			[
 				"mybutton.coff",
 				"client/components/mysite/myButton/myButton.directive.coffee"
-			],
-			[
-				"mypage.jade",
-				"client/components/mysite/myPage/page.jade"
-			],
-			[
-				"mypage",
-				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"defaultlayou",
-				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
 			],
 			[
 				"ckeditor.scss",
@@ -1045,190 +935,6 @@
 			[
 				"participa",
 				"client/components/mysite/myPage/templates/layouts/participantLayout.jade"
-			],
-			[
-				"ticker",
-				"client/components/ticker/ticker.scss"
-			],
-			[
-				"statistiscss",
-				"client/components/statistic-box/statistic-box.scss"
-			],
-			[
-				"statistic",
-				"client/components/statistic-box/statistic-box.jade"
-			],
-			[
-				"ticker.scss",
-				"client/components/ticker/ticker.scss"
-			],
-			[
-				"bower.json",
-				"bower.json"
-			],
-			[
-				"bloglayou",
-				"client/components/mysite/myPage/templates/layouts/blogLayout.jade"
-			],
-			[
-				"statististic-bo",
-				"client/components/statistic-box/statistic-box.jade"
-			],
-			[
-				"ticker.directive",
-				"client/components/ticker/ticker.directive.coffee"
-			],
-			[
-				"page.control.coffe",
-				"public/app/site/page/page.controller.coffee"
-			],
-			[
-				"sites.jade",
-				"client/app/admin/sites/sites.jade"
-			],
-			[
-				"myimage.sc",
-				"client/components/mysite/myImage/myImage.scss"
-			],
-			[
-				"bloglay",
-				"client/components/mysite/myPage/templates/layouts/blogLayout.jade"
-			],
-			[
-				"ckeditor.scs",
-				"client/components/editors/ckeditor/ckeditor.scss"
-			],
-			[
-				"myimage.direc",
-				"client/components/mysite/myImage/myImage.directive.coffee"
-			],
-			[
-				"mybutton.dire",
-				"client/components/mysite/myButton/myButton.directive.coffee"
-			],
-			[
-				"mybutton",
-				"client/components/mysite/myButton/myButton.jade"
-			],
-			[
-				"my",
-				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"mybut",
-				"client/components/mysite/myButton/myButton.jade"
-			],
-			[
-				"contac",
-				"client/components/mysite/myPage/templates/layouts/contactLayout.jade"
-			],
-			[
-				"ckeditor.dir",
-				"client/components/editors/ckeditor/ckeditor.directive.coffee"
-			],
-			[
-				"mypage.directive",
-				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"faqlayout",
-				"client/components/mysite/myPage/templates/layouts/faqLayout.jade"
-			],
-			[
-				"tick.di",
-				"client/components/ticker/ticker.directive.coffee"
-			],
-			[
-				"filters.co",
-				"client/components/filters/filters.filter.coffee"
-			],
-			[
-				"statisticcof",
-				"client/components/statistic-box/statistic-box.directive.coffee"
-			],
-			[
-				"gruntfile",
-				"Gruntfile.js"
-			],
-			[
-				"ckedit",
-				"client/components/editors/ckeditor/ckeditor.directive.coffee"
-			],
-			[
-				"mybutton.directive",
-				"client/components/mysite/myButton/myButton.directive.coffee"
-			],
-			[
-				"publicapp",
-				"public/app/app.coffee"
-			],
-			[
-				"injector",
-				"node_modules/grunt-injector/tasks/injector.js"
-			],
-			[
-				"publicgruntfil",
-				"publicGruntfile.js"
-			],
-			[
-				"site.cof",
-				"public/app/site/site.coffee"
-			],
-			[
-				"page.c",
-				"public/app/site/page/page.controller.coffee"
-			],
-			[
-				"index.h",
-				"public/index.html"
-			],
-			[
-				"site.cont",
-				"public/app/site/site.controller.coffee"
-			],
-			[
-				"page.cont",
-				"client/app/admin/sites/site/page/page.controller.coffee"
-			],
-			[
-				"public",
-				"publicGruntfile.js"
-			],
-			[
-				"site.ser",
-				"public/app/services/sites/sites.service.coffee"
-			],
-			[
-				"publicgr",
-				"publicGruntfile.js"
-			],
-			[
-				"index.html",
-				"client/index.html"
-			],
-			[
-				"myimage.cof",
-				"client/components/mysite/myImage/myImage.directive.coffee"
-			],
-			[
-				"myimagemodal",
-				"client/components/mysite/myImage/myImageModal.jade"
-			],
-			[
-				"media.cof",
-				"client/app/admin/media/media.controller.coffee"
-			],
-			[
-				"main.con",
-				"client/app/main/main.controller.coffee"
-			],
-			[
-				"socket",
-				"server/config/socketio.js"
-			],
-			[
-				"media",
-				"client/app/admin/media/media.controller.coffee"
 			]
 		],
 		"width": 0.0
@@ -1257,7 +963,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 303.0,
+	"side_bar_width": 299.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

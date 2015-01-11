@@ -1,8 +1,10 @@
-select(
-  class="form-control"
-  ng-model="columns"
-  ng-options="template.columns as template.label for template in templates"
-  )
+div(style="display:inline",ng-if="editable")
+  select(
+    ng-model="row.columns"
+    ng-options="template.label for template in templates track by template.label"
+    )
+    option(value='',disabled) -Select Column Layout-
+  div(ng-transclude="true",style="display:inline")
 div.row
-  div(my-column,ng-repeat="column in columns",ng-class="column.class", sections="column.sections")
+  div(my-column,ng-repeat="column in row.columns.columns",ng-class="column.class", sections="column.sections")
 

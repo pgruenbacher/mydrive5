@@ -1,14 +1,17 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'PageCtrl', ($scope,$stateParams,Sites,$interval) ->
-  console.log 'page ctrl'  
+.controller 'PageCtrl', ($scope,$state,$stateParams,Sites,$location,$anchorScroll,$interval,config) ->
   $scope.pageSaving=false
-
   init=->
     $scope.page=Sites.findPage($scope.site,$stateParams.page)
     if typeof $scope.page.template == 'undefined'
       $scope.page.template=$scope.templates[0]
+
+  $scope.editable=!config.public()
+  $scope.preview=(bool)->
+    config.setPublic(bool)
+    $state.reload()
 
   $scope.save=(refresh)->
     $scope.pageSaving=true
@@ -50,6 +53,13 @@ angular.module 'mydrive5App'
         button1:{}
         header1:default1
         image1:{}
+    }
+    {
+      src:'customLayout'
+      label:'custom grid'
+      custom:
+        grid:
+          rows:[]
     }
     {
       src:'contactLayout'

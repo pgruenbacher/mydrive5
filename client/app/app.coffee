@@ -18,7 +18,7 @@ angular.module 'mydrive5App', [
   $locationProvider.html5Mode true
   $httpProvider.interceptors.push 'authInterceptor'
 
-.constant('config',{
+.constant('CONFIG',{
     public:false
   })
 

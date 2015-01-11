@@ -1,28 +1,30 @@
 .container
   .row
-    .col-lg-4.col-lg-offset-2.col-md-10.col-md-offset-1.blog-main
+    .col-lg-4.col-lg-offset-2.col-md-10.col-md-offset-1.blog-main#blog
       div(ng-if="index")
         .post-preview(ng-repeat="post in filteredPosts")
           a(ng-click="openPost(post)")
             h2.post-title {{post.title}}
             h3.post-subtitle {{post.subTitle}}
           p.post-meta Posted on {{post.createdAt|moment:'MMM Do, YYYY'}}
+        |{{currentPage}}
+        ul.pager
+          li.previous
+            button.btn(ng-click="previous()" ng-disabled="currentPage==1") Previous
+          li.next
+            button.btn(ng-click="next()" ng-disabled="currentPage==numPages()") Next
       div(ng-if="!index")
         a(ng-click="openIndex()") Back to index
         h1.post-title {{post.title}}
         h2.post-subtitle {{post.subTitle}}
         article
           div(data-ng-bind-html="post.html")
-      ul.pager
-        li.previous
-          a(ng-click="previous()") Previous
-        li.next
-          a(ng-click="next()") Next
+        a(ng-click="openIndex()") Back to index
     .col-sm-3.col-sm-offset-1.blog-sidebar
       .sidebar-module.sidebar-module-inset
         h4 About
         editor-container
-          div(ckeditor="editorOptions",ng-model="blog.about")
+          div(editable="editorOptions",ng-model="blog.about")
         .sidebar-module
         h4 Archives
         ol.list-unstyled

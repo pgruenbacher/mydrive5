@@ -24,7 +24,7 @@ angular.module 'mydrive5App'
       else
         element.css
           'background-color':'#333333'
-    if config.public
+    if config.public()
       if typeof scope.myImage == 'undefined'
         scope.myImage={urlPath:'//:0'}
       else if typeof scope.myImage.urlPath == 'undefined' 

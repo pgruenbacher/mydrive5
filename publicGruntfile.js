@@ -394,7 +394,9 @@ module.exports = function (grunt) {
           dest:'public',
           src:[
             'assets/**/*',
+            'app/services/**/*',
             'bower_components/**/*',
+            'components/editors/**/*',
             'components/statistic-box/*',
             'components/payments/**/*',
             'components/ui-router/**/*',

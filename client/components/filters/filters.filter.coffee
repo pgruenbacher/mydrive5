@@ -19,6 +19,17 @@ angular.module 'mydrive5App'
     emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     emailRegex.test(email)
 
+.factory 'config', (CONFIG)->
+  publicStatus=CONFIG.public
+  config=
+    public:->
+      publicStatus
+    setPublic:(bool)->
+      console.log bool
+      publicStatus=bool
+
+
+
 .directive 'autoFillSync', ($timeout)->
   restrict:'A'
   require: 'ngModel'

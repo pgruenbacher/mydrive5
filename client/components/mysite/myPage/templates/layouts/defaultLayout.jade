@@ -7,11 +7,6 @@
       div(editable="editorOptions",ng-model="page.template.default.header1")
 
 .container
-  | Grid:{{page.template.default.grid}}
-  my-grid(rows="page.template.default.grid.rows")
-
-
-
   .row
     .col-md-4
       div.my-image(my-image="page.template.default.image1").img-circle
@@ -20,7 +15,6 @@
         div(editable="editorOptions",ng-model="page.template.default.block1")
       p
         my-button(
-          available="navigationItems",
           button="page.template.default.button1",
           current-page="{{page.slug}}"
           )
@@ -31,7 +25,6 @@
         div(editable="editorOptions",ng-model="page.template.default.block2")
       p
         my-button(
-          available="navigationItems",
           button="page.template.default.button2",
           current-page="{{page.slug}}"
           )
@@ -39,10 +32,9 @@
       div.my-image(my-image="page.template.default.image3").img-circle
         img(ng-src="{{page.template.default.image3.urlPath}}").img-circle.img-responsive
       editor-container
-        div(editable="",ng-model="page.template.default.block3")
+        div(editable="editorOptions",ng-model="page.template.default.block3")
       p
         my-button(
-          available="navigationItems",
           button="page.template.default.button3",
           current-page="{{page.slug}}"
           )

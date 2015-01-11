@@ -1,17 +1,18 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.directive 'myButton', ($location,config)->
+.directive 'myButton', ($location,config,Sites)->
   templateUrl: 'components/mysite/myButton/myButton.html'
   restrict: 'E'
   scope:
-    available:'='
     button:'='
     currentPage:'@'
   link: (scope, element, attrs) ->
+    scope.available=Sites.getNavigationItems()
+    console.log scope.available
     scope.visible=true
     defaultTitle='nav button'
-    if config.public
+    if config.public()
       scope.editing= false
       if typeof scope.button == 'undefined' || scope.button.disabled
         scope.visible=false

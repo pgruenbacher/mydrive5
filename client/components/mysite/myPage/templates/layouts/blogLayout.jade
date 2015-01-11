@@ -8,10 +8,10 @@
         .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
           .site-heading
             editor-container
-              div(ckeditor="editorOptions", ng-model="page.template.blog.header")
+              div(editable="editorOptions", ng-model="page.template.blog.header")
             hr.small
             editor-container
-              div(ckeditor="editorOptions", ng-model="page.template.blog.subHeader")
+              div(editable="editorOptions", ng-model="page.template.blog.subHeader")
 
   full-blog(blog="page.template.blog",editor-options="editorOptions")
 

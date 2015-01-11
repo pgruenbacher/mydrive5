@@ -6,7 +6,9 @@ $gray-light: #eee;
 .blog{
   .intro-header {
     background-color: $gray; 
-    background-position: no-repeat center center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center; 
     background-attachment: scroll;
     // NOTE: Background images are set within the HTML using inline CSS!
     margin-bottom: 50px;
