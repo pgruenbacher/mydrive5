@@ -34,7 +34,6 @@ angular.module 'mydrive5App'
       oldTemplate=newValue
 
   controller:($scope)->
-
     $scope.editorOptions =
       language: 'en'
       'skin': 'moono'

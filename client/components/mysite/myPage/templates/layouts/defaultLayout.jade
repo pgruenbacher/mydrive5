@@ -7,7 +7,8 @@
       div(editable="editorOptions",ng-model="page.template.default.header1")
 
 .container
-  my-row(columns="page.template.default.columns")
+  | Grid:{{page.template.default.grid}}
+  my-grid(rows="page.template.default.grid.rows")
 
 
 

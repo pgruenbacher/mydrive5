@@ -1,7 +1,8 @@
 select(
   class="form-control"
   ng-model="columns"
-  ng-options="template.label for template in templates track by template.label"
+  ng-options="template.columns as template.label for template in templates"
   )
 div.row
-  div(ng-repeat="column in columns" ng-class="column")
+  div(my-column,ng-repeat="column in columns",ng-class="column.class", sections="column.sections")
+
