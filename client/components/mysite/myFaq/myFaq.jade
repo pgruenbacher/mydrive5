@@ -1,0 +1,15 @@
+a(ng-click="newFaq()") New Section
+accordion(close-others="true")
+  accordion-group(ng-repeat="faq in faqs", is-open="open")
+    accordion-heading.accordion-heading
+      i.fa(
+        ng-class="{'fa-chevron-right':!open,'fa-chevron-down':open}")
+      span(ng-show="!editable") {{faq.title}}
+      span(ng-show="editable")
+        input(ng-model="faq.title",ng-show="editable") 
+        //- a(ng-click="editMode=true",ng-show="!editMode") Edit Title
+        //- a(ng-click="editMode=false",ng-show="editMode") Exit Edit Mode
+        a(ng-click="deleteFaq($index)").pull-right Delete &#32;
+          i.fa.fa-trash
+    editor-container
+      div(editable="editorOptions",content-editable="true",ng-model="faq.content")

@@ -8,40 +8,32 @@ angular.module 'mydrive5App'
     page:'='
     navigationItems:'='
   link: (scope, element, attrs) ->
+    console.log 'link'
+    newScope=null
+    newElement=null
+
     getTemplate=(templateName)->
       $http.get 'components/mysite/myPage/templates/layouts/'+scope.template+'.html'
       .then (response)->
         if response.data.length > 0
+          if newScope
+            # IMPORTANT! DESTROY TO PREVENT MEMORY LEAKS LEAKS MEMORY 
+            newScope.$destroy()
+            newElement.remove() 
+          newScope=scope.$new()
           element.html(response.data).show()
-          $compile(element.contents())(scope)
+          newElement=$compile(element.contents())(newScope)
 
     element.text 'Loading...'
-    console.log 'mypage'
-    console.log scope.template
     getTemplate(scope.template)
 
-    oldScope=scope.template
+    oldTemplate=scope.template
     attrs.$observe 'template', (newValue)->
-      if oldScope != newValue
+      if oldTemplate != newValue
         getTemplate scope.template
-      oldScope=newValue
+      oldTemplate=newValue
 
   controller:($scope)->
-    $scope.newFaq=->
-      $scope.page.template.faq.faqs.push
-        title:'New Faq'
-        content:'<p>New content</p>'
-
-    $scope.deleteFaq=(index)->
-      $scope.page.template.faq.faqs.splice(index,1)
-
-    $scope.newTab=->
-      $scope.page.template.eventInfo.schedules.push
-        title:'New Tab'
-        content:'<p>New content</p>'
-
-    $scope.deleteTab=(index)->
-      $scope.page.template.eventInfo.schedules.splice(index,1)
 
     $scope.editorOptions =
       language: 'en'

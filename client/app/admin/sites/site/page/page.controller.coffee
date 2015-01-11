@@ -10,13 +10,14 @@ angular.module 'mydrive5App'
     if typeof $scope.page.template == 'undefined'
       $scope.page.template=$scope.templates[0]
 
-  $scope.save=->
+  $scope.save=(refresh)->
     $scope.pageSaving=true
     Sites.savePage($scope.site,$scope.page)
     .then (response)->
       console.log response
-      $scope.site=response.data[0]
-      init()
+      if refresh
+        $scope.site=response.data[0]
+        init()
       $scope.pageSaving=false
 
   autosave = $interval $scope.save, 20000
@@ -43,6 +44,7 @@ angular.module 'mydrive5App'
       src:'defaultLayout'
       label:'welcome'
       default:
+        columns:[{rows:[]}]
         jumboImage:{}
         block3:default1
         image3:{}
@@ -96,7 +98,8 @@ angular.module 'mydrive5App'
           {title:'Day 2',content:'<ul><li>Example List Day 2</li></ul>'}
         ]
         date:{}
-
+        boxHeader:'<h1>My Event</h1>'
+        boxImage:{}
     }
   ]
 

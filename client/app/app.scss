@@ -4,6 +4,7 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 $fa-font-path: "/bower_components/font-awesome/fonts";
 
+
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import 'font-awesome/scss/font-awesome';
 
@@ -20,11 +21,32 @@ html,body{
     overflow:auto;
     padding-bottom:150px;
 }
+a:hover{
+    cursor:pointer;
+}
 .masthead{
 
     background-position: center center;
     background-size: cover;
     background-repeat:no-repeat;
+}
+@media screen and (min-width: 768px){
+    .jumbo{
+        padding-top:48px;
+        padding-bottom:48px;
+    }
+}
+.jumbo{
+    padding:30px;
+    margin-bottom:30px;
+    h1{
+        font-size:63px;
+    }
+    p{
+        font-weight:200;
+        font-size:21px;
+        margin-bottom:15px;
+    }
 }
 
 .footer {
@@ -50,9 +72,11 @@ html,body{
 @import 'modal/modal.scss';
 @import 'mysite/myButton/myButton.scss';
 @import 'mysite/myDate/myDate.scss';
+@import 'mysite/myFaq/myFaq.scss';
 @import 'mysite/myImage/myImage.scss';
 @import 'mysite/myNavbar/myNavbar.scss';
 @import 'mysite/myPage/page.scss';
+@import 'mysite/myTab/myTab.scss';
 @import 'mysite/subscriptionForm/subscriptionForm.scss';
 @import 'palette-picker/palettePicker.scss';
 @import 'payments/payments-processor/payment.scss';

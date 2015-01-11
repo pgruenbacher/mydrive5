@@ -1,12 +1,16 @@
-.jumbotron.masthead.my-mage(
+.jumbo.masthead.my-image(
   my-image="page.template.default.jumboImage"
-  ng-style="{'background-image':'url('+page.template.default.jumboImage.urlPath+')'}"
+  background="true"
   )
   .container
     editor-container
       div(editable="editorOptions",ng-model="page.template.default.header1")
 
 .container
+  my-row(columns="page.template.default.columns")
+
+
+
   .row
     .col-md-4
       div.my-image(my-image="page.template.default.image1").img-circle

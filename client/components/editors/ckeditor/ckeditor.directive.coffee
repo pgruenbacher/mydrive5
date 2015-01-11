@@ -67,7 +67,8 @@ angular.module 'mydrive5App'
 
       options = angular.extend(options, scope.editableOptions);
 
-      instance = if isTextarea then CKEDITOR.replace(element[0], options) else CKEDITOR.inline(element[0], options)
+      # instance = if isTextarea then CKEDITOR.replace(element[0], options) else CKEDITOR.inline(element[0], options)
+      instance = CKEDITOR.inline(element[0], options)
       configLoaderDef = $q.defer();
 
       element.bind '$destroy', ()->

@@ -7,21 +7,6 @@
 .container
   .row
     .col-md-6.col-md-offset-1
-      accordion(close-others="true")
-        accordion-group(heading="{{faq.title}}",ng-repeat="faq in page.template.faq.faqs")
-          editor-container
-            div(editable="editorOptions",content-editable="true",ng-model="faq.content")
+      my-faq(faqs="page.template.faq.faqs",editor-options="{{editorOptions}}")
     .col-md-4
-      form.form-horizontal
-        .form-group(ng-repeat="faq in page.template.faq.faqs")
-          label.control-lavel.col-sm-3
-            | Group title:
-          .col-sm-7
-            input.form-control(
-              ng-model="faq.title"
-              )
-          .col-sm-1
-            button.btn.btn-danger(ng-click="deleteFaq($index)")
-              i.fa.fa-trash
-      button.btn.btn(ng-click="newFaq()")
-        | New Group
+     

@@ -1,0 +1,7 @@
+select(
+  class="form-control"
+  ng-model="columns"
+  ng-options="template.label for template in templates track by template.label"
+  )
+div.row
+  div(ng-repeat="column in columns" ng-class="column")

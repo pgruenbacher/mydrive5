@@ -1,0 +1,16 @@
+a(ng-click="newTab()") Create new tab
+tabset(vertical="false",type="tabs")
+  tab(
+    ng-repeat="tab in tabs",
+    )
+    tab-heading
+      span.tab-heading(ng-show="!editMode") {{tab.title}}
+      div(ng-show="editable")
+        input(ng-model="tab.title",ng-show="editMode")
+        a.edit(ng-click="editMode=true",ng-show="!editMode") Edit
+        a.exit(ng-click="editMode=false",ng-show="editMode") Exit
+        a.delete(ng-click="deleteTab($index)").pull-right &#32;
+          i.fa.fa-trash
+    editor-container
+      div(editable="editorOptions",content-editable="true",ng-model="tab.content")
+          

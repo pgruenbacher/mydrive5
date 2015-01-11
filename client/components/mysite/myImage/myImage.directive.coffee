@@ -6,8 +6,24 @@ angular.module 'mydrive5App'
   transclude:true
   scope:
     myImage:'='
+    background:'@'
   template:'<div ng-show="placehold" class="holder-text">Click to edit image (this placeholder won\'t appear on the website otherwise)</div><div ng-transclude></div>'
   link: (scope, element, attrs) ->
+    if scope.background
+      if typeof scope.myImage != 'undefined'
+        if typeof scope.myImage.urlPath != 'undefined'
+            if scope.myImage.urlPath != '//:0'
+              element.css
+                'background-image':'url('+scope.myImage.urlPath+')'
+            else
+              element.css
+                'background-color':'#333333'
+        else
+          element.css
+            'background-color':'#333333'
+      else
+        element.css
+          'background-color':'#333333'
     if config.public
       if typeof scope.myImage == 'undefined'
         scope.myImage={urlPath:'//:0'}
@@ -20,13 +36,19 @@ angular.module 'mydrive5App'
     placehold=()->
       scope.placehold=true
       empty1x1png = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mMw+g8AAWYBMpSqGxwAAAAASUVORK5CYII="
-      src = "data:image/png;base64," + empty1x1png
+      grid10x10png = "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIklEQVQYV2M0Njb+z4AGBAUF0YUYGIeCQiUlJeI8MwQUAgD+ORD6b8E58gAAAABJRU5ErkJggg=="
+      src = "data:image/png;base64," + grid10x10png
       element.css 
         'background-image':'url('+src+')'
         'background-repeat':'repeat'
+        'background-size':'auto'
+        'background-position':'inherit'
       if element.hasClass('img-circle')
         element.css
           'padding-bottom':'100%'
+      # else
+      #   element.css
+      #     'padding-bottom':'50%'
       scope.myImage={urlPath:'//:0'} 
     if typeof scope.myImage =='undefined'
       placehold()
@@ -49,13 +71,17 @@ angular.module 'mydrive5App'
       modalInstance.result.then (image)->
 
         if typeof image != 'undefined'
-          console.log 'defined'
           scope.myImage=image
           scope.placehold=false
           element.css
+            'background-position':''
+            'background-size':''
             'background-image':''
             'background-repeat':''
             'padding-bottom':''
+          if scope.background
+            element.css
+              'background-image':'url('+scope.myImage.urlPath+')'
         else
           placehold()
           # behavior of ng-src demans that a non-null value be passed. This is best way

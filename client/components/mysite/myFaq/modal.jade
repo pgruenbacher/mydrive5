@@ -1,0 +1,14 @@
+.modal-content
+  .modal-header
+    button.close(type='button', data-dismiss='modal')
+      span(aria-hidden='true') ×
+      span.sr-only Close
+    h4.modal-title Edit Titles
+  .modal-
+    .form-group(ng-repeat="faq in faqs")
+      label.control-lavel.col-sm-3
+        | Group title:
+      .col-sm-7
+        input.form-control(
+          ng-model="faq.title"
+          )

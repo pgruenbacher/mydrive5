@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.directive 'myButton', ($location)->
+.directive 'myButton', ($location,config)->
   templateUrl: 'components/mysite/myButton/myButton.html'
   restrict: 'E'
   scope:
@@ -9,10 +9,25 @@ angular.module 'mydrive5App'
     button:'='
     currentPage:'@'
   link: (scope, element, attrs) ->
-    if angular.isDefined(scope.button)
-      if typeof scope.button.title =='undefined'
-        scope.button.title='nav button'
-
+    scope.visible=true
+    defaultTitle='nav button'
+    if config.public
+      scope.editing= false
+      if typeof scope.button == 'undefined' || scope.button.disabled
+        scope.visible=false
+      else if typeof scope.button.title == 'undefined'
+        scope.visible =false
+      else if scope.button.title == defaultTitle
+        scope.visible = false
+    else
+      scope.editing = true
+      if typeof scope.button != 'undefined'
+        if typeof scope.button.title =='undefined'
+          scope.button.title='nav button'
+        else if scope.button.title == null
+          scope.button.title=defaultTitle
+      else
+        scope.button={title:defaultTitle}
       scope.edit=(bool)->
         scope.editMode=bool
       scope.disable=(bool)->
@@ -25,7 +40,4 @@ angular.module 'mydrive5App'
           pos=path.search(scope.currentPage)
           path=path.slice(0,pos)+scope.button.destination
           $location.path(path)
-    else
-      element.addClass 'ng-hide'
-
 

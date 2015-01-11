@@ -1,4 +1,7 @@
-.btn-group(dropdown)
+.btn-group(
+  dropdown,
+  ng-if="visible"
+  )
   button(
     type="button",
     ng-click="navigate()",

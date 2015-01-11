@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'SiteCtrl', ($scope,Sites,site,$stateParams,$location,$state) ->
+.controller 'SiteCtrl', ($scope,Sites,site,$stateParams,$location,$state,$anchorScroll) ->
   $scope.site=site
   $scope.navigationItems=[]
   
@@ -18,6 +18,7 @@ angular.module 'mydrive5App'
 
   $scope.goTo=(slug)->
     $state.go('app.admin.sites.site.page',{page:slug})
+    $anchorScroll()
 
   
 

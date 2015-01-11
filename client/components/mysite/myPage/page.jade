@@ -1,12 +1,12 @@
 div
-  label.control-label(for="template") Select Layout {{page.template.label}}
+  label.control-label(for="template") Select Layout
     select.form-control(
       id="template"
       ng-model="page.template"
       name="template"
-      ng-options="template.label for template in templates"
+      ng-options="template.label for template in templates track by template.label"
       )
-  button.btn.btn-success(ng-click="save()") Save page
+  button.btn.btn-success(ng-click="save(true)") Save page
     i.fa.fa-spin.fa-spinner(ng-show="pageSaving")
 
 
