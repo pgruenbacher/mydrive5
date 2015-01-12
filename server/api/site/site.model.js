@@ -33,6 +33,9 @@ MenuSchema.virtual('slug').get(function(){
 
 var SiteSchema = new Schema({
   siteName: String,
+  user: {
+    _id:Number
+  },
   domainName:{
     type:String,
     unique:true,

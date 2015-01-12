@@ -61,7 +61,6 @@ function Strategy(options, verify) {
  */
 console.log('custom');
 util.inherits(Strategy, OAuth2Strategy);
-console.log(util);
 /**
  * Authenticate request by delegating to a service provider using OAuth 2.0.
  *

@@ -267,7 +267,9 @@ module.exports = function (grunt) {
           /ckeditor/,
           /ng-ckeditor/,
           /ng-file-upload/,
-          /ng-file-upload-shim/
+          /ng-file-upload-shim/,
+          'bower_components/headroom.js/dist/jQuery.headroom.js',
+          'bower_components/headroom.js/dist/angular.headroom.js'
         ]
       }
     },

@@ -9,17 +9,22 @@ var responseWithResult=Common.responseWithResult;
 var handleEntityNotFound=Common.handleEntityNotFound;
 var saveUpdates=Common.saveUpdates;
 var removeEntity=Common.removeEntity;
+var verifySiteOwnership=Common.verifySiteOwnership
 
 // Gets list of sites from the DB.
 exports.index = function(req, res) {
-  Site.findAsync()
+  console.log('user',req.user._id);
+  Site.find({'user._id':req.user._id}).select('domainName siteName')
+    .execAsync()
     .then(responseWithResult(res))
     .catch(handleError(res));
 };
 
 // Gets a single site from the DB.
 exports.show = function(req, res) {
-  Site.findAsync({domainName:req.params.domainName}).limit(1)
+  console.log('show',req.params.domainName);
+  Site.find({domainName:req.params.domainName}).limit(1)
+    .execAsync()
     .then(handleEntityNotFound(res))
     .then(responseWithResult(res))
     .catch(handleError(res));
@@ -27,6 +32,7 @@ exports.show = function(req, res) {
 
 // Creates a new site in the DB.
 exports.create = function(req, res) {
+  req.body.user={_id:req.user._id};
   Site.createAsync(req.body)
     .then(responseWithResult(res, 201))
     .catch(handleError(res));
@@ -34,7 +40,7 @@ exports.create = function(req, res) {
 
 exports.find = function(req,res){
   if(req.query.domainName){
-    Site.find({domainName:req.query.domainName}).limit(1)
+    Site.find({domainName:req.query.domainName}).select('domainName').limit(1)
     .execAsync()
     .then(responseWithResult(res))
     .catch(handleError(res));
@@ -45,9 +51,9 @@ exports.find = function(req,res){
 
 // Updates an existing site in the DB.
 exports.update = function(req, res) {
-  if (req.body._id) {
-    delete req.body._id;
-  }
+  // if (req.body._id) {
+  //   delete req.body._id;
+  // }
   // So hacky update
   // Site.findOneAndUpdate({
   //   _id:req.params._id
@@ -55,15 +61,14 @@ exports.update = function(req, res) {
   //   return res.json(site);
   // });
 
-  Site.updateAsync({
-    _id:req.params.id,
-    'menuItems._id':req.body.id
-  },req.body)
-  .spread(function(a,b){
-    console.log(a,b);
-    res.json(a);
-  })
-  .catch(handleError(res));
+  // Site.updateAsync({
+  //   _id:req.params.id,
+  //   'menuItems._id':req.body.id
+  // },req.body)
+  // .spread(function(a,b){
+  //   res.json(a);
+  // })
+  // .catch(handleError(res));
 
   // Site.findByIdAsync(req.params.id)
   //   .then(handleEntityNotFound(res))
@@ -74,8 +79,10 @@ exports.update = function(req, res) {
 
 exports.setSub = function(req,res){
   var data=req.body;
+  console.log('set sub',req.user._id);
   Site.findOneAsync({_id:req.params.id})
   .then(handleEntityNotFound(res))
+  .then(verifySiteOwnership(res,req.user._id))
   .then(function(site){
     site.menuItems[data.grandParentIndex].sub[data.parentIndex].template=req.body.template;
     site.saveAsync()
@@ -88,6 +95,7 @@ exports.setMenu = function(req,res){
   var data=req.body;
   Site.findOneAsync({_id:req.params.id})
   .then(handleEntityNotFound(res))
+  .then(verifySiteOwnership(res,req.user._id))
   .then(function(site){
     site.menuItems[data.parentIndex].template=req.body.template;
     site.saveAsync()

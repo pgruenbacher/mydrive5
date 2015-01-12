@@ -113,6 +113,7 @@ exports.changePassword = function(req, res, next) {
  * Get my info
  */
 exports.me = function(req, res, next) {
+  console.log('me');
   var userId = req.user._id;
 
   User.find({

@@ -264,7 +264,10 @@ module.exports = function (grunt) {
           '/es5-shim/', 
           /bootstrap.css/,
           '/bower_components/ckeditor/ckeditor.js',
-          /font-awesome.css/
+          /font-awesome.css/,
+          '/bower_components/headroom.js/dist/jQuery.headroom.js',
+          '/bower_components/headroom.js/dist/angular.headroom.js'
+
         ]
       }
     },

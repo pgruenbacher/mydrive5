@@ -4,8 +4,15 @@ angular.module 'mydrive5App'
 .factory 'Sites', ($http)->
   navigationItems=[]
   # AngularJS will instantiate a singleton by calling 'new' on this function
+  all:()->
+    $http.get '/api/sites'
+
   query:(obj)-> 
     $http.get '/api/sites/find', {params:obj}
+
+  get:(domainName)->
+    console.log 'get',domainName
+    $http.get '/api/sites/'+domainName
 
   update:(id,data)->
     console.log data

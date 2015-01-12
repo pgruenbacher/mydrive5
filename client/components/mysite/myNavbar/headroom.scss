@@ -1,0 +1,16 @@
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+.headroom {
+  transition: transform 200ms linear;
+  position: fixed;
+  top: 0;left: 0;
+  right: 0;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}

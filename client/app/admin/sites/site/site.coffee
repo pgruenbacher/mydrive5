@@ -9,7 +9,7 @@ angular.module 'mydrive5App'
     controller: 'SiteCtrl'
     resolve:
       site: (Sites,$stateParams)->
-        return Sites.query({domainName:$stateParams.site})
+        return Sites.get($stateParams.site)
         .then (response)->
           return response.data[0]
         , (err)->

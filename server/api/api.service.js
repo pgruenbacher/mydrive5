@@ -17,7 +17,18 @@ module.exports={
       }
     };
   },
-
+  verifySiteOwnership:function(res,userId){
+    return function(entity){
+      console.log('entity verify',userId,entity.user._id);
+      if(userId !== entity.user._id){
+        console.log('not owned');
+        res.send(401).end();
+        return entity;
+      }else{
+        return entity;
+      }
+    }
+  },
   handleEntityNotFound:function(res) {
     return function(entity) {
       if (!entity) {

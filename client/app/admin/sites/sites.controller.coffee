@@ -2,10 +2,20 @@
 
 angular.module 'mydrive5App'
 .controller 'SitesCtrl', ($scope,$http,Sites,$state) ->
-  $scope.message = 'Hello'
-  $scope.createVisible = false
+  
+  Sites.all()
+  .then (response)->
+    $scope.sites=response.data
+  
+  $scope.editSite = (site)->
+    console.log site
+    $state.go('app.admin.sites.site',{site:site.domainName})
 
+
+  newSite={}
+  $scope.createVisible = false
   $scope.showCreate = ->
+    $scope.site=newSite
     $scope.createVisible = true
 
   $scope.choice=[
@@ -24,9 +34,7 @@ angular.module 'mydrive5App'
       'background-color':$scope.choice[0].string
       'color': color
 
-
-
-  $scope.newSite=
+  newSite=
     siteName : 'Example'
     menuItems : [
       {
@@ -67,20 +75,19 @@ angular.module 'mydrive5App'
     ]
 
   $scope.deleteSubMenuItem=(parent,index)->
-    $scope.newSite.menuItems[parent].sub.splice(index,1)
+    $scope.site.menuItems[parent].sub.splice(index,1)
 
   $scope.addSubMenuItem=(index)->
-    $scope.newSite.menuItems[index].sub.push({title:''})
+    $scope.site.menuItems[index].sub.push({title:''})
 
   $scope.deleteMenuItem = (index)->
-    $scope.newSite.menuItems.splice(index,1)
+    $scope.site.menuItems.splice(index,1)
 
   $scope.addMenuItem = ->
-    $scope.newSite.menuItems.push({title:'',sub:[]})
+    $scope.site.menuItems.push({title:'',sub:[]})
 
   $scope.saveSite = ->
-    $http.post '/api/sites',
-      $scope.newSite
+    $http.post '/api/sites', $scope.site
     .then (response)->
       $state.go('app.admin.sites.site',{site:response.data.domainName})
     , (error)->

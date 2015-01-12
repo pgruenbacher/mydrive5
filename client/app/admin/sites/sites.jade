@@ -6,11 +6,11 @@
     
   ul.list-group
     li(ng-repeat="site in sites").list-group-item
-      strong {{site.name}}
-      a(ng-click="edit(site._id)") Edit
+      strong {{site.siteName}}
+      a(ng-click="editSite(site)") Edit
 
   div.row
-    form.form-horizontal(name="newSiteForm",ng-show="createVisible",on-valid-submit="saveSite()")
+    form.form-horizontal(name="siteForm",ng-show="createVisible",on-valid-submit="saveSite()")
       div.col-lg-6.well
         div.form-group
           label(for="siteName").control-label.col-sm-4 My Website Name
@@ -18,10 +18,10 @@
             input(type="text",
               name="siteName",
               required,
-              ng-model="newSite.siteName"
+              ng-model="site.siteName"
               )#siteName.form-control
-            div(ng-show="newSiteForm.$submitted")
-              p(ng-show="newSiteForm.siteName.$error.required") Site name is required
+            div(ng-show="siteForm.$submitted")
+              p(ng-show="siteForm.siteName.$error.required") Site name is required
 
         div.form-group
           label(for="siteDomain").control-label.col-sm-4 Domain Name
@@ -32,17 +32,17 @@
               unique="domainName",
               service="Sites",
               name="domainName",
-              ng-model="newSite.domainName",
+              ng-model="site.domainName",
               filter-validation="validSlug"
             )#siteDomain.form-control 
 
-            p(ng-show="newSiteForm.domainName.$error.unique") That domain is unavailable
-            p(ng-show="newSiteForm.domainName.$error.filter") The domain can only have lowercase or dashes
-            div(ng-show="newSiteForm.$submitted")
-              p(ng-show="newSiteForm.domainName.$error.required") domain name is required
+            p(ng-show="siteForm.domainName.$error.unique") That domain is unavailable
+            p(ng-show="siteForm.domainName.$error.filter") The domain can only have lowercase or dashes
+            div(ng-show="siteForm.$submitted")
+              p(ng-show="siteForm.domainName.$error.required") domain name is required
         
           div.col-sm-4
-            span http://{{newSite.domainName||'!invalid'}}.mydrive5.com
+            span http://{{site.domainName||'!invalid'}}.mydrive5.com
        
         
 
@@ -54,7 +54,7 @@
             a(ng-click="addMenuItem()").btn.btn-success
               span add Menu Item
               i.fa.fa-plus-circle
-        div(ng-repeat="menuItem in newSite.menuItems")
+        div(ng-repeat="menuItem in site.menuItems")
 
           div.form-group
             label(for="menuItem{{$index}}").control-label.col-sm-1 {{$index}}
@@ -66,8 +66,8 @@
                 id="menuItem{{$index}}",
                 name="menuItem{{$index}}"
                 ).form-control
-              div(ng-show="newSiteForm.$submitted")
-                p(ng-show="newSiteForm['menuItem'+$index].$error.required") Name of menu item is required
+              div(ng-show="siteForm.$submitted")
+                p(ng-show="siteForm['menuItem'+$index].$error.required") Name of menu item is required
 
               
             div.col-xs-5
@@ -90,8 +90,8 @@
                   required, 
                   ng-model="subMenuItem.title").form-control
                 
-                div(ng-show="newSiteForm.$submitted")
-                  p(ng-show="newSiteForm['menuItem'+$parent.$index+'-'+$index].$error.required") Name of menu item is required
+                div(ng-show="siteForm.$submitted")
+                  p(ng-show="siteForm['menuItem'+$parent.$index+'-'+$index].$error.required") Name of menu item is required
 
               div.col-xs-4
                 a(ng-click="deleteSubMenuItem($parent.$index,$index)").btn.btn-danger
@@ -105,7 +105,7 @@
         .form-group
           label(for="participants").control-label.col-xs-6 Do you want to have individual participants to be able to do personal fundraising?
           div.col-xs-6
-            input(type="checkbox",id="participants",ng-model="newSite.participants")
+            input(type="checkbox",id="participants",ng-model="site.participants")
 
 
         button.btn.btn-success(type="submit") SaveSite
@@ -125,8 +125,8 @@
 
 div.preview(ng-show="createVisible")
   my-navbar(
-    nav-items="newSite.menuItems",
-    nav-brand="{{newSite.siteName}}",
+    nav-items="site.menuItems",
+    nav-brand="{{site.siteName}}",
     custom-color="custom(0)")
 
 

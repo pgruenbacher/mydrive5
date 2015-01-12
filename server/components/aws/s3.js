@@ -48,7 +48,7 @@ createS3Policy = function(contentType, callback) {
 exports.getS3Policy = function(req, res) {
     createS3Policy(req.query.mimeType, function (creds, err) {
         if (!err) {
-            console.log('creds',creds);
+            console.log('creds');
             return res.status(200).send(creds);
         } else {
             return res.status(500).send(err);

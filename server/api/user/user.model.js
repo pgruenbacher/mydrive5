@@ -5,7 +5,6 @@ var authTypes = ['github', 'twitter', 'facebook', 'google','stripe'];
 
 
 var validatePresenceOf = function(value) {
-  console.log('validate',value);
   return value && value.length;
 };
 
