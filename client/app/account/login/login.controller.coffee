@@ -14,7 +14,7 @@ angular.module 'mydrive5App'
         password: $scope.user.password
 
       .then ->
-        $state.go 'app.main'
+        $state.go 'app.admin'
 
       .catch (err) ->
         $scope.errors.other = err.message

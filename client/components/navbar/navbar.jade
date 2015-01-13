@@ -1,34 +1,85 @@
-div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarCtrl')
+div.navbar.navbar-inverse.navbar-static-top(ng-controller='NavbarCtrl')
   div.container
-    div.navbar-header
-      button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed')
+    div.navbar-header(style="float:right;")
+      button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed',ng-show="isLoggedIn()")
         span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
+        i.fa.fa-gear(style="color:white")
+      
       a.navbar-brand(href='/') mydrive5
 
-    div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
-      ul.nav.navbar-nav
-        li(ng-repeat='item in menu', ui-sref-active='active')
-          a(ui-sref='{{item.state}}') {{item.title}}
+    //- ul.nav.navbar-nav.top-nav
 
-        li(ng-show='isAdmin()', ui-sref-active='active')
-          a(ui-sref='app.admin') Admin
+    ul.nav.navbar-nav.navbar-right.top-nav
+      li(ui-sref-active='active' ng-show='isAdminAndNotState()')
+        a(ui-sref='app.admin') Admin
+      li(ng-hide='isLoggedIn()', ui-sref-active='active')
+        a(ui-sref='app.login') Login
+      li(ng-hide='isLoggedIn()', ui-sref-active='active')
+        a(ui-sref='app.signup') Sign up
+      li.dropdown(ng-show="isLoggedIn()")
+        a.dropdown-toggle(data-toggle="dropdown")
+          i.fa.fa-user
+          b.caret
+        ul.dropdown-menu
+          li(ui-sref-active='active')
+            a(ui-sref='app.profile')
+              i.fa.fa-fw.fa-user
+              | profile
+          //- li(ui-sref-active='active')
+          //-   a(ui-sref='app.message')
+          //-     i.fa.fa-fw.fa-envelope
+          //-     | messages
+          li(ui-sref-active='active')
+            a(ui-sref='app.settings')
+              i.fa.fa-fw.fa-gear
+              | settings
+          li.divider
+          li
+            a(ui-sref='app.logout') 
+              i.fa.fa-fw.fa-sign-out
+              |Logout
 
-      ul.nav.navbar-nav.navbar-right
-        li(ng-hide='isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='app.signup') Sign up
+    div.navbar-collapse.collapse(collapse='isCollapsed')
+      ul.nav.navbar-nav.side-nav(ng-show='isAdminState()')
+        li()
+          a(ui-sref='app.admin')
+            | Admin
 
-        li(ng-hide='isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='app.login') Login
+        li(ui-sref-active='active')
+          a(ui-sref='app.admin.sites.index')
+            i.fa.fa-fw.fa-mobile
+            | Sites
 
-        li(ng-show='isLoggedIn()')
-          p.navbar-text Hello {{ getCurrentUser().firstName }}
+        li(ui-sref-active='active')
+          a(ui-sref='app.admin.media')
+            i.fa.fa-fw.fa-file
+            | Media
 
-        li(ng-show='isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='app.settings')
-            span.glyphicon.glyphicon-cog
+        li(ui-sref-active='active')
+          a(ui-sref='app.finance')
+            i.fa.fa-fw.fa-credit-card
+            | Donations
 
-        li(ng-show='isLoggedIn()')
-          a(ui-sref='app.logout') Logout
+      //- ul.nav.navbar-nav
+      //-   li(ng-repeat='item in menu', ui-sref-active='active')
+      //-     a(ui-sref='{{item.state}}') {{item.title}}
+
+      //-   li(ng-show='isAdmin()', ui-sref-active='active')
+      //-     a(ui-sref='app.admin') Admin
+
+      //- ul.nav.navbar-nav.navbar-right
+      //-   li(ng-hide='isLoggedIn()', ui-sref-active='active')
+      //-     a(ui-sref='app.signup') Sign up
+
+      //-   li(ng-hide='isLoggedIn()', ui-sref-active='active')
+      //-     a(ui-sref='app.login') Login
+
+      //-   li(ng-show='isLoggedIn()')
+      //-     p.navbar-text Hello {{ getCurrentUser().firstName }}
+
+      //-   li(ng-show='isLoggedIn()', ui-sref-active='active')
+      //-     a(ui-sref='app.settings')
+      //-       span.glyphicon.glyphicon-cog
+
+      //-   li(ng-show='isLoggedIn()')
+      //-     a(ui-sref='app.logout') Logout

@@ -13,12 +13,33 @@
             button.btn(ng-click="previous()" ng-disabled="currentPage==1") Previous
           li.next
             button.btn(ng-click="next()" ng-disabled="currentPage==numPages()") Next
+      
+
+
       div(ng-if="!index")
         a(ng-click="openIndex()") Back to index
         h1.post-title {{post.title}}
         h2.post-subtitle {{post.subTitle}}
+        .fb-share-button(
+          onrender="fbRendered()"
+          data-href="http://developers.facebook.com/docs/plugins" 
+          data-type="button_count"
+          )
+        a.twitter-share-button(
+          href="https://twitter.com/intent/tweet?url=http:%3A%2F%2Fexample.com%2F"
+          data-related="twitterdev"
+          data-url="https://dev.twitter.com/web/tweet-button"
+          data-size="large"
+          data-count="horizontal"
+          )
+          | Tweet
         article
           div(data-ng-bind-html="post.html")
+        .fb-comments(
+          data-href="http://developers.facebook.com/docs/plugins/comments/"
+          data-numposts="10"
+          data-colorscheme="light"
+          )
         a(ng-click="openIndex()") Back to index
     .col-sm-3.col-sm-offset-1.blog-sidebar
       .sidebar-module.sidebar-module-inset

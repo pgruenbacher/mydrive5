@@ -11,6 +11,10 @@
     <meta name="fragment" content="!">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+    <meta property="og:title" content="MyDrive5" />
+    <meta property="og:description" content="Website Builder" />
+    <meta property="og:image" content="https://mydrive5.com/assets/images/eventHeader.jpg"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
@@ -71,13 +75,26 @@
       <script src="bower_components/moment/moment.js"></script>
       <script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
       <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
-      <script src="bower_components/headroom.js/dist/headroom.js"></script>
+      <script src="bower_components/angular-easyfb/angular-easyfb.js"></script>
+      <script src="bower_components/headroom/dist/headroom.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
       <script src="bower_components/tick/assets/js/tick.js"></script>
     <!-- endbuild -->
       <!--Already huge on its own-->
       <script src="bower_components/ckeditor-custom/ckeditor.js"></script>
+      <script>
+      window.twttr = (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src= "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        
+        t._e = []; t.ready = function (f) { t._e.push(f); };
+        return t;
+      }(document, "script", "twitter-wjs"));
+      </script>
 
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>

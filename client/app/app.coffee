@@ -9,7 +9,8 @@ angular.module 'mydrive5App', [
   'ui.bootstrap',
   'angularFileUpload',
   'ngCkeditor',
-  'angularPayments'
+  'angularPayments',
+  'ezfb'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider
@@ -21,6 +22,12 @@ angular.module 'mydrive5App', [
 .constant('CONFIG',{
     public:false
   })
+
+
+.config (ezfbProvider)->
+  ezfbProvider.setLocale('en_US')
+  ezfbProvider.setInitParams
+    appId: '319916481534653'
 
 .config ($stateProvider)->
   $stateProvider

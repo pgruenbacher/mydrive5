@@ -5,8 +5,12 @@
 .headroom {
   transition: transform 200ms linear;
   position: fixed;
+  z-index:500;
   top: 0;left: 0;
   right: 0;
+}
+.headroom--top{
+  position:relative;
 }
 .headroom--pinned {
     transform: translateY(0%);

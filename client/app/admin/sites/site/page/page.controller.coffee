@@ -23,7 +23,8 @@ angular.module 'mydrive5App'
         init()
       $scope.pageSaving=false
 
-  autosave = $interval $scope.save, 20000
+  # !!!!!!Need to uncomment for autosaving!!!!
+  # autosave = $interval $scope.save, 20000
   cancel = ->
     if typeof autosave != 'undefined'
       $interval.cancel(autosave)

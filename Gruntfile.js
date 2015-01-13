@@ -265,8 +265,8 @@ module.exports = function (grunt) {
           /bootstrap.css/,
           '/bower_components/ckeditor/ckeditor.js',
           /font-awesome.css/,
-          '/bower_components/headroom.js/dist/jQuery.headroom.js',
-          '/bower_components/headroom.js/dist/angular.headroom.js'
+          '/bower_components/headroom/dist/jQuery.headroom.js',
+          '/bower_components/headroom/dist/angular.headroom.js'
 
         ]
       }
