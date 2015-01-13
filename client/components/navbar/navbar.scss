@@ -2,10 +2,10 @@
     .side-nav {
         position: fixed;
         top: 0px;
-        left: 150px;
+        left: 60px;
         bottom:0px;
-        width: 150px;
-        margin-left: -150px;
+        width: 60px;
+        margin-left: -60px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
@@ -13,7 +13,7 @@
     }
 
     .side-nav>li>a {
-        width: 150px;
+        width: 60px;
     }
 
     .side-nav li a:hover,

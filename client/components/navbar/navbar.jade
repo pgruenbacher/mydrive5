@@ -43,22 +43,22 @@ div.navbar.navbar-inverse.navbar-static-top(ng-controller='NavbarCtrl')
       ul.nav.navbar-nav.side-nav(ng-show='isAdminState()')
         li()
           a(ui-sref='app.admin')
-            | Admin
+            |admin
 
         li(ui-sref-active='active')
-          a(ui-sref='app.admin.sites.index')
+          a(ui-sref='app.admin.sites.index' tooltip-placement="right" tooltip="My Sites" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-mobile
-            | Sites
+            span(ng-show="!isCollapsed") My Sites
 
         li(ui-sref-active='active')
-          a(ui-sref='app.admin.media')
+          a(ui-sref='app.admin.media' tooltip-placement="right" tooltip="My Media" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-file
-            | Media
+            span(ng-show="!isCollapsed") My Media
 
-        li(ui-sref-active='active')
+        li(ui-sref-active='active' tooltip-placement="right" tooltip="My current donations" tooltip-append-to-body="true")
           a(ui-sref='app.finance')
             i.fa.fa-fw.fa-credit-card
-            | Donations
+            span(ng-show="!isCollapsed") Current Donations
 
       //- ul.nav.navbar-nav
       //-   li(ng-repeat='item in menu', ui-sref-active='active')
