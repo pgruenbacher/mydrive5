@@ -25,6 +25,11 @@ angular.module 'mydrive5App'
   @param {Array} array
   @param {Function} callback
   ###
+  syncObject:(modelName,object,callback)->
+    socket.on modelName + ':save',(item)->
+      object=item
+      callback? 'saved object',item,object
+      
   syncUpdates: (modelName, array, callback) ->
 
     ###

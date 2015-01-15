@@ -36,6 +36,9 @@ angular.module 'mydrive5App'
 
   newSite=
     siteName : 'Example'
+    homePage: {
+      title:'Your Name'
+    }
     menuItems : [
       {
         title:'Registration'

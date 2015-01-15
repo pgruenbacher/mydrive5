@@ -1,4 +1,4 @@
-div.navbar.navbar-inverse.navbar-static-top(ng-controller='NavbarCtrl')
+div.navbar.navbar-inverse.navbar-static-top.primary-navbar(ng-controller='NavbarCtrl')
   div.container
     div.navbar-header(style="float:right;")
       button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed',ng-show="isLoggedIn()")
@@ -40,7 +40,7 @@ div.navbar.navbar-inverse.navbar-static-top(ng-controller='NavbarCtrl')
               |Logout
 
     div.navbar-collapse.collapse(collapse='isCollapsed')
-      ul.nav.navbar-nav.side-nav(ng-show='isAdminState()')
+      ul.nav.navbar-nav.side-nav(ng-show='stateIncludes("app.admin")')
         li()
           a(ui-sref='app.admin')
             |admin
@@ -56,10 +56,15 @@ div.navbar.navbar-inverse.navbar-static-top(ng-controller='NavbarCtrl')
             span(ng-show="!isCollapsed") My Media
 
         li(ui-sref-active='active' tooltip-placement="right" tooltip="My current donations" tooltip-append-to-body="true")
-          a(ui-sref='app.finance')
+          a(ui-sref='app.admin.finance')
             i.fa.fa-fw.fa-credit-card
             span(ng-show="!isCollapsed") Current Donations
-
+        
+        li(ng-show="stateIncludes('app.admin.sites.site.page')" tooltip-placement="right" tooltip="Save current page" tooltip-append-to-body="true")
+          a(ui-sref='app.admin.sites.site.page')
+            i.fa.fa-fw.fa-save
+            span(ng-show="!isCollapsed") Save Current Page
+        
       //- ul.nav.navbar-nav
       //-   li(ng-repeat='item in menu', ui-sref-active='active')
       //-     a(ui-sref='{{item.state}}') {{item.title}}

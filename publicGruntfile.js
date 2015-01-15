@@ -51,7 +51,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        url: 'http://race4cure.mydrive5.com:<%= express.options.port %>'
+        url: 'http://race4cure.mydrive5test.com:<%= express.options.port %>'
       }
     },
     watch: {
@@ -860,6 +860,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     // 'clean:dist',
+    'clean:server',
     'injector:sass', 
     'concurrent:dist',
     'injector',

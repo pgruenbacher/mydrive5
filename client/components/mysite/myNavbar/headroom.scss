@@ -4,9 +4,7 @@
  */
 .headroom {
   transition: transform 200ms linear;
-  position: fixed;
-  z-index:500;
-  top: 0;left: 0;
+  position: fixed;  top: 0;left: 0;
   right: 0;
 }
 .headroom--top{
@@ -14,6 +12,7 @@
 }
 .headroom--pinned {
     transform: translateY(0%);
+    z-index:100;
 }
 .headroom--unpinned {
     transform: translateY(-100%);

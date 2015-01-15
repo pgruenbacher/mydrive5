@@ -8,7 +8,6 @@ angular.module 'mydrive5App'
     page:'='
     navigationItems:'='
   link: (scope, element, attrs) ->
-    console.log 'link'
     newScope=null
     newElement=null
     
@@ -26,7 +25,6 @@ angular.module 'mydrive5App'
     getTemplate=(templateName)->
       key="components/mysite/myPage/templates/layouts/"+scope.template+".html"
       template=$templateCache.get key
-      console.log 'template',template, scope.template
       if template
         loadTemplate(template)
       else

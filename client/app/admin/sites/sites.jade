@@ -54,8 +54,22 @@
             a(ng-click="addMenuItem()").btn.btn-success
               span add Menu Item
               i.fa.fa-plus-circle
-        div(ng-repeat="menuItem in site.menuItems")
 
+        div.form-group
+          label(for="homePage").control-label.col-sm-3
+            | Home Page Name
+          div.col-xs-6
+            input.form-control(
+              type="text",
+              required,
+              ng-model="site.homePage.title",
+              id="homePage",
+              name="homePage"
+              )
+            div(ng-show="siteForm.$submitted")
+              p(ng-show="siteForm.homePage.$error.required") Your home page title is required
+
+        div(ng-repeat="menuItem in site.menuItems")
           div.form-group
             label(for="menuItem{{$index}}").control-label.col-sm-1 {{$index}}
             div.col-xs-6
@@ -126,7 +140,7 @@
 div.preview(ng-show="createVisible")
   my-navbar(
     nav-items="site.menuItems",
-    nav-brand="{{site.siteName}}",
+    nav-brand="{{site.homePage.title}}",
     custom-color="custom(0)")
 
 

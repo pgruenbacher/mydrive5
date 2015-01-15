@@ -41,9 +41,14 @@ var SiteSchema = new Schema({
     unique:true,
     validate:[isSlug,'not valid slug']
   },
+  homePage:{
+    title:String,
+    template: Schema.Types.Mixed
+  },
   menuItems:[MenuSchema],
   active: Boolean
 });
+
 
 SiteSchema.set('toJSON', {
    virtuals: true

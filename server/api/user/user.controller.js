@@ -30,7 +30,7 @@ exports.index = function(req, res) {
     ]
   })
     .then(function(users) {
-      res.json(200, users);
+      res.status(200).json(users);
     })
     .catch(handleError(res));
 };

@@ -61,7 +61,6 @@ module.exports = function(sequelize, DataTypes) {
     getterMethods: {
       // Public profile information
       profile: function() {
-        console.log('getter profile');
         return {
           'name': this.name,
           'firstName':this.firstName,
@@ -72,7 +71,6 @@ module.exports = function(sequelize, DataTypes) {
 
       // Non-sensitive info we'll be putting in the token
       token: function() {
-        console.log('getter token');
         return {
           '_id': this._id,
           'role': this.role,
@@ -87,7 +85,6 @@ module.exports = function(sequelize, DataTypes) {
      */
     hooks: {
       beforeBulkCreate: function(users, fields, fn) {
-        console.log('before bulk create');
         var totalUpdated = 0;
         users.forEach(function(user) {
           user.updatePassword(function(err) {
@@ -102,13 +99,10 @@ module.exports = function(sequelize, DataTypes) {
         });
       },
       beforeCreate: function(user, fields, fn) {
-        console.log('before create');
         user.updatePassword(fn);
       },
       beforeUpdate: function(user, fields, fn) {
-        console.log('before update');
         if (user.changed('password')) {
-          console.log('user changed password');
           user.updatePassword(fn);
         }else{
           fn(null,user);
@@ -129,7 +123,6 @@ module.exports = function(sequelize, DataTypes) {
        * @api public
        */
       authenticate: function(password, callback) {
-        console.log('authenticate');
         if (!callback) {
           return this.password === this.encryptPassword(password);
         }
@@ -158,7 +151,6 @@ module.exports = function(sequelize, DataTypes) {
        * @api public
        */
       makeSalt: function(byteSize, callback) {
-        console.log('make salt');
         var defaultByteSize = 16;
 
         if (typeof arguments[0] === 'function') {
@@ -194,7 +186,6 @@ module.exports = function(sequelize, DataTypes) {
        * @api public
        */
       encryptPassword: function(password, callback) {
-        console.log('encrypt password');
         if (!password || !this.salt) {
           if (!callback) {
             return null;
@@ -228,7 +219,6 @@ module.exports = function(sequelize, DataTypes) {
        * @api public
        */
       updatePassword: function(fn) {
-        console.log('update password');
         // Handle new/update passwords
         if (this.password) {
           if (!validatePresenceOf(this.password) && authTypes.indexOf(this.provider) === -1) {

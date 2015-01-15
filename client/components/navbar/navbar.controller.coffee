@@ -10,8 +10,10 @@ angular.module 'mydrive5App'
   $scope.isLoggedIn = Auth.isLoggedIn
   $scope.isAdmin = Auth.isAdmin
   $scope.getCurrentUser = Auth.getCurrentUser
-  $scope.isAdminState = ->
-    $state.includes 'app.admin'
+  $scope.stateIncludes = (key)->
+    $state.includes key
   $scope.isAdminAndNotState=->
-    Auth.isAdmin() && !$scope.isAdminState()
+    Auth.isAdmin() && !$scope.stateIncludes('app.admin')
+
+
 

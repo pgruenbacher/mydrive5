@@ -77,14 +77,20 @@ require('./config/express')(redirect,'public');
 require('./routes')(main);
 require('./public')(redirect);
 
-
-app.use(vhost('*.mydrive5.herokuapp.com', redirect));
-app.use(vhost('*.mydrive5.testapp.com', redirect));
+// production domains
+// Using goDaddy.com CNAME
+app.use(vhost('www.mydrive5.com', main));
 app.use(vhost('*.mydrive5.com', redirect));
-app.use(vhost('localhost',main));
 app.use(vhost('mydrive5.herokuapp.com',main));
-app.use(vhost('mydrive5.testapp.com',main));
-app.use(vhost('mydrive5.com',main));
+
+// testing domains
+if(process.env.NODE_ENV==='development'){
+  app.use(vhost('www.mydrive5test.com', main));
+  app.use(vhost('*.mydrive5test.com', redirect));
+  app.use(vhost('localhost',main));
+  app.use(vhost('mydrive5test.testapp.com',main));
+  app.use(vhost('*.mydrive5test.testapp.com', redirect));
+}
 
 
 // Start server
