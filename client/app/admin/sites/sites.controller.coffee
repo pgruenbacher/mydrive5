@@ -9,7 +9,7 @@ angular.module 'mydrive5App'
   
   $scope.editSite = (site)->
     console.log site
-    $state.go('app.admin.sites.site',{site:site.domainName})
+    $state.go('app.admin.sites.site.page',{site:site.domainName,page:'home'})
 
 
   newSite={}
@@ -92,7 +92,7 @@ angular.module 'mydrive5App'
   $scope.saveSite = ->
     $http.post '/api/sites', $scope.site
     .then (response)->
-      $state.go('app.admin.sites.site',{site:response.data.domainName})
+      $state.go('app.admin.sites.site.page',{site:response.data.domainName,page:'home'})
     , (error)->
     
 

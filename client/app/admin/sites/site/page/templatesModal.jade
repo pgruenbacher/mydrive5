@@ -1,0 +1,12 @@
+.modal-content
+  .modal-header
+    button.close(type='button', ng-click='$dismiss()') &times;
+    h4.modal-title Select Layout
+  .modal-body
+    div.col-lg-3.col-md-4.col-xs-6.thumb(ng-repeat="template in templates")
+      a.thumbnail(ng-click="select(template)",ng-class="{active:selected.label==template.label}")
+        span
+          strong {{template.label}}
+
+  .modal-footer
+    button.btn.btn-success(ng-click="$close(selected)") Submit

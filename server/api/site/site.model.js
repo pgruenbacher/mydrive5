@@ -49,6 +49,9 @@ var SiteSchema = new Schema({
   active: Boolean
 });
 
+SiteSchema.virtual('homePage.slug').get(function(){
+  return 'home';
+});
 
 SiteSchema.set('toJSON', {
    virtuals: true

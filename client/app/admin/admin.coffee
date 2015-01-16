@@ -7,3 +7,5 @@ angular.module 'mydrive5App'
     url: '/admin'
     templateUrl: 'app/admin/admin.html'
     controller: 'AdminCtrl'
+    ncyBreadcrumb:
+      label:'Admin'

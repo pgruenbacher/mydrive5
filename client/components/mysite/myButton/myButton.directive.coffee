@@ -9,7 +9,6 @@ angular.module 'mydrive5App'
     currentPage:'@'
   link: (scope, element, attrs) ->
     scope.available=Sites.getNavigationItems()
-    console.log scope.available
     scope.visible=true
     defaultTitle='nav button'
     if config.public()

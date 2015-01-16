@@ -1,0 +1,41 @@
+
+.site-wrapper
+  headroom(offset="50")
+    my-navbar(
+      nav-items="site.menuItems",
+      nav-brand="{{site.homePage.title}}",
+      custom-color="custom(0)",
+      nav-click="goTo(slug)"
+      )
+  .page-wrapper
+    //- label.control-label(for="template",ng-if="editable") Select Layout
+    //-   select.form-control(
+    //-     id="template"
+    //-     ng-model="page.template"
+    //-     name="template"
+    //-     ng-options="template.label for template in templates track by template.label"
+    //-     )
+
+    my-page(template="{{page.template.src}}",page="page",navigation-items="navigationItems")
+
+div.right-side-nav.navbar-nav.nav
+  li
+    a(ng-click="changeLayout()",ng-show="editable",tooltip-placement="left",tooltip="Change Layout",tooltip-append-to-body="true")
+      i.fa.fa-th-large
+    a(ng-click="goToSettings()",tooltip-placement="left",tooltip="Go to website settings",tooltip-append-to-body="true")
+      i.fa.fa-gear        
+    a(ng-click="preview(true)",ng-show="editable",tooltip-placement="left",tooltip="Preview page",tooltip-append-to-body="true")
+      i.fa.fa-paw
+    a(ng-click="preview(false)",ng-show="!editable",tooltip-placement="left",tooltip="Edit page",tooltip-append-to-body="true") 
+      i.fa.fa-edit
+    a(ng-click="setMobile(true)",ng-show="!mobile",tooltip-placement="left",tooltip="Preview in mobile screen",tooltip-append-to-body="true") 
+      i.fa.fa-mobile
+    a(ng-click="setMobile(false)",ng-show="mobile",tooltip-placement="left",tooltip="Preview fullscreen",tooltip-append-to-body="true") 
+      i.fa.fa-desktop
+    a(ng-click="save(true)",tooltip-placement="left",tooltip="Save",tooltip-append-to-body="true") 
+      i.fa.fa-save(ng-hide="pageSaving")
+      i.fa.fa-spin.fa-spinner(ng-show="pageSaving")
+
+
+
+

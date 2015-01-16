@@ -12,10 +12,26 @@
 	"buffers":
 	[
 		{
-			"file": "client/components/mysite/myNavbar/headroom.scss",
+			"file": "client/components/navbar/navbar.jade",
 			"settings":
 			{
-				"buffer_size": 385,
+				"buffer_size": 3547,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/admin/sites/site/page/page.jade",
+			"settings":
+			{
+				"buffer_size": 748,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/admin/sites/site/page/page.scss",
+			"settings":
+			{
+				"buffer_size": 849,
 				"line_ending": "Unix"
 			}
 		},
@@ -23,31 +39,39 @@
 			"file": "client/components/navbar/navbar.scss",
 			"settings":
 			{
-				"buffer_size": 1501,
+				"buffer_size": 1579,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/components/navbar/navbar.jade",
+			"file": "client/app/admin/admin.jade",
 			"settings":
 			{
-				"buffer_size": 3551,
+				"buffer_size": 425,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/components/mysite/myNavbar/myNavbar.jade",
+			"file": "client/components/navbar/navbar.controller.coffee",
 			"settings":
 			{
-				"buffer_size": 1097,
+				"buffer_size": 1262,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/api/site/site.model.js",
+			"file": "client/app/app.jade",
 			"settings":
 			{
-				"buffer_size": 1048,
+				"buffer_size": 331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/components/palette-picker/palettePicker.directive.coffee",
+			"settings":
+			{
+				"buffer_size": 1108,
 				"line_ending": "Unix"
 			}
 		}
@@ -101,44 +125,75 @@
 	},
 	"expanded_folders":
 	[
-		"/home/paul/Code/fundraiser/mydrive5"
+		"/home/paul/Code/fundraiser/mydrive5",
+		"/home/paul/Code/fundraiser/mydrive5/client",
+		"/home/paul/Code/fundraiser/mydrive5/client/app",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page"
 	],
 	"file_history":
 	[
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/admin.scss",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/admin.js.map",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/jquery/src/css/addGetHookIf.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/lib/test/data/dragAndDropInsideScrolledDiv.html",
+		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/headroom.scss",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/8f2dc666f40fe64abe3e1d5a5c5b0e7042e2bc1a/headroom.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/admin.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.spec.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/lib/test/data/clickEventPage.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/lib/clientsidescripts.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/static/client.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/istanbul/lib/cli.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/ChangeLog",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/CHANGELOG",
+		"/home/paul/Code/fundraiser/mydrive5/publicGruntfile.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-api.js",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/cc0c2dc0f66084026de1fd5de246e4b8468ea31a/page.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/public/components/mysite/myPage/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/066ae4dc61043a56fb30052b191caac2d68e903f/palettePicker.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myNavbar/myNavbar.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.scss",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/myPage.js",
+		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/settings/settings.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/settings/settings.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/settings/settings.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/test/stale_element_test.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/config/socketio.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/.bin/ng-annotate",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/lib/test/data/click_too_big.html",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.model.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/app.jade",
 		"/home/paul/Code/fundraiser/mydrive5/public/app/app.jade",
-		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
-		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/myPage.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/admin.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/admin.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.jade",
 		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/socketio.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.scss",
 		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/8f2dc666f40fe64abe3e1d5a5c5b0e7042e2bc1a/myNavbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/services/sites/sites.service.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.model.js",
 		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/sites/sites.js.map",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-api.js",
-		"/home/paul/Code/fundraiser/mydrive5/publicGruntfile.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/.bin/ng-annotate",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/8f2dc666f40fe64abe3e1d5a5c5b0e7042e2bc1a/headroom.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.jade",
 		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/page.jade",
 		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/cc0c2dc0f66084026de1fd5de246e4b8468ea31a/page.scssc",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.model.js",
@@ -155,17 +210,9 @@
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
 		"/home/paul/Code/fundraiser/mydrive5/public/bower_components/angular-socket-io/socket.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/myNavbar.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myNavbar/headroom.scss",
 		"/home/paul/Code/fundraiser/mydrive5/client/.htaccess",
 		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/c9ea0c1e853fb1281e5f49b12895d78abf59bffa/_hide-text.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/static/client.html",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/istanbul/lib/cli.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/ChangeLog",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/CHANGELOG",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/module_selenium-webdriver_firefox_binary_class_Binary.html",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/class_webdriver_http_XhrClient.html",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.controller.coffee",
@@ -210,29 +257,12 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/WatchExpressionsSidebarPane.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose/website.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/app.scss",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/lib/clientsidescripts.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/test/expected/custom_options",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/CONTRIBUTING.md",
 		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/config.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ng-ckeditor/test/directiveOnFormSpec.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/fullBlog/fullBlog.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/twitter.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/blogLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/bower.json",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-easyfb/angular-easyfb.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/apis/config-2014-11-12.min.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/build/config.gypi",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/inquirer/node_modules/rx/src/core/coincidenceheader.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/participantLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/templates/layouts/participantLayout.html",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/supertest/node_modules/superagent/lib/node/part.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-argumentvalidation.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/fullBlog/fullBlog.scss",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/b08e8a31f6d48eccfd7a90259e5b26517b6e8457/adminNavbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/http-proxy/test/core/simple/test-http-client-abort.js"
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee"
 	],
 	"find":
 	{
@@ -250,6 +280,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"60",
 			"finance",
 			"toke",
 			"port",
@@ -376,8 +407,7 @@
 			"respond",
 			"respondWith",
 			"findPage",
-			"pageLoading",
-			"navBrand"
+			"pageLoading"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -395,82 +425,54 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/components/mysite/myNavbar/headroom.scss",
+					"file": "client/components/navbar/navbar.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 385,
+						"buffer_size": 3547,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								2055,
+								2055
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/components/navbar/navbar.scss",
+					"file": "client/app/admin/sites/site/page/page.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1501,
+						"buffer_size": 748,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								34,
-								34
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/components/navbar/navbar.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3551,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								58
+								586,
+								586
 							]
 						],
 						"settings":
@@ -487,20 +489,78 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "client/components/mysite/myNavbar/myNavbar.jade",
+					"buffer": 2,
+					"file": "client/app/admin/sites/site/page/page.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1097,
+						"buffer_size": 849,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								331,
-								331
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/components/navbar/navbar.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								787,
+								787
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/app/admin/admin.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 425,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								398,
+								398
 							]
 						],
 						"settings":
@@ -513,37 +573,97 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "server/api/site/site.model.js",
+					"buffer": 5,
+					"file": "client/components/navbar/navbar.controller.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1048,
+						"buffer_size": 1262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								944,
-								944
+								1195,
+								1195
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 52.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/app/app.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/components/palette-picker/palettePicker.directive.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								388,
+								388
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 510.0,
+						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -604,12 +724,48 @@
 		"selected_items":
 		[
 			[
+				"admin.jade",
+				"client/app/admin/admin.jade"
+			],
+			[
+				"admin.scs",
+				"client/app/admin/admin.scss"
+			],
+			[
+				"navbar.scss",
+				"client/components/navbar/navbar.scss"
+			],
+			[
+				"headroom",
+				"client/components/mysite/myNavbar/headroom.scss"
+			],
+			[
+				"page.jade",
+				"client/app/admin/sites/site/page/page.jade"
+			],
+			[
+				"palettepicker.dir",
+				"client/components/palette-picker/palettePicker.directive.coffee"
+			],
+			[
 				"app.jade",
 				"client/app/app.jade"
 			],
 			[
-				"admin.jade",
-				"client/app/admin/admin.jade"
+				"mynavbar.di",
+				"client/components/mysite/myNavbar/myNavbar.directive.coffee"
+			],
+			[
+				"navbar.con",
+				"client/components/navbar/navbar.controller.coffee"
+			],
+			[
+				"navbar.jade",
+				"client/components/navbar/navbar.jade"
+			],
+			[
+				"page.jad",
+				"client/components/mysite/myPage/page.jade"
 			],
 			[
 				"site.jad",
@@ -664,10 +820,6 @@
 				"client/app/admin/sites/sites.jade"
 			],
 			[
-				"navbar.jade",
-				"client/components/navbar/navbar.jade"
-			],
-			[
 				"headr",
 				"client/components/mysite/myNavbar/headroom.scss"
 			],
@@ -690,10 +842,6 @@
 			[
 				"sites.service",
 				"client/app/services/sites/sites.service.coffee"
-			],
-			[
-				"page.jade",
-				"public/app/site/page/page.jade"
 			],
 			[
 				"pag.econ",
@@ -748,10 +896,6 @@
 				"client/index.html"
 			],
 			[
-				"navbar.con",
-				"client/components/navbar/navbar.controller.coffee"
-			],
-			[
 				"publicsite.jade",
 				"public/app/site/site.jade"
 			],
@@ -760,20 +904,8 @@
 				"public/app/site/page/page.controller.coffee"
 			],
 			[
-				"headroom",
-				"client/components/mysite/myNavbar/headroom.scss"
-			],
-			[
-				"admin.scs",
-				"client/app/admin/admin.scss"
-			],
-			[
 				"site.scss",
 				"client/app/admin/sites/sites.scss"
-			],
-			[
-				"navbar.scss",
-				"client/components/navbar/navbar.scss"
 			],
 			[
 				"htac",
@@ -1102,18 +1234,6 @@
 			[
 				"mytab.scss",
 				"client/components/mysite/myTab/myTab.scss"
-			],
-			[
-				"fullblogjade",
-				"client/components/fullBlog/fullBlog.jade"
-			],
-			[
-				"bloglayou",
-				"client/components/mysite/myPage/templates/layouts/blogLayout.jade"
-			],
-			[
-				"bloglayout",
-				".tmp/components/mysite/myPage/templates/layouts/blogLayout.html"
 			]
 		],
 		"width": 0.0

@@ -52,29 +52,20 @@ exports.find = function(req,res){
 // Updates an existing site in the DB.
 exports.update = function(req, res) {
   // if (req.body._id) {
-  //   delete req.body._id;
-  // }
-  // So hacky update
-  // Site.findOneAndUpdate({
-  //   _id:req.params._id
-  // },req.body,function(site){
-  //   return res.json(site);
-  // });
+};
 
-  // Site.updateAsync({
-  //   _id:req.params.id,
-  //   'menuItems._id':req.body.id
-  // },req.body)
-  // .spread(function(a,b){
-  //   res.json(a);
-  // })
-  // .catch(handleError(res));
-
-  // Site.findByIdAsync(req.params.id)
-  //   .then(handleEntityNotFound(res))
-  //   .then(saveUpdates(req.body))
-  //   .then(responseWithResult(res))
-  //   .catch(handleError(res));
+exports.setHome = function(req,res){
+  var data = req.body;
+  Site.findOneAsync({_id:req.params.id})
+  .then(handleEntityNotFound(res))
+  .then(verifySiteOwnership(res,req.user._id))
+  .then(function(site){
+    site.homePage.template=req.body.template;
+    site.saveAsync()
+    .then(responseWithResult(res,201))
+    .catch(handleError(res));
+  })
+  .catch(handleError(res));
 };
 
 exports.setSub = function(req,res){

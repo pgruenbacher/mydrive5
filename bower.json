@@ -23,7 +23,8 @@
     "ng-ckeditor": "~0.2.1",
     "jquery.easing": "~1.3.1",
     "angular-easyfb": "~1.2.1",
-    "headroom": "headroom.js#~0.7.0"
+    "headroom": "headroom.js#~0.7.0",
+    "angular-breadcrumb": "~0.3.3"
   },
   "devDependencies": {
     "angular-mocks": "~1.2",

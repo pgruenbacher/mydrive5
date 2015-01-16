@@ -41,9 +41,7 @@ angular.module 'mydrive5App'
   link: (scope, element, attrs, ctrls)->
     ngModel = ctrls[0]
     form    = ctrls[1] || null
-    console.log config.public()
     if config.public()
-      console.log 'public'
       ngModel.$render = ()->
         if typeof ngModel.$viewValue != 'undefined' && typeof ngModel.$viewValue != 'number'
           if ngModel.$viewValue != null

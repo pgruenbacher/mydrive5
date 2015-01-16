@@ -5,16 +5,14 @@ angular.module 'mydrive5App'
   $scope.message = 'Hello'
 
   $scope.openUploadModal=->
-    console.log 'open'
-    $modal.open {
+    $modal.open 
       templateUrl:'app/admin/media/modal.html'
       size:'lg'
-    } 
+      
   $scope.images=[]
   Images.all()
   .then (response)->
     $scope.images = response.data
-    console.log $scope.images, response
     socket.syncUpdates 'image', $scope.images
   
   $scope.$on '$destroy', ->

@@ -5,10 +5,10 @@
     .side-nav {
         position: fixed;
         top: 0px;
-        left: 60px;
+        left: 50px;
         bottom:0px;
-        width: 60px;
-        margin-left: -60px;
+        width: 50px;
+        margin-left: -50px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
@@ -16,7 +16,7 @@
     }
 
     .side-nav>li>a {
-        width: 60px;
+        width: 50px;
     }
 
     .side-nav li a:hover,
@@ -30,11 +30,16 @@
     padding: 0;
 }
 
-.side-nav>li>ul>li>a {
-    display: block;
-    padding: 10px 15px 10px 38px;
-    text-decoration: none;
-    color: #999;
+.side-nav>li>a {
+    // display: block;
+    padding-left:0px;
+    padding-right:0px;
+    text-align:center;
+    // text-decoration: none;
+    // color: #999;
+}
+.side-nav>li>a>i{
+    font-size:1.5em;
 }
 
 .side-nav>li>ul>li>a:hover {

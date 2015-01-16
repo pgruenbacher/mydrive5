@@ -11,7 +11,6 @@ angular.module 'mydrive5App'
     $http.get '/api/sites/find', {params:obj}
 
   get:(domainName)->
-    console.log 'get',domainName
     $http.get '/api/sites/'+domainName
 
   update:(id,data)->
@@ -30,6 +29,9 @@ angular.module 'mydrive5App'
   getNavigationItems:->
     navigationItems
 
+  setHome:(id,data)->
+    $http.put '/api/sites/'+id+'/home', data
+
   setPage:(id,pageId,data)->
     $http.put '/api/sites/'+id+'/menu/'+pageId, data
 
@@ -37,6 +39,8 @@ angular.module 'mydrive5App'
     $http.put '/api/sites/'+id+'/menu/'+pageId+'/sub/'+subId, data
 
   findPage:(site,domainName)->
+    if domainName == 'home'
+      return site.homePage
     for key,menuItem of site.menuItems
       menuItem.parentIndex=key
       if menuItem.slug == domainName
@@ -54,3 +58,5 @@ angular.module 'mydrive5App'
       return @setSubPage(site._id,data.parentId, data.id, data)
     else if(data.parentIndex)
       return @setPage(site._id,data.parentId,data)
+    else
+      return @setHome(site._id,data)

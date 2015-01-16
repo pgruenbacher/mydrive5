@@ -10,7 +10,8 @@ angular.module 'mydrive5App', [
   'angularFileUpload',
   'ngCkeditor',
   'angularPayments',
-  'ezfb'
+  'ezfb',
+  'ncy-angular-breadcrumb'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider

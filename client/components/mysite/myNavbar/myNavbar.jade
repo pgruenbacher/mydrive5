@@ -6,7 +6,7 @@ div#myNavbar.navbar.navbar-default.navbar-static-top(ng-style="customColor(0)")
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand() {{navBrand}}
+      a.navbar-brand(ng-click="goTo({slug:'home'})") {{navBrand}}
 
     div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
       ul.nav.navbar-nav

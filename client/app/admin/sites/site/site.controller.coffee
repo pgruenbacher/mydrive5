@@ -5,7 +5,7 @@ angular.module 'mydrive5App'
   $scope.site=site
   Sites.setNavigationItems($scope.site)
   $scope.goTo=(slug)->
-    console.log 'asdf'
+    console.log 'goTo', slug
     $state.go('app.admin.sites.site.page',{page:slug})
 
   

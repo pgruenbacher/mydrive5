@@ -1,4 +1,4 @@
-div.navbar.navbar-inverse.navbar-static-top.primary-navbar(ng-controller='NavbarCtrl')
+div.navbar.navbar-inverse.navbar-static-top.primary-navbar
   div.container
     div.navbar-header(style="float:right;")
       button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed',ng-show="isLoggedIn()")
@@ -47,23 +47,18 @@ div.navbar.navbar-inverse.navbar-static-top.primary-navbar(ng-controller='Navbar
 
         li(ui-sref-active='active')
           a(ui-sref='app.admin.sites.index' tooltip-placement="right" tooltip="My Sites" tooltip-append-to-body="true")
-            i.fa.fa-fw.fa-mobile
+            i.fa.fa-fw.fa-th
             span(ng-show="!isCollapsed") My Sites
 
         li(ui-sref-active='active')
           a(ui-sref='app.admin.media' tooltip-placement="right" tooltip="My Media" tooltip-append-to-body="true")
-            i.fa.fa-fw.fa-file
+            i.fa.fa-fw.fa-file-image-o
             span(ng-show="!isCollapsed") My Media
 
-        li(ui-sref-active='active' tooltip-placement="right" tooltip="My current donations" tooltip-append-to-body="true")
-          a(ui-sref='app.admin.finance')
-            i.fa.fa-fw.fa-credit-card
-            span(ng-show="!isCollapsed") Current Donations
-        
-        li(ng-show="stateIncludes('app.admin.sites.site.page')" tooltip-placement="right" tooltip="Save current page" tooltip-append-to-body="true")
-          a(ui-sref='app.admin.sites.site.page')
-            i.fa.fa-fw.fa-save
-            span(ng-show="!isCollapsed") Save Current Page
+        //- li(ui-sref-active='active' tooltip-placement="right" tooltip="My current donations" tooltip-append-to-body="true")
+        //-   a(ui-sref='app.admin.finance')
+        //-     i.fa.fa-fw.fa-credit-card
+        //-     span(ng-show="!isCollapsed") Current Donations
         
       //- ul.nav.navbar-nav
       //-   li(ng-repeat='item in menu', ui-sref-active='active')

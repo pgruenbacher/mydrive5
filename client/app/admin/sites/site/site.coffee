@@ -5,8 +5,12 @@ angular.module 'mydrive5App'
   $stateProvider
   .state 'app.admin.sites.site',
     url: '/:site'
-    templateUrl: 'app/admin/sites/site/site.html'
+    abstract:true
+    # templateUrl: 'app/admin/sites/site/site.html'
+    template:'<ui-view></ui-view>'
     controller: 'SiteCtrl'
+    ncyBreadcrumb:
+      label:'site'
     resolve:
       site: (Sites,$stateParams)->
         return Sites.get($stateParams.site)
@@ -17,8 +21,10 @@ angular.module 'mydrive5App'
 
   .state 'app.admin.sites.site.page',
     url: '/:page'
-    templateUrl:'components/mysite/myPage/page.html'
+    templateUrl:'app/admin/sites/site/page/page.html'
     controller:'PageCtrl'
+    ncyBreadcrumb:
+      label:'page'
     onExit: ($stateParams,site,Sites)->
       page=Sites.findPage(site,$stateParams.page)
       Sites.savePage(site,page)
