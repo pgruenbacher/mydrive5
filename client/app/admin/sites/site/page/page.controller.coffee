@@ -37,6 +37,7 @@ angular.module 'mydrive5App'
   $scope.$on '$destroy', cancel
 
   $scope.changeLayout=->
+    saved=$scope.page.template
     modalInstance=$modal.open
       templateUrl:'app/admin/sites/site/page/templatesModal.html'
       size:'lg'
@@ -45,10 +46,10 @@ angular.module 'mydrive5App'
         service:->
           'Pages'
         selected:->
-          $scope.page.template
+          $scope.page
 
-    modalInstance.result.then (result)->
-      $scope.page.template=result
+    modalInstance.result.then null,(rejection)->
+      $scope.page.template=saved
 
   $scope.goToSettings=->
     $state.go 'app.admin.sites.site.settings',{site:$scope.site.domainName}

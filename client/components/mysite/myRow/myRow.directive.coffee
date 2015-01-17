@@ -2,7 +2,7 @@
 
 angular.module 'mydrive5App'
 
-.directive 'myRow', (config,Columns)->
+.directive 'myRow', (config,Columns,$modal)->
   restrict: 'EA'
   templateUrl:'components/mysite/myRow/myRow.html'
   transclude:true
@@ -11,6 +11,24 @@ angular.module 'mydrive5App'
   link: (scope, element, attrs) ->
     scope.editable = !config.public()
     scope.templates=Columns.templates
+    console.log scope.row.template == 'undefined'
+    if typeof scope.row.label == 'undefined'
+      scope.row.template=Columns.templates[0]
+    scope.changeColumns=->
+      saved=scope.row
+      modalInstance=$modal.open
+        templateUrl:'app/admin/sites/site/page/templatesModal.html'
+        controller:'layoutCtrl'
+        size:'lg'
+        resolve:
+          service:->
+            'Columns'
+          selected:->
+            scope.row
+      modalInstance.result.then null, (rejection)->
+        console.log scope.row
+        scope.row=saved
+
 
 
 .directive 'myColumn',(config,Sections,$modal)->
@@ -21,10 +39,13 @@ angular.module 'mydrive5App'
   link:(scope,element,attrs)->
     scope.addSection=->
       scope.sections.push
-        section:{}
+        template:Sections.templates[0]
     scope.editable = !config.public()
-    scope.sectionTemplates = Sections.templates
+    # scope.sectionTemplates = Sections.templates
+    scope.deleteSection=(index)->
+      scope.sections.splice(index,1)
     scope.changeSection=(index)->
+      saved=scope.sections[index].template
       modalInstance=$modal.open
         templateUrl:'app/admin/sites/site/page/templatesModal.html'
         controller:'layoutCtrl'
@@ -34,8 +55,8 @@ angular.module 'mydrive5App'
             'Sections'
           selected:->
             scope.sections[index]
-      modalInstance.result.then (result)->
-        scope.sections[index].template = result
+      modalInstance.result.then null, (rejection)->
+        scope.sections[index].template=saved
 
 
 .directive 'myGrid',(config)->
@@ -49,7 +70,10 @@ angular.module 'mydrive5App'
       scope.grid.rows.splice(index,1)
     scope.addRow=->
       scope.grid.rows.push
-        columns:[]
+        template:{}
+    if typeof scope.grid.rows[0] == 'undefined'
+      console.log 'add'
+      scope.addRow()
 
 .directive 'mySection',($compile)->
   restrict:'EA'

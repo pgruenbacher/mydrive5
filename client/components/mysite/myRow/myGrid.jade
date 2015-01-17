@@ -1,4 +1,7 @@
 my-row(row="row",ng-repeat="row in grid.rows")
-  a(ng-click="deleteRow($index)", ng-if="editable") Delete Row
+  a.delete(ng-click="deleteRow($index)", ng-if="editable")
+    i.fa.fa-trash
 
-a(ng-click="addRow()", ng-if="editable") Add row
+a(ng-click="addRow()", ng-if="editable") 
+  i.fa.fa-plus
+  | Add row

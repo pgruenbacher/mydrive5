@@ -13,6 +13,11 @@ angular.module 'mydrive5App'
 .factory 'Sections', ()->
   templates:[
       {
+        block:'<p>Placeholder Text</p>'
+        label:'text box'
+        html:'<editor-container><div editable="editorOptions" ng-model="section.template.block"></div></editor-container>'
+      }
+      {
         label:'image'
         html:'<div class="my-image img-circle" my-image="section.image">
                 <img ng-src="{{section.image.urlPath}}" class="img-circle img-responsive"/>
@@ -26,11 +31,6 @@ angular.module 'mydrive5App'
           {title:'Event Questions',content:'<p>Placeholder</p>'}
         ]
         html: '<my-faq faqs="section.template.faqs" editor-options="{{editorOptions}}"><my-faq>'
-      }
-      {
-        block:'<p>Placeholder Text</p>'
-        label:'text box'
-        html:'<editor-container><div editable="editorOptions" ng-model="section.template.block"></div></editor-container>'
       }
       {
         label:'tabs'

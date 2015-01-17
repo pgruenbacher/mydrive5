@@ -1,12 +1,16 @@
 div(ng-repeat="section in sections", section="section")
-  select(
-  placeholder="select type"
-  ng-if="editable"
-  ng-model="section.template"
-  ng-options="template.label for template in sectionTemplates track by template.label"
-  )
-    option(value='',disabled) -Choose type-
-  a(ng-click="changeSection($index)") Edit Section
-  my-section(section="section")
+  //- select(
+  //- placeholder="select type"
+  //- ng-if="editable"
+  //- ng-model="section.template"
+  //- ng-options="template.label for template in sectionTemplates track by template.label"
+  //- )
+  //-   option(value='',disabled) -Choose type-
+  div(ng-if="editable")
+    a.edit(ng-click="changeSection($index)") Edit Section
+    a.delete.pull-right(ng-click="deleteSection($index)")
+      i.fa.fa-trash
+  div(ng-class="{'dotted-border-yellow':editable}")
+    my-section(section="section")
 
 a(ng-click="addSection()",ng-if="editable") Add Section    

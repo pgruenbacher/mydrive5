@@ -101,12 +101,11 @@ angular.module 'mydrive5App'
 
 
 
-.directive 'ngEnter', ()->
-  (scope, element, attrs)->
-    console.log 'element'
-    element.bind "keydown keypress", (event)->
-      console.log event
-      if event.which == 13
-        scope.$apply ->
-          scope.$eval attrs.ngEnter
-        event.preventDefault()
+# .directive 'ngEnter', ()->
+#   (scope, element, attrs)->
+#     element.bind "keydown keypress", (event)->
+#       console.log event
+#       if event.which == 13
+#         scope.$apply ->
+#           scope.$eval attrs.ngEnter
+#         event.preventDefault()

@@ -1,10 +1,17 @@
-div(style="display:inline",ng-if="editable")
-  select(
-    ng-model="row.columns"
-    ng-options="template.label for template in templates track by template.label"
-    )
-    option(value='',disabled) -Select Column Layout-
-  div(ng-transclude="true",style="display:inline")
-div.row
-  div(my-column,ng-repeat="column in row.columns.columns",ng-class="column.class", sections="column.sections")
+//- div(style="display:inline",ng-if="editable")
+//-   select(
+//-     ng-model="row.columns"
+//-     ng-options="template.label for template in templates track by template.label"
+//-     )
+//-     option(value='',disabled) -Select Column Layout-
+
+  
+div(ng-show="editable")
+  a.edit(ng-click="changeColumns($index)")
+    i.fa.fa-tasks
+    |Edit row
+  div.pull-right(ng-transclude="true",style="display:inline")
+div(ng-class="{'dotted-border-green':editable}")
+  div.row
+    div(my-column,ng-repeat="column in row.template.columns",ng-class="column.class", sections="column.sections")
 
