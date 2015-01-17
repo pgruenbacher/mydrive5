@@ -9,8 +9,8 @@ angular.module 'mydrive5App'
     # templateUrl: 'app/admin/sites/site/site.html'
     template:'<ui-view></ui-view>'
     controller: 'SiteCtrl'
-    ncyBreadcrumb:
-      label:'site'
+    data:
+      title:'{{site.title}}'
     resolve:
       site: (Sites,$stateParams)->
         return Sites.get($stateParams.site)
@@ -23,8 +23,15 @@ angular.module 'mydrive5App'
     url: '/:page'
     templateUrl:'app/admin/sites/site/page/page.html'
     controller:'PageCtrl'
-    ncyBreadcrumb:
-      label:'page'
+    data:
+      title:'{{page.title}}'
+    resolve:
+      page:(Sites,site,$stateParams,Pages)->
+        page=Sites.findPage(site,$stateParams.page)
+        if typeof page.template == 'undefined'
+          page.template=Pages.templates[0]
+        page
+
     onExit: ($stateParams,site,Sites)->
       page=Sites.findPage(site,$stateParams.page)
       Sites.savePage(site,page)

@@ -4,15 +4,19 @@
  */
 .headroom {
   transition: transform 200ms linear;
-  position: fixed;  top: 0;left: 0;
-  right: 0;
 }
 .headroom--top{
   position:relative;
 }
+.headroom--not-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:100;
+}
 .headroom--pinned {
-    transform: translateY(0%);
-    z-index:100;
+  transform: translateY(0%);
 }
 .headroom--unpinned {
     transform: translateY(-100%);

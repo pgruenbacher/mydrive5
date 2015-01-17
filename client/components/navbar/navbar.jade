@@ -1,5 +1,5 @@
 div.navbar.navbar-inverse.navbar-static-top.primary-navbar
-  div.container
+  div.container-fluid
     div.navbar-header(style="float:right;")
       button.navbar-toggle(type='button', ng-click='isCollapsed = !isCollapsed',ng-show="isLoggedIn()")
         span.sr-only Toggle navigation
@@ -8,7 +8,8 @@ div.navbar.navbar-inverse.navbar-static-top.primary-navbar
       a.navbar-brand(href='/') mydrive5
 
     //- ul.nav.navbar-nav.top-nav
-
+    div.navbar-title
+      dynamic-title
     ul.nav.navbar-nav.navbar-right.top-nav
       li(ui-sref-active='active' ng-show='isAdminAndNotState()')
         a(ui-sref='app.admin') Admin

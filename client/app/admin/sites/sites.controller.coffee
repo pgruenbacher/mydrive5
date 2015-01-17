@@ -8,7 +8,6 @@ angular.module 'mydrive5App'
     $scope.sites=response.data
   
   $scope.editSite = (site)->
-    console.log site
     $state.go('app.admin.sites.site.page',{site:site.domainName,page:'home'})
 
 

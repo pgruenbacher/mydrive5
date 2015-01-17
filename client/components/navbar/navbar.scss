@@ -1,5 +1,16 @@
 .primary-navbar{
-    z-index:1100;
+    z-index:1020;
+}
+.navbar-title{
+    text-align:center;
+    position:absolute;
+    width:100%;
+    margin:auto;
+    color:#fff;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
 }
 @media(min-width:768px) {
     .side-nav {

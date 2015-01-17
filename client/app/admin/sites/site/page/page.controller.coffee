@@ -1,19 +1,17 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'layoutCtrl', ($scope,Pages,selected)->
-  $scope.templates=Pages.templates
+.controller 'layoutCtrl', ($scope,service,selected,$injector)->
+  Service=$injector.get(service)
+  $scope.templates=Service.templates
   $scope.selected=selected
   $scope.select=(template)->
     $scope.selected=template
 
-.controller 'PageCtrl', ($scope,$state,$stateParams,Sites,Pages,$location,$anchorScroll,$interval,config,$modal) ->
+.controller 'PageCtrl', ($scope,$state,$stateParams,page,Sites,Pages,$location,$anchorScroll,$interval,config,$modal) ->
   $scope.pageSaving=false
 
-  init=->
-    $scope.page=Sites.findPage($scope.site,$stateParams.page)
-    if typeof $scope.page.template == 'undefined'
-      $scope.page.template=Pages.templates[0]
+  $scope.page=page
 
   $scope.editable=!config.public()
   
@@ -28,7 +26,6 @@ angular.module 'mydrive5App'
       console.log 'saved page',response
       if refresh
         $scope.site=response.data[0]
-        init()
       $scope.pageSaving=false
 
   # !!!!!!Need to uncomment for autosaving!!!!
@@ -45,6 +42,8 @@ angular.module 'mydrive5App'
       size:'lg'
       controller:'layoutCtrl'
       resolve:
+        service:->
+          'Pages'
         selected:->
           $scope.page.template
 
@@ -55,8 +54,6 @@ angular.module 'mydrive5App'
     $state.go 'app.admin.sites.site.settings',{site:$scope.site.domainName}
 
 
- 
-  init()
 
 
   
