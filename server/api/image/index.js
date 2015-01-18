@@ -9,6 +9,7 @@ var router = express.Router();
 
 router.get('/', controller.index);
 router.post('/',controller.create);
+router.get('/splash',controller.splash);
 router.post('/upload',controller.upload);
 router.get('/s3-sign',s3.getS3Policy);
 

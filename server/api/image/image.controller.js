@@ -7,6 +7,7 @@ var Blitline=require('simple_blitline_node');
 var blitline=new Blitline();
 var nodeutil=require('util');
 var fs=require('fs');
+var splashes=require('./splash.json');
 
 var _ = require('lodash');
 var sqldb = require('../../sqldb')
@@ -39,7 +40,6 @@ function createThumbnail(location,callback){
     ]
   });
   blitline.postJobs(function(response){
-    console.log('thumbnail created',nodeutil.inspect(response,{color:true,depth:10}));
     callback(response);
   });
 }
@@ -47,7 +47,6 @@ function createThumbnail(location,callback){
 function formatMediaEmbed(images){
   var array=[];
   var j=0;
-  console.log('populating for editor browser');
   for(var i=0; i<images.length; i++){
     if(typeof images[i].urlPath!=='undefined'){
       array.push({
@@ -55,9 +54,7 @@ function formatMediaEmbed(images){
         folder:'my images'
       });
     }
-    console.log(images[i].Thumbnail);
     if(typeof images[i].Thumbnail.urlPath !== 'undefined'){
-      console.log('setting thumb');
       array[j].thumb=images[i].Thumbnail.urlPath;
     }
     j++;
@@ -82,7 +79,9 @@ exports.index = function(req, res) {
     })
     .catch(handleError(res));
 };
-
+exports.splash=function(req,res){
+  responseWithResult(res)(splashes);
+};
 exports.create = function(req, res){
   var originalImage,thumbnailImage;
   createThumbnail(req.body.location,function(response){
@@ -102,7 +101,6 @@ exports.create = function(req, res){
 };
 
 exports.upload=function(req,res){
-  console.log(req.file,req.files);
   var uploadBucket=new aws.S3({
     params:{
       Bucket:'mydrive5'
@@ -160,7 +158,6 @@ exports.signS3 = function (req,res){
   };
   s3.getSignedUrl('putObject', s3_params, function(err, data){
     if(err){
-      console.log(err);
     }
     else{
       var return_data = {

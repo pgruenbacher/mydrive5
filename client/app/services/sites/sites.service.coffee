@@ -28,6 +28,9 @@ angular.module 'mydrive5App'
     return navigationItems
   getNavigationItems:->
     navigationItems
+    
+  saveSite:(id,data)->
+    $http.put '/api/sites/'+id, data
 
   setHome:(id,data)->
     $http.put '/api/sites/'+id+'/home', data
@@ -39,7 +42,7 @@ angular.module 'mydrive5App'
     $http.put '/api/sites/'+id+'/menu/'+pageId+'/sub/'+subId, data
 
   findPage:(site,domainName)->
-    if domainName == 'home'
+    if domainName == 'home' || domainName == ''
       return site.homePage
     for key,menuItem of site.menuItems
       menuItem.parentIndex=key

@@ -14,4 +14,22 @@
             span
               strong {{image.name}} : {{image.size/1024/1024|number:2}} MB
             img(ng-src="{{image.Thumbnail.urlPath}}", alt="")
+
+
+      div.row
+        div.col-lg-2.col-md-3.col-xs-4.thumb(ng-repeat="splash in filteredSplashes")
+          a.thumbnail(ng-click="$close(splash)")          
+            img(ng-src="{{splash.Thumbnail.urlPath}}", alt="")
+        pagination(
+          total-items="splashes.length" 
+          ng-model="currentPage" 
+          max-size="maxPagination" 
+          class="pagination-sm" 
+          boundary-links="true" 
+          rotate="false" 
+          num-pages="numPages")
+
+
+
+
     a(ng-click="$close()") Disable Image (won't appear on website)

@@ -65,6 +65,8 @@ a:hover{
 @import 'account/signup/signup.scss';
 @import 'admin/admin.scss';
 @import 'admin/sites/site/page/page.scss';
+@import 'admin/sites/site/pageItems/pageItems.scss';
+@import 'admin/sites/site/siteSettings/siteSettings.scss';
 @import 'admin/sites/sites.scss';
 @import 'main/main.scss';
 @import 'twitter.scss';
@@ -78,6 +80,7 @@ a:hover{
 @import 'mysite/myImage/myImage.scss';
 @import 'mysite/myNavbar/headroom.scss';
 @import 'mysite/myNavbar/myNavbar.scss';
+@import 'mysite/myPage/templates/layouts/layouts.scss';
 @import 'mysite/myRow/myRow.scss';
 @import 'mysite/myTab/myTab.scss';
 @import 'mysite/subscriptionForm/subscriptionForm.scss';

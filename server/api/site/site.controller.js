@@ -13,7 +13,6 @@ var verifySiteOwnership=Common.verifySiteOwnership
 
 // Gets list of sites from the DB.
 exports.index = function(req, res) {
-  console.log('user',req.user._id);
   Site.find({'user._id':req.user._id}).select('domainName siteName')
     .execAsync()
     .then(responseWithResult(res))
@@ -22,7 +21,6 @@ exports.index = function(req, res) {
 
 // Gets a single site from the DB.
 exports.show = function(req, res) {
-  console.log('show',req.params.domainName);
   Site.find({domainName:req.params.domainName}).limit(1)
     .execAsync()
     .then(handleEntityNotFound(res))
@@ -51,7 +49,17 @@ exports.find = function(req,res){
 
 // Updates an existing site in the DB.
 exports.update = function(req, res) {
-  // if (req.body._id) {
+  var data = req.body;
+  Site.findOneAsync({_id:req.params.id})
+  .then(handleEntityNotFound(res))
+  .then(verifySiteOwnership(res,req.user._id))
+  .then(function(site){
+    _.extend(site,req.body)
+    site.saveAsync()
+    .then(responseWithResult(res,201))
+    .catch(handleError(res));
+  })
+  .catch(handleError(res));
 };
 
 exports.setHome = function(req,res){
@@ -70,7 +78,6 @@ exports.setHome = function(req,res){
 
 exports.setSub = function(req,res){
   var data=req.body;
-  console.log('set sub',req.user._id);
   Site.findOneAsync({_id:req.params.id})
   .then(handleEntityNotFound(res))
   .then(verifySiteOwnership(res,req.user._id))

@@ -4,6 +4,35 @@
 .page-wrapper{
     margin-top:-20px;
 }
+$mobile-container-width: 332px;
+$mobile-container-height: 696px;
+$mobile-pane-height: 504px;
+$mobile-pane-width: 290px;
+
+.mobile-wrapper{
+    margin:auto auto;
+    position: relative;
+    width: $mobile-container-width;
+    height: $mobile-container-height;
+    img{
+        position:absolute;
+        width:100%;
+        height:auto;
+        left:0px;
+        top:0px;
+    }
+    iframe{
+        z-index: 2;
+        position: absolute;
+        display:block;
+        width: $mobile-pane-width;
+        height: $mobile-pane-height;
+        left: 24px;
+        top: 99px;
+        border: 2px solid #22272D;
+        overflow:hidden;
+    }
+}
 headroom.headroom--not-top{
   left:50px;
   right:50px;

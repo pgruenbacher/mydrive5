@@ -7,5 +7,8 @@ angular.module 'mydrive5App'
   create:(data)->
     $http.post '/api/images', data
 
+  splashes:()->
+    $http.get '/api/images/splash'
+
   all:()->
     $http.get '/api/images'

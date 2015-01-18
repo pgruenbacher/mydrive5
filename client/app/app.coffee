@@ -11,7 +11,7 @@ angular.module 'mydrive5App', [
   'ngCkeditor',
   'angularPayments',
   'ezfb',
-  'ncy-angular-breadcrumb'
+  'ui.tree'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider
@@ -42,8 +42,7 @@ angular.module 'mydrive5App', [
   request: (config) ->
     config.headers = config.headers or {}
     config.headers.Authorization = 'Bearer ' + $cookieStore.get 'token' if $cookieStore.get 'token'
-    config
-
+    return config 
   # Intercept 401s and redirect you to login
   responseError: (response) ->
     if response.status is 401

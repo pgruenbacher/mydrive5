@@ -20,7 +20,7 @@ angular.module 'mydrive5App'
           return err
 
   .state 'app.admin.sites.site.page',
-    url: '/:page'
+    url: '/page/:page'
     templateUrl:'app/admin/sites/site/page/page.html'
     controller:'PageCtrl'
     data:

@@ -10,15 +10,25 @@ angular.module 'mydrive5App'
 
 .controller 'PageCtrl', ($scope,$state,$stateParams,page,Sites,Pages,$location,$anchorScroll,$interval,config,$modal) ->
   $scope.pageSaving=false
-
+  $scope.mobile=false
   $scope.page=page
 
   $scope.editable=!config.public()
   
   $scope.preview=(bool)->
+    $scope.save(false)
     config.setPublic(bool)
     $state.reload()
   
+  $scope.setMobile=(bool)->
+    $scope.mobile=bool
+
+  $scope.mobilePreview=(bool)->
+    if bool
+      !$scope.editable && $scope.mobile
+    else
+       !$scope.editable && !$scope.mobile
+
   $scope.save=(refresh)->
     $scope.pageSaving=true
     Sites.savePage($scope.site,$scope.page)

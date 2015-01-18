@@ -18,7 +18,33 @@ angular.module 'mydrive5App'
   $scope.$on '$destroy', ->
     socket.unsyncUpdates 'image'
   
+  # pagination
+  $scope.splashes=[];
+  Images.splashes()
+  .then (response)->
+    $scope.splashes = response.data
+  $scope.filteredSplashes=[]
+  numPerPage=10
+  $scope.maxPagination=8
+  $scope.currentPage=1
+  # For pagination of index
+  $scope.numPages = ()->
+    return Math.ceil($scope.splashes.length / numPerPage)
+  $scope.previous=()->
+    if $scope.currentPage>1 then $scope.currentPage--
+    $location.hash('blog')
+    $anchorScroll()
+  $scope.next=()->
+    if $scope.currentPage<$scope.numPages() then $scope.currentPage++
+    $location.hash('blog')
+    $anchorScroll()
 
+    
+
+  $scope.$watch 'splashes+currentPage', ()->
+    begin = (($scope.currentPage - 1) * numPerPage)
+    end = begin + numPerPage
+    $scope.filteredSplashes = $scope.splashes.slice(begin, end)
             
 
 

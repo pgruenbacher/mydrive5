@@ -9,9 +9,9 @@
       strong {{site.siteName}}
       a(ng-click="editSite(site)") Edit
 
-  div.row
-    form.form-horizontal(name="siteForm",ng-show="createVisible",on-valid-submit="saveSite()")
-      div.col-lg-6.well
+  div.row(ng-show="createVisible")
+    div.col-lg-6.well
+      form.form-horizontal(name="siteForm",on-valid-submit="saveSite()")
         div.form-group
           label(for="siteName").control-label.col-sm-4 My Website Name
           div.col-sm-8
@@ -43,76 +43,6 @@
         
           div.col-sm-4
             span http://{{site.domainName||'!invalid'}}.mydrive5.com
-       
-        
-
-
-        .row
-          .col-sm-6
-            h3 Some Quick Menu Items
-          .col-sm-6
-            a(ng-click="addMenuItem()").btn.btn-success
-              span add Menu Item
-              i.fa.fa-plus-circle
-
-        div.form-group
-          label(for="homePage").control-label.col-sm-3
-            | Home Page Name
-          div.col-xs-6
-            input.form-control(
-              type="text",
-              required,
-              ng-model="site.homePage.title",
-              id="homePage",
-              name="homePage"
-              )
-            div(ng-show="siteForm.$submitted")
-              p(ng-show="siteForm.homePage.$error.required") Your home page title is required
-
-        div(ng-repeat="menuItem in site.menuItems")
-          div.form-group
-            label(for="menuItem{{$index}}").control-label.col-sm-1 {{$index}}
-            div.col-xs-6
-              input(
-                type="text", 
-                required,
-                ng-model="menuItem.title",
-                id="menuItem{{$index}}",
-                name="menuItem{{$index}}"
-                ).form-control
-              div(ng-show="siteForm.$submitted")
-                p(ng-show="siteForm['menuItem'+$index].$error.required") Name of menu item is required
-
-              
-            div.col-xs-5
-              a(ng-click="addSubMenuItem($index)").btn.btn-info
-                span add subMenu&nbsp
-                i.fa.fa-plus-square
-              a(ng-click="deleteMenuItem($index)").btn.btn-danger
-                span delete&nbsp
-                i.fa.fa-trash
-          
-
-          div(ng-repeat="subMenuItem in menuItem.sub")
-            i.fa-fa-caret-right
-            div.form-group
-              label(for="").control-label.col-sm-1.col-sm-offset-1 {{$parent.$index}}.{{$index}}
-              div.col-xs-6
-                input(
-                  type="text", 
-                  name="subMenu{{$parent.$index}}-{{$index}}",
-                  required, 
-                  ng-model="subMenuItem.title").form-control
-                
-                div(ng-show="siteForm.$submitted")
-                  p(ng-show="siteForm['menuItem'+$parent.$index+'-'+$index].$error.required") Name of menu item is required
-
-              div.col-xs-4
-                a(ng-click="deleteSubMenuItem($parent.$index,$index)").btn.btn-danger
-                  span delete&nbsp
-                  i.fa.fa-trash
-
-      div.col-lg-6.well           
         
         palette-picker(choice="choice")
 
@@ -123,13 +53,9 @@
 
 
         button.btn.btn-success(type="submit") SaveSite
-
-
-
-
-
-
-
+      
+    div.col-lg-6.well    
+      page-items(menu-items="site.menuItems")  
 
 
 

@@ -1,0 +1,48 @@
+div(ui-tree="options")
+  ol(ui-tree-nodes ng-model="menuItems" data-type="menuItem")
+    li(ng-repeat="menuItem in menuItems" ui-tree-node)
+      div.menu-title.angular-ui-tree-handle(ng-show="!menuEditing")
+        a.btn.btn-danger.btn-xs.pull-right(href="" data-nodrag ng-click="removeMenu($index)")
+          i.glyphicon.glyphicon-remove
+        a.btn.btn-primary.btn-xs.pull-right(href="" data-nodrag ng-click="menuEditing=true")
+          i.glyphicon.glyphicon-pencil
+        a.btn.btn-success.btn-xs.pull-right(href="" data-nodrag ng-click="menuItem.subAdding=true")
+          i.fa.fa-plus
+        div &nbsp;{{menuItem.title}}
+      div.menu-title.angular-ui-tree-handle(data-nodrag ng-show="menuEditing")
+        form.form-inline(role="form",name="editMenuForm",on-valid-submit="menuEditing=false")
+          div.form-group
+            label.sr-only(for="") Menu title
+            input.text-control(type="text" class="form-control",required="true", placeholder="Menu title" ng-model="menuItem.title")
+          button.btn.btn-default(type="submit") Close
+      ol(ui-tree-nodes ng-model="menuItem.sub" data-type="subMenuItem")
+        li(ng-repeat="subMenuItem in menuItem.sub" ui-tree-node)
+          div.sub-title.angular-ui-tree-handle(ng-show="!subEditing")
+            a.btn.btn-danger.btn-xs.pull-right(href="" data-nodrag ng-click="removeSubMenu($parent.$index, $index)")
+              i.glyphicon.glyphicon-remove
+            a.btn.btn-primary.btn-xs.pull-right(href="" data-nodrag ng-click="subEditing=true")
+              i.glyphicon.glyphicon-pencil
+            div &nbsp;{{subMenuItem.title}}
+          div.angular-ui-tree-handle(data-nodrag ng-show="subEditing")
+            form.form-inline(role="form",name="editMenuForm",on-valid-submit="subEditing=false")
+              div.form-group
+                label.sr-only(for="") sub Menu title
+                input.text-control(type="text" class="form-control",required="true", placeholder="Menu title" ng-model="subMenuItem.title")
+              button.btn.btn-default(type="submit") Close
+      ol.angular-ui-tree-nodes(data-nodrag,ng-show="menuItem.subAdding")
+        li.angular-ui-tree-node
+          div.sub-title.angular-ui-tree-handle
+            form.form-inline(role="form",on-valid-submit="addSubMenu($index,newSubTitle,menuItem.subAdding)")
+              div.form-group
+                label.sr-only(for="") Sub menu title
+                input.form-control(type="text" required ng-model="newSubTitle" placeholder="sub Menu title")
+              button.btn.btn-default(type="submit") Add Sub Menu
+              button.btn.btn-default(ng-click="menuItem.subAdding=false") Cancel
+  ol.angular-ui-tree-nodes
+    li.angular-ui-tree-node
+      div.menu-title.angular-ui-tree-handle
+        form.form-inline(role="form",name="addMenuForm",on-valid-submit="addMenu(newMenu)")
+          div.form-group
+            label.sr-only(for="") Menu title
+            input.form-control(type="text",required, ng-model="newMenu" placeholder="Menu title")
+          button.btn.btn-default(type="submit") Add Menu {{newMenuForm}}
