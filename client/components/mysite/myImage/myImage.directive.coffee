@@ -13,6 +13,7 @@ angular.module 'mydrive5App'
       if typeof scope.myImage != 'undefined'
         if typeof scope.myImage.urlPath != 'undefined'
             if scope.myImage.urlPath != '//:0'
+              console.log 'set'
               element.css
                 'background-image':'url('+scope.myImage.urlPath+')'
             else
@@ -43,9 +44,9 @@ angular.module 'mydrive5App'
         'background-repeat':'repeat'
         'background-size':'auto'
         'background-position':'inherit'
-      if element.hasClass('img-circle')
-        element.css
-          'padding-bottom':'100%'
+      # if element.hasClass('img-circle')
+      #   element.css
+      #     'padding-bottom':'100%'
       # else
       #   element.css
       #     'padding-bottom':'50%'
@@ -67,7 +68,7 @@ angular.module 'mydrive5App'
         return null
       modalInstance=$modal.open
         size:'lg'
-        templateUrl:'components/mysite/myImage/myImageModal.html'
+        templateUrl:'app/admin/media/myImageModal.html'
       modalInstance.result.then (image)->
 
         if typeof image != 'undefined'

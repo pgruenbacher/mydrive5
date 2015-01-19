@@ -29,3 +29,12 @@
   
 
 }
+.force-round{
+  overflow:hidden;
+  background-position:center center;
+  background-size:cover;
+}
+.col-md-4>.force-round{
+  width:200px;
+  height:200px;
+}

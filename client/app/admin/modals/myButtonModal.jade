@@ -1,0 +1,16 @@
+.modal-content
+  .modal-header
+    button.close(type='button', data-dismiss='modal')
+      span(aria-hidden='true') ×
+      span.sr-only Close
+    h4#uploadMediaLabel.modal-title Upload Media
+  .modal-body
+    a(ng-click="disable(true)",ng-show="!button.disabled") Disable (won't appear on website)
+    a(ng-click="disable(false)",ng-show="button.disabled") Enable (will appear on website)
+    .divider
+    input(type="text",ng-model="button.title")
+    .divider
+    h4 Choose button navigation destination
+    ul.item-list
+      li(ng-repeat="item in available",ng-class="{highlight:button.destination===item}")
+        a(ng-click="setDestination(item)") {{item}}

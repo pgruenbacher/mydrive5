@@ -1,4 +1,16 @@
 li.highlight{
   background-color:#ABFFE9;
 }
+ul.item-list{
+  list-style-type: none;
+  padding:0;
+  li{
+    display:block;
+  }
+  li.divider{
+    border-bottom:2px solid #B0AFAD;
+    padding-right:20px;
+    padding-left:20px;
+  }
+}
 

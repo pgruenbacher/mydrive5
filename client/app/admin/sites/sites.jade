@@ -47,10 +47,19 @@
         palette-picker(choice="choice")
 
         .form-group
-          label(for="participants").control-label.col-xs-6 Do you want to have individual participants to be able to do personal fundraising?
-          div.col-xs-6
+          label(for="participants").control-label.col-xs-9 Do you want to have individual participants to be able to do personal fundraising?
+          div.col-xs-2
             input(type="checkbox",id="participants",ng-model="site.participants")
+        
+        .form-group
+          label(for="blog").control-label.col-xs-9 Do you want to be able to add posts to a news/blog page?
+          div.col-xs-2
+            input(type="checkbox",id="blog",ng-model="site.blog")
 
+        .form-group
+          label.control-label.col-xs-9(for="subscribe") Do you want to be able to add posts to a news/blog page?
+          div.col-xs-2
+            input(type="checkbox",id="subscribe",ng-model="site.subscribe") 
 
         button.btn.btn-success(type="submit") SaveSite
       

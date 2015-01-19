@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.directive 'myPage', ($http,$compile,$templateCache)->
+.directive 'myPage', ($http,$compile,$templateCache,config,CONFIG)->
   restrict: 'EA',
   scope:
     template:'@'
@@ -20,12 +20,10 @@ angular.module 'mydrive5App'
       element.html(template).show()
       newElement=$compile(element.contents())(newScope)
     
-    $templateCache.put("components/mysite/myPage/templates/layouts/defaultLayout.html",'<div my-image=page.template.default.jumboImage background=true class="jumbo masthead my-image"><div class=container><editor-container><div editable=editorOptions ng-model=page.template.default.header1></div></editor-container></div></div><div class=container-fluid><div class=row><div class=col-md-4><div my-image=page.template.default.image1 class="my-image img-circle"><img ng-src={{page.template.default.image1.urlPath}} class="img-circle img-responsive"></div><editor-container><div editable=editorOptions ng-model=page.template.default.block1></div></editor-container><p><my-button button=page.template.default.button1 current-page={{page.slug}}></my-button></p></div><div class=col-md-4><div my-image=page.template.default.image2 class="my-image img-circle"><img ng-src={{page.template.default.image2.urlPath}} class="img-circle img-responsive"></div><editor-container><div editable=editorOptions ng-model=page.template.default.block2></div></editor-container><p><my-button button=page.template.default.button2 current-page={{page.slug}}></my-button></p></div><div class=col-md-4><div my-image=page.template.default.image3 class="my-image img-circle"><img ng-src={{page.template.default.image3.urlPath}} class="img-circle img-responsive"></div><editor-container><div editable=editorOptions ng-model=page.template.default.block3></div></editor-container><p><my-button button=page.template.default.button3 current-page={{page.slug}}></my-button></p></div></div><div class=row><subscription-form></subscription-form></div></div>')
-
     getTemplate=(templateName)->
       key="components/mysite/myPage/templates/layouts/"+scope.template+".html"
       template=$templateCache.get key
-      if template
+      if template && CONFIG.public
         loadTemplate(template)
       else
         $http.get key

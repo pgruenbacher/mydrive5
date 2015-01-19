@@ -1,0 +1,11 @@
+label(for="{{field.id}}"){{field.label}}
+input.form-control(
+  type="email"
+  placeholder="{{field.placeholder}}"
+  ng-model="data[field.name]"
+  name="{{field.name}}"
+  ng-required="field.required"
+  ng-cloak
+  )
+p(ng-show="myForm[field.name].$error.required") Email is required
+p(ng-show="myForm[field.name].$error.email") Email is required

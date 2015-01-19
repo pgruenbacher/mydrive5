@@ -1,0 +1,12 @@
+.checkbox
+  label(for="{{field.id}}",ng-cloak){{field.label}}
+    input(
+      ng-cloak
+      ng-model="data[field.name]",
+      name="foo",
+      id="{{field.id}}",
+      type="checkbox",
+      ng-required="field.required")
+p(ng-show="myForm.foo.$error.required") this is required 
+
+pre {{myForm.foo.$error.required}}

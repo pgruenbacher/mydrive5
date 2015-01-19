@@ -66,9 +66,9 @@
               "has-error": form.year.$invalid && submitted }')    
 
                 label.col-sm-4 Date of Birth 
-                  span.hint (dd/mm/yyyy)
+                  span.hint (mm/dd/yyyy)
                 .col-sm-8
-                  input.form-control(mask="99/99/9999",placeholder="dd/mm/yyyy",name="dob",ng-model="user.dob", required='')
+                  input.form-control(mask="99/99/9999",placeholder="mm/dd/yyyy",name="dob",ng-model="user.dob", required='')
                 //- .date-input
                   //- .col-sm-2.col-xs-4
                   //-   input.form-control(type='num', maxlength="2", placeholder="dd", name='day', ng-model='user.day', required='', mongoose-error='')

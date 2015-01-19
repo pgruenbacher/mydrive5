@@ -1,0 +1,11 @@
+form(name="theForm" on-valid-submit="check(this)")
+
+
+div(ng-repeat="field in fields")
+  form(name="myForm")
+    .form-group
+      my-field(field="field",data="data[$index]",valid="{{field.valid}}")
+
+button.btn(type="submit") Submit
+
+pre {{data}}

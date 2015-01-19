@@ -24,6 +24,12 @@ html,body{
 a:hover{
     cursor:pointer;
 }
+.center-align{
+    text-align:center;
+}
+.center{
+    margin:auto auto;
+}
 .masthead{
 
     background-position: center center;
@@ -64,6 +70,7 @@ a:hover{
 @import 'account/login/login.scss';
 @import 'account/signup/signup.scss';
 @import 'admin/admin.scss';
+@import 'admin/media/media.scss';
 @import 'admin/sites/site/page/page.scss';
 @import 'admin/sites/site/pageItems/pageItems.scss';
 @import 'admin/sites/site/siteSettings/siteSettings.scss';
@@ -77,6 +84,7 @@ a:hover{
 @import 'mysite/myButton/myButton.scss';
 @import 'mysite/myDate/myDate.scss';
 @import 'mysite/myFaq/myFaq.scss';
+@import 'mysite/myForm/myForm.scss';
 @import 'mysite/myImage/myImage.scss';
 @import 'mysite/myNavbar/headroom.scss';
 @import 'mysite/myNavbar/myNavbar.scss';

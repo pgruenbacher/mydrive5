@@ -11,7 +11,8 @@ angular.module 'mydrive5App', [
   'ngCkeditor',
   'angularPayments',
   'ezfb',
-  'ui.tree'
+  'ui.tree',
+  'akoenig.deckgrid'
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider
@@ -23,7 +24,7 @@ angular.module 'mydrive5App', [
 .constant('CONFIG',{
     public:false
   })
-
+.constant('BROWSER',Modernizr)
 
 .config (ezfbProvider)->
   ezfbProvider.setLocale('en_US')

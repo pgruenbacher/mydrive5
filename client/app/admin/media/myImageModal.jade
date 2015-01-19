@@ -1,0 +1,40 @@
+.modal-content
+  .modal-header
+    button.close(type='button', data-dismiss='modal')
+      span(aria-hidden='true') ×
+      span.sr-only Close
+    h4#uploadMediaLabel.modal-title My Media
+  .modal-body
+    div(ng-controller="mediaCtrl")
+      div.images-navbar
+        button.btn.btn-primary.pull-left(ng-click="openUploadModal()") Upload
+        ul 
+          li
+            a(ng-click="select('myImages')",ng-class="{active:selected=='myImages'}") Uploaded
+          li
+            a(ng-click="select('splashes')",ng-class="{active:selected=='splashes'}") Splash Headers
+          a.pull-right(ng-click="$close()") 
+              i.fa.fa-ban
+              |Disable Image (won't appear on website)
+      div(style="text-align:center")
+        pagination(
+          total-items="images.length" 
+          ng-model="currentPage" 
+          max-size="maxPagination"
+          items-per-page="12" 
+          class="pagination-sm" 
+          boundary-links="true" 
+          rotate="false"
+          num-pages="numPages"
+          )
+      div.gallery
+        div.deckgrid(deckgrid,source="filteredImages")
+          a.thumbnail(ng-click="mother.$close(card)")          
+            img(ng-src="{{card.Thumbnail.urlPath}}", alt="")
+      div.row.clear-both
+
+
+      
+
+
+

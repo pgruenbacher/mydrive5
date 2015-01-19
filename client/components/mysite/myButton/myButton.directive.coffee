@@ -1,14 +1,29 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.directive 'myButton', ($location,config,Sites)->
+.controller 'buttonModalCtrl',($scope,button,Sites)->
+  $scope.available=Sites.getNavigationItems()
+  $scope.button=button
+  $scope.disable=(bool)->
+    $scope.button.disabled=bool
+  $scope.setDestination=(dest)->
+    $scope.button.destination=dest
+
+.directive 'myButton', ($location,config,Sites,$modal)->
   templateUrl: 'components/mysite/myButton/myButton.html'
   restrict: 'E'
   scope:
     button:'='
     currentPage:'@'
   link: (scope, element, attrs) ->
-    scope.available=Sites.getNavigationItems()
+    
+    scope.navigate=()->
+      if scope.button.destination?
+        path=$location.path()
+        pos=path.search(scope.currentPage)
+        path=path.slice(0,pos)+scope.button.destination
+        $location.path(path)
+
     scope.visible=true
     defaultTitle='nav button'
     if config.public()
@@ -28,16 +43,20 @@ angular.module 'mydrive5App'
           scope.button.title=defaultTitle
       else
         scope.button={title:defaultTitle}
+
+
+
       scope.edit=(bool)->
-        scope.editMode=bool
-      scope.disable=(bool)->
-        scope.button.disabled=bool
-      scope.setDestination=(dest)->
-        scope.button.destination=dest
-      scope.navigate=()->
-        if scope.button.destination? && !scope.editMode
-          path=$location.path()
-          pos=path.search(scope.currentPage)
-          path=path.slice(0,pos)+scope.button.destination
-          $location.path(path)
+        modalInstance=$modal.open
+          templateUrl:'app/admin/modals/myButtonModal.html'
+          size:'sm'
+          controller:'buttonModalCtrl'
+          resolve:
+            button:->
+              scope.button
+            available:->
+              scope.available
+
+
+      
 

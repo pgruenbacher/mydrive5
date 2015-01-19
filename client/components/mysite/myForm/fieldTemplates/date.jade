@@ -1,0 +1,28 @@
+label(for="{{field.id}}",ng-cloak){{field.label}}
+input.form-control(
+  ng-cloak
+  type="date"
+  placeholder="mm/dd/yyyy",
+  name="{{field.name}}",
+  ng-model="data[field.name]",
+  required='{{field.required}}'
+  ng-show="browser.supportsDate"
+  )
+input.form-control(
+  ng-cloak
+  type="text" 
+  datepicker-popup="dd-MMMM-yyyy"
+  ng-model="field"
+  is-open="field.open"
+  ng-click = "field.open = true"
+  max-date="fieldmaxDate"
+  datepicker-options="field.dateOptions"
+  ng-required="field.required"
+  close-text="Close"
+  placeholder="{{field.placeholder}}"
+  ng-show="!browser.supportsDate"
+ )
+p(ng-show="myForm[field.name].$error.required") this is required 
+
+//- datepicker.well.well-sm(ng-model="field.date" min-date="minDate")
+

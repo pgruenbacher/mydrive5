@@ -1,0 +1,11 @@
+label(for="{{field.id}}"){{field.label}}
+textarea(
+  type="text",
+  ng-model="data[field.name]"
+  placeholder="{{field.placeholder}}"
+  ng-required="field.required"
+  name="{{field.name}}"
+  id="{{field.id}}"
+  ng-cloak
+  )
+p(ng-show="myForm[field.name].$error.required") This is required

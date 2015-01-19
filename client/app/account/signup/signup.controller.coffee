@@ -51,8 +51,8 @@ angular.module 'mydrive5App'
     else
       user=$scope.user
       date=$scope.user.dob.split('/')
-      user.day=date[0]
-      user.month=date[1]
+      user.day=date[1]
+      user.month=date[0]
       user.year=date[2]
       user.phoneNumber=user.phoneNumber.replace(/\D/g,'')
       # url=$location.path('/auth/'+provider).search(user)

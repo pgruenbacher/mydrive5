@@ -1,50 +1,53 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'mediaCtrl', ($scope,Images,$modal,socket,$upload,$http,$filter) ->
+.controller 'mediaCtrl', ($scope,Images,$modal,$timeout,$upload,$http,$filter) ->
   $scope.message = 'Hello'
 
   $scope.openUploadModal=->
-    $modal.open 
+    modalInstance=$modal.open 
       templateUrl:'app/admin/media/modal.html'
       size:'lg'
-      
+    # Get images if rejected or if closed
+    modalInstance.result.then getMyImages, getMyImages
+
   $scope.images=[]
-  Images.all()
-  .then (response)->
-    $scope.images = response.data
-    socket.syncUpdates 'image', $scope.images
-  
-  $scope.$on '$destroy', ->
-    socket.unsyncUpdates 'image'
-  
-  # pagination
-  $scope.splashes=[];
+      
+  $scope.myImages=[]
+  $scope.splashes=[]
+
+  $scope.selected=String
+  $scope.select=(selection)->
+    $scope.images=$scope[selection]
+    $scope.selected=selection
+
+  getMyImages=->
+    Images.all()
+    .then (response)->
+      $scope.myImages = response.data     
+  getMyImages()
+    
   Images.splashes()
   .then (response)->
+    console.log 'splash data',response
     $scope.splashes = response.data
-  $scope.filteredSplashes=[]
-  numPerPage=10
+
+
+
+  $scope.filteredImages=[]
+  $scope.numPerPage=12
   $scope.maxPagination=8
   $scope.currentPage=1
   # For pagination of index
-  $scope.numPages = ()->
-    return Math.ceil($scope.splashes.length / numPerPage)
-  $scope.previous=()->
-    if $scope.currentPage>1 then $scope.currentPage--
-    $location.hash('blog')
-    $anchorScroll()
-  $scope.next=()->
-    if $scope.currentPage<$scope.numPages() then $scope.currentPage++
-    $location.hash('blog')
-    $anchorScroll()
+  # $scope.numPages = ()->
+  #   return 51
+    # return Math.ceil($scope.splashes.length / numPerPage) 
 
-    
-
-  $scope.$watch 'splashes+currentPage', ()->
-    begin = (($scope.currentPage - 1) * numPerPage)
-    end = begin + numPerPage
-    $scope.filteredSplashes = $scope.splashes.slice(begin, end)
+  $scope.$watch 'images+currentPage', ()->
+    if $scope.images.length?
+      begin = (($scope.currentPage - 1) * $scope.numPerPage)
+      end = begin + $scope.numPerPage
+      $scope.filteredImages = $scope.images.slice(begin, end)
             
 
 
