@@ -13,7 +13,7 @@ getExpiryTime = function () {
 };
 
 createS3Policy = function(contentType, callback) {
-    console.log('create s3policy');
+    console.log('create s3policy',config.aws.secret,config.aws.bucket,config.aws.secret);
     var date = new Date();
     var s3Policy = {
         'expiration': getExpiryTime(),

@@ -14,6 +14,10 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 html,body{
     height:100%;
 }
+// input[type="text"], textarea, option{
+//   background-color : #FFEFE2; 
+// }
+
 #wrap{
     min-height:100%;
 }
@@ -98,3 +102,7 @@ a:hover{
 @import 'statistic-box/statistic-box.scss';
 @import 'ticker/ticker.scss';
 // endinjector
+
+
+
+

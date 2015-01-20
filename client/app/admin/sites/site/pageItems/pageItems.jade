@@ -13,7 +13,7 @@ div(ui-tree="options")
         form.form-inline(role="form",name="editMenuForm",on-valid-submit="menuEditing=false")
           div.form-group
             label.sr-only(for="") Menu title
-            input.text-control(type="text" class="form-control",required="true", placeholder="Menu title" ng-model="menuItem.title")
+            input.form-control(type="text",required="true", placeholder="Menu title" ng-model="menuItem.title")
           button.btn.btn-default(type="submit") Close
       ol(ui-tree-nodes ng-model="menuItem.sub" data-type="subMenuItem")
         li(ng-repeat="subMenuItem in menuItem.sub" ui-tree-node)
@@ -23,11 +23,11 @@ div(ui-tree="options")
             a.btn.btn-primary.btn-xs.pull-right(href="" data-nodrag ng-click="subEditing=true")
               i.glyphicon.glyphicon-pencil
             div &nbsp;{{subMenuItem.title}}
-          div.angular-ui-tree-handle(data-nodrag ng-show="subEditing")
+          div.sub-title.angular-ui-tree-handle(data-nodrag ng-show="subEditing")
             form.form-inline(role="form",name="editMenuForm",on-valid-submit="subEditing=false")
               div.form-group
                 label.sr-only(for="") sub Menu title
-                input.text-control(type="text" class="form-control",required="true", placeholder="Menu title" ng-model="subMenuItem.title")
+                input.form-control(type="text",required="true", placeholder="Menu title" ng-model="subMenuItem.title")
               button.btn.btn-default(type="submit") Close
       ol.angular-ui-tree-nodes(data-nodrag,ng-show="menuItem.subAdding")
         li.angular-ui-tree-node
@@ -45,4 +45,4 @@ div(ui-tree="options")
           div.form-group
             label.sr-only(for="") Menu title
             input.form-control(type="text",required, ng-model="newMenu" placeholder="Menu title")
-          button.btn.btn-default(type="submit") Add Menu {{newMenuForm}}
+          button.btn.btn-default(type="submit") Add Menu

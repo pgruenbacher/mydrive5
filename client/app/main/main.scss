@@ -3,27 +3,23 @@
 }
 
 #banner {
+    overflow:hidden;
+    padding-top:200px;
     border-bottom: none;
     margin-top: -20px;
+    background-image: url(https://s3.amazonaws.com/mydrive5/splash/photos/0009_xII7efH1G6o.jpeg)
 }
 
 #banner h1 {
-    font-family:"Lato",serif;
-    font-size: 100px;
+    font-family:"Lato" serif;
+    font-size: 150px;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1;
     letter-spacing: -1px;
 }
 
-.hero-unit {
-    position: relative;
-    padding: 30px 15px;
-    color: #F5F5F5;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
-}
+
 
 .btn-default,
 .btn-primary,
@@ -58,3 +54,225 @@
         border-top-right-radius:0px;
     }
 }
+
+
+/* -- Variables -- */
+$icolor: #fff;      /* icon color       */
+$scolor: #12664b;   /* shadow color     */
+$bcolor: #1b926c;   /* background color */
+$bradius: 8;       /* bg border radius */
+$length: 80;       /* box length       */
+
+
+@mixin long-shadow ($scolor, $length) {
+  $list: ();
+  @for $i from 1 through $length {
+    $list: append($list, $scolor $i+px $i+px, comma);
+  }
+  text-shadow: $list;
+}
+@mixin border-radius ($bradius) {  
+  -webkit-border-radius: $bradius+px;
+  -moz-border-radius: $bradius+px;
+  -ms-border-radius: $bradius+px;
+  border-radius: $bradius+px;
+}
+// $colors-list:#1b926c #E54343 #FFF272 #83F185;
+// @each $current-color in $colors-list {
+//     $i: index($colors-list, $current-color);
+//     .long-#{$i} { 
+//         color: darken($current-color,5%);
+//         background-color: lighten($current-color,30%);
+//     }
+// }
+
+
+.long-header{
+    display:inline-block;
+    color:darken($bcolor,5%);
+    line-height:$length+px;
+    font-size:$length/1.6+px;
+}
+.long-shadow-box {
+    display:inline-block;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: $length+px;
+  height: $length+px;
+  font-size: $length/1.2+px;
+  line-height: $length+px;
+  background-color: $bcolor;
+  @include border-radius ($bradius);
+}
+.long-shadow-box span {
+  display: block;
+
+  position: absolute;
+  height: $length+px;
+  width: $length+px;
+  color: $icolor;
+  @include long-shadow (darken($scolor,5%), $length);
+}
+
+
+
+
+
+
+
+
+
+
+//The Mixin
+//==========
+
+@mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
+  $shadow: '';
+  @if $skew == false or $type == text{
+    @if $direction == right {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
+      }
+    }
+    @if $direction == left {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
+       }
+      }
+     }
+        
+   @if $fadeout == true{
+    @for $i from 1 to $length - 1 {
+      @if $type == text or $skew == false{
+        @if $direction == right{
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left{
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+      @if ($type == box) and $skew == true{
+        @if $direction == right {
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left {
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+  }
+  $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
+ }
+ @if $fadeout == false{
+   @if $skew == true and ( $type == box ){
+     @for $i from 0 to $length - 1 {
+            $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .1 + 'px ' + $color + ',';
+      }
+   }
+    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
+ }
+ $shadow: unquote($shadow);
+  @if $type == 'box' {box-shadow: $shadow;}
+  @if $type == 'text' {text-shadow: $shadow;}
+}
+
+// The Other Stuff
+// ===============    
+$white:#fff;
+$peach:#FFBD88;
+$blue-light:#3297A3;
+$midnight:#12664b;    
+.text-shadow {
+  font-family: sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: $white;
+  @include long-shadow(text, darken($midnight, 5), 200, false, false, right);
+}
+        
+        // em {
+        // color: $yellow ;
+        // display: inline-block;
+        // @include long-shadow(text, $peach, 200, false, false, right);
+        // }
+// }
+
+// .shadow {
+//   margin-bottom: 100px;
+//   padding: 2%;
+//   color: $white;
+//   font-family: sans-serif;
+//   @include background-image(linear-gradient(lighten($peach, 10), $peach));
+//     font-weight: bold;
+//     font-size: 3em;
+//   @include long-shadow(text, desaturate(darken($peach, 12), 50), 50, true, left);
+ 
+//       display: inline-block;
+//       float: left;
+//   margin-right: 2%;
+//   @include long-shadow(box, darken($midnight, 5), 120, false, true);
+// }
+// .shadow-2 {
+//   @extend .shadow;
+//       @include background-image(linear-gradient(lighten($blue-light, 10), $blue-light));
+      
+//   @include long-shadow(text, $blue, 100, false, false, left);
+//   }
+//         .shadow-3 {
+//   @extend .shadow;
+//       @include background-image(linear-gradient(lighten($orange, 10), $orange));
+      
+//   @include long-shadow(text, $red, 100, false, false, left);
+//   }
+//     .app-icon {
+//       width: 100px;height: 100px;
+//       margin-bottom: 1em;
+//       font-family: entypo;
+//       border-radius: 5px;
+//       color: white;
+//       padding-left: 15px;
+//       font-size: 60px;
+//       padding-top: 15px;
+//       margin-right: 10px;
+//       display: inline-block;
+//       @include long-shadow(box, darken($midnight, 1), 50, true, true);
+   
+//     }
+//     .app-icon-1 {
+//       background: $emerald;
+//       border: 4px solid darken($emerald, 5);
+//       @include long-shadow(text, darken($emerald, 10), 35, false);
+//     }
+//     .app-icon-2 {
+//     background: $blue-light;
+//       border: 4px solid darken($blue-light, 5);
+    
+//       @include long-shadow(text, darken($blue-light, 10), 55, true);
+//      }
+//  .app-icon-3 {
+//       background: $turqoise;
+//       border: 4px solid $turqoise;
+    
+//       @include long-shadow(text, darken($turqoise, 5), 55, true, false, right);
+//     }
+//     .app-icon-4 {
+//     background: $orange;
+//       border: 4px solid darken($peach, 0);
+//       @include long-shadow(text, lighten($peach, 0), 55, true);
+//      }
+       
+//     .app-icon-twitter {
+//       background: $twitter-blue;
+//       font-family: zocial;
+//       a {
+//         text-decoration: none;
+//         color: white;
+//         @include long-shadow(text, darken($twitter-blue, 10), 55, true);
+//       }
+//     }   
+//     div {
+//     overflow: hidden;
+//     }    
+// body{
+//   background: $midnight;
+// }

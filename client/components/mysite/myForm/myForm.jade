@@ -1,11 +1,11 @@
 form(name="theForm" on-valid-submit="check(this)")
-
-
-div(ng-repeat="field in fields")
-  form(name="myForm")
-    .form-group
-      my-field(field="field",data="data[$index]",valid="{{field.valid}}")
-
-button.btn(type="submit") Submit
-
-pre {{data}}
+  div(ng-repeat="field in fields")
+    ng-form(name="myForm")
+      .form-group
+        my-field(field="field",data="data",valid="{{field.valid}}")
+        p(ng-show="myForm[field.name].$error.required && theForm.$submitted") this is required
+        p(ng-show="myForm[field.name].$error.email && theForm.$submitted") invalid email
+        p(ng-show="myForm[field.name].$error.date && theForm.$submitted") invalid date
+        p(ng-show="myForm[field.name].$error.time && theForm.$submitted") invalid time
+  button.btn(type="submit") Submit
+  pre {{data}}

@@ -1,0 +1,74 @@
+div(ui-tree="options")
+  ol(ui-tree-nodes ng-model="formItems" data-type="formItems")
+    li(ng-repeat="formItem in formItems" ui-tree-node)
+
+      div.menu-title.angular-ui-tree-handle(ng-show="fieldEditing.index!==$index")
+        a.btn.btn-danger.btn-xs.pull-right(href="" data-nodrag ng-click="removeField($index)")
+          i.glyphicon.glyphicon-remove
+        a.btn.btn-primary.btn-xs.pull-right(href="" data-nodrag ng-click="fieldEditing.index=$index")
+          i.glyphicon.glyphicon-pencil
+        div &nbsp;{{formItem.name}} ({{formItem.type}})
+
+      div.menu-title.angular-ui-tree-handle(data-nodrag ng-show="fieldEditing.index===$index")
+        form.form-horizontal(role="form",name="editMenuForm",on-valid-submit="fieldEditing.index=null")
+          div.center-align {{formItem.name}} ({{formItem.type}})
+            button.btn.btn-warning.pull-right.btn-xs(type="submit") 
+              i.fa.fa-close
+              |Close
+          div.clear-both
+          div.form-group
+            label.col-sm-6.control-label(for="") field Name
+            div.col-sm-6
+              input.form-control(type="text",required="true", placeholder="name" ng-model="formItem.name")
+          div.form-group(ng-if="hasProp(formItem,'label')")  
+            label.col-sm-6.control-label(for="") Label
+            div.col-sm-6
+              input.form-control(type="text",required="true", placeholder="label" ng-model="formItem.label")
+          div.form-group(ng-if="hasProp(formItem,'placeholder')") 
+            label.col-sm-6.control-label(for="") Placeholder
+            div.col-sm-6
+              input.form-control(type="text",required="true", placeholder="placeholder" ng-model="formItem.placeholder")
+          div.form-group(ng-if="hasProp(formItem,'required')")
+            label.col-sm-6.control-label(for="sdasfd") Is field required?
+            div.col-sm-6.checkbox
+              input(type="checkbox", id="sdasfd" ng-model="formItem.required")
+
+          div(ng-if="hasProp(formItem,'options')")
+            h4 {{formItem.type}}
+            table.table-condensed
+              thead
+                tr
+                  th Name
+                  th value
+                  th
+              tbody
+                tr(ng-repeat="option in formItem.options")
+                  td
+                    input.form-control(type="text" class="form-control",required="true", placeholder="name", ng-model="option.name")
+                  td
+                    input.form-control(type="text" class="form-control",required="true", placeholder="value", ng-model="option.value")
+                  td 
+                    a.btn.btn-danger(ng-click="deleteOption($parent.$index,$index)")
+                      i.fa.fa-trash            
+                tr
+                  td
+                    input.form-control(type="text", class="form-control", placeholder="name" ng-model="newOption.name")
+                  td  
+                    input.form-control(type="text", class="form-control", placeholder="value" ng-model="newOption.value")
+                  td
+                    a.btn.btn-success(ng-click="addOption($index,newOption)")
+                      i.fa.fa-plus-square
+            
+      
+  ol.angular-ui-tree-nodes
+    li.angular-ui-tree-node
+      div.menu-title.angular-ui-tree-handle
+        form.form-inline(role="form",name="addMenuForm",on-valid-submit="addField(newName,newField)")
+          div.form-group
+            label.sr-only(for="") Field name
+            input.form-control(type="text",required, ng-model="newName" placeholder="Menu name" filter-validation="validSlug")
+          div.form-group
+            select.form-control(ng-options="formItem.label for formItem in defaults",ng-model="newField",required)
+              option(value="") --select type--
+          button.btn.btn-success.btn-xs.pull-right(type="submit")
+            i.fa.fa-plus-square

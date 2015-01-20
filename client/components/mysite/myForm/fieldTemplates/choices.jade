@@ -1,0 +1,9 @@
+label {{field.label}}
+input(type="hidden",name="{{field.name}}",ng-model="data[field.name]",ng-required="field.required")
+.btn-list
+  label.btn.btn-default(
+    ng-repeat="radio in field.options"
+    ng-model="data[field.name]"
+    btn-radio="radio.value"
+    uncheckable
+    ) {{radio.name}}

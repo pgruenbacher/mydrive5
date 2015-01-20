@@ -22,7 +22,7 @@ angular.module 'mydrive5App', [
   $httpProvider.interceptors.push 'authInterceptor'
 
 .constant('CONFIG',{
-    public:false
+    public:true
   })
 .constant('BROWSER',Modernizr)
 

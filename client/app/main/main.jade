@@ -1,13 +1,46 @@
-header#banner.hero-unit
+header#banner.jumbo.masthead
   .container
-    h1 myDrive5
-    p.lead Kick-start your next web app with Angular Fullstack
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
-
+    h1.text-shadow.pull-right myDrive5
 .container
   .row
     .col-md-7
-      div(ckeditor="editorOptions" contenteditable="false" ng-model="exampleBody")
+      iframe(
+        width="560"
+        height="315"
+        src="//www.youtube.com/embed/rb37CnyR614"
+        frameborder="0"
+        allowfullscreen)
+      .row
+          .long-shadow-box.pull-left
+            span
+              |5
+          span.long-header Reasons to use myDrive5
+      .row
+          .long-shadow-box.pull-right
+            span 
+              i.fa.fa-dollar
+          span.long-header Free Hosting
+      .row
+          .long-shadow-box.pull-left
+            span 
+              i.fa.fa-mobile
+          span.long-header Mobile Friendly
+      .row
+          .long-shadow-box.pull-right
+            span 
+              i.fa.fa-thumbs-up
+          span.long-header Ease of Use
+      .row
+          .long-shadow-box.pull-left
+            span 
+              i.fa.fa-rss
+          span.long-header Social Media
+      .row
+          .long-shadow-box.pull-right
+            span 
+              i.fa.fa-dollar
+          span.long-header Beautiful
+
     .col-md-5
       statistic-box(total-donated="{{statistics.totalDonated}}",goal="{{statistics.goal}}")
   .row

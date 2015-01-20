@@ -47,12 +47,12 @@ div.navbar.navbar-inverse.navbar-static-top.primary-navbar
             |admin
 
         li(ui-sref-active='active')
-          a(ui-sref='app.admin.sites.index' tooltip-placement="right" tooltip="My Sites" tooltip-append-to-body="true")
+          a(ui-sref='app.admin.sites.index' tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="My Sites" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-th
             span(ng-show="!isCollapsed") My Sites
 
         li(ui-sref-active='active')
-          a(ui-sref='app.admin.media' tooltip-placement="right" tooltip="My Media" tooltip-append-to-body="true")
+          a(ui-sref='app.admin.media' tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="My Media" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-file-image-o
             span(ng-show="!isCollapsed") My Media
 

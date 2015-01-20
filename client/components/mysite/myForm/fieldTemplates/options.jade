@@ -1,5 +1,5 @@
 label(for="{{field.id}}") {{field.label}}
-select(
+select.form-control(
   id="{{field.id}}",
   ng-model="data[field.name]",
   name="{{field.name}}",
@@ -7,4 +7,3 @@ select(
   ng-cloak
   ng-options="option.name for option in field.options")
   option(value="") {{field.placeholder}}
-p(ng-show="myForm[field.name].$error.required") this is required!

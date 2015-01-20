@@ -25,10 +25,15 @@ angular.module 'mydrive5App'
     public:->
       publicStatus
     setPublic:(bool)->
-      console.log bool
       publicStatus=bool
 
-
+.factory 'random', ()->
+  makeId:(length)->
+    text = ""
+    possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    for i in [0...length]
+      text += possible.charAt(Math.floor(Math.random() * possible.length))
+    return text
 
 .directive 'autoFillSync', ($timeout)->
   restrict:'A'
@@ -53,7 +58,6 @@ angular.module 'mydrive5App'
       jsObj[attr.unique]=ngModelCtrl.$viewValue
       service.query jsObj
       .then (res)->
-        console.log res.data.length
         ngModelCtrl.$setValidity('unique',res.data.length==0)
 
     ngModelCtrl.$viewChangeListeners.push ->

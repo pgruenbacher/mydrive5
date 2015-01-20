@@ -56,44 +56,7 @@ angular.module 'mydrive5App'
 .directive 'myForm', ->
   templateUrl: 'components/mysite/myForm/myForm.html'
   restrict: 'EA'
+  scope:
+    fields:'='
   link: (scope, element, attrs) ->
-    scope.data=[{},{},{},{},{}]
-    scope.fields=[
-      {
-        id:1
-        type:'checkbox'
-        name:'checkbox'
-        label:'checkbox demo'
-        required:true
-      }
-      {
-        id:2
-        type:'options'
-        name:'asdfff'
-        label:'options demo'
-        options:[
-          {name:'asdf',value:'asdfl'}
-          {name:'sabba',value:'ablkj'}
-        ]
-        required:true
-        placeholder:'pick option'
-      }
-      {
-        id:3
-        type:'date'
-        name:'datepick'
-        date:new Date()
-        label:'date example'
-        format:'MM.dd.YYYY'
-        placeholder:'pibck date'
-      }
-      {
-        id:4
-        type:'textarea'
-        name:'asbb'
-        label:'text example'
-        required:true
-        placeholder:'adsflkj placehold'
-      }
-
-    ]
+    scope.data={}

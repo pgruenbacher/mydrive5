@@ -1,9 +1,10 @@
 label(for="{{field.id}}") {{field.label}}
 input.form-control(
-  type="email"
-  placeholder="{{field.placeholder}}"
+  type="text",
   ng-model="data[field.name]"
-  name="{{field.name}}"
+  placeholder="{{field.placeholder}}"
   ng-required="field.required"
+  name="{{field.name}}"
+  id="{{field.id}}"
   ng-cloak
   )

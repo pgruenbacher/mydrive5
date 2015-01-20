@@ -9,26 +9,29 @@
   
   div.mobile-wrapper(ng-show="mobile")
     img(src="assets/images/mobile-container.svg")
-    iframe(src="http://test-app.mydrive5.com",width="320px",height="480px")
+    iframe(ng-src="{{site.fullDomain}}",width="320px",height="480px")
   
   .page-wrapper(ng-hide="mobile")
     my-page(template="{{page.template.src}}",page="page",navigation-items="navigationItems")
 
 div.right-side-nav.navbar-nav.nav
   li
-    a(ng-click="changeLayout()",ng-show="editable",tooltip-placement="left",tooltip="Change Layout",tooltip-append-to-body="true")
+    a(ng-click="changeLayout()",ng-show="editable",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Change Layout",tooltip-append-to-body="true")
       i.fa.fa-th-large
-    a(ng-click="goToSettings()",tooltip-placement="left",tooltip="Go to website settings",tooltip-append-to-body="true")
-      i.fa.fa-gear        
-    a(ng-click="preview(true)",ng-show="editable",tooltip-placement="left",tooltip="Preview page",tooltip-append-to-body="true")
+      | Layout
+    a(ng-click="goToSettings()",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to website settings",tooltip-append-to-body="true")
+      i.fa.fa-gear       
+      | Settings
+    a(ng-click="preview(true)",ng-show="editable",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Preview page",tooltip-append-to-body="true")
       i.fa.fa-asterisk
-    a(ng-click="preview(false)",ng-show="!editable",tooltip-placement="left",tooltip="Edit page",tooltip-append-to-body="true") 
+      |Preview
+    a(ng-click="preview(false)",ng-show="!editable",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Edit page",tooltip-append-to-body="true") 
       i.fa.fa-edit
-    a(ng-click="setMobile(true)",ng-show="mobilePreview(false)",tooltip-placement="left",tooltip="Preview in mobile screen",tooltip-append-to-body="true") 
+    a(ng-click="setMobile(true)",ng-show="mobilePreview(false)",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Preview in mobile screen",tooltip-append-to-body="true") 
       i.fa.fa-mobile
-    a(ng-click="setMobile(false)",ng-show="mobilePreview(true)",tooltip-placement="left",tooltip="Preview fullscreen",tooltip-append-to-body="true") 
+    a(ng-click="setMobile(false)",ng-show="mobilePreview(true)",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Preview fullscreen",tooltip-append-to-body="true") 
       i.fa.fa-desktop
-    a(ng-click="save(true)",tooltip-placement="left",tooltip="Save",tooltip-append-to-body="true") 
+    a(ng-click="save(true)",tooltip-placement="left",tooltip="Save",tooltip-trigger="mouseenter",tooltip-append-to-body="true") 
       i.fa.fa-save(ng-hide="pageSaving")
       i.fa.fa-spin.fa-spinner(ng-show="pageSaving")
 

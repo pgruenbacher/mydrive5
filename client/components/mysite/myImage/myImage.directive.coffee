@@ -70,7 +70,9 @@ angular.module 'mydrive5App'
         size:'lg'
         templateUrl:'app/admin/media/myImageModal.html'
       modalInstance.result.then (image)->
-
+        if image.$index?
+          delete image.$index
+          # check for $index from the masonry
         if typeof image != 'undefined'
           scope.myImage=image
           scope.placehold=false

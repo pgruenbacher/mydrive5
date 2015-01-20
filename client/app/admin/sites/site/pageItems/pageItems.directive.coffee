@@ -7,9 +7,8 @@ angular.module 'mydrive5App'
   scope:
     menuItems:'='
   link: (scope, element, attrs) ->
-    console.log scope.menuItems
+    
   controller:($scope)->
-    console.log $scope.menuItems
     $scope.addMenu = (title,form)->
       if $scope.menuItems.length > 6
         window.alert 'You can\'t add more than 10 groups!'

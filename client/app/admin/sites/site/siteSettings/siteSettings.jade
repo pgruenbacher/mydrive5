@@ -1,64 +1,74 @@
-a.btn.btn-default(ui-sref="app.admin.sites.site.page({site:site.domainName,page:'home'})")
-  i.fa.fa-chevron-left
-  i.fa.fa-chevron-left
-  | Back to Edit Pages
-div.row
-  div.col-lg-6.well
-    form.form-horizontal(name="siteForm", on-valid-submit="saveSite()")
-      div.form-group
-        label(for="siteName").control-label.col-sm-4 My Website Name
-        div.col-sm-8
-          input(type="text",
-            name="siteName",
-            required,
-            ng-model="site.siteName"
-            )#siteName.form-control
-          div(ng-show="siteForm.$submitted")
-            p(ng-show="siteForm.siteName.$error.required") Site name is required
+.site-wrapper
+  a.btn.btn-default(ui-sref="app.admin.sites.site.page({site:site.domainName,page:'home'})")
+    i.fa.fa-chevron-left
+    i.fa.fa-chevron-left
+    | Back to Edit Pages
+  div.row
+    div.col-lg-6.well
+      form.form-horizontal(name="siteForm", on-valid-submit="saveSite()")
+        div.form-group
+          label(for="siteName").control-label.col-sm-4 My Website Name
+          div.col-sm-8
+            input(type="text",
+              name="siteName",
+              required,
+              ng-model="site.siteName"
+              )#siteName.form-control
+            div(ng-show="siteForm.$submitted")
+              p(ng-show="siteForm.siteName.$error.required") Site name is required
 
-      div.form-group
-        label(for="siteDomain").control-label.col-sm-4 Domain Name
-        div.col-sm-4
-          input(
-            type="text",
-            required,
-            unique="domainName",
-            service="Sites",
-            name="domainName",
-            ng-model="site.domainName",
-            filter-validation="validSlug"
-          )#siteDomain.form-control 
+        div.form-group
+          label(for="siteDomain").control-label.col-sm-4 Domain Name
+          div.col-sm-4
+            input(
+              type="text",
+              required,
+              unique="domainName",
+              service="Sites",
+              name="domainName",
+              ng-model="site.domainName",
+              filter-validation="validSlug"
+            )#siteDomain.form-control 
 
-          p(ng-show="siteForm.domainName.$error.unique") That domain is unavailable
-          p(ng-show="siteForm.domainName.$error.filter") The domain can only have lowercase or dashes
-          div(ng-show="siteForm.$submitted")
-            p(ng-show="siteForm.domainName.$error.required") domain name is required
-      
-        div.col-sm-4
-          span http://{{site.domainName||'!invalid'}}.mydrive5.com
-      
-      palette-picker(choice="choice")
-      
-      .form-group
-        label(for="participants").control-label.col-xs-9 Do you want to have individual participants to be able to do personal fundraising?
-        div.col-xs-2
-          input(type="checkbox",id="participants",ng-model="site.participants")
-      
-      .form-group
-        label(for="blog").control-label.col-xs-9 Do you want to be able to add posts to a news/blog page?
-        div.col-xs-2
-          input(type="checkbox",id="blog",ng-model="site.blog")
+            p(ng-show="siteForm.domainName.$error.unique") That domain is unavailable
+            p(ng-show="siteForm.domainName.$error.filter") The domain can only have lowercase or dashes
+            div(ng-show="siteForm.$submitted")
+              p(ng-show="siteForm.domainName.$error.required") domain name is required
+        
+          div.col-sm-4
+            span http://{{site.domainName||'!invalid'}}.mydrive5.com
+        
+        palette-picker(choice="choice")
+        
+        .form-group
+          label(for="participants").control-label.col-xs-9 Do you want to have individual participants to be able to do personal fundraising?
+          div.col-xs-2
+            input(type="checkbox",id="participants",ng-model="site.participants")
+        
+        .form-group
+          label(for="blog").control-label.col-xs-9 Do you want to be able to add posts to a news/blog page?
+          div.col-xs-2
+            input(type="checkbox",id="blog",ng-model="site.blog")
 
-      .form-group
-        label.control-label.col-xs-9(for="subscribe") Do you want to be able to add posts to a news/blog page?
-        div.col-xs-2
-          input(type="checkbox",id="subscribe",ng-model="site.subscribe") 
+        .form-group
+          label.control-label.col-xs-9(for="subscribe") Do you want to be able to add posts to a news/blog page?
+          div.col-xs-2
+            input(type="checkbox",id="subscribe",ng-model="site.subscribe") 
 
-      button.btn.btn-success(type="submit") SaveSite
+        button.btn.btn-success(type="submit") SaveSite
 
-  div.col-lg-6.well           
-    page-items(menu-items="site.menuItems")
+    div.col-lg-6.well           
+      page-items(menu-items="site.menuItems")
 
-.row
-  .col-lg-3
-    my-form
+
+div.right-side-nav.navbar-nav.nav
+  li
+    a(ui-sref="app.admin.sites.site.page({site:site.domainName,page:'home'})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to site pages",tooltip-append-to-body="true")
+      i.fa.fa-book
+      | Pages        
+    a(ui-sref="app.admin.sites.site.forms({site:site.domainName})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to my forms",tooltip-append-to-body="true")
+      i.fa.fa-list
+      | Forms
+    a(ng-click="",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Save",tooltip-append-to-body="true") 
+      i.fa.fa-save(ng-hide="pageSaving")
+      i.fa.fa-spin.fa-spinner(ng-show="pageSaving")
