@@ -1,9 +1,10 @@
-label(for="{{field.id}}") {{field.label}}
-select.form-control(
-  id="{{field.id}}",
-  ng-model="data[field.name]",
-  name="{{field.name}}",
-  ng-required="field.required",
-  ng-cloak
-  ng-options="option.name for option in field.options")
-  option(value="") {{field.placeholder}}
+.modified-paper-input
+  label(for="{{field.id}}") {{field.label}}
+  select.form-control(
+    id="{{field.id}}",
+    ng-model="data[field.name]",
+    name="{{field.name}}",
+    ng-required="field.required",
+    ng-cloak
+    ng-options="option.name for option in field.options")
+    option(value="") {{field.placeholder}}

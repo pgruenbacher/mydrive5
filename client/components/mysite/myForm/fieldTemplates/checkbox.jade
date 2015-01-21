@@ -1,10 +1,12 @@
-.checkbox
-  label(for="{{field.id}}",ng-cloak) {{field.label}}
-    input(
-      ng-cloak
-      ng-model="data[field.name]",
-      name="{{field.name}}",
-      id="{{field.id}}",
-      type="checkbox",
-      ng-required="field.required")
+//- .checkbox
+//-   label(for="{{field.id}}",ng-cloak) {{field.label}}
+//-     input(
+//-       ng-cloak
+//-       ng-model="data[field.name]",
+//-       name="{{field.name}}",
+//-       id="{{field.id}}",
+//-       type="checkbox",
+//-       ng-required="field.required")
+
+paper-checkbox(field="field",data="data")
 

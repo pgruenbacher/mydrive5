@@ -1,26 +1,27 @@
-label(for="{{field.id}}",ng-cloak) {{field.label}}
-input.form-control(
-  ng-cloak
-  type="date"
-  placeholder="mm/dd/yyyy",
-  name="{{field.name}}",
-  ng-model="data[field.name]",
-  required='{{field.required}}'
-  ng-if="browser.supportsDate"
-  )
-input.form-control(
-  ng-cloak
-  type="text" 
-  datepicker-popup="dd-MMMM-yyyy"
-  ng-model="field"
-  is-open="field.open"
-  ng-click = "field.open = true"
-  datepicker-options="field.dateOptions"
-  ng-required="field.required"
-  close-text="Close"
-  placeholder="{{field.placeholder}}"
-  ng-if="!browser.supportsDate"
- )
+.modified-paper-input
+  label(for="{{field.id}}") {{field.label}}
+  input.form-control(
+    ng-cloak
+    type="date"
+    placeholder="mm/dd/yyyy",
+    name="{{field.name}}",
+    ng-model="data[field.name]",
+    required='{{field.required}}'
+    ng-if="browser.supportsDate"
+    )
+  input.form-control(
+    ng-cloak
+    type="text" 
+    datepicker-popup="dd-MMMM-yyyy"
+    ng-model="field"
+    is-open="field.open"
+    ng-click = "field.open = true"
+    datepicker-options="field.dateOptions"
+    ng-required="field.required"
+    close-text="Close"
+    placeholder="{{field.placeholder}}"
+    ng-if="!browser.supportsDate"
+   )
 
 //- datepicker.well.well-sm(ng-model="field.date" min-date="minDate")
 

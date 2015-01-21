@@ -1,10 +1,12 @@
-label(for="{{field.id}}") {{field.label}}
-input.form-control(
-  type="text",
-  ng-model="data[field.name]"
-  placeholder="{{field.placeholder}}"
-  ng-required="field.required"
-  name="{{field.name}}"
-  id="{{field.id}}"
-  ng-cloak
-  )
+div.paper-input.group
+  input.form-control(
+    type="text",
+    ng-model="data[field.name]"
+    ng-required="field.required"
+    name="{{field.name}}"
+    id="{{field.id}}"
+    ng-cloak
+    )
+  span.highlight
+  span.bar
+  label(for="{{field.id}}") {{field.label}}

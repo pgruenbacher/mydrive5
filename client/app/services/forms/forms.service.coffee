@@ -20,6 +20,37 @@ angular.module 'mydrive5App'
         label:'street address'
         required:true
         type:'textfield'
+        placeholder:'street'
+      }
+      {
+        id:2
+        name:'city'
+        label:'city'
+        required:true
+        type:'textfield'
+        placeholder:'city'
+      }
+      {
+        id:3
+        name:'state'
+        type:'states'
+        label:'state'
+        required:true
+        placeholder:'state'
+      }
+      {
+        id:4
+        name:'agree'
+        type:'checkbox'
+        label:'I have agreed to the terms and conditions'
+        required:true
+      }
+      {
+        id:5
+        name:'available'
+        type:'date'
+        label:'Availability'
+        required:true
       }
     ]
 
@@ -30,14 +61,14 @@ angular.module 'mydrive5App'
         id:1
         type:'checkbox'
         name:'checkbox'
-        label:'checkbox demo'
+        label:'checkbox'
         required:true
       }
       {
         id:2
         type:'options'
-        name:'asdfff'
-        label:'options demo'
+        name:'options'
+        label:'options dropdown'
         options:[
           {name:'option1',value:'duty1'}
           {name:'option2',value:'duty2'}
@@ -50,31 +81,31 @@ angular.module 'mydrive5App'
         type:'date'
         name:'datepick'
         date:new Date()
-        label:'date example'
+        label:'date picker'
         format:'MM.dd.YYYY'
-        placeholder:'pibck date'
+        placeholder:'pick a date'
       }
       {
         id:4
         type:'textarea'
-        name:'asbb'
-        label:'text example'
+        name:'textarea'
+        label:'text box'
         required:true
-        placeholder:'adsflkj placehold'
+        placeholder:'text field'
       }
       {
         id:5
         type:'textfield'
-        name:'ab'
-        label:'text example'
+        name:'textfield'
+        label:'text field'
         required:true
-        placeholder:'adsflkj placehold'
+        placeholder:'text area'
       }
       {
         id:6
         type:'choices'
         name:'choicefield'
-        label:'multiple choice example'
+        label:'multiple choice'
         required:true
         options:[
           {name:'choice A',value:'A'}

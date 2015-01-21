@@ -1,0 +1,13 @@
+.paper-checkbox
+  input(
+    ng-model="data[field.name]",
+    name="{{field.name}}",
+    id="{{field.id}}",
+    type="checkbox",
+    ng-required="field.required")
+  label(for="{{field.id}}",ng-click="invokeAnimation()")
+    span
+    span.check
+    span.box
+    | {{field.label}}
+

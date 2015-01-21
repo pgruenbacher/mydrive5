@@ -1,0 +1,319 @@
+// Basic Checkbox Google Material
+
+/* basic css */
+.paper-checkbox  {
+  position: relative;
+}
+.paper-checkbox > input[type=checkbox] {
+  display: none;
+}
+.paper-checkbox > label,
+.paper-checkbox p {
+  padding-left: 50px;
+}
+
+/* checkbox css */
+
+.paper-checkbox > label {
+  cursor: pointer;
+}
+.paper-checkbox label > span {
+  display: block;
+  position: absolute;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.paper-checkbox label > .circle{
+  background-color: transparent;
+  left: -30px;
+  top: -30px;
+  height: 80px;
+  width: 80px;
+  /* z-index: -1; */
+  border-radius: 50%;
+  -webkit-animation: growCircle 0.3s ease;
+  -moz-animation: growCircle 0.3s ease;
+  animation: growCircle 0.3s ease;
+}
+.paper-checkbox label > .box {
+  border: 2px solid #000;
+  height: 20px;
+  width: 20px;
+  z-index: 888;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.paper-checkbox label > .check {
+  top: -7px;
+  left: 6px;
+  width: 12px;
+  height: 24px;
+  border: 2px solid #0f9d58;
+  border-top: none;
+  border-left: none;
+  opacity: 0;
+  z-index: 888;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+/* handling click events */
+
+/* when checkbox is checked */
+.paper-checkbox input[type=checkbox]:checked ~ label > .box {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(-180deg);
+  -moz-transform: scale(0) rotate(-180deg);
+  transform: scale(0) rotate(-180deg);
+}
+.paper-checkbox input[type=checkbox]:checked ~ label > .check {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(45deg);
+  -moz-transform: scale(1) rotate(45deg);
+  transform: scale(1) rotate(45deg);
+}
+/* bubble animation */
+
+@-webkit-keyframes growCircle {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  70% {
+    opacity: 0.5;
+    background: #ddd;
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+  }
+}
+@-moz-keyframes growCircle {
+  0%,
+  100% {
+    -moz-transform: scale(0);
+  }
+  70% {
+    opacity: 0.5;
+    background: #DDD;
+    -moz-transform: scale(1.25);
+  }
+}
+@keyframes growCircle {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  70% {
+    opacity: 0.5;
+    background: #DDD;
+    transform: scale(1.25);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Basic Google Material Input CSS
+/* form starting stylings ------------------------------- */
+
+.group {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom:10px;
+}
+.modified-paper-input{
+  input,textarea:focus,select{
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #757575;
+  }
+  input:focus,textarea:focus,select:focus{
+    outline:none;
+  }
+  input.ng-valid.ng-dirty,textarea.ng-valid.ng-dirty,select.ng-valid.ng-dirty{
+    border-bottom: 1px solid #4fc24f;
+  }
+  input.ng-invalid.ng-dirty,textarea.ng-invalid.ng-dirty,select.ng-invalid.ng-dirty{
+    border-bottom: 1px solid #d34336;
+  }
+}
+
+
+
+
+
+.paper-input input,.paper-input textarea {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+.paper-input input:focus,.paper-input textarea:focus {
+  outline: none;
+}
+/* LABEL ======================================= */
+
+.paper-input label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+/* active state */
+
+.paper-input input:focus ~ label/*, input:valid ~ label*/,.paper-input textarea:focus ~ label/*, input:valid ~ label*/,
+.paper-input input.ng-dirty ~ label,.paper-input textarea.ng-dirty ~ label  {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+
+
+/* BOTTOM BARS ================================= */
+.bar  { position:relative; display:block; width:300px; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.paper-input input:focus ~ .bar:before,.paper-input textarea:focus ~ .bar:before,
+.paper-input input:focus ~ .bar:after,.paper-input textarea:focus ~ .bar:after  {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:225px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.paper-input input:focus ~ .highlight,.paper-input textarea:focus ~ .highlight  {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+
+
+
+
+/* === VALIDATION ==== */
+
+/* VALID */
+.paper-input input.ng-valid.ng-dirty,.paper-input textarea.ng-valid.ng-dirty { border-bottom: 1px solid #4fc24f;}
+.paper-input input.ng-valid.ng-dirty ~ .bar:before, .paper-input textarea.ng-valid.ng-dirty ~ .bar:before,
+.paper-input input.ng-valid.ng-dirty ~ .bar:after, .paper-input textarea.ng-valid.ng-dirty ~ .bar:after{
+  background: #4fc24f !important;
+}
+.paper-input input.ng-valid.ng-dirty ~ label,.paper-input textarea.ng-valid.ng-dirty ~ label{
+  color: #4fc24f;
+}
+.paper-input input.ng-valid.ng-dirty:focus ~ .highlight,.paper-input textarea.ng-valid.ng-dirty:focus ~ .highlight {
+  -webkit-animation:validHighlighter 0.3s ease !important;
+  -moz-animation:validHighlighter 0.3s ease !important;
+  animation:validHighlighter 0.3s ease;
+}
+@-webkit-keyframes validHighlighter {
+    from { background:#4fc24f; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes validHighlighter {
+    from { background:#4fc24f; }
+  to    { width:0; background:transparent; }
+}
+@keyframes validHighlighter {
+    from { background:#4fc24f; }
+  to    { width:0; background:transparent; }
+}
+
+/* INVALID */
+.paper-input input.ng-invalid.ng-dirty,.paper-input textarea.ng-invalid.ng-dirty{ border-bottom: 1px solid #d34336;}
+.paper-input input.ng-invalid.ng-dirty ~ .bar:before, .paper-input textarea.ng-invalid.ng-dirty ~ .bar:before,
+.paper-input input.ng-invalid.ng-dirty ~ .bar:after, .paper-input textarea.ng-invalid.ng-dirty ~ .bar:after{
+  background: #d34336 !important;
+}
+.paper-input input.ng-invalid.ng-dirty ~ label,.paper-input textarea.ng-invalid.ng-dirty ~ label  {
+  color: #d34336;
+}
+.paper-input input.ng-invalid.ng-dirty:focus ~ .highlight,.paper-input textarea.ng-invalid.ng-dirty:focus ~ .highlight {
+  -webkit-animation:invalidHighlighter 0.3s ease;
+  -moz-animation:invalidHighlighter 0.3s ease;
+  animation:invalidHighlighter 0.3s ease;
+}
+@-webkit-keyframes invalidHighlighter {
+    from { background:#d34336; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes invalidHighlighter {
+    from { background:#d34336; }
+  to    { width:0; background:transparent; }
+}
+@keyframes invalidHighlighter {
+    from { background:#d34336; }
+  to    { width:0; background:transparent; }
+}
+
+
+
+
+

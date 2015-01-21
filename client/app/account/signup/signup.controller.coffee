@@ -19,7 +19,12 @@ angular.module 'mydrive5App'
 
   $scope.errors = {}
 
-
+  $scope.field=
+    state:
+      name:'state'
+      type:'states'
+      placeholder:'--state--'
+      required:true
 
 
   $scope.register = (form) ->
