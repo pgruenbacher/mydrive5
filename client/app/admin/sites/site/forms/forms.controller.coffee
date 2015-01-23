@@ -8,6 +8,6 @@ angular.module 'mydrive5App'
   #   Sites.saveSite($scope.site._id,$scope.site)
   #   .then (response)->
   #     console.log response
-
+  $scope.newField={}
   $scope.fields=Forms.registration.fields
   console.log $scope.fields

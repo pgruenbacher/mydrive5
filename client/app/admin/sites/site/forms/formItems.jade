@@ -28,7 +28,15 @@ div(ui-tree="options")
             label.col-sm-6.control-label(for="") Placeholder
             div.col-sm-6
               input.form-control(type="text",required="true", placeholder="placeholder" ng-model="formItem.placeholder")
-          div.form-group(ng-if="hasProp(formItem,'required')")
+          div.form-group(ng-if="hasProp(formItem,'maxlength')") 
+            label.col-sm-6.control-label(for="") Max-length (optional)
+            div.col-sm-6
+              input.form-control(type="number",required="false", placeholder="max-length?" ng-model="formItem.maxlength")
+          div.form-group(ng-if="hasProp(formItem,'maxlength')") 
+            label.col-sm-6.control-label(for="") Min-length (optional)
+            div.col-sm-6
+              input.form-control(type="number",required="false", placeholder="min-length?" ng-model="formItem.minlength")
+          div.form-group(ng-if="hasProp(formItem,'minlength')")
             label.col-sm-6.control-label(for="sdasfd") Is field required?
             div.col-sm-6.checkbox
               input(type="checkbox", id="sdasfd" ng-model="formItem.required")
@@ -63,12 +71,15 @@ div(ui-tree="options")
   ol.angular-ui-tree-nodes
     li.angular-ui-tree-node
       div.menu-title.angular-ui-tree-handle
-        form.form-inline(role="form",name="addMenuForm",on-valid-submit="addField(newName,newField)")
+        form.form-inline(role="form",name="addMenuForm",on-valid-submit="addField(newName,newField.data)")
           div.form-group
             label.sr-only(for="") Field name
             input.form-control(type="text",required, ng-model="newName" placeholder="Menu name" filter-validation="validSlug")
           div.form-group
-            select.form-control(ng-options="formItem.label for formItem in defaults",ng-model="newField",required)
+            select.form-control(ng-options="formItem.label for formItem in defaults",ng-model="newField.data",required)
               option(value="") --select type--
           button.btn.btn-success.btn-xs.pull-right(type="submit")
             i.fa.fa-plus-square
+
+div
+  my-field(field="newField.data")

@@ -19,12 +19,76 @@ angular.module 'mydrive5App'
 
   $scope.errors = {}
 
-  $scope.field=
-    state:
-      name:'state'
-      type:'states'
-      placeholder:'--state--'
-      required:true
+  $scope.fields=
+      email:
+        name:'email'
+        type:'textfield'
+        label:'email'
+        required:true
+      firstName:
+        name:'firstName'
+        type:'textfield'
+        label:'first name'
+        required:true
+      lastName:
+        name:'lastName'
+        type:'textfield'
+        label:'last name'
+        required:true
+      phoneNumber:
+        name:'phoneNumber'
+        type:'phoneNumber'
+        label:'phone number'
+        required:true
+      dob:
+        name:'dob'
+        type:'date'
+        label:'date of birth'
+        required:true
+      businessName:
+        name:'businessName'
+        type:'textfield'
+        label:'your organization name'
+        required:true
+      productDescription:
+        name:'productDescription'
+        label:'organization description'
+        type:'textarea'
+        minlength:20
+        maxlength:500
+      businessType:
+        name:'businessType'
+        label:'business type'
+        type:'options'
+        options:[
+          {value:'sole_prop',label:'Sole Proprietorship'}
+          {value:'corporation',label:'Corporation'}
+          {value:'non_profit', label:'Non Profit'}
+          {value:'partnership',label:'Partnership'}
+          {value:'llc',label:'LLC'}
+        ]
+      zip:
+        name:'zip'
+        label:'zipcode'
+        type:'textfield'
+        required:true
+      streetAddress:
+        name:'streetAddress'
+        label:'street address'
+        type:'textfield'
+        required:true
+      city:
+        name:'city'
+        label:'city'
+        type:'textfield'
+        required:true
+      state:
+        name:'state'
+        type:'states'
+        placeholder:'--state--'
+        required:true
+        label:'select state'
+
 
 
   $scope.register = (form) ->

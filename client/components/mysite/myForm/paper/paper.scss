@@ -164,7 +164,7 @@
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 300px;
+  // width: 300px;
   border: none;
   border-bottom: 1px solid #757575;
 }
@@ -193,7 +193,14 @@
   font-size: 14px;
   color: #5264AE;
 }
-
+/* length validation */
+.paper-input .hint{
+  position:absolute;
+  right:10px;
+  line-height:1em;
+  bottom:-14px;
+  font-size:10px;
+}
 
 
 /* BOTTOM BARS ================================= */
@@ -259,8 +266,16 @@
 
 /* === VALIDATION ==== */
 
+
 /* VALID */
-.paper-input input.ng-valid.ng-dirty,.paper-input textarea.ng-valid.ng-dirty { border-bottom: 1px solid #4fc24f;}
+
+.paper-input input.ng-valid.ng-dirty ~ .hint,.paper-input textarea.ng-valid.ng-dirty ~.hint{
+  color: #4fc24f; 
+}
+
+.paper-input input.ng-valid.ng-dirty,.paper-input textarea.ng-valid.ng-dirty { 
+  border-bottom: 1px solid #4fc24f;
+}
 .paper-input input.ng-valid.ng-dirty ~ .bar:before, .paper-input textarea.ng-valid.ng-dirty ~ .bar:before,
 .paper-input input.ng-valid.ng-dirty ~ .bar:after, .paper-input textarea.ng-valid.ng-dirty ~ .bar:after{
   background: #4fc24f !important;
@@ -287,7 +302,12 @@
 }
 
 /* INVALID */
-.paper-input input.ng-invalid.ng-dirty,.paper-input textarea.ng-invalid.ng-dirty{ border-bottom: 1px solid #d34336;}
+.paper-input input.ng-invalid.ng-dirty ~ .hint,.paper-input textarea.ng-invalid.ng-dirty ~.hint{
+  color: #d34336; 
+}
+.paper-input input.ng-invalid.ng-dirty,.paper-input textarea.ng-invalid.ng-dirty{
+  border-bottom: 1px solid #d34336;
+}
 .paper-input input.ng-invalid.ng-dirty ~ .bar:before, .paper-input textarea.ng-invalid.ng-dirty ~ .bar:before,
 .paper-input input.ng-invalid.ng-dirty ~ .bar:after, .paper-input textarea.ng-invalid.ng-dirty ~ .bar:after{
   background: #d34336 !important;

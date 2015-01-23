@@ -6,6 +6,7 @@ angular.module 'mydrive5App'
   restrict: 'EA'
   scope:
     formItems:'='
+    newField:'='
   link: (scope, element, attrs) ->
     scope.defaults=Forms.default.fields
     scope.fieldEditing={}

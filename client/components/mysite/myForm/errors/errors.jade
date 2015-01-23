@@ -1,0 +1,10 @@
+ng-form(name="myForm") 
+  div(ng-transclude="true")
+  div.errors
+    p(ng-show="myForm[field.name].$error.required && form.$submitted") this is required
+    p(ng-show="myForm[field.name].$error.email && form.$submitted") invalid email
+    p(ng-show="myForm[field.name].$error.date && form.$submitted") invalid date
+    p(ng-show="myForm[field.name].$error.time && form.$submitted") invalid time
+    p(ng-show="myForm[field.name].$error.maxlength") invalid length
+    p(ng-show="myForm[field.name].$error.minlength") input length too short
+  

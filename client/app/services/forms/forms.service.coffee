@@ -20,7 +20,6 @@ angular.module 'mydrive5App'
         label:'street address'
         required:true
         type:'textfield'
-        placeholder:'street'
       }
       {
         id:2
@@ -28,7 +27,6 @@ angular.module 'mydrive5App'
         label:'city'
         required:true
         type:'textfield'
-        placeholder:'city'
       }
       {
         id:3
@@ -36,7 +34,6 @@ angular.module 'mydrive5App'
         type:'states'
         label:'state'
         required:true
-        placeholder:'state'
       }
       {
         id:4
@@ -91,6 +88,8 @@ angular.module 'mydrive5App'
         name:'textarea'
         label:'text box'
         required:true
+        maxlength:100
+        minlength:20
         placeholder:'text field'
       }
       {
@@ -99,6 +98,8 @@ angular.module 'mydrive5App'
         name:'textfield'
         label:'text field'
         required:true
+        maxlength:20
+        minlength:4
         placeholder:'text area'
       }
       {

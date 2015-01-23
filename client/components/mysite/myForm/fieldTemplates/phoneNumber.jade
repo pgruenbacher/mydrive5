@@ -1,11 +1,14 @@
 div.paper-input
   input.form-control(
-    type="email"
+    type="tel",
     ng-model="data[field.name]"
-    name="{{field.name}}"
     ng-required="field.required"
+    mask='(999) 999-9999? ex:9999'
+    name="{{field.name}}"
+    id="{{field.id}}"
     ng-cloak
     )
   span.highlight
   span.bar
   label(for="{{field.id}}") {{field.label}}
+    span.hint (999) 999-9999

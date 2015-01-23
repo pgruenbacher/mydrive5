@@ -4,9 +4,11 @@ ul
 
 .row
   .col-lg-4
-    formItems(form-items="fields")
+    formItems(form-items="fields",new-field="newField")
   .col-lg-4
     my-form(fields="fields")
+
+    pre {{newField}}
 
 div.right-side-nav.navbar-nav.nav
   li

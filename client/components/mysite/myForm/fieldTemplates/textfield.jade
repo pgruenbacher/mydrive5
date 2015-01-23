@@ -5,8 +5,14 @@ div.paper-input.group
     ng-required="field.required"
     name="{{field.name}}"
     id="{{field.id}}"
+    ng-maxlength="{{field.maxlength}}"
     ng-cloak
     )
   span.highlight
   span.bar
+  div.hint
+    span(ng-show="field.minlength>0")
+      | min length:{{field.minlength}} &#32;&#32;
+    span(ng-show="field.maxlength>0")
+      | {{data[field.name].length || 0}}/{{field.maxlength}} &#32;&#32;
   label(for="{{field.id}}") {{field.label}}

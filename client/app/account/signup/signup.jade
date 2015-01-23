@@ -1,4 +1,46 @@
 .container
+  .col-sm-12
+    h1 Sign up
+  .col-sm-12
+    form.form.signup-form(
+        name='form',
+        on-valid-submit="loginOauth('stripe')"
+        )
+      .row
+        .col-sm-6
+          .form-group
+            my-errors(field="fields.firstName",form="form")
+              my-field(field="fields.firstName",data="user")
+          
+          .form-group
+            my-errors(field="fields.lastName",form="form")
+              my-field(field="fields.lastName",data="user")
+          .form-group
+            my-errors(field="fields.firstName",form="form")
+              my-field(field="fields.firstName",data="user")
+          .form-group
+            my-errors(field="fields.email",form="form")
+              my-field(field="fields.email",data="user")
+          .form-group
+            my-errors(field="fields.telephoneNumber",form="form")
+              my-field(field="fields.telephoneNumber",data="user")
+          .form-group
+            my-errors(field="fields.dob",form="form")
+              my-field(field="fields.dob",data="user")
+        .col-sm-6
+          .form-group
+            my-errors(field="fields.businessName",form="form")
+              my-field(field="fields.businessName",data="user")
+          .form-group
+            my-errors(field="fields.productDescription",form="form")
+              my-field(field="fields.productDescription",data="user")
+          .form-group
+            my-errors(field="fields.businessType",form="form")
+              my-field(field="fields.businessType",data="user")
+
+          button.stripe-connect.dark(type="submit")
+            span Connect with Stripe
+
   .row
     .col-sm-12
       h1 Sign up
@@ -48,6 +90,7 @@
                   | What's your telephone number?
                 p.help-block(ng-show='form.phoneNumber.$error.mongoose')
                   | {{ errors.phoneNumber }}
+
               
               //- .form-group(ng-class='{ "has-success": form.day.$valid && submitted,\
               //- "has-error": form.day.$invalid && submitted }')
@@ -131,7 +174,7 @@
                   input.form-control(type='text', placeholder="city" name='city', ng-model='user.city', required='', mongoose-error='')
                 
                 .col-sm-3
-                  my-field(field="field.state" data="user")
+                  my-field(field="fields.state" data="user")
                                   
                 .col-sm-4
                   input.form-control(type='text', placeholder="zip code", name='zip', ng-model='user.zip', required='', mongoose-error='')

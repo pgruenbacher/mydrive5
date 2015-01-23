@@ -1,13 +1,23 @@
 'use strict'
 
 angular.module 'mydrive5App'
+.directive 'myErrors',()->
+  templateUrl:'components/mysite/myForm/errors/errors.html'
+  restrict:'E'
+  transclude:true
+  scope:
+    field:'='
+    form:'='
+  link:()->
+    if
+
+
 .directive 'myField',($http,$compile,$templateCache,config,CONFIG,BROWSER)->
   restrict:'EA'
   scope:
     field:'='
     data:'='
-  require:'^form'
-  link:(scope,element,attrs,myForm)->
+  link:(scope,element,attrs)->
     scope.browser={
       supportsDate:BROWSER.inputtypes.date
       supportsDateTime:BROWSER.inputtypes.dateTime
@@ -36,12 +46,15 @@ angular.module 'mydrive5App'
         .then (response)->
           if response.data.length > 0
             loadField response.data
-
-    getField scope.field.type
+    if scope.field?
+      if scope.field.type?        
+        getField scope.field.type
 
     scope.$watch 'field', (newValue,oldValue)->
-      if oldValue != newValue
-        getField scope.field.type
+      if typeof newValue != 'undefined'
+        if typeof newValue.type !='undefined'
+          if oldValue != newValue
+            getField scope.field.type
 
     scope.opened=true
     scope.open=($event)->
