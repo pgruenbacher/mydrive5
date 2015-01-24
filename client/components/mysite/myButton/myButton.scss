@@ -14,3 +14,34 @@ ul.item-list{
   }
 }
 
+div.button-navbar{
+  height:50px;
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li{
+      float:left;
+      a{
+        text-align:center;
+        width:150px;
+        display:block;
+      }
+      a:before {
+        content: "\f152";
+        text-decoration:none;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        /*--adjust as necessary--*/
+        color: #FD691C;
+        font-size: 18px;
+        padding-right: 0.5em;
+      }
+      a.active:before{
+        content:"\f150";
+      }
+    }
+  }
+}

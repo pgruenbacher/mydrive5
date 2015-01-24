@@ -36,16 +36,16 @@ angular.module 'mydrive5App'
       .then (response)->
         console.log response.data
         $scope.form=response.data[0]
-        # reinit()
+        reinit()
     else
       Forms.create(form)
       .then (response)->
         $scope.form=response.data[0]
-        # reinit()
+        reinit()
 
-  # reinit=()->
-  #   Forms.all().then (response)->
-  #     $scope.forms=response.data
+  reinit=()->
+    Forms.all().then (response)->
+      $scope.forms=response.data
 
 
   $scope.newField={}

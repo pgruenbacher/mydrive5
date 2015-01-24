@@ -1,21 +1,31 @@
 .modal-content
   .modal-header
-    button.close(type='button', data-dismiss='modal')
+    button.btn.btn-default.pull-right(type='button', data-dismiss='modal')
       span(aria-hidden='true') ×
       span.sr-only Close
-    h4#uploadMediaLabel.modal-title Upload Media
+    a.btn.btn-default.pull-right(ng-click="disable(true)",ng-show="!button.disabled") Disable (won't appear on website)
+    a.btn.btn-default.pull-right(ng-click="disable(false)",ng-show="button.disabled") Enable (will appear on website)
+    h4.modal-title {{button.title}}
   .modal-body
-    a(ng-click="disable(true)",ng-show="!button.disabled") Disable (won't appear on website)
-    a(ng-click="disable(false)",ng-show="button.disabled") Enable (will appear on website)
-    .divider
     input(type="text",ng-model="button.title")
-    .divider
-    h4 Choose button navigation destination
-    ul.item-list
-      li(ng-repeat="item in available",ng-class="{highlight:button.destination===item}")
-        a(ng-click="setDestination(item)") {{item}}
+    div.button-navbar
+      ul
+        li
+          span Choose action of button:
+        li
+          a(ng-click="select('Navigation')",ng-class="{active:selected=='Navigation'}") Navigate to page
+        li
+          a(ng-click="select('Action')",ng-class="{active:selected=='Action'}") Open Form
 
-    h4 Choose button action
-    ul.item-list
-      li(ng-repeat="form in forms",ng-class="{highlight:button.action===form._id}")
-        a(ng-click="setAction(item)") {{form.title}}
+    .divider      
+    div(ng-switch="selected")
+      div(ng-switch-when="Navigation")
+        h4 Choose button navigation destination
+        ul.item-list
+          li(ng-repeat="item in available",ng-class="{highlight:button.perform===item}")
+            a(ng-click="setDestination(item)") {{item}}
+      div(ng-switch-when="Action")
+        h4 Choose button action
+        ul.item-list
+          li(ng-repeat="form in forms",ng-class="{highlight:button.perform===form._id}")
+            a(ng-click="setForm(form._id)") {{form.title}}

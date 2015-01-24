@@ -5,10 +5,18 @@ angular.module 'mydrive5App'
   $scope.available=available
   $scope.button=button
   $scope.forms=forms
+  $scope.selected=''
   $scope.disable=(bool)->
     $scope.button.disabled=bool
   $scope.setDestination=(dest)->
-    $scope.button.destination=dest
+    $scope.button.perform=dest
+    $scope.button.performType='navigation'
+  $scope.setForm=(action)->
+    $scope.button.perform=action
+    $scope.button.performType='form'
+
+  $scope.select=(option)->
+    $scope.selected=option
 
 .directive 'myButton', ($location,config,Sites,$modal,Forms)->
   templateUrl: 'components/mysite/myButton/myButton.html'
@@ -18,12 +26,25 @@ angular.module 'mydrive5App'
     currentPage:'@'
   link: (scope, element, attrs) ->
     
-    scope.navigate=()->
-      if scope.button.destination?
-        path=$location.path()
-        pos=path.search(scope.currentPage)
-        path=path.slice(0,pos)+scope.button.destination
-        $location.path(path)
+    scope.perform=()->
+      'perform'
+      switch scope.button.performType
+        when 'navigation'
+          path=$location.path()
+          pos=path.search(scope.currentPage)
+          path=path.slice(0,pos)+scope.button.perform
+          $location.path(path)
+        when 'form'
+          console.log 'is form'
+          $modal.open
+            templateUrl:'components/mysite/myForm/myFormModal.html'
+            controller:'myFormModalCtrl'
+            size:'sm'
+            resolve:
+              form:->
+                Forms.get(scope.button.perform).then (response)->
+                  response.data
+
 
     scope.visible=true
     defaultTitle='nav button'
@@ -50,7 +71,7 @@ angular.module 'mydrive5App'
       scope.edit=(bool)->
         modalInstance=$modal.open
           templateUrl:'app/admin/modals/myButtonModal.html'
-          size:'sm'
+          size:'lg'
           controller:'buttonModalCtrl'
           resolve:
             button:->

@@ -11,6 +11,7 @@ angular.module 'mydrive5App', [
   'ngCkeditor',
   'angularPayments',
   'ezfb',
+  'ngAnimate',
   'ui.tree',
   'akoenig.deckgrid'
 ]
@@ -31,6 +32,9 @@ angular.module 'mydrive5App', [
   ezfbProvider.setInitParams
     appId: '319916481534653'
 
+.config ($tooltipProvider)->
+  $tooltipProvider.options({animation: false});
+  
 .config ($stateProvider)->
   $stateProvider
   .state 'app',

@@ -12,10 +12,26 @@
 	"buffers":
 	[
 		{
+			"file": "client/components/mysite/myButton/myButton.directive.coffee",
+			"settings":
+			{
+				"buffer_size": 1847,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "client/app/services/forms/forms.service.coffee",
 			"settings":
 			{
-				"buffer_size": 2329,
+				"buffer_size": 4028,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/app/admin/modals/myButtonModal.jade",
+			"settings":
+			{
+				"buffer_size": 847,
 				"line_ending": "Unix"
 			}
 		},
@@ -23,47 +39,7 @@
 			"file": "client/components/mysite/myForm/paper/paper.scss",
 			"settings":
 			{
-				"buffer_size": 7885,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myForm/fieldTemplates/email.jade",
-			"settings":
-			{
-				"buffer_size": 237,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myForm/fieldTemplates/textfield.jade",
-			"settings":
-			{
-				"buffer_size": 513,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/account/signup/signup.controller.coffee",
-			"settings":
-			{
-				"buffer_size": 3309,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/components/mysite/myForm/myForm.directive.coffee",
-			"settings":
-			{
-				"buffer_size": 1892,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "client/app/account/signup/signup.jade",
-			"settings":
-			{
-				"buffer_size": 11093,
+				"buffer_size": 8608,
 				"line_ending": "Unix"
 			}
 		}
@@ -119,147 +95,150 @@
 	[
 		"/home/paul/Code/fundraiser/mydrive5",
 		"/home/paul/Code/fundraiser/mydrive5/client",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/closure",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/closure/backdrop",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/closure/button",
+		"/home/paul/Code/fundraiser/mydrive5/client/app",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms",
 		"/home/paul/Code/fundraiser/mydrive5/client/components",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/errors",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper"
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper",
+		"/home/paul/Code/fundraiser/mydrive5/server/api",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/form",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site"
 	],
 	"file_history":
 	[
+		"/home/paul/Code/fundraiser/mydrive5/server/api/form/form.model.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/myForm.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/myPage.js",
-		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/account/signup/signup.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/signup/signup.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/.bin/sequelize",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/errors/errors.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/elem-ruby.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/supertest/example.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myImage/myImage.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/25746e2be27d2f43ce18e93bdd293cb8889d545b/myForm.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myFaq/myFaq.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/myForm.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/formItems.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/textarea.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize/lib/errors.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/errorhandler/public/error.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/textfield.jade",
-		"/home/paul/Code/fundraiser/mydrive5/dev.sqlite",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-jscs/node_modules/jscs/lib/rules/disallow-empty-blocks.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/formItems.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/log4js/examples/flush-on-exit.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/filters/filters.filter.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/forms-inputnumber-l10n.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-jscs/node_modules/jscs/lib/options/file-extensions.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/node_modules/gulp/node_modules/deprecated/test/field.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/js/textField/textField.min.css",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/FilteredItemSelectionDialog.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/myForm.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/phoneNumber.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/signup/signup.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/account/signup/signup.scss",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/signup/signup.js.map",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/textfield.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/forms.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/services/forms/forms.service.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/forms.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/tar-fs/node_modules/tar-stream/node_modules/end-of-stream/node_modules/once/node_modules/wrappy/LICENSE",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap/js/button.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/test/build_control_test.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/inquirer/lib/ui/baseUI.js",
+		"/home/paul/Code/fundraiser/mydrive5/bower.json",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/tar-fs/node_modules/tar-stream/node_modules/readable-stream/node_modules/core-util-is/package.json",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/glob/test/root-nomount.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/js/button/button.min.css",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/closure/button/button.css",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myButton/myButton.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/source-map/build/prefix-utils.jsm",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/socket.io/node_modules/redis/multi_bench.js",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/5cf4d7353b55f29e1b4dc40cb0e7cbbf9245c901/myButton.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/s3/managed_upload.js",
+		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/modals/myButtonModal.html",
+		"/home/paul/Code/fundraiser/mydrive5/mydrive5.sublime-project",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/3cdee18a669f6499b7e7c5248502ffe303ca9bf7/paper.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/066ae4dc61043a56fb30052b191caac2d68e903f/palettePicker.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/package.json",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/modals/myButtonModal.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/forms.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/forms.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/services/forms/forms.service.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/forms.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/form/form.controller.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/formItems.jade",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.controller.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/options.jade",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/api.service.js",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.scss",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/.bin/sequelize",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/node_modules/gulp/node_modules/vinyl-fs/lib/dest/writeContents.js",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/date.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/formItems.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.jade",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.jade",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/form/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/forms-inputnumber-l10n.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/forms.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/states.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/textfield.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/myForm.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/address.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/formItemsModal.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/modal/modal.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/c5bb520096a8c6d701d567b89ef40618c56058ba/modal.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/composable-middleware/lib/middleware-common-object.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/myForm.scss",
 		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/sites/site/forms/formItems.js",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/sites/site/forms/formItems.html",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/services/forms/forms.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/myForm.js",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/25746e2be27d2f43ce18e93bdd293cb8889d545b/myForm.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins/_text-emphasis.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/services/sites/sites.service.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/1782bdfb64591ed5e125153eb6e88aadba641aa6/sites.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/siteSettings/siteSettings.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/siteSettings/siteSettings.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-timers-ie-1.12.1.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/supertest/node_modules/superagent/node_modules/formidable/test/integration/test-octet-stream.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/http-proxy/test/core/simple/test-http-upgrade-server2.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/http-proxy/test/core/simple/test-http-set-cookies.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.spec.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/socket.io/node_modules/socket.io-adapter/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.integration.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/multer/node_modules/busboy/node_modules/dicer/bench/formidable-bench-multipart-parser.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.model.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/choices.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/choices.html",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myPage/myPage.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/css-hyphens.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-autoprefixer/CHANGELOG",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper/paper.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/af1289ca7f010b3d69f8884f2e2c729a035d2186/_filter.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-ui-tree/demo/filter.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/signup/signup.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/account/signup/signup.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/signup/signup.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/examples/choice.js",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/states.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose/lib/statemachine.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose/static.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/stoppable_test.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/optimist/example/line_count_options.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/connect/LICENSE",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/date.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/email.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/number.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/password.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/textarea.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/pageItems/pageItems.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/pageItems/pageItems.jade",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/textfield.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/palette-picker/palettePicker.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper/paper.scss",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/states.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/options.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper/paperCheckBox.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/login/login.js",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/4c9d10b6cc34d7d3d4e957ffced09bbbfe2e83c1/login.scssc",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/checkbox.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper/paperInput.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/paperinput.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/checkbox.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ng-ckeditor/examples/checkspelling.php",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/class_webdriver_http_Executor.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/myForm.scss",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/phoneNumber.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/test/options.test.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt/lib/grunt/option.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/supertest/node_modules/superagent/node_modules/formidable/lib/octet_parser.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/blitline/out.txt",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/mysite/myForm/fieldTemplates/email.html",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/credentials/ec2_metadata_credentials.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/supertest/example.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/closure/textField/textField.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/modules/closure/textField/textField.css",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap/less/forms.less",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/lib/init/formatters.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/lib/test/data/form_handling_js_submit.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.jade",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/body-parser/lib/types/text.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/node_modules/shelljs/src/toEnd.js",
 		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/12bf08928ee045d92693f21cae023a91c6dc928e/ticker.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/angular-material.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/s3/managed_upload.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/express-subdomain/test/multi-level.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/archy/examples/multi_line.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/TimelineManager.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/TimelineFrameController.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-material/angular-material.css",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/b08e8a31f6d48eccfd7a90259e5b26517b6e8457/adminNavbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/fieldTemplates/papercheckbox.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myForm/paper/paperInputDate.jade",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/signup/signup.js",
-		"/home/paul/Code/fundraiser/mydrive5/publicGruntfile.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.scss",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/adm-zip/headers/mainHeader.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-angular-templates/test/expected/usemin.html",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/templates/layouts/defaultLayout.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/page/page.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/package.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/lib/defaults.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/f90d5779a126074193747d01e14571a4c4334e5d/myImage.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt/node_modules/nopt/examples/my-program.js",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/page/page.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/cc0c2dc0f66084026de1fd5de246e4b8468ea31a/page.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/image/image.controller.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/components/aws/s3.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/index.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/local.env.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/optimist/example/line_count_options.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/connect/LICENSE",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/apis/config-2014-11-12.min.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/build/config.gypi",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/config.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ng-ckeditor/test/directiveOnFormSpec.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/CONTRIBUTING.md",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/test/expected/custom_options",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/service.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/server.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/media/media.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/media/media.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/media/media.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/services/images/images.service.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/c7b7f113e90bcbe9c99da7389dcab7b0f1bc93fc/media.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/bootstrap/less/media.less",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/lodash/dist/lodash.underscore.js",
-		"/home/paul/Code/fundraiser/mydrive5/Gruntfile.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/mysite/myPage/myPage.directive.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.controller.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.controller.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/pageItems/pageItems.jade"
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-jscs/node_modules/jscs/lib/options/file-extensions.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sequelize-cli/node_modules/gulp/node_modules/deprecated/test/field.js"
 	],
 	"find":
 	{
@@ -277,6 +256,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"scope.avail",
+			"destination",
+			"ng-show",
+			"ng-if",
+			"fields",
+			"selects",
+			"options",
+			"selects",
+			"options",
+			"#5264AE",
+			"#d34336",
+			"#4fc24f",
+			"width",
 			".name",
 			"fieldName",
 			"state",
@@ -391,20 +383,7 @@
 			"admin",
 			"removeBasePath",
 			"copy",
-			"ignorePath",
-			"wiredep",
-			"ignorePath",
-			"wiredep",
-			"clean",
-			"'client",
-			"injector",
-			"injector:sc",
-			"copy",
-			"copyOver",
-			"copy",
-			"@",
-			"console.log",
-			"console"
+			"ignorePath"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -422,188 +401,24 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/app/services/forms/forms.service.coffee",
+					"file": "client/components/mysite/myButton/myButton.directive.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2329,
+						"buffer_size": 1847,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1765,
-								1765
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/components/mysite/myForm/paper/paper.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3900,
-								3900
-							],
-							[
-								5472,
-								5472
-							],
-							[
-								5519,
-								5519
-							],
-							[
-								6701,
-								6701
-							],
-							[
-								6750,
-								6750
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3724.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/components/mysite/myForm/fieldTemplates/email.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								236,
-								236
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/components/mysite/myForm/fieldTemplates/textfield.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 513,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								231,
-								231
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "client/app/account/signup/signup.controller.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3309,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								378,
-								378
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "client/components/mysite/myForm/myForm.directive.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1892,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								181,
-								181
+								1803,
+								1803
 							]
 						],
 						"settings":
@@ -613,59 +428,57 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 0.0,
+						"translation.y": 585.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "client/app/account/signup/signup.jade",
+					"buffer": 1,
+					"file": "client/app/services/forms/forms.service.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11093,
+						"buffer_size": 4028,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								253,
-								253
-							],
+								527,
+								527
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/app/admin/modals/myButtonModal.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 847,
+						"regions":
+						{
+						},
+						"selection":
+						[
 							[
-								406,
-								406
-							],
-							[
-								548,
-								548
-							],
-							[
-								687,
-								687
-							],
-							[
-								832,
-								832
-							],
-							[
-								975,
-								975
-							],
-							[
-								1133,
-								1133
-							],
-							[
-								1288,
-								1288
-							],
-							[
-								1443,
-								1443
+								792,
+								792
 							]
 						],
 						"settings":
@@ -678,7 +491,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/components/mysite/myForm/paper/paper.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6583,
+								6583
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3304.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -739,12 +582,276 @@
 		"selected_items":
 		[
 			[
+				"form.model",
+				"server/api/form/form.model.js"
+			],
+			[
+				"forms.ser",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"mybuttonmod",
+				"client/app/admin/modals/myButtonModal.jade"
+			],
+			[
+				"paper.scss",
+				"client/components/mysite/myForm/paper/paper.scss"
+			],
+			[
+				"mybutton.dir",
+				"client/components/mysite/myButton/myButton.directive.coffee"
+			],
+			[
+				"forms.jade",
+				"client/app/admin/sites/site/forms/forms.jade"
+			],
+			[
+				"forms.con",
+				"client/app/admin/sites/site/forms/forms.controller.coffee"
+			],
+			[
+				"forms.serv",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"options.jade",
+				"client/components/mysite/myForm/fieldTemplates/options.jade"
+			],
+			[
+				"site.con.js",
+				"server/api/site/site.controller.js"
+			],
+			[
+				"sitecontr",
+				"server/api/site/site.controller.js"
+			],
+			[
+				"api.s",
+				"server/api/api.service.js"
+			],
+			[
+				"form.conjs",
+				"server/api/form/form.controller.js"
+			],
+			[
+				"site.conjs",
+				"server/api/site/site.controller.js"
+			],
+			[
+				"formitems.jade",
+				"client/app/admin/sites/site/forms/formItems.jade"
+			],
+			[
+				"page.con",
+				"client/app/admin/sites/site/page/page.controller.coffee"
+			],
+			[
+				"site.con",
+				"client/app/admin/sites/site/site.controller.coffee"
+			],
+			[
+				"forminde",
+				"server/api/form/index.js"
+			],
+			[
+				"forms.s",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"form.servic",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"modal",
+				"client/components/modal/modal.jade"
+			],
+			[
+				"formitemjad",
+				"client/app/admin/sites/site/forms/formItems.jade"
+			],
+			[
+				"formitems",
+				"client/app/admin/sites/site/forms/formItems.directive.coffee"
+			],
+			[
+				"formitemdi",
+				"client/app/admin/sites/site/forms/formItems.directive.coffee"
+			],
+			[
+				"myform.di",
+				"client/components/mysite/myForm/myForm.directive.coffee"
+			],
+			[
+				"formitemsjade",
+				"client/app/admin/sites/site/forms/formItems.jade"
+			],
+			[
+				"formitemjade",
+				"client/app/admin/sites/site/forms/formItems.jade"
+			],
+			[
+				"myfrm.jade",
+				"client/components/mysite/myForm/myForm.jade"
+			],
+			[
 				"myform.jade",
 				"client/components/mysite/myForm/myForm.jade"
 			],
 			[
+				"formitems.jad",
+				"client/app/admin/sites/site/forms/formItems.jade"
+			],
+			[
+				"forms.servi",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"app.scss",
+				"client/app/app.scss"
+			],
+			[
+				"app.scs",
+				"client/app/app.scss"
+			],
+			[
+				"sites.s",
+				"client/app/admin/sites/sites.scss"
+			],
+			[
+				"sites.jade",
+				"client/app/admin/sites/sites.jade"
+			],
+			[
+				"sites.scs",
+				"client/app/admin/sites/sites.scss"
+			],
+			[
+				"sitesettings.jade",
+				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
+			],
+			[
+				"site.controljs",
+				"server/api/site/site.controller.js"
+			],
+			[
+				"formcont",
+				"server/api/form/form.controller.js"
+			],
+			[
+				"siteindex",
+				"server/api/site/index.js"
+			],
+			[
+				"siteinde",
+				"server/api/site/index.js"
+			],
+			[
+				"site.ind",
+				"node_modules/socket.io/node_modules/socket.io-adapter/index.js"
+			],
+			[
+				"form.mo",
+				"server/api/form/form.model.js"
+			],
+			[
+				"forms.service",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"sites.con",
+				"client/app/admin/sites/sites.controller.coffee"
+			],
+			[
+				"site.ser",
+				"client/app/services/sites/sites.service.coffee"
+			],
+			[
+				"formitems.ja",
+				"client/app/admin/sites/site/forms/formItems.jade"
+			],
+			[
+				"myform.scs",
+				"client/components/mysite/myForm/myForm.scss"
+			],
+			[
+				"choice.j",
+				"client/components/mysite/myForm/fieldTemplates/choices.jade"
+			],
+			[
+				"filter.co",
+				"client/components/filters/filters.filter.coffee"
+			],
+			[
+				"signup.con",
+				"client/app/account/signup/signup.controller.coffee"
+			],
+			[
+				"choice.ja",
+				"client/components/mysite/myForm/fieldTemplates/choices.jade"
+			],
+			[
+				"states.jade",
+				"client/components/mysite/myForm/fieldTemplates/states.jade"
+			],
+			[
+				"site.model",
+				"server/api/site/site.model.js"
+			],
+			[
+				"form.ser",
+				"client/app/services/forms/forms.service.coffee"
+			],
+			[
+				"login.jade",
+				"client/app/account/login/login.jade"
+			],
+			[
+				"pageitems.jade",
+				"client/app/admin/sites/site/pageItems/pageItems.jade"
+			],
+			[
+				"pageitems.di",
+				"client/app/admin/sites/site/pageItems/pageItems.directive.coffee"
+			],
+			[
+				"myform.dir",
+				"client/components/mysite/myForm/myForm.directive.coffee"
+			],
+			[
+				"formitems.di",
+				"client/app/admin/sites/site/forms/formItems.directive.coffee"
+			],
+			[
+				"palettepicker.dir",
+				"client/components/palette-picker/palettePicker.directive.coffee"
+			],
+			[
+				"login.con",
+				"client/app/account/login/login.controller.coffee"
+			],
+			[
 				"signup.jade",
 				"client/app/account/signup/signup.jade"
+			],
+			[
+				"email.jad",
+				"client/components/mysite/myForm/fieldTemplates/email.jade"
+			],
+			[
+				"textfield.jad",
+				"client/components/mysite/myForm/fieldTemplates/textfield.jade"
+			],
+			[
+				"filter",
+				"client/components/filters/filters.filter.coffee"
+			],
+			[
+				"signup.jad",
+				"client/app/account/signup/signup.jade"
+			],
+			[
+				"app.js",
+				"server/app.js"
 			],
 			[
 				"errors.",
@@ -771,40 +878,16 @@
 				"client/components/mysite/myForm/myForm.jade"
 			],
 			[
-				"formitems.jade",
-				"client/app/admin/sites/site/forms/formItems.jade"
-			],
-			[
-				"signup.con",
-				"client/app/account/signup/signup.controller.coffee"
-			],
-			[
 				"signu",
 				"public/app/account/signup/signup.jade"
-			],
-			[
-				"forms.service",
-				"client/app/services/forms/forms.service.coffee"
 			],
 			[
 				"form.di",
 				"client/components/mysite/myForm/myForm.directive.coffee"
 			],
 			[
-				"formitemdi",
-				"client/app/admin/sites/site/forms/formItems.directive.coffee"
-			],
-			[
-				"forms.con",
-				"client/app/admin/sites/site/forms/forms.controller.coffee"
-			],
-			[
 				"formitems.dir",
 				"client/app/admin/sites/site/forms/formItems.directive.coffee"
-			],
-			[
-				"forms.jade",
-				"client/app/admin/sites/site/forms/forms.jade"
 			],
 			[
 				"choices.jade",
@@ -821,10 +904,6 @@
 			[
 				"checkbox",
 				".tmp/components/mysite/myForm/fieldTemplates/checkbox.html"
-			],
-			[
-				"form.ser",
-				"client/app/services/forms/forms.service.coffee"
 			],
 			[
 				"formjade",
@@ -865,10 +944,6 @@
 			[
 				"form.",
 				"client/components/mysite/myForm/myForm.jade"
-			],
-			[
-				"signup.jad",
-				"client/app/account/signup/signup.jade"
 			],
 			[
 				"main.jad",
@@ -915,14 +990,6 @@
 				"client/app/admin/media/media.controller.coffee"
 			],
 			[
-				"site.con",
-				"client/app/admin/sites/site/site.controller.coffee"
-			],
-			[
-				"page.con",
-				"client/app/admin/sites/site/page/page.controller.coffee"
-			],
-			[
 				"gruntfile",
 				"Gruntfile.js"
 			],
@@ -937,10 +1004,6 @@
 			[
 				"mypag",
 				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"app.scss",
-				"client/app/app.scss"
 			],
 			[
 				"navbar.jad",
@@ -979,14 +1042,6 @@
 				"client/app/main/main.scss"
 			],
 			[
-				"myform.dir",
-				"client/components/mysite/myForm/myForm.directive.coffee"
-			],
-			[
-				"filter",
-				"client/components/filters/filters.filter.coffee"
-			],
-			[
 				"paymentjad",
 				"client/components/payments/payments-processor/paymentModal.jade"
 			],
@@ -1007,24 +1062,12 @@
 				"client/components/mysite/myForm/myForm.jade"
 			],
 			[
-				"forms.ser",
-				"client/app/services/forms/forms.service.coffee"
-			],
-			[
 				"formsser",
 				"client/app/services/forms/forms.service.coffee"
 			],
 			[
-				"pageitems.jade",
-				"client/app/admin/sites/site/pageItems/pageItems.jade"
-			],
-			[
 				"pageitems.ja",
 				"client/app/admin/sites/site/pageItems/pageItems.jade"
-			],
-			[
-				"sitesettings.jade",
-				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
 			],
 			[
 				"sitesettingcon",
@@ -1039,10 +1082,6 @@
 				"client/components/navbar/navbar.jade"
 			],
 			[
-				"sites.jade",
-				"client/app/admin/sites/sites.jade"
-			],
-			[
 				"sitesetting",
 				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
 			],
@@ -1053,202 +1092,6 @@
 			[
 				"pageitem",
 				"client/app/admin/sites/site/pageItems/pageItems.jade"
-			],
-			[
-				"filtercoff",
-				"client/components/filters/filters.filter.coffee"
-			],
-			[
-				"forms.se",
-				"client/app/services/forms/forms.service.coffee"
-			],
-			[
-				"pageitems.di",
-				"client/app/admin/sites/site/pageItems/pageItems.directive.coffee"
-			],
-			[
-				"settingscon",
-				"client/app/account/settings/settings.controller.coffee"
-			],
-			[
-				"sitesettings.c",
-				"client/app/admin/sites/site/siteSettings/siteSettings.controller.coffee"
-			],
-			[
-				"sitsettings.a",
-				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
-			],
-			[
-				"index.",
-				"client/index.html"
-			],
-			[
-				"signup.",
-				"client/app/account/signup/signup.controller.coffee"
-			],
-			[
-				"sign",
-				"client/app/account/signup/signup.jade"
-			],
-			[
-				"mypage.dir",
-				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"mypa",
-				".tmp/components/mysite/myPage/myPage.js.map"
-			],
-			[
-				"mypage.d",
-				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"defaultlayout.jade",
-				"public/components/mysite/myPage/templates/layouts/defaultLayout.jade"
-			],
-			[
-				"defaultly",
-				".tmp/components/mysite/myPage/templates/layouts/defaultLayout.html"
-			],
-			[
-				"mediamodal",
-				"client/app/admin/media/modal.jade"
-			],
-			[
-				"mybutton.jade",
-				"client/components/mysite/myButton/myButton.jade"
-			],
-			[
-				"participant",
-				"client/components/mysite/myPage/templates/layouts/participantLayout.jade"
-			],
-			[
-				"defaultlayout",
-				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
-			],
-			[
-				"modalscss",
-				"client/components/modal/modal.scss"
-			],
-			[
-				"componentssocket",
-				"client/components/socket/socket.service.coffee"
-			],
-			[
-				"mediajade",
-				"client/components/mysite/myImage/myImageModal.jade"
-			],
-			[
-				"app.",
-				"client/app/app.coffee"
-			],
-			[
-				"myimage.scss",
-				"client/components/mysite/myImage/myImage.scss"
-			],
-			[
-				"myp",
-				"client/components/mysite/myPage/myPage.directive.coffee"
-			],
-			[
-				"my",
-				".tmp/components/mysite/myPage/myPage.js"
-			],
-			[
-				"myi",
-				".sass-cache/f90d5779a126074193747d01e14571a4c4334e5d/myImage.scssc"
-			],
-			[
-				"app.coff",
-				"client/app/app.coffee"
-			],
-			[
-				"mediactrl",
-				"client/app/admin/media/media.controller.coffee"
-			],
-			[
-				"media.jade",
-				"client/components/mysite/myImage/myImageModal.jade"
-			],
-			[
-				"pageitems",
-				"client/app/admin/sites/site/pageItems/pageItems.jade"
-			],
-			[
-				"image.con",
-				"server/api/image/image.controller.js"
-			],
-			[
-				"images.ser",
-				"client/app/services/images/images.service.coffee"
-			],
-			[
-				"fullblog.jade",
-				"client/components/fullBlog/fullBlog.jade"
-			],
-			[
-				"fullblog.dir",
-				"client/components/fullBlog/fullBlog.directive.coffee"
-			],
-			[
-				"common",
-				"client/bower_components/angular-ui-router/src/common.js"
-			],
-			[
-				"fullblog.dire",
-				"client/components/fullBlog/fullBlog.directive.coffee"
-			],
-			[
-				"fullblog.j",
-				"client/components/fullBlog/fullBlog.jade"
-			],
-			[
-				"defaultlayou",
-				"client/components/mysite/myPage/templates/layouts/defaultLayout.jade"
-			],
-			[
-				"sitesetting.cof",
-				"client/app/admin/sites/site/siteSettings/siteSettings.coffee"
-			],
-			[
-				"sites.con",
-				"client/app/admin/sites/sites.controller.coffee"
-			],
-			[
-				"sitessetjad",
-				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
-			],
-			[
-				"sitecontol",
-				"server/api/site/site.controller.js"
-			],
-			[
-				"site.ser",
-				"client/app/services/sites/sites.service.coffee"
-			],
-			[
-				"siteindex",
-				"server/api/site/index.js"
-			],
-			[
-				"sitecontroller",
-				"server/api/site/site.controller.js"
-			],
-			[
-				"sites.ser",
-				"public/app/services/sites/sites.service.coffee"
-			],
-			[
-				"mynavbar.jade",
-				"client/components/mysite/myNavbar/myNavbar.jade"
-			],
-			[
-				"angular-ui-tree",
-				"client/bower_components/angular-ui-tree/dist/angular-ui-tree.js"
-			],
-			[
-				"jquery.easing",
-				"client/bower_components/jquery.easing/js/jquery.easing.js"
 			]
 		],
 		"width": 0.0

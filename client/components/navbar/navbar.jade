@@ -56,6 +56,12 @@ div.navbar.navbar-inverse.navbar-static-top.primary-navbar
             i.fa.fa-fw.fa-file-image-o
             span(ng-show="!isCollapsed") My Media
 
+
+        li(ui-sref-active='active')
+          a(ui-sref='app.admin.data' tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="My Data" tooltip-append-to-body="true")
+            i.fa.fa-fw.fa-database
+            span(ng-show="!isCollapsed") My Data
+
         //- li(ui-sref-active='active' tooltip-placement="right" tooltip="My current donations" tooltip-append-to-body="true")
         //-   a(ui-sref='app.admin.finance')
         //-     i.fa.fa-fw.fa-credit-card

@@ -9,7 +9,7 @@ div(ui-tree="options")
           i.glyphicon.glyphicon-pencil
         div &nbsp;{{formItem.name}} ({{formItem.type}})
 
-      div.menu-title.angular-ui-tree-handle(data-nodrag ng-show="fieldEditing.index===$index")
+      div.menu-title.angular-ui-tree-handle.animate-show(data-nodrag ng-show="fieldEditing.index===$index")
         form.form-horizontal(role="form",name="editMenuForm",on-valid-submit="fieldEditing.index=null")
           div.center-align {{formItem.name}} ({{formItem.type}})
             button.btn.btn-warning.pull-right.btn-xs(type="submit") 
@@ -27,19 +27,19 @@ div(ui-tree="options")
           div.form-group(ng-if="hasProp(formItem,'placeholder')") 
             label.col-sm-6.control-label(for="") Placeholder
             div.col-sm-6
-              input.form-control(type="text",required="true", placeholder="placeholder" ng-model="formItem.placeholder")
+              input.form-control(type="text", placeholder="placeholder" ng-model="formItem.placeholder")
           div.form-group 
             label.col-sm-6.control-label(for="") Description
             div.col-sm-6
-              textarea.form-control(type="text",required="true", placeholder="description" ng-model="formItem.description")
+              textarea.form-control(type="text",placeholder="description" ng-model="formItem.description")
           div.form-group(ng-if="hasProp(formItem,'maxlength')") 
             label.col-sm-6.control-label(for="") Max-length (optional)
             div.col-sm-6
-              input.form-control(type="number",required="false", placeholder="max-length?" ng-model="formItem.maxlength")
+              input.form-control(type="number", placeholder="max-length?" ng-model="formItem.maxlength")
           div.form-group(ng-if="hasProp(formItem,'Min-length')") 
             label.col-sm-6.control-label(for="") Min-length (optional)
             div.col-sm-6
-              input.form-control(type="number",required="false", placeholder="min-length?" ng-model="formItem.minlength")
+              input.form-control(type="number", placeholder="min-length?" ng-model="formItem.minlength")
           div.form-group
             label.col-sm-6.control-label(for="sdasfd") Is field required?
             div.col-sm-6.checkbox

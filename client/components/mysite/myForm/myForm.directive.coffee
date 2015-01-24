@@ -1,6 +1,9 @@
 'use strict'
 
 angular.module 'mydrive5App'
+.controller 'myFormModalCtrl',($scope,form)->
+  $scope.form=form
+
 .directive 'myErrors',()->
   templateUrl:'components/mysite/myForm/errors/errors.html'
   restrict:'E'

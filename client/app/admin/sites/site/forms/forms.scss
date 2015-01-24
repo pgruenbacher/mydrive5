@@ -1,0 +1,20 @@
+.animate-show {
+  form{
+    opacity: 1;
+  }
+}
+
+.animate-show.ng-hide-remove.ng-hide-remove-active{
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  form{
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+  }
+}
+
+.animate-show.ng-hide {
+  form{
+    opacity: 0;
+  }
+}
