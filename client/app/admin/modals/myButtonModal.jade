@@ -14,3 +14,8 @@
     ul.item-list
       li(ng-repeat="item in available",ng-class="{highlight:button.destination===item}")
         a(ng-click="setDestination(item)") {{item}}
+
+    h4 Choose button action
+    ul.item-list
+      li(ng-repeat="form in forms",ng-class="{highlight:button.action===form._id}")
+        a(ng-click="setAction(item)") {{form.title}}

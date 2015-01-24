@@ -1,5 +1,4 @@
-.modified-paper-input
-  label(for="{{field.id}}",ng-show="field.label") {{field.label}}
+.modified-paper-input.group
   select.form-control(
     id="{{field.id}}",
     ng-model="data[field.name]",
@@ -58,3 +57,4 @@
       option(value="WV") WV
       option(value="WI") WI
       option(value="WY") WY
+  label(for="{{field.id}}",ng-show="field.label") {{field.label}}

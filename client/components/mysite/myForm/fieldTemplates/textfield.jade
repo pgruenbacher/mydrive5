@@ -7,12 +7,13 @@ div.paper-input.group
     id="{{field.id}}"
     ng-maxlength="{{field.maxlength}}"
     ng-cloak
+    auto-fill-sync
     )
   span.highlight
   span.bar
   div.hint
     span(ng-show="field.minlength>0")
-      | min length:{{field.minlength}} &#32;&#32;
+      | min {{field.minlength}} > &#32;&#32;
     span(ng-show="field.maxlength>0")
-      | {{data[field.name].length || 0}}/{{field.maxlength}} &#32;&#32;
+      | {{data[field.name].length || ' '}} < {{field.maxlength}} max &#32;&#32;
   label(for="{{field.id}}") {{field.label}}

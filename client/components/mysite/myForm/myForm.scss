@@ -10,3 +10,16 @@
   color: #d34336;
 }
 
+.form-description{
+  hr{
+    border: 0;
+    text-align:center;
+    width:40%;
+    height: 1px;
+    // background:#333;
+    // @include background-image(linear-gradient(to right, #ccc, #333, #ccc)); 
+  }
+  h1,h2,h3,h4{
+    margin-bottom:5px;
+  }
+}

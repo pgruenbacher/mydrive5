@@ -1,21 +1,45 @@
-ul
-  li(ng-repeat="form in forms")
-    a(ng-click="editForm(form)") {{form.title}}
+.site-wrapper
+  h1 My Forms
+  ul.list-inline.chip-list
+    li(ng-repeat="form in forms")
+      a(ng-click="editForm(form)") {{form.title}}
+    li
+      a(ng-click="newForm()")
+        i.fa.fa-plus
+        |New Form
+  .row
+    .col-lg-4.col-l
+      div(ng-show="editing")
+        .menu-title
+          form.form-horizontal(on-valid-submit="saveForm(form)")
+            button.btn.btn-danger.pull-right(ng-click="deleteForm(form._id)",ng-if="form._id")
+              i.fa.fa-trash
+            button.btn.btn-success.pull-right
+              span(ng-show="form._id")
+                | Save
+              span(ng-show="!form._id")
+                | Create
+            .form-group
+              label.col-md-4 Title:
+              .col-md-5
+                input.form-control(type="text",placeholder="name of the form",required,ng-model="form.title")
+            .form-group(style="margin-bottom:0px")
+              label.col-md-4
+                | Quick form: 
+              .col-md-5
+                select.form-control(ng-model="form.fields",ng-options="form.fields as form.title for form in possible")
+                  option(value="") --Select--
+        formItems(form-items="form.fields",new-field="newField")
+    .col-lg-4
+      .paper-shadow(ng-show="form.fields.length")
+        my-form(form="form")
 
-.row
-  .col-lg-4
-    formItems(form-items="fields",new-field="newField")
-  .col-lg-4
-    my-form(fields="fields")
-
-    pre {{newField}}
-
-div.right-side-nav.navbar-nav.nav
-  li
-    a(ui-sref="app.admin.sites.site.page({site:site.domainName,page:'home'})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to site pages",tooltip-append-to-body="true")
-      i.fa.fa-book       
-    a(ui-sref="app.admin.sites.site.settings({site:site.domainName})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to my settings",tooltip-append-to-body="true")
-      i.fa.fa-gear
-    a(ng-click="",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Save",tooltip-append-to-body="true") 
-      i.fa.fa-save(ng-hide="pageSaving")
-      i.fa.fa-spin.fa-spinner(ng-show="pageSaving")
+  div.right-side-nav.navbar-nav.nav
+    li
+      a(ui-sref="app.admin.sites.site.page({site:site.domainName,page:'home'})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to site pages",tooltip-append-to-body="true")
+        i.fa.fa-book       
+      a(ui-sref="app.admin.sites.site.settings({site:site.domainName})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to my settings",tooltip-append-to-body="true")
+        i.fa.fa-gear
+      a(ng-click="",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Save",tooltip-append-to-body="true") 
+        i.fa.fa-save(ng-hide="pageSaving")
+        i.fa.fa-spin.fa-spinner(ng-show="pageSaving")

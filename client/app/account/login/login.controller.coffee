@@ -4,6 +4,19 @@ angular.module 'mydrive5App'
 .controller 'LoginCtrl', ($scope, Auth, $state, $window) ->
   $scope.user = {}
   $scope.errors = {}
+
+  $scope.fields=
+    email:
+      name:'email'
+      type:'email'
+      label:'email'
+      required:true
+    password:
+      name:'password'
+      type:'password'
+      label:'password'
+      required:true
+
   $scope.login = (form) ->
     $scope.submitted = true
 

@@ -1,13 +1,13 @@
 .container-fluid
   h3 My Sites
+  ul.list-inline.chip-list
+    li(ng-repeat="site in sites").list-group-item
+      a(ng-click="editSite(site)") {{site.siteName}}
+      
   a(ng-click="showCreate()").btn.btn-success
     i.fa.fa-plus-circle
     span Create Site
     
-  ul.list-group
-    li(ng-repeat="site in sites").list-group-item
-      strong {{site.siteName}}
-      a(ng-click="editSite(site)") Edit
 
   div.row(ng-show="createVisible")
     div.col-lg-6.well

@@ -13,6 +13,9 @@ angular.module 'mydrive5App'
   get:(domainName)->
     $http.get '/api/sites/'+domainName
 
+  create:(data)->
+    $http.post '/api/sites', data
+
   update:(id,data)->
     console.log data
     $http.put '/api/sites/'+id, data

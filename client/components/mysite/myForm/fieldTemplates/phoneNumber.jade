@@ -1,4 +1,4 @@
-div.paper-input
+div.paper-input.group
   input.form-control(
     type="tel",
     ng-model="data[field.name]"
@@ -6,9 +6,10 @@ div.paper-input
     mask='(999) 999-9999? ex:9999'
     name="{{field.name}}"
     id="{{field.id}}"
+    auto-fill-sync
     ng-cloak
     )
   span.highlight
   span.bar
   label(for="{{field.id}}") {{field.label}}
-    span.hint (999) 999-9999
+  div.hint (999) 999-9999

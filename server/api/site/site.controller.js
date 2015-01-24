@@ -9,7 +9,8 @@ var responseWithResult=Common.responseWithResult;
 var handleEntityNotFound=Common.handleEntityNotFound;
 var saveUpdates=Common.saveUpdates;
 var removeEntity=Common.removeEntity;
-var verifySiteOwnership=Common.verifySiteOwnership
+var verifySiteOwnership=Common.verifySiteOwnership;
+var extendAndSave=Common.extendAndSave;
 
 // Gets list of sites from the DB.
 exports.index = function(req, res) {
@@ -53,12 +54,8 @@ exports.update = function(req, res) {
   Site.findOneAsync({_id:req.params.id})
   .then(handleEntityNotFound(res))
   .then(verifySiteOwnership(res,req.user._id))
-  .then(function(site){
-    _.extend(site,req.body)
-    site.saveAsync()
-    .then(responseWithResult(res,201))
-    .catch(handleError(res));
-  })
+  .then(extendAndSave(req.body))
+  .then(responseWithResult(res,201))
   .catch(handleError(res));
 };
 

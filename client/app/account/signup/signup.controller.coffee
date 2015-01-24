@@ -1,21 +1,23 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'SignupCtrl', ($scope, Auth, $state, $window) ->
-
-  $scope.user =
-    email:'pgruenbacher@gmail.com'
-    firstName:'paul'
-    lastName:'gruen'
-    phoneNumber:'(513) 319-8238'
-    dob: '05/08/1990'
-    businessName:'something name'
-    productDescription:'description description'
-    businessType:'sole_prop'
-    zip:45014
-    streetAddress:'1867 Harrowgate'
-    state:'OH'
-    city:'fairfield'
+.controller 'SignupCtrl', ($scope, Auth, $state, $window,$timeout) ->
+  $scope.user={}
+  $timeout ->
+    $scope.user =
+      email:'pgruenbacher@gmail.com'
+      firstName:'paul'
+      lastName:'gruen'
+      phoneNumber:'(513) 319-8238'
+      dob: new Date()
+      businessName:'something name'
+      productDescription:'description description'
+      businessType:'sole_prop'
+      zip:45014
+      streetAddress:'1867 Harrowgate'
+      state:'OH'
+      city:'fairfield'
+  , 300
 
   $scope.errors = {}
 
@@ -60,12 +62,13 @@ angular.module 'mydrive5App'
         name:'businessType'
         label:'business type'
         type:'options'
-        options:[
-          {value:'sole_prop',label:'Sole Proprietorship'}
-          {value:'corporation',label:'Corporation'}
-          {value:'non_profit', label:'Non Profit'}
-          {value:'partnership',label:'Partnership'}
-          {value:'llc',label:'LLC'}
+        placeholder:'--type--'
+        selects:[
+          {value:'sole_prop',name:'Sole Proprietorship'}
+          {value:'corporation',name:'Corporation'}
+          {value:'non_profit', name:'Non Profit'}
+          {value:'partnership',name:'Partnership'}
+          {value:'llc',name:'LLC'}
         ]
       zip:
         name:'zip'
@@ -115,11 +118,19 @@ angular.module 'mydrive5App'
             $scope.errors[field] = err.message
 
   $scope.loginOauth = (provider) ->
+    
     if provider != 'stripe'
       $window.location.href = '/auth/' + provider
     else
       user=$scope.user
-      date=$scope.user.dob.split('/')
+
+      if typeof $scope.user.dob =='string'
+        date=$scope.user.dob.split('/')
+      else
+        date= new Date($scope.user.dob)
+        date=[date.getMonth()+1,date.getDate(),date.getFullYear()]
+
+      console.log date
       user.day=date[1]
       user.month=date[0]
       user.year=date[2]

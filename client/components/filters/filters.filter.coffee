@@ -27,6 +27,23 @@ angular.module 'mydrive5App'
     setPublic:(bool)->
       publicStatus=bool
 
+.factory 'exitclick',($document)->
+  elementMatchesAnyInArray=(element,elementArray)->
+    for item in elementArray
+      if element == item
+        return true
+    return false
+
+  set:(scope,element,callback)->
+    $document.bind 'click', (event)->
+      if !elementMatchesAnyInArray(event.target, element.find(event.target.tagName))
+        callback()
+        scope.$apply()
+      scope.$on '$destroy', ->
+        $document.unbind('click')
+
+
+
 .factory 'random', ()->
   makeId:(length)->
     text = ""
@@ -41,10 +58,13 @@ angular.module 'mydrive5App'
   link:(scope, elem, attrs, ngModel)->
     origVal = elem.val();
     $timeout(()->
-      newVal = elem.val();
+      newVal=elem.val()
       if ngModel.$pristine && origVal != newVal
         ngModel.$setViewValue(newVal);
-    , 500)
+        ngModel.$setDirty()
+      if ngModel.$pristine && ngModel.$viewValue
+        ngModel.$setDirty()
+    , 400)
 
 .directive 'unique', ($injector)->
   require:'ngModel'

@@ -1,10 +1,9 @@
-.modified-paper-input
-  label(for="{{field.id}}") {{field.label}}
+.modified-paper-input.group
   input.form-control(
-    ng-cloak
     type="date"
     placeholder="mm/dd/yyyy",
     name="{{field.name}}",
+    auto-fill-sync
     ng-model="data[field.name]",
     required='{{field.required}}'
     ng-if="browser.supportsDate"
@@ -22,6 +21,7 @@
     placeholder="{{field.placeholder}}"
     ng-if="!browser.supportsDate"
    )
+  label(for="{{field.id}}") {{field.label}}
 
 //- datepicker.well.well-sm(ng-model="field.date" min-date="minDate")
 

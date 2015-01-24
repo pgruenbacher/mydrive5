@@ -1,4 +1,5 @@
 'use strict';
+var _ = require('lodash');
 
 module.exports={
   handleError:function(res, statusCode) {
@@ -36,7 +37,12 @@ module.exports={
       return entity;
     };
   },
-
+  extendAndSave:function(updates){
+    return function(entity){
+      _.extend(entity,updates);
+      return entity.saveAsync();
+    };
+  },
   saveUpdates:function(updates) {
     return function(entity) {
       return entity.updateAttributes(updates)

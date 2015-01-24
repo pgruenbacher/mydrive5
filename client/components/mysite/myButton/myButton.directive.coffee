@@ -1,15 +1,16 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'buttonModalCtrl',($scope,button,Sites)->
-  $scope.available=Sites.getNavigationItems()
+.controller 'buttonModalCtrl',($scope,button,available,forms)->
+  $scope.available=available
   $scope.button=button
+  $scope.forms=forms
   $scope.disable=(bool)->
     $scope.button.disabled=bool
   $scope.setDestination=(dest)->
     $scope.button.destination=dest
 
-.directive 'myButton', ($location,config,Sites,$modal)->
+.directive 'myButton', ($location,config,Sites,$modal,Forms)->
   templateUrl: 'components/mysite/myButton/myButton.html'
   restrict: 'E'
   scope:
@@ -55,7 +56,10 @@ angular.module 'mydrive5App'
             button:->
               scope.button
             available:->
-              scope.available
+              Sites.getNavigationItems()
+            forms:->
+              Forms.cacheCall().then (response)->
+                response.data
 
 
       

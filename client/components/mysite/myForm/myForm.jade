@@ -1,7 +1,10 @@
 form(name="theForm" on-valid-submit="check(this)")
-  div(ng-repeat="field in fields")
+  h1 {{form.title}}
+  div(ng-repeat="field in form.fields")
     .form-group
+      div(ng-show="field.description.length").form-description
+        hr
+        h4 {{field.description}}
       my-errors(field="field",form="theForm")
         my-field(field="field",data="data",valid="{{field.valid}}")
-  button.btn(type="submit") Submit
-  pre {{data}}
+  button.btn.btn-default.btn-block.btn-lg(type="submit" ng-click="performAction()") Submit

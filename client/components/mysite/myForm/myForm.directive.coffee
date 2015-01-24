@@ -8,8 +8,7 @@ angular.module 'mydrive5App'
   scope:
     field:'='
     form:'='
-  link:()->
-    if
+  link:(scope,element,attrs)->
 
 
 .directive 'myField',($http,$compile,$templateCache,config,CONFIG,BROWSER)->
@@ -17,7 +16,7 @@ angular.module 'mydrive5App'
   scope:
     field:'='
     data:'='
-  link:(scope,element,attrs)->
+  link:(scope,element,attrs,form)->
     scope.browser={
       supportsDate:BROWSER.inputtypes.date
       supportsDateTime:BROWSER.inputtypes.dateTime
@@ -70,9 +69,11 @@ angular.module 'mydrive5App'
   templateUrl: 'components/mysite/myForm/myForm.html'
   restrict: 'EA'
   scope:
-    fields:'='
+    form:'='
   link: (scope, element, attrs) ->
     scope.data={}
+    scope.performAction=()->
+      
 
 
 

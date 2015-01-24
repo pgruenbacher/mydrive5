@@ -1,9 +1,31 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.factory 'Forms', ($http)->
+.factory 'Forms', ($http,$q)->
   # AngularJS will instantiate a singleton by calling 'new' on this function
   # Creates record, not upload!
+  forms=[]
+  all:()->
+    $http.get 'api/forms'
+  create:(data)->
+    $http.post 'api/forms',data
+  update:(id,data)->
+    $http.put 'api/forms/'+id,data
+  get:(id)->
+    $http.get 'api/forms/'+id
+  remove:(id)->
+    $http.delete 'api/forms/'+id
+  cacheCall:()->
+    if forms.length
+      deferred=$q.defer()
+      deferred.resolve({data:forms})
+      return deferred.promise
+    else
+      @all().success (data)->
+        forms=data
+  openFormModal:(form)->
+
+
   types:[
     'checkbox'
     'options'
@@ -14,6 +36,13 @@ angular.module 'mydrive5App'
   registration:
     title:'Register for Event'
     fields:[
+      {
+        id:0
+        name:'name'
+        label:'your name'
+        required:true
+        type:'textfield'
+      }
       {
         id:1
         name:'street'
@@ -34,22 +63,67 @@ angular.module 'mydrive5App'
         type:'states'
         label:'state'
         required:true
+        placeholder:'--state--'
       }
       {
         id:4
+        name:'zip'
+        type:'number'
+        minlength:5
+        maxlength:10
+        label:'zip code'
+      }
+      {
+        id:5
         name:'agree'
         type:'checkbox'
         label:'I have agreed to the terms and conditions'
         required:true
       }
       {
-        id:5
+        id:6
         name:'available'
         type:'date'
         label:'Availability'
         required:true
       }
     ]
+
+  order:
+    title: 'order Form'
+    fields:[
+      {
+        id:1
+        type:'number'
+        name:'tickets'
+        label:'enter # of tickerts'
+        required:true
+      }
+      {
+        id:2
+        type:'textfield'
+        name:'street'
+        label:'street address'
+        required:true
+        description:'delivery address'
+      }
+      {
+        id:3
+        type:'textfield'
+        name:'city'
+        label:'city'
+        required:true
+      }
+    ]
+
+
+
+
+
+
+
+
+
 
   default:
     title:'example Form'
@@ -60,18 +134,28 @@ angular.module 'mydrive5App'
         name:'checkbox'
         label:'checkbox'
         required:true
+        icon:'fa-check-square-o'
       }
       {
         id:2
         type:'options'
         name:'options'
         label:'options dropdown'
-        options:[
+        selects:[
           {name:'option1',value:'duty1'}
           {name:'option2',value:'duty2'}
         ]
         required:true
         placeholder:'pick option'
+        icon:'fa-caret-square-o-down'
+      }
+      {
+        id:'asdf'
+        type:'phoneNumber'
+        label:'phone number'
+        name:'phone'
+        required:true
+        icon:'fa-phone'
       }
       {
         id:3
@@ -81,6 +165,7 @@ angular.module 'mydrive5App'
         label:'date picker'
         format:'MM.dd.YYYY'
         placeholder:'pick a date'
+        icon:'fa-calendar'
       }
       {
         id:4
@@ -90,7 +175,6 @@ angular.module 'mydrive5App'
         required:true
         maxlength:100
         minlength:20
-        placeholder:'text field'
       }
       {
         id:5
@@ -100,7 +184,6 @@ angular.module 'mydrive5App'
         required:true
         maxlength:20
         minlength:4
-        placeholder:'text area'
       }
       {
         id:6
@@ -108,13 +191,29 @@ angular.module 'mydrive5App'
         name:'choicefield'
         label:'multiple choice'
         required:true
-        options:[
+        selects:[
           {name:'choice A',value:'A'}
           {name:'choice B',value:'B'}
           {name:'choice C',value:'C'}
           {name:'choice D',value:'D'}
 
         ]
+      }
+      {
+        id:7
+        type:'states'
+        name:'states'
+        required:true
+        label:'state'
+      }
+      {
+        id:8
+        type:'number'
+        name:'number'
+        required:true
+        label:'number'
+        minlength:5
+        maxlength:10
       }
 
     ]

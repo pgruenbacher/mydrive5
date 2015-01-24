@@ -1,0 +1,10 @@
+.modal-content
+  .modal-header
+    button.close(ng-if='modal.dismissable', type='button', ng-click='$dismiss()') &times;
+    h4.modal-title Select Field
+  .modal-body
+    ul.list-inline
+      li(ng-repeat="field in fields")
+        a(ng-click="$close(field)")
+          i.fa(ng-class="field.icon")
+          | {{field.label}}

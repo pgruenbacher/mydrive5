@@ -25,6 +25,13 @@ html,body{
     overflow:hidden;
     padding-bottom:150px;
 }
+.paper-shadow{
+   -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75); 
+    -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75); 
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75);
+    border:1px solid #888;
+    padding:10px;
+}
 a:hover{
     cursor:pointer;
 }
@@ -75,6 +82,7 @@ a:hover{
 @import 'account/signup/signup.scss';
 @import 'admin/admin.scss';
 @import 'admin/media/media.scss';
+@import 'admin/sites/site/forms/forms.scss';
 @import 'admin/sites/site/page/page.scss';
 @import 'admin/sites/site/pageItems/pageItems.scss';
 @import 'admin/sites/site/siteSettings/siteSettings.scss';

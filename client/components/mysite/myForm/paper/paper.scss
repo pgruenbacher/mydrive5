@@ -1,4 +1,8 @@
 // Basic Checkbox Google Material
+$invalid-color:#d34336;
+$valid-color:#4fc24f;
+$theme-color:#2C2A46;
+
 
 /* basic css */
 .paper-checkbox  {
@@ -148,11 +152,26 @@
   input:focus,textarea:focus,select:focus{
     outline:none;
   }
+  label{
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: -20px;
+    font-size: 14px;
+    color: #999;
+  }
   input.ng-valid.ng-dirty,textarea.ng-valid.ng-dirty,select.ng-valid.ng-dirty{
-    border-bottom: 1px solid #4fc24f;
+    border-bottom: 1px solid $valid-color;
+  }
+  input.ng-valid.ng-dirty ~ label,select.ng-valid.ng-dirty ~ label{
+    color:$valid-color
   }
   input.ng-invalid.ng-dirty,textarea.ng-invalid.ng-dirty,select.ng-invalid.ng-dirty{
-    border-bottom: 1px solid #d34336;
+    border-bottom: 1px solid $invalid-color;
+  }
+  input.ng-invalid.ng-dirty ~ label,select.ng-invalid.ng-dirty ~ label,{
+    color:$invalid-color
   }
 }
 
@@ -191,7 +210,7 @@
 .paper-input input.ng-dirty ~ label,.paper-input textarea.ng-dirty ~ label  {
   top: -20px;
   font-size: 14px;
-  color: #5264AE;
+  color: $theme-color;
 }
 /* length validation */
 .paper-input .hint{
@@ -204,14 +223,14 @@
 
 
 /* BOTTOM BARS ================================= */
-.bar  { position:relative; display:block; width:300px; }
+.bar  { position:relative; display:block; width:100%; }
 .bar:before, .bar:after   {
   content:'';
   height:2px; 
   width:0;
   bottom:1px; 
   position:absolute;
-  background:#5264AE; 
+  background:$theme-color; 
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
@@ -230,36 +249,36 @@
 }
 
 /* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:225px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
+// .highlight {
+//   position:absolute;
+//   height:60%; 
+//   width:225px; 
+//   top:25%; 
+//   left:0;
+//   pointer-events:none;
+//   opacity:0.5;
+// }
 
 /* active state */
-.paper-input input:focus ~ .highlight,.paper-input textarea:focus ~ .highlight  {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
+// .paper-input input:focus ~ .highlight,.paper-input textarea:focus ~ .highlight  {
+//   -webkit-animation:inputHighlighter 0.3s ease;
+//   -moz-animation:inputHighlighter 0.3s ease;
+//   animation:inputHighlighter 0.3s ease;
+// }
 
 /* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
-    from { background:#5264AE; }
-  to    { width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-    from { background:#5264AE; }
-  to    { width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-    from { background:#5264AE; }
-  to    { width:0; background:transparent; }
-}
+// @-webkit-keyframes inputHighlighter {
+//     from { background:$theme-color; }
+//   to    { width:0; background:transparent; }
+// }
+// @-moz-keyframes inputHighlighter {
+//     from { background:$theme-color; }
+//   to    { width:0; background:transparent; }
+// }
+// @keyframes inputHighlighter {
+//     from { background:$theme-color; }
+//   to    { width:0; background:transparent; }
+// }
 
 
 
@@ -270,68 +289,68 @@
 /* VALID */
 
 .paper-input input.ng-valid.ng-dirty ~ .hint,.paper-input textarea.ng-valid.ng-dirty ~.hint{
-  color: #4fc24f; 
+  color: $valid-color; 
 }
 
 .paper-input input.ng-valid.ng-dirty,.paper-input textarea.ng-valid.ng-dirty { 
-  border-bottom: 1px solid #4fc24f;
+  border-bottom: 1px solid $valid-color;
 }
 .paper-input input.ng-valid.ng-dirty ~ .bar:before, .paper-input textarea.ng-valid.ng-dirty ~ .bar:before,
 .paper-input input.ng-valid.ng-dirty ~ .bar:after, .paper-input textarea.ng-valid.ng-dirty ~ .bar:after{
-  background: #4fc24f !important;
+  background: $valid-color !important;
 }
 .paper-input input.ng-valid.ng-dirty ~ label,.paper-input textarea.ng-valid.ng-dirty ~ label{
-  color: #4fc24f;
+  color: $valid-color;
 }
-.paper-input input.ng-valid.ng-dirty:focus ~ .highlight,.paper-input textarea.ng-valid.ng-dirty:focus ~ .highlight {
-  -webkit-animation:validHighlighter 0.3s ease !important;
-  -moz-animation:validHighlighter 0.3s ease !important;
-  animation:validHighlighter 0.3s ease;
-}
-@-webkit-keyframes validHighlighter {
-    from { background:#4fc24f; }
-  to    { width:0; background:transparent; }
-}
-@-moz-keyframes validHighlighter {
-    from { background:#4fc24f; }
-  to    { width:0; background:transparent; }
-}
-@keyframes validHighlighter {
-    from { background:#4fc24f; }
-  to    { width:0; background:transparent; }
-}
+// .paper-input input.ng-valid.ng-dirty:focus ~ .highlight,.paper-input textarea.ng-valid.ng-dirty:focus ~ .highlight {
+//   -webkit-animation:validHighlighter 0.3s ease !important;
+//   -moz-animation:validHighlighter 0.3s ease !important;
+//   animation:validHighlighter 0.3s ease;
+// }
+// @-webkit-keyframes validHighlighter {
+//     from { background:$valid-color; }
+//   to    { width:0; background:transparent; }
+// }
+// @-moz-keyframes validHighlighter {
+//     from { background:$valid-color; }
+//   to    { width:0; background:transparent; }
+// }
+// @keyframes validHighlighter {
+//     from { background:$valid-color; }
+//   to    { width:0; background:transparent; }
+// }
 
 /* INVALID */
 .paper-input input.ng-invalid.ng-dirty ~ .hint,.paper-input textarea.ng-invalid.ng-dirty ~.hint{
-  color: #d34336; 
+  color: $invalid-color; 
 }
 .paper-input input.ng-invalid.ng-dirty,.paper-input textarea.ng-invalid.ng-dirty{
-  border-bottom: 1px solid #d34336;
+  border-bottom: 1px solid $invalid-color;
 }
 .paper-input input.ng-invalid.ng-dirty ~ .bar:before, .paper-input textarea.ng-invalid.ng-dirty ~ .bar:before,
 .paper-input input.ng-invalid.ng-dirty ~ .bar:after, .paper-input textarea.ng-invalid.ng-dirty ~ .bar:after{
-  background: #d34336 !important;
+  background: $invalid-color !important;
 }
 .paper-input input.ng-invalid.ng-dirty ~ label,.paper-input textarea.ng-invalid.ng-dirty ~ label  {
-  color: #d34336;
+  color: $invalid-color;
 }
-.paper-input input.ng-invalid.ng-dirty:focus ~ .highlight,.paper-input textarea.ng-invalid.ng-dirty:focus ~ .highlight {
-  -webkit-animation:invalidHighlighter 0.3s ease;
-  -moz-animation:invalidHighlighter 0.3s ease;
-  animation:invalidHighlighter 0.3s ease;
-}
-@-webkit-keyframes invalidHighlighter {
-    from { background:#d34336; }
-  to    { width:0; background:transparent; }
-}
-@-moz-keyframes invalidHighlighter {
-    from { background:#d34336; }
-  to    { width:0; background:transparent; }
-}
-@keyframes invalidHighlighter {
-    from { background:#d34336; }
-  to    { width:0; background:transparent; }
-}
+// .paper-input input.ng-invalid.ng-dirty:focus ~ .highlight,.paper-input textarea.ng-invalid.ng-dirty:focus ~ .highlight {
+//   -webkit-animation:invalidHighlighter 0.3s ease;
+//   -moz-animation:invalidHighlighter 0.3s ease;
+//   animation:invalidHighlighter 0.3s ease;
+// }
+// @-webkit-keyframes invalidHighlighter {
+//     from { background:$invalid-color; }
+//   to    { width:0; background:transparent; }
+// }
+// @-moz-keyframes invalidHighlighter {
+//     from { background:$invalid-color; }
+//   to    { width:0; background:transparent; }
+// }
+// @keyframes invalidHighlighter {
+//     from { background:$invalid-color; }
+//   to    { width:0; background:transparent; }
+// }
 
 
 

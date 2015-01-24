@@ -1,10 +1,12 @@
-.modified-paper-input
-  label(for="{{field.id}}") {{field.label}}
+.modified-paper-input.group
   select.form-control(
     id="{{field.id}}",
     ng-model="data[field.name]",
     name="{{field.name}}",
     ng-required="field.required",
     ng-cloak
-    ng-options="option.name for option in field.options")
+    ng-options="option.value as option.name for option in field.selects")
     option(value="") {{field.placeholder}}
+
+  label(for="{{field.id}}") {{field.label}}
+  {{data[field.name]}}

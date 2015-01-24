@@ -1,6 +1,7 @@
 div.paper-input.group
-  textarea.form-control(
+  input.form-control(
     type="text",
+    pattern="[0-9]*"
     ng-model="data[field.name]"
     ng-required="field.required"
     name="{{field.name}}"
@@ -14,7 +15,7 @@ div.paper-input.group
   span.bar
   div.hint
     span(ng-show="field.minlength>0")
-      | min {{field.minlength}}> &#32;
+      | min {{field.minlength}} > &#32;&#32;
     span(ng-show="field.maxlength>0")
-      | {{data[field.name].length || ' '}} <{{field.maxlength}} max &#32;
+      | {{data[field.name].length || ' '}} < {{field.maxlength}} max &#32;&#32;
   label(for="{{field.id}}") {{field.label}}

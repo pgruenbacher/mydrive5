@@ -1,10 +1,11 @@
-div.paper-input
+div.paper-input.group
   input.form-control(
     type="email"
     ng-model="data[field.name]"
     name="{{field.name}}"
     ng-required="field.required"
     ng-cloak
+    auto-fill-sync
     )
   span.highlight
   span.bar

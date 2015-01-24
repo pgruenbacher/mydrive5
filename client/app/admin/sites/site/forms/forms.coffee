@@ -7,6 +7,13 @@ angular.module 'mydrive5App'
     controller: 'FormsCtrl'
     data:
       title: '{{site.siteName}} Forms'
+    resolve:
+      forms:(Forms)->
+        Forms.all()
+        .then (response)->
+          console.log response
+          response.data
+
 
 
       

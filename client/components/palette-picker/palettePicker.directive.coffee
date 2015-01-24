@@ -1,7 +1,7 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.directive 'palettePicker', ($document)->
+.directive 'palettePicker', ($document,exitclick)->
   templateUrl: 'components/palette-picker/palettePicker.html'
   restrict: 'E'
   scope:
@@ -12,16 +12,9 @@ angular.module 'mydrive5App'
       scope.pickerVisible=!scope.pickerVisible
     scope.choosePalette=(item)->
       scope.choice=item
-    elementMatchesAnyInArray=(element,elementArray)->
-      for item in elementArray
-        if element == item
-          return true
-      return false
 
-    $document.bind 'click', (event)->
-      if !elementMatchesAnyInArray(event.target, element.find(event.target.tagName))
-        scope.pickerVisible=false
-        scope.$apply()
+    exitclick.set scope,element,->
+      scope.pickerVisible=false
 
     scope.choices=[
       [

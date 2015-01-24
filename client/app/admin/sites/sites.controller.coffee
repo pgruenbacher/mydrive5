@@ -89,7 +89,7 @@ angular.module 'mydrive5App'
     $scope.site.menuItems.push({title:'',sub:[]})
 
   $scope.saveSite = ->
-    $http.post '/api/sites', $scope.site
+    Sites.create($scope.site)
     .then (response)->
       $state.go('app.admin.sites.site.page',{site:response.data.domainName,page:'home'})
     , (error)->
