@@ -52,7 +52,9 @@ module.exports = function(sequelize, DataTypes) {
     github: DataTypes.TEXT,
     stripe: DataTypes.TEXT,
     stripeToken : DataTypes.STRING,
-    stripeRefreshToken : DataTypes.STRING
+    stripeRefreshToken : DataTypes.STRING,
+    googleToken: DataTypes.STRING,
+    googleRefreshToken : DataTypes.STRING
   }, {
 
     /**

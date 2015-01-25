@@ -4,9 +4,23 @@ var mongoose = require('mongoose-bird')();
 var Schema = mongoose.Schema;
 
 var SubscriberSchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  firstName:String,
+  lastName:String,
+  email:String,
+  street:String,
+  city:String,
+  zip:Number,
+  state:String
 });
 
+SubscriberSchema.statics.csvHeader= function(){
+  return [
+  'Email'
+  ];
+}
+SubscriberSchema.methods.mapToCSV=function() {
+  return [
+    this.email
+  ];
+}
 module.exports = mongoose.model('Subscriber', SubscriberSchema);

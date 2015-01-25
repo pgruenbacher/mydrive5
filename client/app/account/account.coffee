@@ -10,9 +10,10 @@ angular.module 'mydrive5App'
 
   .state 'app.logout',
     url: '/logout?referrer'
-    referrer: 'main'
+    referrer: 'app.main'
     controller: ($state, Auth) ->
-      referrer = $state.params.referrer or $state.current.referrer or "main"
+      referrer = $state.params.referrer or $state.current.referrer or "app.main"
+      console.log referrer
       Auth.logout()
       $state.go referrer
 

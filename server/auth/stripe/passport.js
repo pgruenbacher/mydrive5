@@ -1,6 +1,6 @@
 var passport = require('passport');
 var StripeStrategy = require('passport-stripe').Strategy;
-var Thing=require('../../sqldb').Thing
+var User=require('../../sqldb').User
 
 exports.setup = function (User, config) {
   passport.use(new StripeStrategy({
@@ -21,6 +21,7 @@ exports.setup = function (User, config) {
               username: 'account.email',
               provider: 'stripe',
               active: true,
+              stripe:JSON.stringify(account),
               stripeToken: accessToken,
               stripeRefreshToken: refreshToken
             });
@@ -39,6 +40,7 @@ exports.setup = function (User, config) {
             user.role='admin';
             user.provider='stripe';
             user.active=true;
+            user.stripe=JSON.stringify(account);
             user.stripeToken=accessToken;
             user.stripeRefreshToken=refreshToken;
 

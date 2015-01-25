@@ -4,7 +4,7 @@ var _ = require('lodash');
 var Custom = require('./custom.model');
 
 
-var Common = require('../api.service');
+var Common = require('../../api.service');
 var handleError=Common.handleError;
 var responseWithResult=Common.responseWithResult;
 var handleEntityNotFound=Common.handleEntityNotFound;

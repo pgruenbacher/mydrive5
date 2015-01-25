@@ -1,0 +1,89 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/paul/.nvm/v0.10.33/bin/node',
+1 verbose cli   '/home/paul/.nvm/v0.10.33/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'googleleapis',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json karma-mocha@0.1.10 No README data
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'googleleapis', null ]
+7 verbose cache add name=undefined spec="googleleapis" args=["googleleapis",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'googleleapis',
+8 verbose parsed url   path: 'googleleapis',
+8 verbose parsed url   href: 'googleleapis' }
+9 silly lockFile 07109b9a-googleleapis googleleapis
+10 verbose lock googleleapis /home/paul/.npm/07109b9a-googleleapis.lock
+11 silly lockFile 07109b9a-googleleapis googleleapis
+12 silly lockFile 07109b9a-googleleapis googleleapis
+13 verbose addNamed [ 'googleleapis', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile dbb874bc-googleleapis googleleapis@
+16 verbose lock googleleapis@ /home/paul/.npm/dbb874bc-googleleapis.lock
+17 silly addNameRange { name: 'googleleapis', range: '*', hasData: false }
+18 verbose request where is /googleleapis
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id 369ab54f3ffb0687
+21 verbose url raw /googleleapis
+22 verbose url resolving [ 'https://registry.npmjs.org/', './googleleapis' ]
+23 verbose url resolved https://registry.npmjs.org/googleleapis
+24 verbose request where is https://registry.npmjs.org/googleleapis
+25 info trying registry request attempt 1 at 18:00:51
+26 http GET https://registry.npmjs.org/googleleapis
+27 http 404 https://registry.npmjs.org/googleleapis
+28 verbose headers { date: 'Sat, 24 Jan 2015 23:00:51 GMT',
+28 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 verbose headers   'content-type': 'application/json',
+28 verbose headers   'cache-control': 'max-age=0',
+28 verbose headers   'content-length': '52',
+28 verbose headers   'accept-ranges': 'bytes',
+28 verbose headers   via: '1.1 varnish',
+28 verbose headers   age: '0',
+28 verbose headers   'x-served-by': 'cache-jfk1034-JFK',
+28 verbose headers   'x-cache': 'MISS',
+28 verbose headers   'x-cache-hits': '0',
+28 verbose headers   'x-timer': 'S1422140451.575475,VS0,VE93',
+28 verbose headers   'keep-alive': 'timeout=10, max=50',
+28 verbose headers   connection: 'Keep-Alive' }
+29 silly registry.get cb [ 404,
+29 silly registry.get   { date: 'Sat, 24 Jan 2015 23:00:51 GMT',
+29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=0',
+29 silly registry.get     'content-length': '52',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '0',
+29 silly registry.get     'x-served-by': 'cache-jfk1034-JFK',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1422140451.575475,VS0,VE93',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 silly lockFile dbb874bc-googleleapis googleleapis@
+31 silly lockFile dbb874bc-googleleapis googleleapis@
+32 error 404 404 Not Found: googleleapis
+32 error 404
+32 error 404 'googleleapis' is not in the npm registry.
+32 error 404 You should bug the author to publish it
+32 error 404 It was specified as a dependency of 'mydrive5'
+32 error 404
+32 error 404 Note that you can also install from a
+32 error 404 tarball, folder, or http url, or git url.
+33 error System Linux 3.13.0-44-generic
+34 error command "/home/paul/.nvm/v0.10.33/bin/node" "/home/paul/.nvm/v0.10.33/bin/npm" "install" "googleleapis" "--save"
+35 error cwd /home/paul/Code/fundraiser/mydrive5
+36 error node -v v0.10.33
+37 error npm -v 1.4.28
+38 error code E404
+39 verbose exit [ 1, true ]

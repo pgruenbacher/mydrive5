@@ -2,11 +2,15 @@
 
 var _ = require('lodash');
 var Subscriber = require('./subscriber.model');
-var stringify = require('csv-stringify');
-var generate = require('csv-generate');
-var fs = require('fs');
+// var csv = require('csv');
+// var stringify = csv.stringify;
+// var generate = csv.generate;
+// var fs = require('fs');
+var csvify = require('../csvify.js');
+var map = require('map-stream');
+var google = require('../../../components/google/drive');
 
-var Common = require('../api.service');
+var Common = require('../../api.service');
 var handleError=Common.handleError;
 var responseWithResult=Common.responseWithResult;
 var handleEntityNotFound=Common.handleEntityNotFound;
@@ -15,6 +19,7 @@ var removeEntity=Common.removeEntity;
 var verifySiteOwnership=Common.verifySiteOwnership;
 var extendAndSave=Common.extendAndSave;
 
+
 // Gets list of subscribers from the DB.
 exports.index = function(req, res) {
   Subscriber.findAsync()
@@ -22,18 +27,60 @@ exports.index = function(req, res) {
     .catch(handleError(res));
 };
 
-exports.download = function(req,res){
-  var generator = generate({columns: ['int', 'bool'], length: 100});
-  var stringifier = stringify();
-  var writeStream = fs.createWriteStream('subscribers.csv');
-  
-  res.setHeader('Content-disposition', 'attachment; filename=subscribers.csv');
-  res.setHeader('Content-type', 'text/csv');
-  writeStream.on('end', function() {
-    res.end({"status":"Completed"});
-  });
+exports.googleSave = function(req,res){
+  console.log('got to controller');
+  // oauth2Client.setCredentials({
+  //   access_token:req.user.googleToken,
+  //   refresh_token:req.user.googleRefreshToken
+  // });
+  // var drive=googleapis.drive('v2')
+  // drive.files.insert({
+  //   resource: {
+  //     title: 'Angular 2.0!!!',
+  //     mimeType: 'text/plain'
+  //   },
+  //   media: {
+  //     mimeType: 'text/plain',
+  //     body: 'Hello World'
+  //   },
+  //   auth: oauth2Client
+  // }, function(a,b){
+  //   console.log('inserted',a,b);
+  // });
+  // drive.files.list
+};
 
-  generator.pipe(stringifier).pipe(writeStream).pipe(res);
+exports.download = function(req,res){
+  // var generator = generate({seed:1,columns: 20, length: 100});
+  // var stringifier = stringify({delimiter:','});
+  // var writeStream = fs.createWriteStream('subscribers.csv');
+
+  res.writeHead(200, {
+    'Content-Type': 'text/csv',
+    'Content-Disposition': 'attachment; filename=subscribers.csv'
+  });
+  res.write(csvify.rowFromArray(Subscriber.csvHeader()));
+
+  Subscriber.find()
+  // csv.generate({seed: 1, columns: 2, length: 20})
+  .stream()
+  .pipe(map(function teamToArray (team, callback) {
+    callback(null, team.mapToCSV());
+  }))
+  .pipe(map(function myCSVify (data, callback) {
+    callback(null, csvify.rowFromArray(data));
+  }))
+  .on('error', function csvError (err) {
+    console.log("oh noes, csv error!", err.stack);
+  })
+  .pipe(res);
+
+
+  // .pipe(through(function write(doc){
+  //   this.queue(_.values(doc.toObject({getters:true, virtuals:false})));
+  // }, function end(){
+  //   console.log('done');    
+  // }))
 };
 
 // Gets a single subscriber from the DB.

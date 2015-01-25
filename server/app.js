@@ -32,6 +32,10 @@ var socketio = require('socket.io')(server, {
 
 // app.use(subdomain({ base : 'mydrive5', removeWWW : true }));
 
+var google = require('googleapis');
+var OAuth2 = google.auth.OAuth2;
+var oauth2Client = new OAuth2(config.google.clientId, config.google.clientSecret, config.google.callbackURL);
+google.options({ auth: oauth2Client }); // set auth as a global default
 
 
 app.use(require('prerender-node').set('prerenderToken', config.prerender.token));

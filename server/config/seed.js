@@ -89,6 +89,12 @@ User.sync()
       name: 'Admin',
       email: 'admin@admin.com',
       password: 'admin'
+    },{
+      provider: 'stripe',
+      role:'admin',
+      name:'Admin',
+      email:'pgruenbacher@gmail.com',
+      password:'admin'
     }])
     .then(function() {
       console.log('finished populating users');
