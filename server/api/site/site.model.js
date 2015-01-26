@@ -46,7 +46,8 @@ var SiteSchema = new Schema({
     template: Schema.Types.Mixed
   },
   menuItems:[MenuSchema],
-  active: Boolean
+  active: Boolean,
+  googleTrackingId:String
 });
 
 SiteSchema.virtual('homePage.slug').get(function(){

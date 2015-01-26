@@ -36,6 +36,12 @@
             | Register
 
         hr
+        a.btn.btn-default(
+          analytics-category="purchasing"
+          analytics-on="click" 
+          analytics-label="using credits for cards" 
+          analytics-event="useCredits"
+          ) Analytics
         div
           button.stripe-connect.dark(ng-click='loginOauth("stripe")')
             span Connect with Stripe

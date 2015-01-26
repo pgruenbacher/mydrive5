@@ -13,7 +13,10 @@ angular.module 'mydrive5App', [
   'ezfb',
   'ngAnimate',
   'ui.tree',
-  'akoenig.deckgrid'
+  'akoenig.deckgrid',
+  'angulartics',
+  'angulartics.google.analytics'
+
 ]
 .config ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
   $urlRouterProvider
@@ -40,6 +43,8 @@ angular.module 'mydrive5App', [
   .state 'app',
     abstract:true
     templateUrl: 'app/app.html'
+    controller: ($scope)->
+      $scope.googleTrackingId='UA-58977205-1'
 
 .factory 'authInterceptor', ($rootScope, $q, $cookieStore, $injector) ->
   state = null

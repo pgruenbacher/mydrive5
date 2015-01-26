@@ -269,7 +269,8 @@ module.exports = function (grunt) {
           /ng-file-upload/,
           /ng-file-upload-shim/,
           '/bower_components/headroom/dist/jQuery.headroom.js',
-          '/bower_components/headroom/dist/angular.headroom.js'
+          '/bower_components/headroom/dist/angular.headroom.js',
+          /angulartics/
         ]
       }
     },

@@ -33,7 +33,7 @@
     "passport-local": "~0.1.6",
     "passport-stripe": "git://github.com/pgruenbacher/passport-stripe",
     "passport-twitter": "latest",
-    "pg": "^2.0.0",
+    "pg": "^4.2.0",
     "prerender-node": "^1.2.0",
     "sequelize": "^2.0.0-rc2",
     "serve-favicon": "~2.0.1",

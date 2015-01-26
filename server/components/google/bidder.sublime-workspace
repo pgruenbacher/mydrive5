@@ -12,29 +12,85 @@
 	"buffers":
 	[
 		{
-			"file": "server/auth/local/index.js",
+			"file": "/home/paul/Code/bidder/client/components/bidder/bidder.jade",
 			"settings":
 			{
-				"buffer_size": 607,
+				"buffer_size": 183,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "tt{\n  \"name\": \"mydrive5\",\n  \"version\": \"0.0.0\",\n  \"main\": \"server/app.js\",\n  \"dependencies\": {\n    \"aws-sdk\": \"^2.1.4\",\n    \"blitline\": \"^1.1.6\",\n    \"body-parser\": \"~1.5.0\",\n    \"composable-middleware\": \"^0.3.0\",\n    \"compression\": \"~1.0.1\",\n    \"connect\": \"^3.3.3\",\n    \"connect-mongo\": \"^0.4.1\",\n    \"cookie-parser\": \"~1.0.1\",\n    \"csv\": \"^0.4.1\",\n    \"errorhandler\": \"~1.0.0\",\n    \"express\": \"~4.9.0\",\n    \"express-jwt\": \"^0.1.3\",\n    \"express-session\": \"~1.0.2\",\n    \"express-subdomain\": \"^1.0.2\",\n    \"googleapis\": \"^1.1.1\",\n    \"jade\": \"~1.2.0\",\n    \"jsonwebtoken\": \"^0.3.0\",\n    \"lodash\": \"~2.4.1\",\n    \"map-stream\": \"0.0.5\",\n    \"method-override\": \"~1.0.0\",\n    \"mongoose\": \"~3.8.8\",\n    \"mongoose-bird\": \"~0.0.1\",\n    \"morgan\": \"~1.0.0\",\n    \"multer\": \"^0.1.6\",\n    \"passport\": \"~0.2.0\",\n    \"passport-facebook\": \"latest\",\n    \"passport-google-oauth\": \"latest\",\n    \"passport-local\": \"~0.1.6\",\n    \"passport-stripe\": \"git://github.com/pgruenbacher/passport-stripe\",\n    \"passport-twitter\": \"latest\",\n    \"pg\": \"^4.2.0\",\n    \"prerender-node\": \"^1.2.0\",\n    \"sequelize\": \"^2.0.0-rc2\",\n    \"serve-favicon\": \"~2.0.1\",\n    \"simple_blitline_node\": \"^2.2.0\",\n    \"slug\": \"^0.8.0\",\n    \"socket.io\": \"^1.0.6\",\n    \"socket.io-client\": \"^1.0.6\",\n    \"socketio-jwt\": \"^2.0.2\",\n    \"sqlite3\": \"~3.0.2\",\n    \"stripe\": \"^3.0.2\",\n    \"subdomain\": \"^1.2.0\",\n    \"through\": \"^2.3.6\",\n    \"vhost\": \"^3.0.0\"\n  },\n  \"devDependencies\": {\n    \"chai-as-promised\": \"^4.1.1\",\n    \"chai-things\": \"^0.2.0\",\n    \"connect-livereload\": \"~0.4.0\",\n    \"grunt\": \"~0.4.4\",\n    \"grunt-angular-templates\": \"^0.5.4\",\n    \"grunt-autoprefixer\": \"~0.7.2\",\n    \"grunt-build-control\": \"DaftMonk/grunt-build-control\",\n    \"grunt-concurrent\": \"~0.5.0\",\n    \"grunt-contrib-clean\": \"~0.5.0\",\n    \"grunt-contrib-coffee\": \"^0.10.1\",\n    \"grunt-contrib-concat\": \"~0.4.0\",\n    \"grunt-contrib-copy\": \"~0.5.0\",\n    \"grunt-contrib-cssmin\": \"~0.9.0\",\n    \"grunt-contrib-htmlmin\": \"~0.2.0\",\n    \"grunt-contrib-imagemin\": \"~0.7.1\",\n    \"grunt-contrib-jade\": \"^0.11.0\",\n    \"grunt-contrib-jshint\": \"~0.10.0\",\n    \"grunt-contrib-sass\": \"^0.7.3\",\n    \"grunt-contrib-uglify\": \"~0.4.0\",\n    \"grunt-contrib-watch\": \"~0.6.1\",\n    \"grunt-dom-munger\": \"^3.4.0\",\n    \"grunt-env\": \"~0.4.1\",\n    \"grunt-express-server\": \"~0.4.17\",\n    \"grunt-google-cdn\": \"~0.4.0\",\n    \"grunt-injector\": \"~0.5.4\",\n    \"grunt-jscs\": \"~0.7.1\",\n    \"grunt-karma\": \"~0.8.2\",\n    \"grunt-mocha-istanbul\": \"^2.0.0\",\n    \"grunt-mocha-test\": \"~0.10.2\",\n    \"grunt-newer\": \"~0.7.0\",\n    \"grunt-ng-annotate\": \"^0.2.3\",\n    \"grunt-node-inspector\": \"~0.1.5\",\n    \"grunt-nodemon\": \"~0.2.0\",\n    \"grunt-open\": \"~0.2.3\",\n    \"grunt-protractor-runner\": \"^1.1.0\",\n    \"grunt-rev\": \"~0.1.0\",\n    \"grunt-svgmin\": \"~0.4.0\",\n    \"grunt-usemin\": \"~2.1.1\",\n    \"grunt-wiredep\": \"~1.8.0\",\n    \"jit-grunt\": \"^0.5.0\",\n    \"jshint-stylish\": \"~0.1.5\",\n    \"karma\": \"~0.12.9\",\n    \"karma-chai-plugins\": \"^0.2.3\",\n    \"karma-chrome-launcher\": \"~0.1.3\",\n    \"karma-coffee-preprocessor\": \"~0.2.1\",\n    \"karma-firefox-launcher\": \"~0.1.3\",\n    \"karma-html2js-preprocessor\": \"~0.1.0\",\n    \"karma-jade-preprocessor\": \"0.0.11\",\n    \"karma-mocha\": \"^0.1.9\",\n    \"karma-ng-html2js-preprocessor\": \"~0.1.0\",\n    \"karma-ng-jade2js-preprocessor\": \"^0.1.2\",\n    \"karma-ng-scenario\": \"~0.1.0\",\n    \"karma-phantomjs-launcher\": \"~0.1.4\",\n    \"karma-requirejs\": \"~0.2.1\",\n    \"karma-script-launcher\": \"~0.1.0\",\n    \"karma-spec-reporter\": \"0.0.13\",\n    \"open\": \"~0.0.4\",\n    \"proxyquire\": \"^1.0.1\",\n    \"requirejs\": \"~2.1.11\",\n    \"sequelize-cli\": \"^1.0.1\",\n    \"sinon-chai\": \"^2.5.0\",\n    \"supertest\": \"~0.11.0\",\n    \"time-grunt\": \"~0.3.1\"\n  },\n  \"engines\": {\n    \"node\": \">=0.10.0\"\n  },\n  \"scripts\": {\n    \"start\": \"node server/app.js\",\n    \"test\": \"grunt test\",\n    \"update-webdriver\": \"node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update\"\n  },\n  \"private\": true\n}\n",
-			"file": "package.json",
-			"file_size": 3883,
-			"file_write_time": 130666976430967077,
+			"contents": "'use strict'\n\nangular.module 'bidderApp'\n.directive 'bidder', ($interval)->\n  templateUrl: 'components/bidder/bidder.html'\n  restrict: 'EA'\n  scope:\n    bidder:'='\n  link: (scope, element, attrs) ->\n    $interval ->\n      $scope.timeLeft=\n\n\n",
+			"file": "/home/paul/Code/bidder/client/components/bidder/bidder.directive.coffee",
+			"file_size": 189,
+			"file_write_time": 130667018324846768,
 			"settings":
 			{
-				"buffer_size": 3885,
+				"buffer_size": 241,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/api/image/image.model.js",
+			"file": "/home/paul/Code/bidder/client/app/main/main.jade",
 			"settings":
 			{
-				"buffer_size": 686,
+				"buffer_size": 495,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/server/config/socketio.js",
+			"settings":
+			{
+				"buffer_size": 1700,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/client/app/main/main.coffee",
+			"settings":
+			{
+				"buffer_size": 319,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/server/api/bidder/bidder.model.js",
+			"settings":
+			{
+				"buffer_size": 434,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/server/config/seed.js",
+			"settings":
+			{
+				"buffer_size": 2806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/server/api/bidder/index.js",
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/server/api/bidder/bidder.controller.js",
+			"settings":
+			{
+				"buffer_size": 2362,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/paul/Code/bidder/server/app.js",
+			"settings":
+			{
+				"buffer_size": 1192,
 				"line_ending": "Unix"
 			}
 		}
@@ -88,44 +144,70 @@
 	},
 	"expanded_folders":
 	[
-		"/home/paul/Code/fundraiser/mydrive5",
-		"/home/paul/Code/fundraiser/mydrive5/server",
-		"/home/paul/Code/fundraiser/mydrive5/server/auth",
-		"/home/paul/Code/fundraiser/mydrive5/server/auth/local"
+		"/home/paul/Code/bidder",
+		"/home/paul/Code/bidder/dist/client",
+		"/home/paul/Code/bidder/node_modules/passport-anonymous",
+		"/home/paul/Code/bidder/server",
+		"/home/paul/Code/bidder/server/api",
+		"/home/paul/Code/bidder/server/api/bidder",
+		"/home/paul/Code/bidder/server/api/thing",
+		"/home/paul/Code/bidder/server/auth/anonymous",
+		"/home/paul/Code/bidder/server/auth/facebook",
+		"/home/paul/Code/bidder/server/auth/google",
+		"/home/paul/Code/bidder/server/auth/local",
+		"/home/paul/Code/bidder/server/config",
+		"/home/paul/Code/bidder/server/config/environment"
 	],
 	"file_history":
 	[
-		"/home/paul/Code/fundraiser/mydrive5/server/sqldb/index.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sqlite3/sqlite3.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/server-quiet.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/seed.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/image/image.controller.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/image/image.model.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/UPGRADING.md",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/istanbul/node_modules/mkdirp/test/umask_sync.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.controller.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.model.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/socketio-jwt/lib/UnauthorizedError.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose/lib/model.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/modernizr.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/modal/modal.jade",
-		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/development.js",
-		"/home/paul/Code/fundraiser/mydrive5/package.json",
+		"/home/paul/Code/bidder/client/components/modal/modal.jade",
+		"/home/paul/Code/bidder/client/app/app.scss",
+		"/home/paul/Code/bidder/bower.json",
+		"/home/paul/Code/bidder/node_modules/grunt-contrib-sass/docs/sass-examples.md",
+		"/home/paul/Code/bidder/client/app/main/main.controller.coffee",
+		"/home/paul/Code/bidder/client/app/main/main.jade",
+		"/home/paul/Code/bidder/server/config/seed.js",
+		"/home/paul/Code/bidder/server/sqldb/index.js",
+		"/home/paul/Code/bidder/node_modules/grunt-express-server/test/server-quiet.js",
+		"/home/paul/Code/bidder/server/api/user/user.model.js",
+		"/home/paul/Code/bidder/client/components/auth/user.service.coffee",
+		"/home/paul/Code/bidder/server/api/bidder/bidder.controller.js",
+		"/home/paul/Code/bidder/.tmp/components/bidder/bidder.js",
+		"/home/paul/Code/bidder/.tmp/components/bidder/bidder.html",
+		"/home/paul/Code/bidder/node_modules/grunt-injector/test/expected/bowerInOtherDir.html",
+		"/home/paul/Code/bidder/client/bower_components/angular-socket-io/bower-install.sh",
+		"/home/paul/Code/bidder/server/auth/anonymous/index.js",
+		"/home/paul/Code/bidder/client/app/account/login/login.controller.coffee",
+		"/home/paul/Code/bidder/client/components/auth/auth.service.coffee",
+		"/home/paul/Code/bidder/server/api/user/user.controller.js",
+		"/home/paul/Code/bidder/server/api/user/index.js",
+		"/home/paul/Code/bidder/server/auth/auth.service.js",
+		"/home/paul/Code/bidder/server/api/user/user.integration.js",
+		"/home/paul/Code/bidder/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/node_modules/npmconf/test/fixtures/userconfig",
+		"/home/paul/Code/bidder/node_modules/istanbul/node_modules/mkdirp/test/umask_sync.js",
+		"/home/paul/Code/bidder/server/config/local.env.js",
+		"/home/paul/Code/bidder/node_modules/connect/LICENSE",
+		"/home/paul/Code/bidder/client/app/main/main.coffee",
+		"/home/paul/Code/bidder/.tmp/app/main/main.js",
+		"/home/paul/Code/bidder/.sass-cache/395060aabbda4005e94781efc66d14b48e486f06/main.scssc",
+		"/home/paul/Code/bidder/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/home/paul/Code/bidder/server/api/thing/thing.model.js",
+		"/home/paul/Code/bidder/server/api/thing/thing.controller.js",
+		"/home/paul/Code/bidder/node_modules/pg/test/test-helper.js",
+		"/home/paul/Code/bidder/node_modules/grunt-karma/TODO.md",
+		"/home/paul/Code/bidder/package.json",
+		"/home/paul/Code/bidder/server/config/environment/index.js",
+		"/home/paul/Code/bidder/server/config/environment/development.js",
+		"/home/paul/Code/bidder/node_modules/grunt-jscs/node_modules/jscs/lib/rules/disallow-empty-blocks.js",
+		"/home/paul/Code/bidder/node_modules/sqlite3/sqlite3.js",
+		"/home/paul/Code/bidder/server/config/environment/production.js",
+		"/home/paul/Code/bidder/node_modules/connect-livereload/LICENSE",
+		"/home/paul/Code/bidder/node_modules/istanbul/lib/config.js",
+		"/home/paul/Code/bidder/node_modules/grunt-usemin/lib/configwriter.js",
+		"/home/paul/Code/bidder/node_modules/chai/CONTRIBUTING.md",
+		"/home/paul/Code/bidder/node_modules/grunt-build-control/test/expected/custom_options",
+		"/home/paul/Code/bidder/node_modules/grunt-autoprefixer/CHANGELOG",
 		"/home/paul/Code/fundraiser/mydrive5/server/components/google/drive.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/local.env.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/optimist/example/line_count_options.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/connect/LICENSE",
-		"/home/paul/Code/fundraiser/mydrive5/dev.sqlite",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-jscs/node_modules/jscs/lib/rules/disallow-empty-blocks.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/production.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/index.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/config.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ng-ckeditor/test/directiveOnFormSpec.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/CONTRIBUTING.md",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/test/expected/custom_options",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/googleapis/COPYING",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/google/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/auth.service.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/google/passport.js",
@@ -138,13 +220,16 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/csv/doc/stringifier.md",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/lib/StripeResource.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/stoppable_test.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/config/seed.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/socketio-jwt/test/authorizer_noqs.test.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/google-cdn/googlecdn.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/glob/test/new-glob-optional-options.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/.bin/grunt-open",
 		"/home/paul/Code/fundraiser/mydrive5/Gruntfile.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
+		"/home/paul/Code/fundraiser/mydrive5/package.json",
 		"/home/paul/Code/fundraiser/mydrive5/server/components/google/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-google-oauth/node_modules/passport-oauth/lib/passport-oauth/strategies/oauth2.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.controller.js",
@@ -159,6 +244,8 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport/node_modules/passport-strategy/package.json",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/apis/storagegateway-2013-06-30.paginators.json",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/optimist/example/line_count_options.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/connect/LICENSE",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose-bird/node_modules/bluebird/js/main/direct_resolve.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.jade",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/dataview-api.js",
@@ -167,11 +254,20 @@
 		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.model.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/source-map/build/suffix-utils.jsm",
+		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ng-ckeditor/test/directiveOnFormSpec.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/CONTRIBUTING.md",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-build-control/test/expected/custom_options",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/googleapis/COPYING",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/facebook/passport.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-local/.npmignore",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-twitter/.jshintrc",
 		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/auth/auth.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.model.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.controller.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/istanbul/node_modules/mkdirp/test/umask_sync.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/UPGRADING.md",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/post/post.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-clean/AUTHORS",
@@ -191,38 +287,7 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/express-subdomain/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/slug/node_modules/unicode/node_modules/bufferstream/node_modules/buffertools/binding.gyp",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/inquirer/node_modules/rx/src/core/subintro.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/node_modules/npmconf/test/fixtures/userconfig",
-		"/home/paul/Code/fundraiser/mydrive5/server/routes.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.jade",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.integration.js",
-		"/home/paul/Code/fundraiser/mydrive5/subscribers.csv",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/account.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/account.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular-csp.css",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/navbar/navbar.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/bf9bbc0a41faabe1e5e2503402cfa9ae42ca417a/navbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/.bin/ng-annotate",
-		"/home/paul/Code/fundraiser/mydrive5/e2e/account/logout/logout.spec.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/enum_goog_uri_utils_ComponentIndex.html",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/package.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/test/stripe.spec.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/strict-equals.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/socketio.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/0c3b696d16eae78e70c805f0118a5be22efe13db/siteSettings.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/auth/user.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/build/config.gypi",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/apis/config-2014-11-12.min.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-nodemon/node_modules/nodemon/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/mkdirp",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/insight/node_modules/configstore/node_modules/js-yaml/node_modules/.bin/esvalidate",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/data/data.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-api.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/.bin/jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/chalk/node_modules/.bin/strip-ansi",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/test/packages-svn.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sqlite3/src/database.cc"
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/ckeditor/config.js"
 	],
 	"find":
 	{
@@ -240,6 +305,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Thing",
+			"onConnect",
+			"destroy",
 			"getOauthAcce",
 			"domain",
 			"validateJwt",
@@ -364,10 +432,7 @@
 			"iframe",
 			"instance",
 			"faq",
-			"tick",
-			"Tick_Flip",
-			"startValue",
-			"startNumber"
+			"tick"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -390,24 +455,80 @@
 			[
 				{
 					"buffer": 0,
-					"file": "server/auth/local/index.js",
+					"file": "/home/paul/Code/bidder/client/components/bidder/bidder.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 607,
+						"buffer_size": 183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								180,
+								180
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/paul/Code/bidder/client/components/bidder/bidder.directive.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								238,
+								238
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/paul/Code/bidder/client/app/main/main.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -419,50 +540,78 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "package.json",
+					"buffer": 3,
+					"file": "/home/paul/Code/bidder/server/config/socketio.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3885,
+						"buffer_size": 1700,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2,
-								2
+								229,
+								229
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/paul/Code/bidder/client/app/main/main.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								318,
+								318
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "server/api/image/image.model.js",
+					"buffer": 5,
+					"file": "/home/paul/Code/bidder/server/api/bidder/bidder.model.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 686,
+						"buffer_size": 434,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								624,
-								624
+								434,
+								434
 							]
 						],
 						"settings":
@@ -475,7 +624,121 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/paul/Code/bidder/server/config/seed.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1021,
+								1021
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 481.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/paul/Code/bidder/server/api/bidder/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/paul/Code/bidder/server/api/bidder/bidder.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								715,
+								715
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/paul/Code/bidder/server/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								708,
+								708
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -514,7 +777,7 @@
 	"menu_visible": true,
 	"output.coffeecompile_output":
 	{
-		"height": 219.0
+		"height": 280.0
 	},
 	"output.exec":
 	{
@@ -528,7 +791,7 @@
 	{
 		"height": 86.0
 	},
-	"project": "mydrive5.sublime-project",
+	"project": "bidder.sublime-project",
 	"replace":
 	{
 		"height": 50.0
@@ -540,31 +803,99 @@
 		"selected_items":
 		[
 			[
+				"main.jade",
+				"client/app/main/main.jade"
+			],
+			[
+				"bidder.cof",
+				"client/components/bidder/bidder.directive.coffee"
+			],
+			[
+				"seed",
+				"server/config/seed.js"
+			],
+			[
+				"main.cof",
+				"client/app/main/main.coffee"
+			],
+			[
+				"main.con",
+				"client/app/main/main.controller.coffee"
+			],
+			[
 				"sqldb",
 				"server/sqldb/index.js"
 			],
 			[
-				"image.mod",
-				"server/api/image/image.model.js"
-			],
-			[
-				"image.modl",
-				"server/api/image/image.model.js"
-			],
-			[
-				"user.model",
+				"user.mo",
 				"server/api/user/user.model.js"
+			],
+			[
+				"bidder.model",
+				"server/api/bidder/bidder.model.js"
+			],
+			[
+				"bidder.coff",
+				"client/components/bidder/bidder.directive.coffee"
+			],
+			[
+				"app.js",
+				"server/app.js"
+			],
+			[
+				"socketio",
+				"server/config/socketio.js"
+			],
+			[
+				"bidderjade",
+				"client/components/bidder/bidder.jade"
+			],
+			[
+				"authser",
+				"server/auth/auth.service.js"
+			],
+			[
+				"userinde",
+				"server/api/user/index.js"
+			],
+			[
+				"usercontol",
+				"server/api/user/user.controller.js"
+			],
+			[
+				"usercof",
+				"client/components/auth/user.service.coffee"
+			],
+			[
+				"usercoff",
+				"client/components/auth/user.service.coffee"
+			],
+			[
+				"authcof",
+				"client/components/auth/auth.service.coffee"
+			],
+			[
+				"auth.ser",
+				"server/auth/auth.service.js"
+			],
+			[
+				"login.c",
+				"client/app/account/login/login.controller.coffee"
+			],
+			[
+				"see",
+				"server/config/seed.js"
+			],
+			[
+				"thing.model",
+				"server/api/thing/thing.model.js"
 			],
 			[
 				"pack",
 				"package.json"
 			],
 			[
-				"packa",
-				"package.json"
-			],
-			[
-				"develo",
+				"develop",
 				"server/config/environment/development.js"
 			],
 			[
@@ -572,16 +903,8 @@
 				"server/config/local.env.js"
 			],
 			[
-				"sqldbin",
-				"server/sqldb/index.js"
-			],
-			[
-				"configind",
+				"configindex",
 				"server/config/environment/index.js"
-			],
-			[
-				"auth.ser",
-				"server/auth/auth.service.js"
 			],
 			[
 				"stripeind",
@@ -640,12 +963,16 @@
 				"node_modules/passport-google-oauth/node_modules/passport-oauth/node_modules/passport/lib/passport/strategy.js"
 			],
 			[
+				"configind",
+				"server/config/environment/index.js"
+			],
+			[
 				"subscriberind",
 				"server/api/data/subscriber/index.js"
 			],
 			[
-				"app.js",
-				"server/app.js"
+				"user.model",
+				"server/api/user/user.model.js"
 			],
 			[
 				"authservi",
@@ -738,10 +1065,6 @@
 			[
 				"subscribmod",
 				"server/api/data/subscriber/subscriber.model.js"
-			],
-			[
-				"socketio",
-				"server/config/socketio.js"
 			],
 			[
 				"subscriptionform.jade",
@@ -990,66 +1313,6 @@
 			[
 				"sites.scs",
 				"client/app/admin/sites/sites.scss"
-			],
-			[
-				"sitesettings.jade",
-				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
-			],
-			[
-				"site.controljs",
-				"server/api/site/site.controller.js"
-			],
-			[
-				"formcont",
-				"server/api/form/form.controller.js"
-			],
-			[
-				"siteindex",
-				"server/api/site/index.js"
-			],
-			[
-				"siteinde",
-				"server/api/site/index.js"
-			],
-			[
-				"site.ind",
-				"node_modules/socket.io/node_modules/socket.io-adapter/index.js"
-			],
-			[
-				"form.mo",
-				"server/api/form/form.model.js"
-			],
-			[
-				"forms.service",
-				"client/app/services/forms/forms.service.coffee"
-			],
-			[
-				"sites.con",
-				"client/app/admin/sites/sites.controller.coffee"
-			],
-			[
-				"site.ser",
-				"client/app/services/sites/sites.service.coffee"
-			],
-			[
-				"formitems.ja",
-				"client/app/admin/sites/site/forms/formItems.jade"
-			],
-			[
-				"myform.scs",
-				"client/components/mysite/myForm/myForm.scss"
-			],
-			[
-				"choice.j",
-				"client/components/mysite/myForm/fieldTemplates/choices.jade"
-			],
-			[
-				"filter.co",
-				"client/components/filters/filters.filter.coffee"
-			],
-			[
-				"signup.con",
-				"client/app/account/signup/signup.controller.coffee"
 			]
 		],
 		"width": 0.0

@@ -28,26 +28,7 @@ exports.index = function(req, res) {
 };
 
 exports.googleSave = function(req,res){
-  console.log('got to controller');
-  // oauth2Client.setCredentials({
-  //   access_token:req.user.googleToken,
-  //   refresh_token:req.user.googleRefreshToken
-  // });
-  // var drive=googleapis.drive('v2')
-  // drive.files.insert({
-  //   resource: {
-  //     title: 'Angular 2.0!!!',
-  //     mimeType: 'text/plain'
-  //   },
-  //   media: {
-  //     mimeType: 'text/plain',
-  //     body: 'Hello World'
-  //   },
-  //   auth: oauth2Client
-  // }, function(a,b){
-  //   console.log('inserted',a,b);
-  // });
-  // drive.files.list
+  res.status(200).json({a:'asdf'}).end()
 };
 
 exports.download = function(req,res){
