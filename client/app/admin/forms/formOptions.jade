@@ -1,0 +1,54 @@
+div.form-group
+  label.col-sm-6.control-label(for="") field Name
+  div.col-sm-6
+    input.form-control(type="text",required="true", placeholder="name" ng-model="field.name")
+div.form-group 
+  label.col-sm-6.control-label(for="") Label
+  div.col-sm-6
+    input.form-control(type="text",required="true", placeholder="label" ng-model="field.label")
+div.form-group(ng-if="hasProp(field,'placeholder')") 
+  label.col-sm-6.control-label(for="") Placeholder
+  div.col-sm-6
+    input.form-control(type="text", placeholder="placeholder" ng-model="field.placeholder")
+div.form-group 
+  label.col-sm-6.control-label(for="") Description
+  div.col-sm-6
+    textarea.form-control(type="text",placeholder="description" ng-model="field.description")
+div.form-group(ng-if="hasProp(field,'maxlength')") 
+  label.col-sm-6.control-label(for="") Max-length (optional)
+  div.col-sm-6
+    input.form-control(type="number", placeholder="max-length?" ng-model="field.maxlength")
+div.form-group(ng-if="hasProp(field,'Min-length')") 
+  label.col-sm-6.control-label(for="") Min-length (optional)
+  div.col-sm-6
+    input.form-control(type="number", placeholder="min-length?" ng-model="field.minlength")
+div.form-group
+  label.col-sm-6.control-label(for="sdasfd") Is field required?
+  div.col-sm-6.checkbox
+    input(type="checkbox", id="sdasfd" ng-model="field.required")
+
+div(ng-if="hasProp(field,'selects')")
+  h4 {{field.type}}
+  table.table-condensed
+    thead
+      tr
+        th Name
+        th value
+        th
+    tbody
+      tr(ng-repeat="option in field.selects")
+        td
+          input.form-control(type="text" class="form-control",required="true", placeholder="name", ng-model="option.name")
+        td
+          input.form-control(type="text" class="form-control",required="true", placeholder="value", ng-model="option.value")
+        td 
+          a.btn.btn-danger(ng-click="deleteOption($parent.$index,$index)")
+            i.fa.fa-trash            
+      tr
+        td
+          input.form-control(type="text", class="form-control", placeholder="name" ng-model="newOption.name")
+        td  
+          input.form-control(type="text", class="form-control", placeholder="value" ng-model="newOption.value")
+        td
+          a.btn.btn-success(ng-click="addOption($index,newOption)")
+            i.fa.fa-plus-square

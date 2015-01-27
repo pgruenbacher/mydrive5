@@ -1,0 +1,27 @@
+div(ui-tree="options")
+  ol(ui-tree-nodes ng-model="formItems" data-type="formItems")
+    li(ng-repeat="formItem in formItems" ui-tree-node)
+
+      div.menu-title.angular-ui-tree-handle(ng-show="fieldEditing.index!==$index")
+        a.btn.btn-danger.btn-xs.pull-right(href="" data-nodrag ng-click="removeField($index)")
+          i.glyphicon.glyphicon-remove
+        a.btn.btn-primary.btn-xs.pull-right(href="" data-nodrag ng-click="fieldEditing.index=$index")
+          i.glyphicon.glyphicon-pencil
+        div &nbsp;{{formItem.name}} ({{formItem.type}})
+
+      div.menu-title.angular-ui-tree-handle.animate-show(data-nodrag ng-show="fieldEditing.index===$index")
+        form.form-horizontal(role="form",name="editMenuForm",on-valid-submit="fieldEditing.index=null")
+          div.center-align {{formItem.name}} ({{formItem.type}})
+            button.btn.btn-warning.pull-right.btn-xs(type="submit") 
+              i.fa.fa-close
+              |Close
+          form-options(field="formItem")
+          
+            
+      
+  ol.angular-ui-tree-nodes
+    li.angular-ui-tree-node
+      div.menu-title.angular-ui-tree-handle
+        button.btn.btn-success(ng-click="newField()")
+          i.fa.fa-plus
+          | add field

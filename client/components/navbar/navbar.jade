@@ -49,18 +49,22 @@ div.navbar.navbar-inverse.navbar-static-top.primary-navbar
         li(ui-sref-active='active')
           a(ui-sref='app.admin.sites.index' tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="My Sites" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-th
-            span(ng-show="!isCollapsed") My Sites
+            | Sites
 
         li(ui-sref-active='active')
           a(ui-sref='app.admin.media' tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="My Media" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-file-image-o
-            span(ng-show="!isCollapsed") My Media
+            | Media
 
+        li(ui-sref-active='active')       
+          a(ui-sref="app.admin.forms({site:site.domainName})",tooltip-trigger="mouseenter",tooltip-placement="right",tooltip="Go to my forms",tooltip-append-to-body="true")
+            i.fa.fa-pencil
+            | Forms
 
         li(ui-sref-active='active')
           a(ui-sref='app.admin.data' tooltip-trigger="mouseenter" tooltip-placement="right" tooltip="My Data" tooltip-append-to-body="true")
             i.fa.fa-fw.fa-database
-            span(ng-show="!isCollapsed") My Data
+            | Data
 
         //- li(ui-sref-active='active' tooltip-placement="right" tooltip="My current donations" tooltip-append-to-body="true")
         //-   a(ui-sref='app.admin.finance')

@@ -65,10 +65,7 @@ div.right-side-nav.navbar-nav.nav
   li
     a(ui-sref="app.admin.sites.site.page({site:site.domainName,page:'home'})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to site pages",tooltip-append-to-body="true")
       i.fa.fa-book
-      | Pages        
-    a(ui-sref="app.admin.sites.site.forms({site:site.domainName})",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Go to my forms",tooltip-append-to-body="true")
-      i.fa.fa-list
-      | Forms
+      | Pages
     a(ng-click="",tooltip-trigger="mouseenter",tooltip-placement="left",tooltip="Save",tooltip-append-to-body="true") 
       i.fa.fa-save(ng-hide="pageSaving")
       i.fa.fa-spin.fa-spinner(ng-show="pageSaving")

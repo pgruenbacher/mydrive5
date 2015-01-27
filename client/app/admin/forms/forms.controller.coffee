@@ -1,7 +1,24 @@
 'use strict'
 
 angular.module 'mydrive5App'
-.controller 'FormsCtrl', ($scope,site,Sites,Forms,forms) ->
+
+.controller 'formExamplesModalCtrl', ($scope,Forms)->
+  $scope.selected={form:{}}
+  $scope.possible=
+    [
+      {title:'Custom',fields:[
+        {
+          type:'textfield'
+          name:'example'
+          label:'custom field'
+          required:true
+          }]}
+      Forms.registration
+      Forms.order
+    ]
+
+
+.controller 'FormsCtrl', ($scope,Forms,forms,$modal) ->
   # $scope.site=site
   # $scope.saveSite=()->
   #   console.log 'save'
@@ -13,6 +30,10 @@ angular.module 'mydrive5App'
   $scope.editing=false
   $scope.form=
     fields:[]
+
+  $scope.actions=Forms.submitActions
+  console.log $scope.actions
+
   $scope.editForm=(form)->
     $scope.editing=true
     $scope.form=form
@@ -34,30 +55,29 @@ angular.module 'mydrive5App'
     if form._id?
       Forms.update(form._id,form)
       .then (response)->
-        console.log response.data
         $scope.form=response.data[0]
         reinit()
     else
       Forms.create(form)
       .then (response)->
-        $scope.form=response.data[0]
+        $scope.form=response.data
         reinit()
 
   reinit=()->
     Forms.all().then (response)->
       $scope.forms=response.data
 
+  $scope.openExamples=()->
+    modalInstance= $modal.open
+      templateUrl:'app/admin/forms/formExamplesModal.html'
+      size:'lg'
+      controller:'formExamplesModalCtrl'
+
+    modalInstance.result.then (result)->
+      if result.title
+        $scope.editing=true
+        $scope.form=result
+
 
   $scope.newField={}
-  $scope.possible=
-    [
-      {title:'Custom',fields:[
-        {
-          type:'textfield'
-          name:'example'
-          label:'custom field'
-          required:true
-          }]}
-      Forms.registration
-      Forms.order
-    ]
+  

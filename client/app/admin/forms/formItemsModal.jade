@@ -1,0 +1,25 @@
+.modal-content
+  .modal-header
+    button.close(ng-if='modal.dismissable', type='button', ng-click='$dismiss()') &times;
+    h4.modal-title Select Field
+  .modal-body
+    //- ul.list-inline
+    .row
+      .col-md-6
+        form.form-horizontal(role="form",name="newFieldForm",on-valid-submit="$close(selected.field)",ng-show="selected.field.name")
+          div.center-align {{selected.field.name}} ({{selected.field.type}})
+          form-options(field="selected.field")
+          
+          button.pull-right.btn.btn-lg.btn-success(type="submit") Add Field
+
+      .col-md-6
+        ul
+          li(ng-repeat="field in fields")
+            a(ng-click="selected.field=field")
+              i.fa(ng-class="field.icon")
+              | {{field.label}}
+      
+        
+        hr
+        h4 {{selected.field.description}}
+        my-field(field="selected.field")

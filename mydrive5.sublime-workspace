@@ -11,33 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "server/auth/local/index.js",
-			"settings":
-			{
-				"buffer_size": 607,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "tt{\n  \"name\": \"mydrive5\",\n  \"version\": \"0.0.0\",\n  \"main\": \"server/app.js\",\n  \"dependencies\": {\n    \"aws-sdk\": \"^2.1.4\",\n    \"blitline\": \"^1.1.6\",\n    \"body-parser\": \"~1.5.0\",\n    \"composable-middleware\": \"^0.3.0\",\n    \"compression\": \"~1.0.1\",\n    \"connect\": \"^3.3.3\",\n    \"connect-mongo\": \"^0.4.1\",\n    \"cookie-parser\": \"~1.0.1\",\n    \"csv\": \"^0.4.1\",\n    \"errorhandler\": \"~1.0.0\",\n    \"express\": \"~4.9.0\",\n    \"express-jwt\": \"^0.1.3\",\n    \"express-session\": \"~1.0.2\",\n    \"express-subdomain\": \"^1.0.2\",\n    \"googleapis\": \"^1.1.1\",\n    \"jade\": \"~1.2.0\",\n    \"jsonwebtoken\": \"^0.3.0\",\n    \"lodash\": \"~2.4.1\",\n    \"map-stream\": \"0.0.5\",\n    \"method-override\": \"~1.0.0\",\n    \"mongoose\": \"~3.8.8\",\n    \"mongoose-bird\": \"~0.0.1\",\n    \"morgan\": \"~1.0.0\",\n    \"multer\": \"^0.1.6\",\n    \"passport\": \"~0.2.0\",\n    \"passport-facebook\": \"latest\",\n    \"passport-google-oauth\": \"latest\",\n    \"passport-local\": \"~0.1.6\",\n    \"passport-stripe\": \"git://github.com/pgruenbacher/passport-stripe\",\n    \"passport-twitter\": \"latest\",\n    \"pg\": \"^4.2.0\",\n    \"prerender-node\": \"^1.2.0\",\n    \"sequelize\": \"^2.0.0-rc2\",\n    \"serve-favicon\": \"~2.0.1\",\n    \"simple_blitline_node\": \"^2.2.0\",\n    \"slug\": \"^0.8.0\",\n    \"socket.io\": \"^1.0.6\",\n    \"socket.io-client\": \"^1.0.6\",\n    \"socketio-jwt\": \"^2.0.2\",\n    \"sqlite3\": \"~3.0.2\",\n    \"stripe\": \"^3.0.2\",\n    \"subdomain\": \"^1.2.0\",\n    \"through\": \"^2.3.6\",\n    \"vhost\": \"^3.0.0\"\n  },\n  \"devDependencies\": {\n    \"chai-as-promised\": \"^4.1.1\",\n    \"chai-things\": \"^0.2.0\",\n    \"connect-livereload\": \"~0.4.0\",\n    \"grunt\": \"~0.4.4\",\n    \"grunt-angular-templates\": \"^0.5.4\",\n    \"grunt-autoprefixer\": \"~0.7.2\",\n    \"grunt-build-control\": \"DaftMonk/grunt-build-control\",\n    \"grunt-concurrent\": \"~0.5.0\",\n    \"grunt-contrib-clean\": \"~0.5.0\",\n    \"grunt-contrib-coffee\": \"^0.10.1\",\n    \"grunt-contrib-concat\": \"~0.4.0\",\n    \"grunt-contrib-copy\": \"~0.5.0\",\n    \"grunt-contrib-cssmin\": \"~0.9.0\",\n    \"grunt-contrib-htmlmin\": \"~0.2.0\",\n    \"grunt-contrib-imagemin\": \"~0.7.1\",\n    \"grunt-contrib-jade\": \"^0.11.0\",\n    \"grunt-contrib-jshint\": \"~0.10.0\",\n    \"grunt-contrib-sass\": \"^0.7.3\",\n    \"grunt-contrib-uglify\": \"~0.4.0\",\n    \"grunt-contrib-watch\": \"~0.6.1\",\n    \"grunt-dom-munger\": \"^3.4.0\",\n    \"grunt-env\": \"~0.4.1\",\n    \"grunt-express-server\": \"~0.4.17\",\n    \"grunt-google-cdn\": \"~0.4.0\",\n    \"grunt-injector\": \"~0.5.4\",\n    \"grunt-jscs\": \"~0.7.1\",\n    \"grunt-karma\": \"~0.8.2\",\n    \"grunt-mocha-istanbul\": \"^2.0.0\",\n    \"grunt-mocha-test\": \"~0.10.2\",\n    \"grunt-newer\": \"~0.7.0\",\n    \"grunt-ng-annotate\": \"^0.2.3\",\n    \"grunt-node-inspector\": \"~0.1.5\",\n    \"grunt-nodemon\": \"~0.2.0\",\n    \"grunt-open\": \"~0.2.3\",\n    \"grunt-protractor-runner\": \"^1.1.0\",\n    \"grunt-rev\": \"~0.1.0\",\n    \"grunt-svgmin\": \"~0.4.0\",\n    \"grunt-usemin\": \"~2.1.1\",\n    \"grunt-wiredep\": \"~1.8.0\",\n    \"jit-grunt\": \"^0.5.0\",\n    \"jshint-stylish\": \"~0.1.5\",\n    \"karma\": \"~0.12.9\",\n    \"karma-chai-plugins\": \"^0.2.3\",\n    \"karma-chrome-launcher\": \"~0.1.3\",\n    \"karma-coffee-preprocessor\": \"~0.2.1\",\n    \"karma-firefox-launcher\": \"~0.1.3\",\n    \"karma-html2js-preprocessor\": \"~0.1.0\",\n    \"karma-jade-preprocessor\": \"0.0.11\",\n    \"karma-mocha\": \"^0.1.9\",\n    \"karma-ng-html2js-preprocessor\": \"~0.1.0\",\n    \"karma-ng-jade2js-preprocessor\": \"^0.1.2\",\n    \"karma-ng-scenario\": \"~0.1.0\",\n    \"karma-phantomjs-launcher\": \"~0.1.4\",\n    \"karma-requirejs\": \"~0.2.1\",\n    \"karma-script-launcher\": \"~0.1.0\",\n    \"karma-spec-reporter\": \"0.0.13\",\n    \"open\": \"~0.0.4\",\n    \"proxyquire\": \"^1.0.1\",\n    \"requirejs\": \"~2.1.11\",\n    \"sequelize-cli\": \"^1.0.1\",\n    \"sinon-chai\": \"^2.5.0\",\n    \"supertest\": \"~0.11.0\",\n    \"time-grunt\": \"~0.3.1\"\n  },\n  \"engines\": {\n    \"node\": \">=0.10.0\"\n  },\n  \"scripts\": {\n    \"start\": \"node server/app.js\",\n    \"test\": \"grunt test\",\n    \"update-webdriver\": \"node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update\"\n  },\n  \"private\": true\n}\n",
-			"file": "package.json",
-			"file_size": 3883,
-			"file_write_time": 130666976430967077,
-			"settings":
-			{
-				"buffer_size": 3885,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/api/image/image.model.js",
-			"settings":
-			{
-				"buffer_size": 686,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -89,20 +62,78 @@
 	"expanded_folders":
 	[
 		"/home/paul/Code/fundraiser/mydrive5",
-		"/home/paul/Code/fundraiser/mydrive5/server",
-		"/home/paul/Code/fundraiser/mydrive5/server/auth",
-		"/home/paul/Code/fundraiser/mydrive5/server/auth/local"
+		"/home/paul/Code/fundraiser/mydrive5/client",
+		"/home/paul/Code/fundraiser/mydrive5/client/app",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites",
+		"/home/paul/Code/fundraiser/mydrive5/server/auth/google",
+		"/home/paul/Code/fundraiser/mydrive5/server/components/google"
 	],
 	"file_history":
 	[
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.jade",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.controller.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/components/google/drive.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/components/google/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/dataview-api.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/api.service.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.scss",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.model.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/SHA-1/sha1.js",
+		"/home/paul/Code/fundraiser/mydrive5/subscribers.csv",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/source-map/build/suffix-utils.jsm",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.scss",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-node-inspector/node_modules/node-inspector/front-end/dataGrid.css",
+		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/data/data.src.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/site/site.model.js",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/sinon/pkg/sinon-ie.js",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/app.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/app.jade",
+		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.jade",
+		"/home/paul/Code/fundraiser/mydrive5/client/components/analytics/analytics.directive.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/app.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/site.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/sites.scss",
+		"/home/paul/Code/fundraiser/mydrive5/publicGruntfile.js",
+		"/home/paul/Code/fundraiser/mydrive5/package.json",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.controller.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/optimist/example/line_count_options.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/connect/LICENSE",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angulartics/src/angulartics-ga.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angulartics/src/angulartics.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular.js",
+		"/home/paul/Code/fundraiser/mydrive5/Gruntfile.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/waypoints/waypoints.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/ng-annotate/tests/with_annotations.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/wscript",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/lib/middleware/strip_host.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/config/seed.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/UPGRADING.md",
+		"/home/paul/Code/fundraiser/mydrive5/public/app/site/site.jade",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/googleapis/node_modules/request/node_modules/tough-cookie/public-suffix.txt",
+		"/home/paul/Code/fundraiser/mydrive5/client/app/main/main.coffee",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/2d653af2dc75de162c05e1fa888c295a650c53b8/main.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/post/post.controller.js",
+		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-animate/angular-animate.js",
+		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/b08e8a31f6d48eccfd7a90259e5b26517b6e8457/adminNavbar.scssc",
+		"/home/paul/Code/fundraiser/mydrive5/server/api/image/image.model.js",
+		"/home/paul/Code/fundraiser/mydrive5/server/auth/local/index.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/source-map/build/prefix-utils.jsm",
+		"/home/paul/Code/fundraiser/mydrive5/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json",
 		"/home/paul/Code/fundraiser/mydrive5/server/sqldb/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/sqlite3/sqlite3.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-express-server/test/server-quiet.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/seed.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/image/image.controller.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/index.html",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/image/image.model.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/UPGRADING.md",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/istanbul/node_modules/mkdirp/test/umask_sync.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/api/user/user.model.js",
@@ -110,13 +141,8 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose/lib/model.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/modernizr.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/components/modal/modal.jade",
-		"/home/paul/Code/fundraiser/mydrive5/mocha.conf.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/development.js",
-		"/home/paul/Code/fundraiser/mydrive5/package.json",
-		"/home/paul/Code/fundraiser/mydrive5/server/components/google/drive.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/config/local.env.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/optimist/example/line_count_options.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/connect/LICENSE",
 		"/home/paul/Code/fundraiser/mydrive5/dev.sqlite",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-jscs/node_modules/jscs/lib/rules/disallow-empty-blocks.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/config/environment/production.js",
@@ -131,7 +157,6 @@
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/google/passport.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/stripe/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-ui-router/release/angular-ui-router.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/app.scss",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/lib/StripeMethod.basic.js",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/stripe/passport.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/lib/stripe.js",
@@ -143,12 +168,7 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/google-cdn/googlecdn.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/glob/test/new-glob-optional-options.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/.bin/grunt-open",
-		"/home/paul/Code/fundraiser/mydrive5/Gruntfile.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/mout/lang/isNull.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/components/google/index.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-google-oauth/node_modules/passport-oauth/lib/passport-oauth/strategies/oauth2.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.controller.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-google-oauth/node_modules/passport-oauth/lib/passport-oauth/strategies/oauth.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport/lib/strategies/session.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-facebook/lib/strategy.js",
@@ -158,22 +178,13 @@
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-google-oauth/node_modules/passport-oauth/node_modules/passport/lib/passport/strategy.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport/node_modules/passport-strategy/package.json",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/apis/storagegateway-2013-06-30.paginators.json",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.controller.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/mongoose-bird/node_modules/bluebird/js/main/direct_resolve.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.jade",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/modernizr/feature-detects/dataview-api.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/lib/test/data/click_tests/google_map.html",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport/node_modules/passport-strategy/lib/index.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/index.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.model.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/source-map/build/suffix-utils.jsm",
 		"/home/paul/Code/fundraiser/mydrive5/server/auth/facebook/passport.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-local/.npmignore",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/passport-twitter/.jshintrc",
 		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/auth/auth.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/app.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/app.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/post/post.controller.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-contrib-clean/AUTHORS",
 		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular-ui-tree/dist/angular-ui-tree.js",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/class_goog_labs_testing_IsNotMatcher.html",
@@ -187,42 +198,7 @@
 		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/sites/site/forms/formItems.directive.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/client/app/services/forms/forms.service.coffee",
 		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/log4js/examples/flush-on-exit.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/filters/filters.filter.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/express-subdomain/index.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/slug/node_modules/unicode/node_modules/bufferstream/node_modules/buffertools/binding.gyp",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/inquirer/node_modules/rx/src/core/subintro.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/node_modules/npmconf/test/fixtures/userconfig",
-		"/home/paul/Code/fundraiser/mydrive5/server/routes.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/components/navbar/navbar.jade",
-		"/home/paul/Code/fundraiser/mydrive5/server/api/data/subscriber/subscriber.integration.js",
-		"/home/paul/Code/fundraiser/mydrive5/subscribers.csv",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/account.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/account/account.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/bower_components/angular/angular-csp.css",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/navbar/navbar.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/bf9bbc0a41faabe1e5e2503402cfa9ae42ca417a/navbar.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-ng-annotate/node_modules/.bin/ng-annotate",
-		"/home/paul/Code/fundraiser/mydrive5/e2e/account/logout/logout.spec.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-protractor-runner/node_modules/protractor/node_modules/selenium-webdriver/docs/enum_goog_uri_utils_ComponentIndex.html",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/package.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/stripe/test/stripe.spec.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/test/unit/compress/expected/strict-equals.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/lib/sequential_executor.js",
-		"/home/paul/Code/fundraiser/mydrive5/server/config/socketio.js",
-		"/home/paul/Code/fundraiser/mydrive5/.sass-cache/0c3b696d16eae78e70c805f0118a5be22efe13db/siteSettings.scssc",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/components/auth/user.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/pg/build/config.gypi",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/aws-sdk/apis/config-2014-11-12.min.json",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-nodemon/node_modules/nodemon/node_modules/update-notifier/node_modules/configstore/node_modules/.bin/mkdirp",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/node_modules/insight/node_modules/configstore/node_modules/js-yaml/node_modules/.bin/esvalidate",
-		"/home/paul/Code/fundraiser/mydrive5/.tmp/app/admin/data/data.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/proxyquire/test/proxyquire-api.js",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/.bin/jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/chalk/node_modules/.bin/strip-ansi",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/grunt-google-cdn/node_modules/bower/test/packages-svn.js",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/admin/data/data.coffee",
-		"/home/paul/Code/fundraiser/mydrive5/client/app/account/login/login.jade",
-		"/home/paul/Code/fundraiser/mydrive5/node_modules/sqlite3/src/database.cc"
+		"/home/paul/Code/fundraiser/mydrive5/client/components/filters/filters.filter.coffee"
 	],
 	"find":
 	{
@@ -240,6 +216,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"subdomain",
+			"injector",
 			"getOauthAcce",
 			"domain",
 			"validateJwt",
@@ -365,9 +343,7 @@
 			"instance",
 			"faq",
 			"tick",
-			"Tick_Flip",
-			"startValue",
-			"startNumber"
+			"Tick_Flip"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -385,99 +361,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "server/auth/local/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 607,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3885,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2,
-								2
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "server/api/image/image.model.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 686,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								624,
-								624
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -540,6 +425,118 @@
 		"selected_items":
 		[
 			[
+				"data.jad",
+				"client/app/admin/data/data.jade"
+			],
+			[
+				"data.jade",
+				"client/app/admin/data/data.jade"
+			],
+			[
+				"apiser",
+				"server/api/api.service.js"
+			],
+			[
+				"data.con",
+				"client/app/admin/data/data.controller.coffee"
+			],
+			[
+				"subscriberindex",
+				"server/api/data/subscriber/index.js"
+			],
+			[
+				"subscribercon",
+				"server/api/data/subscriber/subscriber.controller.js"
+			],
+			[
+				"data.contl",
+				"client/app/admin/data/data.controller.coffee"
+			],
+			[
+				"site.model",
+				"server/api/site/site.model.js"
+			],
+			[
+				"app.cof",
+				"client/app/app.coffee"
+			],
+			[
+				"app.jade",
+				"public/app/app.jade"
+			],
+			[
+				"site.o",
+				"public/app/site/site.coffee"
+			],
+			[
+				"publicapp",
+				"public/app/app.coffee"
+			],
+			[
+				"index.h",
+				"client/index.html"
+			],
+			[
+				"app.coff",
+				"client/app/app.coffee"
+			],
+			[
+				"index",
+				"client/index.html"
+			],
+			[
+				"login.jade",
+				"client/app/account/login/login.jade"
+			],
+			[
+				"public",
+				"publicGruntfile.js"
+			],
+			[
+				"waypoints.j",
+				"client/bower_components/waypoints/waypoints.js"
+			],
+			[
+				"sha1",
+				"client/bower_components/SHA-1/sha1.js"
+			],
+			[
+				"gruntfile",
+				"Gruntfile.js"
+			],
+			[
+				"publicsite.jad",
+				"public/app/site/site.jade"
+			],
+			[
+				"site.coff",
+				"public/app/site/site.coffee"
+			],
+			[
+				"main.cof",
+				"client/app/main/main.coffee"
+			],
+			[
+				"app.co",
+				"client/app/app.coffee"
+			],
+			[
+				"main.coff",
+				"client/app/main/main.coffee"
+			],
+			[
+				"analy",
+				"client/components/analytics/analytics.directive.coffee"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"app.js",
+				"server/app.js"
+			],
+			[
 				"sqldb",
 				"server/sqldb/index.js"
 			],
@@ -557,10 +554,6 @@
 			],
 			[
 				"pack",
-				"package.json"
-			],
-			[
-				"packa",
 				"package.json"
 			],
 			[
@@ -620,10 +613,6 @@
 				"client/app/account/login/login.controller.coffee"
 			],
 			[
-				"data.con",
-				"client/app/admin/data/data.controller.coffee"
-			],
-			[
 				"googlepassp",
 				"server/auth/google/passport.js"
 			],
@@ -642,10 +631,6 @@
 			[
 				"subscriberind",
 				"server/api/data/subscriber/index.js"
-			],
-			[
-				"app.js",
-				"server/app.js"
 			],
 			[
 				"authservi",
@@ -692,10 +677,6 @@
 				"client/components/navbar/navbar.jade"
 			],
 			[
-				"app.co",
-				"client/app/app.coffee"
-			],
-			[
 				"stripepass",
 				"server/auth/stripe/passport.js"
 			],
@@ -712,20 +693,12 @@
 				"server/config/environment/index.js"
 			],
 			[
-				"data.jad",
-				"client/app/admin/data/data.jade"
-			],
-			[
 				"googlestrategy",
 				"node_modules/passport-google-oauth/node_modules/passport-oauth/node_modules/passport/lib/passport/strategy.js"
 			],
 			[
 				"passport",
 				"server/auth/google/passport.js"
-			],
-			[
-				"login.jade",
-				"client/app/account/login/login.jade"
 			],
 			[
 				"datajade",
@@ -774,10 +747,6 @@
 			[
 				"page.jad",
 				"client/app/admin/sites/site/page/page.jade"
-			],
-			[
-				"app.cof",
-				"client/app/app.coffee"
 			],
 			[
 				"mybutotn.jade",
@@ -870,14 +839,6 @@
 			[
 				"bower.",
 				"bower.json"
-			],
-			[
-				"index",
-				"client/index.html"
-			],
-			[
-				"app.coff",
-				"client/app/app.coffee"
 			],
 			[
 				"formitems.jade",
@@ -974,82 +935,6 @@
 			[
 				"formitems.jad",
 				"client/app/admin/sites/site/forms/formItems.jade"
-			],
-			[
-				"forms.servi",
-				"client/app/services/forms/forms.service.coffee"
-			],
-			[
-				"sites.s",
-				"client/app/admin/sites/sites.scss"
-			],
-			[
-				"sites.jade",
-				"client/app/admin/sites/sites.jade"
-			],
-			[
-				"sites.scs",
-				"client/app/admin/sites/sites.scss"
-			],
-			[
-				"sitesettings.jade",
-				"client/app/admin/sites/site/siteSettings/siteSettings.jade"
-			],
-			[
-				"site.controljs",
-				"server/api/site/site.controller.js"
-			],
-			[
-				"formcont",
-				"server/api/form/form.controller.js"
-			],
-			[
-				"siteindex",
-				"server/api/site/index.js"
-			],
-			[
-				"siteinde",
-				"server/api/site/index.js"
-			],
-			[
-				"site.ind",
-				"node_modules/socket.io/node_modules/socket.io-adapter/index.js"
-			],
-			[
-				"form.mo",
-				"server/api/form/form.model.js"
-			],
-			[
-				"forms.service",
-				"client/app/services/forms/forms.service.coffee"
-			],
-			[
-				"sites.con",
-				"client/app/admin/sites/sites.controller.coffee"
-			],
-			[
-				"site.ser",
-				"client/app/services/sites/sites.service.coffee"
-			],
-			[
-				"formitems.ja",
-				"client/app/admin/sites/site/forms/formItems.jade"
-			],
-			[
-				"myform.scs",
-				"client/components/mysite/myForm/myForm.scss"
-			],
-			[
-				"choice.j",
-				"client/components/mysite/myForm/fieldTemplates/choices.jade"
-			],
-			[
-				"filter.co",
-				"client/components/filters/filters.filter.coffee"
-			],
-			[
-				"signup.con",
-				"client/app/account/signup/signup.controller.coffee"
 			]
 		],
 		"width": 0.0

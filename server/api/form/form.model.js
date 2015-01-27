@@ -24,7 +24,8 @@ var FormSchema = new Schema({
   fields:[fieldSchema],
   user: {
     _id:Number
-  }
+  },
+  submitAction:{}
 })
 
 module.exports = mongoose.model('Form', FormSchema);

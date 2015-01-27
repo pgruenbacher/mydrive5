@@ -1,9 +1,9 @@
 angular.module 'mydrive5App'
 .config ($stateProvider) ->
   $stateProvider
-  .state 'app.admin.sites.site.forms',
+  .state 'app.admin.forms',
     url: '/forms'
-    templateUrl:'app/admin/sites/site/forms/forms.html'
+    templateUrl:'app/admin/forms/forms.html'
     controller: 'FormsCtrl'
     data:
       title: '{{site.siteName}} Forms'

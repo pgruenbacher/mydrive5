@@ -1,0 +1,18 @@
+.modal-content
+  .modal-header
+    button.close(ng-if='modal.dismissable', type='button', ng-click='$dismiss()') &times;
+    h4.modal-title Select Example Form
+  .modal-body
+    //- ul.list-inline
+    .row
+      .col-md-6
+        ul
+          li(ng-repeat="form in possible")
+            a(ng-click="selected.form=form")
+              | {{form.title}}
+
+        button.btn.btn-success(ng-click="$close(selected.form)") Select
+
+      .col-md-6
+      
+        my-form(form="selected.form")

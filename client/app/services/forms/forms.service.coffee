@@ -25,6 +25,21 @@ angular.module 'mydrive5App'
         forms=data
   openFormModal:(form)->
 
+  submitActions:[
+    {
+      description:'simply save form, then close'
+      type:'simple'
+    },{
+      description:'save and navigate to different page'
+      type:'navigate'
+    },{
+      description:'save and go to another new form'
+      type:'nextForm'
+    },{
+      description:'save and go to checkout page'
+      type:'checkout'
+    }
+  ]
 
   types:[
     'checkbox'

@@ -1,0 +1,47 @@
+.site-wrapper
+  h1 My Forms
+  ul.list-inline.chip-list
+    li(ng-repeat="form in forms")
+      a(ng-click="editForm(form)") {{form.title}}
+    li
+      a(ng-click="newForm()")
+        i.fa.fa-plus
+        |New Form
+    li
+      a(ng-click="openExamples()")
+        i.fa.fa-plus
+        |Use existing examples
+  .row
+    .col-lg-4
+      div(ng-show="editing")
+        .menu-title(style="padding-bottom:1px;")
+          form.form-horizontal(on-valid-submit="saveForm(form)")
+            button.btn.btn-danger.pull-right(ng-click="deleteForm(form._id)",ng-if="form._id")
+              i.fa.fa-trash
+            button.btn.btn-success.pull-right
+              span(ng-show="form._id")
+                | Save
+              span(ng-show="!form._id")
+                | Create
+            .form-group
+              label.col-sm-1.col-sm-offset-1 Title:
+              .col-sm-5
+                input.form-control(type="text",placeholder="name of the form",required,ng-model="form.title")
+        formItems(form-items="form.fields",new-field="newField")
+    .col-lg-4
+      .paper-shadow(ng-show="form.fields.length")
+        my-form(form="form")
+
+
+    .col-lg-4
+      div(ng-show="editing")
+        .menu-title
+          h3 Select Action of Form
+          p Data from this will be saved under "{{form.title}}"
+
+          select.form-control(ng-options="action.description for action in actions",ng-model="submitAction")
+            option(value="") --select action--
+
+          div(ng-repeat="action in actions")
+        
+        
